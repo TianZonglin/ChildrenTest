@@ -40,6 +40,23 @@ to this section's matching END comment to see page-specific styles.
 }
 
 /* Our remix on glitch button */
+.corner--remix {
+  font-family: HK Grotesk;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2.75rem;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
 .btn--remix {
   font-family: HK Grotesk;
   padding: 0.75rem 1rem;
@@ -73,7 +90,7 @@ to this section's matching END comment to see page-specific styles.
   padding: 1rem 0 0.75rem 0;
   width: 100%;
   flex-wrap: wrap;
-  border-top: 4px solid #fff;
+  border-top: 4px solid #f3f3f3;
 }
 
 .footer a:not(.btn--remix):link,
