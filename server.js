@@ -33,11 +33,13 @@ fastify.register(require("point-of-view"), {
   }
 });
 
-// Load and parse SEO data
-const seo = require("./src/seo.json");
+// Load and parse site data
+const seo = require("./src/site.json");
 if (seo.url === "glitch-default") {
   seo.url = `https://${process.env.PROJECT_DOMAIN}.glitch.me`;
 }
+
+ 
 
 // We use a module for handling database operations in /src
 const data = require("./src/data.json");
