@@ -34,9 +34,9 @@ fastify.register(require("point-of-view"), {
 });
 
 // Load and parse site data
-const seo = require("./src/site.json");
-if (seo.url === "glitch-default") {
-  seo.url = `https://${process.env.PROJECT_DOMAIN}.glitch.me`;
+const site = require("./src/site.json");
+if (site.url === "glitch-default") {
+  site.url = `https://${process.env.PROJECT_DOMAIN}.glitch.me`;
 }
 
  
@@ -56,9 +56,9 @@ const db = require("./src/" + data.database);
 fastify.get("/", async (request, reply) => {
   /* 
   Params is the data we pass to the client
-  - SEO values for front-end UI but not for raw data
+  - SITE values for front-end UI but not for raw data
   */
-  let params = request.query.raw ? {} : { seo: seo };
+  let params = request.query.raw ? {} : { site: site };
 
   // Get the available choices from the database
   const options = await db.getOptions();
@@ -89,8 +89,8 @@ fastify.get("/", async (request, reply) => {
  * Return updated list of votes
  */
 fastify.post("/", async (request, reply) => { 
-  // We only send seo if the client is requesting the front-end ui
-  let params = request.query.raw ? {} : { seo: seo };
+  // We only send site if the client is requesting the front-end ui
+  let params = request.query.raw ? {} : { site: site };
 
   // Flag to indicate we want to show the poll results instead of the poll form
   params.results = true;
@@ -119,7 +119,7 @@ fastify.post("/", async (request, reply) => {
  * Send raw json or the admin handlebars page
  */
 fastify.get("/logs", async (request, reply) => {
-  let params = request.query.raw ? {} : { seo: seo };
+  let params = request.query.raw ? {} : { site: site };
 
   // Get the log history from the db
   params.optionHistory = await db.getLogs();
@@ -141,7 +141,7 @@ fastify.get("/logs", async (request, reply) => {
  * If auth is successful, empty the history
  */
 fastify.post("/reset", async (request, reply) => {
-  let params = request.query.raw ? {} : { seo: seo };
+  let params = request.query.raw ? {} : { site: site };
 
   /* 
   Authenticate the user request by checking against the env key variable
