@@ -132,6 +132,7 @@
           What do you want to share about yourself?
         </p>
         <!-- Call the server post endpoint when the user submits an option in the poll -->
+        <textarea style="height: 150px;width: 100%;resize: none;"></textarea>
         <form method="post" action="/">
           <!-- The server script returns the list of language options to offer in the poll -->
           {{#each optionNames}}
@@ -168,7 +169,7 @@
     <span class="divider">|</span>
     <a href="/logs">Admin</a>
     <a class="corner--remix" target="_top" href="#">
-      Powered by Glitch
+      Powered by Glitch <span class="divider">|</span> Designed by Universiteit Utrecht
     </a>
   </footer>
 </body>
