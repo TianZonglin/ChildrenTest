@@ -93,7 +93,7 @@
     <div class="content" role="main">
 
       <!-- This is the start of content for our page -->
-      <h1>Online Investigation System</h1>
+      <h1>认识更多小朋友</h1>
       <p>
         Here is the explaination for this website.
       </p>
@@ -125,17 +125,18 @@
       
       {{else}} <!-- default into the first step -->
       <h2>
-        STEP ONE - Filling in your own profile.
+        请回答以下三个问题来检测你的鼠标和键盘是否正常
       </h2>
       <div class="poll-form">
+        <!--
         <p>
           What do you want to share about yourself?
-        </p>
+        </p>-->
         <!-- Call the server post endpoint when the user submits an option in the poll -->
-        <textarea style="height: 150px;width: 100%;resize: none;"></textarea>
-        <form method="post" action="/">
+        <!--<textarea style="height: 150px;width: 100%;resize: none;"></textarea>
+        <form method="post" action="/">-->
           <!-- The server script returns the list of language options to offer in the poll -->
-          {{#each optionNames}}
+          <!--{{#each optionNames}}
           <input type="radio" id="girl" name="girl" value="girl" required />
           <label for="{{this}}">{{this}}</label>
           {{/each}}
@@ -143,9 +144,9 @@
           <button type="submit">
             Submit
           </button>
-        </form>
+        </form>-->
         <!-- ADD LINK FROM TODO -->
-        
+        <p>请在下面依次点击-健-康-是-福</p>
       </div>
       {{/if}}
       {{/if}}
