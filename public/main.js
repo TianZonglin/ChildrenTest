@@ -7,6 +7,7 @@ $(function(){
     if(oString.length == 4 && oString === "健康是福"){
       $("#p1a_text").html("<span style='color:green'>回答正确！</span>");
       oString = "";
+      checkPage(1);
     }else if(oString.length == 4){
       $("#p1a_text").html("<span style='color:red'>回答错误，请重新点击！</span>");
       $(".p1a").removeClass("disabled");
@@ -18,7 +19,8 @@ $(function(){
   function checkPage(rst){
     oPage += rst;
     if(oPage == 4){
-      $("#p1_text").html("<span style='color:green'>非常棒，你已经完成了四项测试，请点击按钮进入下一页！</span>");
+      $("#p1_text").html("<span style='color:green'>测试完成，请点击按钮进入下一页！</span>");
+      $("#p1_button").show();
       oPage = 0;
     }
     //alert($(this).val());
@@ -27,13 +29,14 @@ $(function(){
   $(".p1a").click(function(){
     $(this).addClass("disabled");
     checkOrder($(this).val());
-    checkPage(1);
+    
   });
   $('#p1b').change(function(){
     let vle = $(this).children('option:selected').val();
     if(vle === "18"){
       $("#p1b_text").html("<span style='color:green'>回答正确！</span>");  
       $(this).addClass("disabled");
+      checkPage(1);
     }else{
       $("#p1b_text").html("<span style='color:red'>您选择的是 "+vle+"，请重新选择！</span>");  
     }
@@ -44,6 +47,7 @@ $(function(){
     if(strInput === "6752"){
       $("#p1c_text").html("<span style='color:green'>输入正确！</span>");  
       $(this).addClass("disabled");
+      checkPage(1);
     }else if(strInput.length == 4){
       $("#p1c_text").html("<span style='color:red'>输入错误，请重新输入！</span>");  
     }
@@ -54,6 +58,7 @@ $(function(){
     if(strInput === "ENGLISH"){
       $("#p1d_text").html("<span style='color:green'>输入正确！</span>");  
       $(this).addClass("disabled");
+      checkPage(1);
     }else if(strInput.length == 7){
       $("#p1d_text").html("<span style='color:red'>输入错误，请重新输入！</span>");  
     }
