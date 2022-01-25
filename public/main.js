@@ -83,13 +83,9 @@ $(function(){
       setTimeout(function(){
         $("#p3_content").hide();
         $("#p4_content").show();
-        window.addEventListener("load", function(event) {
-          // Now $ or JQuery is completly available
-          // Now using JQuery.load() should be defined
-          $("#p4_content").load('pages/qualtrics.html');
-        });
-        
-      },5000);
+        $("#p4_content").load('qltcs.html');
+
+      },1000);
     }else if(strInput.length == 7){
       $("#p5d_text").html("<span style='color:red'>输入错误，请重新输入！</span>");  
     }
