@@ -79,7 +79,6 @@ $(function(){
     let strInput = $(this).val();
     if(strInput === "1111111"){
       $("#p5d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
-      $(this).addClass("disabled");
       setTimeout(function(){
         $("#p3_content").hide();
         $("#p4_content").show();
