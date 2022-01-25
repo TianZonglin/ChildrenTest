@@ -18,8 +18,18 @@ $(function(){
   
   $(".p1a").click(function(){$(this).addClass("disabled");checkOrder($(this).val())});
   $('#p1b').change(function(){
-      $("#p1b_text").html("<span style='color:red'>"+$(this).children('option:selected').val()));  //弹出select的值
+    let vle = $(this).children('option:selected').val();
+    if(vle === "18"){
+      $("#p1b_text").html("<span style='color:green'>回答正确！</span>");  
+    }else{
+      $("#p1b_text").html("<span style='color:red'>您选择的是 "+vle+"，请重新选择！</span>");  
+    }
   });
 
+  $('#p1c').on('input propertychange',function() {
+    var result = $(this).val();
+    console.log(result);
+ 
+  });
   
 });
