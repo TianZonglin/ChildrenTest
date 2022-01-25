@@ -30,6 +30,9 @@
 
   <!-- Show choice chart on poll submission -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  
   <script type="text/javascript">
     /*
     The chart uses chart.js - try tweaking the config!
@@ -148,10 +151,10 @@
         <!-- ADD LINK FROM TODO -->
       <div class="poll-form">
         <p>一、请在下面依次点击 <b>健 康 是 福</b> 四个汉字</p>
-        <input type="button" value="康" style="background-color:#65647c;color:white;height:49px;"/>&emsp;
-        <input type="button" value="是" style="background-color:#65647c;color:white;height:49px;"/>&emsp;
-        <input type="button" value="福" style="background-color:#65647c;color:white;height:49px;"/>&emsp;
-        <input type="button" value="健" style="background-color:#65647c;color:white;height:49px;"/>
+        <input id="p1a1" type="button" value="康" style="background-color:#65647c;color:white;height:49px;"/>&emsp;
+        <input id="p1a2" type="button" value="是" style="background-color:#65647c;color:white;height:49px;"/>&emsp;
+        <input id="p1a3" type="button" value="福" style="background-color:#65647c;color:white;height:49px;"/>&emsp;
+        <input id="p1a4" type="button" value="健" style="background-color:#65647c;color:white;height:49px;"/>
       </div>
       <br>
       <div class="poll-form">
@@ -201,5 +204,5 @@
     </a>
   </footer>
 </body>
-
+<script href="/main.js"></script>
 </html>
