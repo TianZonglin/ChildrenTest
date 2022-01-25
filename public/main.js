@@ -64,4 +64,10 @@ $(function(){
     }
   });
   
+  //page 2
+  $("#p1_button").click(function(){
+    $("#content").html("");
+ 
+    
+  });
 });

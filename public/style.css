@@ -180,7 +180,7 @@ h1 {
 .poll-form,
 .poll-results {
   background-color: #fbfafb;
-  padding: 0 16px 16px 16px;
+  padding: 1px 16px 16px 16px;
   border-radius: 8px;
 }
 .poll-form button:hover {
