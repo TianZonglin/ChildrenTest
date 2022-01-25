@@ -17,7 +17,9 @@ $(function(){
   
   
   $(".p1a").click(function(){$(this).addClass("disabled");checkOrder($(this).val())});
- 
+  $('#p1b').change(function(){
+      $("#p1b_text").html("<span style='color:red'>"+$(this).children('option:selected').val()));  //弹出select的值
+  });
 
   
 });
