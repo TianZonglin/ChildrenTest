@@ -74,5 +74,20 @@ $(function(){
     $("#p2_content").hide();
     $("#p3_content").show();
   });
+
+  $('#p5d').on('input propertychange',function() {
+    let strInput = $(this).val();
+    if(strInput === "1111111"){
+      $("#p5d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
+      $(this).addClass("disabled");
+      setTimeout(function(){
+        $("#p3_content").hide();
+        $("#p4_content").load('qualtrics.html');
+      },5000);
+    }else if(strInput.length == 7){
+      $("#p5d_text").html("<span style='color:red'>输入错误，请重新输入！</span>");  
+    }
+  });
+  
   
 });
