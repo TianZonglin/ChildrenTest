@@ -66,8 +66,11 @@ $(function(){
   
   //page 2
   $("#p1_button").click(function(){
-    $("#content").html("");
- 
-    
+    $("#content").html("").html(
+      "<h2>很好，你的鼠标和键盘功能正常！</h2><br>"+
+      "现在，刘老师正逐一帮助遇到问题的同学。<b>请你在座位上安静等待，不要提前进入下一页。</b>"+
+      "稍后，刘老师会带所有同学一起进入下一页。<br><br><br>"+
+      "<button id='p2_button'>下一页</button>"
+    );
   });
 });
