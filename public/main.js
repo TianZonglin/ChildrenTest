@@ -19,8 +19,8 @@ $(function(){
   function checkPage(rst){
     oPage += rst;
     if(oPage == 4){
-      $("#p1_text").html("<span style='color:green'>测试完成，请点击按钮进入下一页！</span>");
-      $("#p1_button").show();
+      $("#p1_text").css("visibility","visible");
+      $("#p1_button").css("visibility","visible");
       oPage = 0;
     }
     //alert($(this).val());
