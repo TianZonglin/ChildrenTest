@@ -5,7 +5,7 @@
     column-count: 5;
     column-width: 240px;
     column-gap: 20px;
-    padding:10px;
+
   }
   /* 每一列图片包含层 */
   .item {
@@ -64,6 +64,12 @@
     margin-bottom: 2px;
     
   }
+  .cnt{
+    background-color: #cdcdcd;
+    padding: 0px 6px;
+    border-radius: 3px;
+    color: #fbff00;
+  }
 </style>
 
 <script>
@@ -84,8 +90,8 @@
       网站中有三个问题，请大家使用鼠标或键盘来回答问题。如果这三道题你都做对，网站会自动跳转到下一页；否则，网站会提示你做错，然后让你继续做，直到你都做对。
     </div>
   
-    <div class="Btn">like&emsp;<button style="float:right">like&nbsp;<img class="imgbtn" src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png"/></button></div>
-    <div class="Btn">dislike&emsp;<button style="float:right">dislike&nbsp;<img class="imgbtn" src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png"/></button></div>
+    <div class="Btn">like&nbsp;<span class="cnt">0</span><button style="float:right">like&nbsp;<img class="imgbtn" src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png"/></button></div>
+    <div class="Btn">dislike&nbsp;<span class="cnt">0</span><button style="float:right">dislike&nbsp;<img class="imgbtn" src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png"/></button></div>
  
 
 
