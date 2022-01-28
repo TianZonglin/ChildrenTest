@@ -1,5 +1,13 @@
 <style>
-
+  .svgg{
+    display:inline-block
+  }
+  .svgg:hover, .svgg:hover{
+      color: #9A1A4A;
+  }
+  svg:hover {
+    fill: red;
+  }
 </style>
 
 
@@ -103,7 +111,7 @@
             eyes: eyes[Math.floor(Math.random() * eyes.length)],
             mouth: mouth[Math.floor(Math.random() * mouth.length)]
         });
-        $("#avat").append("<span style='display:inline-block'>"+svg+"<span>");
+        $("#avat").append("<a class='svgg'>"+svg+"</a>");
 
       }
     });
