@@ -3,6 +3,7 @@
     display:inline-block;
     margin-right: 9px;
     margin-bottom: 5px;
+    cursor: pointer;
   }
   .svgg:hover, .svgg:hover{
       color: #9A1A4A;
@@ -130,6 +131,12 @@
         $("#avat").append("<a class='svgg' value='"+arr.join(",")+"'>"+svg+"</a>");
 
       }
+    });
+    
+    
+    $('body').on('click', '.svgg',function(){
+      console.log(this.value);
+      console.log($(this).val());
     });
 
   })
