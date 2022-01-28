@@ -61,11 +61,11 @@
   </p><br>
   <div class="poll-form">
     <p>点击选择一个头像 <a id="reset" style="cursor: pointer; ">[重置]</a></p> 
-    这个头像将在“介绍环节”中代表你。<br><br>
+    这个头像将在“介绍环节”中代表你。&emsp;<span id="p10_text"></span><br><br>
     <div id="avat"></div>
     <br>
-
-    <button id="p9d">提交</button>
+    <button style="visibility:hidden">提交</button>
+    <button id="p10d" style="float:right;margin-right: 20px;">提交</button>
     
   </div>
   
@@ -78,9 +78,12 @@
   $("#p9d").click(function(){
     $("#p9_content").hide();
     $("#p10_content").show();
- 
-
   });
+  
+  
+  
+  
+  
 
   $(function(){
     
@@ -138,6 +141,7 @@
     
     $("body").on("click", ".svgg",function(){
       console.log($(this).attr("value"));
+      $("#p10_text").html("<span style='color:green'>选择成功，点击提交按钮！</span>");
     });
 
   })
