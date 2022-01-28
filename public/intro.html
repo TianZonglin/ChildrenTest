@@ -1,6 +1,8 @@
 <style>
   .svgg{
-    display:inline-block
+    display:inline-block;
+    margin-right: 9px;
+    margin-bottom: 5px;
   }
   .svgg:hover, .svgg:hover{
       color: #9A1A4A;
@@ -58,7 +60,7 @@
   </p><br>
   <div class="poll-form">
     <p>点击选择一个头像 <a id="reset" style="cursor: pointer; ">[重置]</a></p> 
-    这个头像将在“介绍环节”中代表你。
+    这个头像将在“介绍环节”中代表你。<br><br>
     <div id="avat"></div>
     
     
@@ -86,32 +88,46 @@
     let eyes = ["squint","closed","cry","eyeRoll","happy","hearts","side","surprised","wink","winkWacky","xDizzy"];
     let mouth = ["concerned","disbelief","eating","grimace","sad","screamOpen","serious","smile","tongue","twinkle","vomit"];
 
-    for(let i=0;i<100;i++){
-      var svg = Avataaars.create({
-          width: 60,
-          top: mtop[Math.floor(Math.random() * mtop.length)],
-          hairColor: hairColor[Math.floor(Math.random() * hairColor.length)],
-          clothing: clothing[Math.floor(Math.random() * clothing.length)],
-          clothingColor: clothingColor[Math.floor(Math.random() * clothingColor.length)],
-          eyes: eyes[Math.floor(Math.random() * eyes.length)],
-          mouth: mouth[Math.floor(Math.random() * mouth.length)]
-      });
-      $("#avat").append("<span style='display:inline-block'>"+svg+"<span>");
-      
-    }
-    $("#reset").click(function(){
-      $("#avat").html("");
-      for(let i=0;i<100;i++){
+      for(let i=0;i<99;i++){
+        let t = mtop[Math.floor(Math.random() * mtop.length)];
+        let h = hairColor[Math.floor(Math.random() * hairColor.length)];
+        let c = clothing[Math.floor(Math.random() * clothing.length)];
+        let cc = clothingColor[Math.floor(Math.random() * clothingColor.length)];
+        let e = eyes[Math.floor(Math.random() * eyes.length)];
+        let m = mouth[Math.floor(Math.random() * mouth.length)];
+        let arr = [t,h,c,cc,e,m];
         var svg = Avataaars.create({
             width: 60,
-            top: mtop[Math.floor(Math.random() * mtop.length)],
-            hairColor: hairColor[Math.floor(Math.random() * hairColor.length)],
-            clothing: clothing[Math.floor(Math.random() * clothing.length)],
-            clothingColor: clothingColor[Math.floor(Math.random() * clothingColor.length)],
-            eyes: eyes[Math.floor(Math.random() * eyes.length)],
-            mouth: mouth[Math.floor(Math.random() * mouth.length)]
+            top: t,
+            hairColor: h,
+            clothing: c,
+            clothingColor: cc,
+            eyes: e,
+            mouth: m
         });
-        $("#avat").append("<a class='svgg'>"+svg+"</a>");
+        $("#avat").append("<a class='svgg' value='"+arr.join(",")+"'>"+svg+"</a>");
+
+      }
+    $("#reset").click(function(){
+      $("#avat").html("");
+      for(let i=0;i<99;i++){
+        let t = mtop[Math.floor(Math.random() * mtop.length)];
+        let h = hairColor[Math.floor(Math.random() * hairColor.length)];
+        let c = clothing[Math.floor(Math.random() * clothing.length)];
+        let cc = clothingColor[Math.floor(Math.random() * clothingColor.length)];
+        let e = eyes[Math.floor(Math.random() * eyes.length)];
+        let m = mouth[Math.floor(Math.random() * mouth.length)];
+        let arr = [t,h,c,cc,e,m];
+        var svg = Avataaars.create({
+            width: 60,
+            top: t,
+            hairColor: h,
+            clothing: c,
+            clothingColor: cc,
+            eyes: e,
+            mouth: m
+        });
+        $("#avat").append("<a class='svgg' value='"+arr.join(",")+"'>"+svg+"</a>");
 
       }
     });
