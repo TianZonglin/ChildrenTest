@@ -63,7 +63,9 @@
     <p>点击选择一个头像 <a id="reset" style="cursor: pointer; ">[重置]</a></p> 
     这个头像将在“介绍环节”中代表你。<br><br>
     <div id="avat"></div>
-    
+    <br>
+
+    <button id="p9d">提交</button>
     
   </div>
   
@@ -134,9 +136,8 @@
     });
     
     
-    $('body').on('click', '.svgg',function(){
-      console.log(this.value);
-      console.log($(this).val());
+    $("body").on("click", ".svgg",function(){
+      console.log($(this).attr("value"));
     });
 
   })
