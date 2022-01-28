@@ -93,7 +93,10 @@
     let clothingColor = ["black","blue01","blue02","blue03","gray01","gray02","heather","pastelBlue","pastelGreen","pastelOrange","pastelRed","pastelYellow","pink","red","white"];
     let eyes = ["squint","closed","cry","eyeRoll","happy","hearts","side","surprised","wink","winkWacky","xDizzy"];
     let mouth = ["concerned","disbelief","eating","grimace","sad","screamOpen","serious","smile","tongue","twinkle","vomit"];
+    let background = ["#DD8FE4","#76D18D","#839BFF","#A59101","#8F69DB"];
 
+    
+    
       for(let i=0;i<99;i++){
         let t = mtop[Math.floor(Math.random() * mtop.length)];
         let h = hairColor[Math.floor(Math.random() * hairColor.length)];
@@ -101,7 +104,8 @@
         let cc = clothingColor[Math.floor(Math.random() * clothingColor.length)];
         let e = eyes[Math.floor(Math.random() * eyes.length)];
         let m = mouth[Math.floor(Math.random() * mouth.length)];
-        let arr = [t,h,c,cc,e,m];
+        let b = background[Math.floor(Math.random() * background.length)];
+        let arr = [t,h,c,cc,e,m,b];
         var svg = Avataaars.create({
             width: 60,
             top: t,
@@ -109,7 +113,9 @@
             clothing: c,
             clothingColor: cc,
             eyes: e,
-            mouth: m
+            mouth: m,
+            skin:"yellow",
+            background: b
         });
         $("#avat").append("<a class='svgg' value='"+arr.join(",")+"'>"+svg+"</a>");
 
@@ -123,7 +129,8 @@
         let cc = clothingColor[Math.floor(Math.random() * clothingColor.length)];
         let e = eyes[Math.floor(Math.random() * eyes.length)];
         let m = mouth[Math.floor(Math.random() * mouth.length)];
-        let arr = [t,h,c,cc,e,m];
+        let b = background[Math.floor(Math.random() * background.length)];
+        let arr = [t,h,c,cc,e,m,b];
         var svg = Avataaars.create({
             width: 60,
             top: t,
@@ -131,7 +138,9 @@
             clothing: c,
             clothingColor: cc,
             eyes: e,
-            mouth: m
+            mouth: m,
+            skin:"yellow",
+            background: b
         });
         $("#avat").append("<a class='svgg' value='"+arr.join(",")+"'>"+svg+"</a>");
 
