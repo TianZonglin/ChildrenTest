@@ -94,7 +94,15 @@ $(function(){
   $("#p7d").click(function(){
     $("#p7_content").hide();
     $("#p8_content").show();
-    $("#p8_content").load('intro.html');
+    //$("#p8_content").load('intro.html');
+
+  });
+  
+    //page 8
+  $("#p8d").click(function(){
+    $("#p8_content").hide();
+    $("#p9-15").show();
+    $("#p9-15").load('intro.html');
 
   });
 });
