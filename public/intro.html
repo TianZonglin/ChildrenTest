@@ -2,15 +2,7 @@
 
 </style>
 
-<script>
-      //page 9
-  $("#p9d").click(function(){
-    $("#p9_content").hide();
-    $("#p10_content").show();
- 
 
-  });
-</script>
 
 
 
@@ -59,7 +51,7 @@
   <div class="poll-form">
     <p>点击选择一个头像</p>
     这个头像将在“介绍环节”中代表你。
-    
+    <div id="avat"></div>
     
     
   </div>
@@ -67,3 +59,40 @@
 
 
 </div>
+
+<script>
+      //page 9
+  $("#p9d").click(function(){
+    $("#p9_content").hide();
+    $("#p10_content").show();
+ 
+
+  });
+
+  $(function(){
+    
+    let a = [dreads01, frizzle, shaggyMullet, shaggy, shortCurly, shortFlat, shortRound, sides, shortWaved, theCaesarAndSidePart, theCaesar, bigHair, bob, bun, curly, curvy, dreads, frida, froAndBand, fro, longButNotTooLong, miaWallace, shavedSides, straightAndStrand, straight01, eyepatch, turban, hijab, hat, winterHat01];
+    let a = [dauburn, black, blonde, brown, pastelPink, platinum, red, silverGray]
+    blazerAndShirt, blazerAndSweater, collarAndSweater, graphicShirt, hoodie, overall, shirtCrewNeck, shirtScoopNeck, shirtVNeck
+    black, blue01, blue02, blue03, gray01, gray02, heather, pastelBlue, pastelGreen, pastelOrange, pastelRed, pastelYellow, pink, red, white
+    squint, closed, cry, eyeRoll, happy, hearts, side, surprised, wink, winkWacky, xDizzy
+    concerned, default, disbelief, eating, grimace, sad, screamOpen, serious, smile, tongue, twinkle, vomit
+    
+    for(let i=0;i<10;i++){
+      var svg = Avataaars.create({
+          width: 60,
+          top: "",
+          eyes: "wink",
+          hair: "dreads",
+          hairColor: "red",
+          clothing: "hoodie"
+          clothingColor: "hoodie"
+      });
+      $("#avat").append(svg);
+      
+    }
+    
+
+  })
+  
+</script>
