@@ -64,31 +64,37 @@ $(function(){
     }
   });
   
-  //page 2
+  //page 3
   $("#p1_button").click(function(){
     $("#p1_content").hide();
-    $("#p2_content").show();
-  });
-  
-  $("#p2_button").click(function(){
-    $("#p2_content").hide();
     $("#p3_content").show();
   });
+  
+  $("#p3_button").click(function(){
+    $("#p3_content").hide();
+    $("#p4_content").show();
+  });
 
-  $('#p5d').on('input propertychange',function() {
+   //page 4
+  $('#p4d').on('input propertychange',function() {
     let strInput = $(this).val();
     if(strInput === "1111111"){
-      $("#p5d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
+      $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
       setTimeout(function(){
-        $("#p3_content").hide();
-        $("#p4_content").show();
-        $("#p4_content").load('qltcs.html');
-
+        $("#p4_content").hide();
+        $("#p7_content").show();
+  
       },1000);
     }else if(strInput.length == 7){
-      $("#p5d_text").html("<span style='color:red'>输入错误，请重新输入！</span>");  
+      $("#p4d_text").html("<span style='color:red'>输入错误，请重新输入！</span>");  
     }
   });
-  
-  
+ 
+  //page 7
+  $("#p7d").click(function(){
+    $("#p7_content").hide();
+    $("#p8_content").show();
+    $("#p8_content").load('intro.html');
+
+  });
 });
