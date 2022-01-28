@@ -71,22 +71,22 @@
 
   $(function(){
     
-    let a = [dreads01, frizzle, shaggyMullet, shaggy, shortCurly, shortFlat, shortRound, sides, shortWaved, theCaesarAndSidePart, theCaesar, bigHair, bob, bun, curly, curvy, dreads, frida, froAndBand, fro, longButNotTooLong, miaWallace, shavedSides, straightAndStrand, straight01, eyepatch, turban, hijab, hat, winterHat01];
-    let a = [dauburn, black, blonde, brown, pastelPink, platinum, red, silverGray]
-    blazerAndShirt, blazerAndSweater, collarAndSweater, graphicShirt, hoodie, overall, shirtCrewNeck, shirtScoopNeck, shirtVNeck
-    black, blue01, blue02, blue03, gray01, gray02, heather, pastelBlue, pastelGreen, pastelOrange, pastelRed, pastelYellow, pink, red, white
-    squint, closed, cry, eyeRoll, happy, hearts, side, surprised, wink, winkWacky, xDizzy
-    concerned, default, disbelief, eating, grimace, sad, screamOpen, serious, smile, tongue, twinkle, vomit
-    
-    for(let i=0;i<10;i++){
+    let mtop = ["dreads01","frizzle","shaggyMullet","shaggy","shortCurly","shortFlat","shortRound","sides","shortWaved","theCaesarAndSidePart","theCaesar","bigHair","bob","bun","curly","curvy","dreads","frida","froAndBand","fro","longButNotTooLong","miaWallace","shavedSides","straightAndStrand","straight01","eyepatch","turban","hijab","hat","winterHat01"];
+    let hairColor = ["dauburn","black","blonde","brown","pastelPink","platinum","red","silverGray"];
+    let clothing = ["blazerAndShirt","blazerAndSweater","collarAndSweater","graphicShirt","hoodie","overall","shirtCrewNeck","shirtScoopNeck","shirtVNeck"];
+    let clothingColor = ["black","blue01","blue02","blue03","gray01","gray02","heather","pastelBlue","pastelGreen","pastelOrange","pastelRed","pastelYellow","pink","red","white"];
+    let eyes = ["squint","closed","cry","eyeRoll","happy","hearts","side","surprised","wink","winkWacky","xDizzy"];
+    let mouth = ["concerned","disbelief","eating","grimace","sad","screamOpen","serious","smile","tongue","twinkle","vomit"];
+
+    for(let i=0;i<100;i++){
       var svg = Avataaars.create({
           width: 60,
-          top: "",
-          eyes: "wink",
-          hair: "dreads",
-          hairColor: "red",
-          clothing: "hoodie"
-          clothingColor: "hoodie"
+          top: mtop[Math.floor(Math.random() * mtop.length)],
+          hairColor: hairColor[Math.floor(Math.random() * hairColor.length)],
+          clothing: clothing[Math.floor(Math.random() * mtop.length)],
+          clothingColor: mtop[Math.floor(Math.random() * mtop.length)],
+          eyes: mtop[Math.floor(Math.random() * mtop.length)],
+          mouth: mtop[Math.floor(Math.random() * mtop.length)]
       });
       $("#avat").append(svg);
       
