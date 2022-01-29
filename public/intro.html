@@ -17,20 +17,20 @@
 
 
 
-<div id="p9_content">
+<div id="p8_content">
   <p>
-    page - 9
+    page - 8
   </p><br>
   <div class="poll-form">
     <p>请输入你的基本信息</p>
     请在给你的纸条上找到你的拼音首字母，并将其输入到下面的方框中。为保护你的隐私，你只需输入姓名的拼音首字母，而不是全名。例如，我的姓名是刘丹霓，拼音是 Liu Dan Ni，所以我的拼音首字母是LDN。
-    <input id="p9a" maxlength="4" type="text" style="background-color:#e1e1e1;color:#65647c;height:49px;width:100px;"/>&emsp;
-    <span id="p9a_text"></span>
+    <input id="p8a" maxlength="4" type="text" style="background-color:#e1e1e1;color:#65647c;height:49px;width:100px;"/>&emsp;
+    <span id="p8a_text"></span>
   </div>
   <br>
   <div class="poll-form">
     <p>请选择你的性别</p>
-    <select id="p9b" style="background-color:#e1e1e1;height:49px;width:85px;color:#65647c;border-radius:5px">
+    <select id="p8b" style="background-color:#e1e1e1;height:49px;width:85px;color:#65647c;border-radius:5px">
       <option value="0">点击选择</option>
       <option value="1">男</option>
       <option value="2">女</option>
@@ -39,7 +39,7 @@
   <br>
   <div class="poll-form">
     <p>请选择你的年龄</p>
-    <select id="p9c" style="background-color:#e1e1e1;height:49px;width:85px;color:#65647c;border-radius:5px">
+    <select id="p8c" style="background-color:#e1e1e1;height:49px;width:85px;color:#65647c;border-radius:5px">
       <option value="0">点击选择</option>
       <option value="9">9</option>
       <option value="10">10</option>
@@ -51,21 +51,21 @@
   </div>
   <br>
  
-  <button id="p9d">提交</button>
+  <button id="p8d">提交</button>
 </div>
 
 
-<div id="p10_content" style="display:none">
+<div id="p9_content" style="display:none">
   <p>
-    page - 10
+    page - 9
   </p><br>
   <div class="poll-form">
     <p>点击选择一个头像 <a id="reset" style="cursor: pointer; ">[重置]</a></p> 
-    这个头像将在“介绍环节”中代表你。&emsp;<span id="p10_text"></span><br><br>
+    这个头像将在“介绍环节”中代表你。&emsp;<span id="p9_text"></span><br><br>
     <div id="avat"></div>
     <br>
     <button style="visibility:hidden">提交</button>
-    <button id="p10d" style="float:right;margin-right: 20px;">提交</button>
+    <button id="p9d" style="float:right;margin-right: 20px;">提交</button>
     
   </div>
   
@@ -76,13 +76,13 @@
 
 <script>
       //page 9
-  $("#p9d").click(function(){
-    $("#p9_content").hide();
-    $("#p10_content").show();
+  $("#p8d").click(function(){
+    $("#p8_content").hide();
+    $("#p9_content").show();
   });
   
-  $("#p10d").click(function(){
-    $("#p10_content").hide();
+  $("#p9d").click(function(){
+    $("#p9_content").hide();
     $("#2ndiv").show();
     $("#2ndiv").load("itact.html");
   });
@@ -155,7 +155,7 @@
     
     $("body").on("click", ".svgg",function(){
       console.log($(this).attr("value"));
-      $("#p10_text").html("<span style='color:green'>选择成功，点击提交按钮！</span>");
+      $("#p9_text").html("<span style='color:green'>选择成功，点击提交按钮！</span>");
     });
 
   })
