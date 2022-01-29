@@ -125,14 +125,13 @@
   
   let selectNum = 0;
   $(".blocks").click(function(){
-    .css("disabled");
     selectNum += 1;
     if(selectNum >= 6){
-      $(".blocks").attr("disabled", true);
-    }else{
       
+    }else{
+      $(this).toggleClass("blockLight");
     }
-    $(this).toggleClass("blockLight");
+    
   });
   
   
