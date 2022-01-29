@@ -200,7 +200,9 @@
     <p><b>“建立连接中...</b></p>
     请稍等，你正在与其他学校的五年级学生建立连接。这可能需要几分钟。
     <br>
-    ...连接成功，可以开始。<br>
+    <div id="p15_img"><img src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/abc.gif"/></div>
+    <br>
+    <span style="color:green" id="p15_text"></span>
     <button style="visibility:hidden">继续</button>
     <button id="p15d" style="float:right;margin-right: 20px;">继续</button>
   </div>
@@ -240,6 +242,11 @@
   $("#p14d").click(function(){
     $("#p14_content").hide();
     $("#p15_content").show();
+    setTimeout(function(){
+      $("#p15_img").html("<img src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/abc.png'/>");
+      $("#p15_content").html("...连接成功，可以开始。");
+    },4000);
+     
   });
   $("#p15d").click(function(){
     $("#p15_content").hide();
