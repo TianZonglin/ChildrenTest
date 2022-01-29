@@ -11,6 +11,10 @@
   svg:hover {
     fill: red;
   }
+  
+  .blocks{
+    border: 2px solid;
+  }
 </style>
 
 
@@ -75,15 +79,15 @@
     page - 10
   </p><br>
   <div class="poll-form">
-    <p>请选择六个主题来向别人介绍你自己</p> 
+    <p><b>请选择六个主题来向别人介绍你自己</b></p> 
     下面是小学生在自我介绍时经常使用的10个主题。<b>请选择 6 个你愿意分享的主题</b>，来向其他同学介绍自己。
     <br>
     <p>点击选择主题</p> 
-    <a>性格	爱好	理想工作	最喜欢的歌手	最喜欢的演员	最喜欢的网络游戏
-最喜欢的书	最喜欢的电视节目或电影	最喜欢的食物或零食	最不喜欢的食物	最喜欢的动物
+    <a class="blocks">性格</a><a class="blocks">爱好</a><a class="blocks">理想工作</a><a class="blocks">最喜欢的歌手</a><a class="blocks">最喜欢的演员</a><a class="blocks">最喜欢的网络游戏</a>
+    <a class="blocks">最喜欢的书</a><a class="blocks">最喜欢的电视节目或电影</a><a class="blocks">最喜欢的食物或零食</a><a class="blocks">最不喜欢的食物</a><a class="blocks">最喜欢的动物</a> 
     <br>
     <button style="visibility:hidden">提交</button>
-    <button id="p9d" style="float:right;margin-right: 20px;">提交</button>
+    <button id="p10d" style="float:right;margin-right: 20px;">提交</button>
     
   </div>
 </div>
@@ -100,8 +104,7 @@
   
   $("#p9d").click(function(){
     $("#p9_content").hide();
-    $("#2ndiv").show();
-    $("#2ndiv").load("itact.html");
+    $("#p10_content").show();
   });
   
   
