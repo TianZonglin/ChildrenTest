@@ -187,13 +187,26 @@
   </p><br>
   <div class="poll-form">
     <p><b>“认识人网”新手引导</b></p>
-    欢迎来到“认识人网”新手引导！此引导将帮你快速熟悉“认识人网”的重要功能。
+    此引导将帮你快速熟悉“认识人网”的重要功能。清楚以下功能介绍后，点击继续按钮进入系统。<br>
     <button style="visibility:hidden">继续</button>
     <button id="p14d" style="float:right;margin-right: 20px;">继续</button>
   </div>
 </div>
+<div id="p15_content" style="display:none">
+  <p>
+    page - 15 16
+  </p><br>
+  <div class="poll-form">
+    <p><b>“建立连接中...</b></p>
+    请稍等，你正在与其他学校的五年级学生建立连接。这可能需要几分钟。
+    <br>
+    ...连接成功，可以开始。<br>
+    <button style="visibility:hidden">继续</button>
+    <button id="p15d" style="float:right;margin-right: 20px;">继续</button>
+  </div>
+</div>
 
-
+ 
 
 
 
@@ -223,6 +236,14 @@
   $("#p13d").click(function(){
     $("#p13_content").hide();
     $("#p14_content").show();
+  });
+  $("#p14d").click(function(){
+    $("#p14_content").hide();
+    $("#p15_content").show();
+  });
+  $("#p15d").click(function(){
+    $("#p15_content").hide();
+    $("#2ndiv").load("itact.html");
   });
   
   let selectNum = 0;
