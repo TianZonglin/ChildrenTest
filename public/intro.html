@@ -123,9 +123,21 @@
     $("#p10_content").show();
   });
   
+  let selectNum = 0;
   $(".blocks").click(function(){
+    .css("disabled");
+    selectNum += 1;
+    if(selectNum >= 6){
+      $(".blocks").attr("disabled", true);
+    }else{
+      
+    }
     $(this).toggleClass("blockLight");
   });
+  
+  
+  
+  
   
 
   $(function(){
