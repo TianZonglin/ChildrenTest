@@ -144,7 +144,7 @@
 </div>
 <div id="p11_content" style="display:none">
   <p>
-    page - 11
+    page - 11 12
   </p><br>
   <div class="poll-form">
     <p><b>请为每个主题选择1个最能代表你/最符合你的答案</b></p> 
@@ -165,6 +165,37 @@
     
   </div>
 </div>
+<div id="p13_content" style="display:none">
+  <p>
+    page - 13
+  </p><br>
+  <div class="poll-form">
+    <p><b>马上，你将进入介绍环节</b></p>
+    你的任务是浏览其他学生的个人简介，并做出反应——<b>你可以给你喜欢的个人简介点“赞”（👍），或给你不喜欢的个人简介点“踩”（👎）。</b>这里的“赞”和“踩”按钮类似于抖音和百度等常见网站中的“赞”（也叫“顶”）和“踩”按钮。
+    <br>
+    到时，请试着想象这些学生在现实生活中的样子。例如，如果能见到他们，你会想和谁交朋友。<b>介绍环节将持续3分钟，到时请集中注意，认真参与。</b>
+    <br>
+    <b>进入介绍环节前，请浏览新手引导。</b>
+    <button style="visibility:hidden">继续</button>
+    <button id="p13d" style="float:right;margin-right: 20px;">继续</button>
+
+  </div>
+</div>
+<div id="p14_content" style="display:none">
+  <p>
+    page - 14
+  </p><br>
+  <div class="poll-form">
+    <p><b>“认识人网”新手引导</b></p>
+    欢迎来到“认识人网”新手引导！此引导将帮你快速熟悉“认识人网”的重要功能。
+    <button style="visibility:hidden">继续</button>
+    <button id="p14d" style="float:right;margin-right: 20px;">继续</button>
+  </div>
+</div>
+
+
+
+
 
 <div id="2ndiv"></div>
 
@@ -183,6 +214,15 @@
   $("#p10d").click(function(){
     $("#p10_content").hide();
     $("#p11_content").show();
+  });
+  
+  $("#p11d").click(function(){
+    $("#p11_content").hide();
+    $("#p13_content").show();
+  });
+  $("#p13d").click(function(){
+    $("#p13_content").hide();
+    $("#p14_content").show();
   });
   
   let selectNum = 0;
