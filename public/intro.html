@@ -25,7 +25,7 @@
   }
   .blocks:hover { 
     background-color: rgb(175,175,214);
-    color:rgb(255, 255, 250);
+    color:white;
   }
   .blockLight { 
     background-color: rgb(175,175,214);
@@ -97,8 +97,9 @@
   <div class="poll-form">
     <p><b>请选择六个主题来向别人介绍你自己</b></p> 
     下面是小学生在自我介绍时经常使用的10个主题。<b>请选择 6 个你愿意分享的主题</b>，来向其他同学介绍自己。
-    <br>
-    <p>点击选择主题</p> 
+    <br><br>
+    <span><b>点击选择主题</b></span> &emsp;<span id="blocktext"></span>
+    <br><br>
     <a class="blocks">性格</a><a class="blocks">爱好</a><a class="blocks">理想工作</a><a class="blocks">最喜欢的歌手</a><a class="blocks">最喜欢的演员</a><a class="blocks">最喜欢的网络游戏</a>
     <a class="blocks">最喜欢的书</a><a class="blocks">最喜欢的电视节目或电影</a><a class="blocks">最喜欢的食物或零食</a><a class="blocks">最不喜欢的食物</a><a class="blocks">最喜欢的动物</a> 
     <br>
@@ -126,13 +127,19 @@
   let selectNum = 0;
   $(".blocks").click(function(){
     console.log($(this).css("color"));
-    if($(this).css("color")=="rgb(255, 255, 255)"){
+    if($(this).val()=="selected"){
       selectNum -= 1;
+      $(this).val("");
       $(this).toggleClass("blockLight");
     }else if(selectNum < 6){
       selectNum += 1;
-      $(this).value
+      $(this).val("selected");
       $(this).toggleClass("blockLight");
+    }
+    if(selectNum === 6){
+      $("#blocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
+    }else{
+      $("#blocktext").html("");
     }
   });
   
