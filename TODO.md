@@ -32,6 +32,7 @@ The homepage shows votes cast so far when the user completes the poll, but you c
 ```
 // User requested results
 params.results = request.query.results;
+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
 ```
 
 Click the __Show results__ link to see the results without voting!
