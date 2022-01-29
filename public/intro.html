@@ -25,7 +25,7 @@
   }
   .blocks:hover { 
     background-color: rgb(175,175,214);
-    color:white;
+    color:rgb(255, 255, 250);
   }
   .blockLight { 
     background-color: rgb(175,175,214);
@@ -125,13 +125,15 @@
   
   let selectNum = 0;
   $(".blocks").click(function(){
-    selectNum += 1;
-    if(selectNum >= 6){
-      
-    }else{
+    console.log($(this).css("color"));
+    if($(this).css("color")=="rgb(255, 255, 255)"){
+      selectNum -= 1;
+      $(this).toggleClass("blockLight");
+    }else if(selectNum < 6){
+      selectNum += 1;
+      $(this).value
       $(this).toggleClass("blockLight");
     }
-    
   });
   
   
