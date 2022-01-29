@@ -102,7 +102,8 @@
     <a class="blocks">性格</a><a class="blocks">爱好</a><a class="blocks">理想工作</a><a class="blocks">最喜欢的歌手</a><a class="blocks">最喜欢的演员</a><a class="blocks">最喜欢的网络游戏</a>
     <a class="blocks">最喜欢的书</a><a class="blocks">最喜欢的电视节目或电影</a><a class="blocks">最喜欢的食物或零食</a><a class="blocks">最不喜欢的食物</a><a class="blocks">最喜欢的动物</a> 
     <br>
-    <button id="p10d" style="">提交</button>
+    <button style="visibility:hidden">提交</button>
+    <button id="p10d" style="float:right;margin-right: 20px;">提交</button>
     
   </div>
 </div>
@@ -123,7 +124,7 @@
   });
   
   $(".blocks").click(function(){
-    $(this).toggleClass();
+    $(this).toggleClass("blockLight");
   });
   
 
