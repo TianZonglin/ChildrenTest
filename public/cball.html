@@ -38,61 +38,17 @@
   <script src="/avataaars.js"></script>
   
   <script type="text/javascript">
-    /*
-    The chart uses chart.js - try tweaking the config!
-    https://www.chartjs.org/docs/3.0.2/charts/doughnut.html
     
-    We pass the choices and picks arrays from the page when the server script returns them
-    */
-    function showChart(choices, picks) {
-      
-      // Get the page element to show the chart inside
-      var ctx = document.getElementById('myChart');
-      
-      // Set up the chart colors
-      var colors = ["#05DA84", "#E6E656", "#E5AED6"];
-      var border = "#ffffff";
-      
-      // Make sure we have some votes–if not show an empty chart
-      if(picks.reduce((a, b) => a + b, 0)<1) {
-        picks=["1e-10"]; // use a near zero value so that the doughnut displays
-        choices=["No votes! Reload and vote again."];
-        colors=["#00000000"]; // we'll show an empty doughnut shape
-        border=["#000000"];
-      }
-      
-      // Build the chart in the page element
-      var myLineChart = new Chart(ctx, {
-        type: "doughnut",
-        data: {
-          labels: choices,
-          datasets: [{
-            data: picks,
-            backgroundColor: colors,
-            borderColor: border,
-            fill: true,
-            hoverOffset: 12,
-            cutout: "60%"
-          }]
-        },
-        options: {
-          plugins: {
-            legend: {
-              display: true,
-              position: "bottom",
-              labels: {
-                padding: 24
-              }
-            }
-          },
-          layout: {
-            padding: 24
-          }
-        }
-      });
-    }
+    $(function() {
+      //find iframe
+      let iframe = $('#main_iframe');
+      //find button inside iframe
+      let button = iframe.contents().find('#main_button');
+      //trigger button click
+      button.trigger("click");
+
+    });
     
- 
   </script>
 
 </head>
@@ -117,8 +73,8 @@
           <br><p>这是一个能让人体验在网络上抛球的网站。</p>
           你将继续与其他学校的学生随机组队，三人一组来测试网站。这个网站测试很简单，当球扔给你的时候，你点击其他学生的头像，就可以把球扔给其他学生。你想扔给谁都行。这个游戏持续大概2-3分钟。
           <br><br>准备好后，点击下方开始按钮开始<br><br>
-          <iframe  width="100%" height="430" style="border:none;" src="https://cyberball.empirisoft.com/web?cbe=2d773911-3fd0-40cb-9109-387569bc4d2a&condition=1&pid=">
-          </iframe><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <iframe  width="100%" height="432" style="border:none;" src="https://cyberball.empirisoft.com/web?cbe=2d773911-3fd0-40cb-9109-387569bc4d2a&condition=1&pid=">
+          </iframe><br>
         </div>
        </div>
     </div>
