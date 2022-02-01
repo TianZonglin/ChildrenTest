@@ -103,7 +103,7 @@
             </div>
           </div>
           <br>
-          <div style="text-align:center;margin:0px auto;width:300px;height:30px;color:rgb(255,95,95)" id="tptext"></div>
+          <div style="text-align:center;margin:0px auto;width:300px;height:30px;color:rgb(255,95,95);font-weight:900" id="tptext"></div>
           <br>
           <button style="visibility:hidden">继续</button>
           <button id="p27d" style="float:right;margin-right: 0px;">下一页</button><br> 
@@ -161,18 +161,29 @@
 <script src="/main.js"></script>
 </html>
 <script type="text/javascript">
-  $("#p31d").click(function(){
-    $("#p31_content").hide();
-    $("#p34_content").show();
-  });
-  setTimeout(function(){
-    $("#p31d").css("visibility","visible");
-  }, 60000);
   $(function(){
+    
+    $("#p31d").click(function(){
+      $("#p31_content").hide();
+      $("#p34_content").show();
+    });
+    
+    $("#p31d").click(function(){
+      $("#p31_content").hide();
+      $("#p34_content").show();
+    });
+    
+    setTimeout(function(){
+      $("#p31d").css("visibility","visible");
+    }, 60000);
+  
+    
+    const NUMBER = 1234;
     
     let timer = document.querySelector("#timer");
     let number = 15;
     $("#startt").click(function(){
+      $("#timer").css("color","rgb(255,95,95)");
       let sid = setInterval(function(){
         number -- ;
         if(number <= 0 ){
@@ -189,6 +200,7 @@
       });
       $("#tp2").click(function(){
         $("#timer").text("0");
+        $("#tpcnt").text(NUMBER);
         $("#tp1").unbind("click");
         $("#tp3").unbind("click"); 
         $("#tptext").text("您已弃权，无法继续投票！");
@@ -201,7 +213,10 @@
     });
  
     $("#avatt").html( Avataaars.create({width:50}) );
-    $("#tpcnt").text(1234);
+    
+    
+    
+    $("#tpcnt").text(NUMBER);
 
     
 
