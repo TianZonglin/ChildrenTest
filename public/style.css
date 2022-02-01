@@ -12,7 +12,9 @@
   width: 800px;
 }
 
-
+.rzone{
+  min-height: 640px;
+}
 
 /******************************************************************************
 START Glitch hello-app default styles
