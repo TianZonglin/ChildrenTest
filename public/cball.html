@@ -170,25 +170,33 @@
   }, 60000);
   $(function(){
     
-    var timer = document.querySelector("#timer");
-    var number = 15;
-    setInterval(function(){
-      number -- ;
-      if(number <= 0 )
-        number = 0;
-      timer.innerText = number + 0 }, 
-    1000);
+    let timer = document.querySelector("#timer");
+    let number = 15;
+
     
     $("#avatt").html( Avataaars.create({width:50}) );
     $("#tpcnt").text(1234);
     $("#tp1").click(function(){
-      $("#tpcnt").text(parseInt($("#tpcnt").text())-1);
+  
+      if($(this).val() == 1){
+        $("#tpcnt").text(parseInt($("#tpcnt").text())-1);
+      }else{
+        $(this).val(1);
+        let sid = setInterval(function(){
+          number -- ;
+          if(number <= 0 )
+            number = 0;
+          timer.innerText = number + 0 }, 
+        1000);
+      }
+      
     });
     $("#tp2").click(function(){
       $("#timer").text("0");
       $("#tp1").unbind("click");
       $("#tp3").unbind("click"); 
       $("#tptext").text("您已弃权，无法继续投票！");
+      clearInterval(sid);
     });
     $("#tp3").click(function(){
       $("#tpcnt").text(parseInt($("#tpcnt").text())+1);
