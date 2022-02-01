@@ -88,19 +88,17 @@
               <div style="box-shadow: 2px 2px 0px 0px #c4c4c4;margin:0px auto;width:90px;height:30px;line-height:30px;background-color:rgb(255,95,95);color:white;border-radius:0px 0px 10px 10px;">
               计票器
               </div>
-              <div style="margin:5px auto;width:130px;height:60px;line-height:60px;font-size:50px;font-weight:900">
-              1234
-              </div>
+              <div style="margin:5px auto;width:130px;height:60px;line-height:60px;font-size:50px;font-weight:900" id="tpcnt"></div>
             </div>
             <div style="margin:0px auto;width:260px;height:50px;">
               <div style="float:left;width:33.33333%;padding:0px 6px 0px 0px;">
-                <div class="p2s3">-</div>
+                <div class="p2s3" id="tp1">-</div>
               </div>
               <div style="float:left;width:33.33333%;padding:0px 3px 0px 3px;">
-                <div class="p2s3">弃权</div>
+                <div class="p2s3" id="tp2">弃权</div>
               </div>
               <div style="float:right;width:33.33333%;padding:0px 0px 0px 6px;">
-                <div class="p2s3">+</div>
+                <div class="p2s3" id="tp3">+</div>
               </div>
             </div>
           </div>
@@ -170,5 +168,6 @@
   }, 60000);
   $(function(){
     $("#avatt").html( Avataaars.create({width:50}) );
+    $("#tpcnt").text(1234);
   });
 </script>
