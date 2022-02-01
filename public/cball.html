@@ -38,7 +38,7 @@
   <style>
     .p2s3{
       text-align:center;
-      border:2px rgb(168,168,168) solid;
+      border:1px rgb(174,174,174) solid;
       height:30px;
       line-height:26px;
       width:100%;
@@ -47,7 +47,7 @@
       color:rgb(255,95,95);
       font-weight:900;
       cursor:pointer;
-      user-select:none;
+      box-shadow: 1px 1px 0px 0px #c4c4c4;
     }
   </style>
   
@@ -72,13 +72,13 @@
           <br><br>点击按钮开始15秒倒计时。
           <br><br>
        
-          <div style="margin:0px auto;width:300px;height:180px;border:1px rgb(255,95,95) solid;border-radius:20px;background-color:rgb(255,95,95)">
-            <div style="margin:15px auto;text-align:center;width:260px;height:100px;border-radius:10px;background-color:rgb(249,249,249)">
-              <div style="margin:0px auto;width:90px;height:30px;line-height:30px;background-color:rgb(255,95,95);color:white;border-radius:0px 0px 10px 10px;">
+          <div style="box-shadow: 2px 2px 0px 0px #c4c4c4;user-select:none;margin:0px auto;width:300px;height:180px;border:1px rgb(255,95,95) solid;border-radius:20px;background-color:rgb(255,95,95)">
+            <div style="box-shadow: inset 2px 2px 0px 0px #c4c4c4;margin:15px auto;text-align:center;width:260px;height:100px;border-radius:10px;background-color:rgb(249,249,249)">
+              <div style="box-shadow: 2px 2px 0px 0px #c4c4c4;margin:0px auto;width:90px;height:30px;line-height:30px;background-color:rgb(255,95,95);color:white;border-radius:0px 0px 10px 10px;">
               计票器
               </div>
-              <div style="margin:5px auto;width:130px;height:60px;line-height:60px;background-color:rgb(255,95,95)">
-              撒大声地
+              <div style="margin:5px auto;width:130px;height:60px;line-height:60px;font-size:50px;font-weight:900">
+              1234
               </div>
             </div>
             <div style="margin:0px auto;width:260px;height:50px;">
@@ -93,9 +93,10 @@
               </div>
             </div>
           </div>
-          
- 
           <br><br>
+          <button style="visibility:hidden">继续</button>
+          <button id="p27d" style="float:right;margin-right: 0px;">点此结束</button><br><br>
+          
         </div>
        </div> 
 
