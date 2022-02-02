@@ -1,5 +1,7 @@
 $(function(){
   
+  $("#version").html(new Date().toString().substring(4,15).replaceAll(" ",".").replaceAll("Feb","2").replaceAll("Mar","3"));
+  
   let oString = "";
   let oPage = 0;
   function checkOrder(str){

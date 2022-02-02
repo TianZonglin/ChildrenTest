@@ -167,6 +167,11 @@ h1 {
   margin: 2rem 0 0;
 }
 
+h3 {
+  color: #65647c;
+ 
+}
+
 /* Very light scaling for our illustration */
 .illo-container {
   display: flex;
