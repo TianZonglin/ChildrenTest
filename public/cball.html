@@ -1,165 +1,108 @@
 
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="{{site.ico}}" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>{{site.title}}</title>
-
-  <!-- Meta tags for SEO and social sharing -->
-  <link rel="canonical" href="{{site.url}}">
-  <meta name="description" content="{{site.description}}">
-  <meta property="og:title" content="{{site.title}}">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="{{site.url}}">
-  <meta property="og:description" content="{{site.description}}">
-  <meta property="og:image" content="{{site.image}}">
-  <meta name="twitter:card" content="summary">
-
-  <!-- Import the webpage's stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
+<style>
+  .p2s3{
+    text-align:center;
+    border:1px rgb(174,174,174) solid;
+    height:30px;
+    line-height:26px;
+    width:100%;
+    border-radius:10px;
+    background-color:rgb(236,236,236);
+    color:rgb(255,95,95);
+    font-weight:900;
+    cursor:pointer;
+    box-shadow: 1px 1px 0px 0px #c4c4c4;
+  }
+</style>
   
-
-  <!-- Show choice chart on poll submission -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/avataaars.js"></script>
-  
-
-
-</head>
-
-  
-  <style>
-    .p2s3{
-      text-align:center;
-      border:1px rgb(174,174,174) solid;
-      height:30px;
-      line-height:26px;
-      width:100%;
-      border-radius:10px;
-      background-color:rgb(236,236,236);
-      color:rgb(255,95,95);
-      font-weight:900;
-      cursor:pointer;
-      box-shadow: 1px 1px 0px 0px #c4c4c4;
-    }
-  </style>
-  
-<body>
-  <div class="wrapper">
-    <div class="content" role="main">
-
-      <!-- This is the start of content for our page -->
-      <h1>认识更多小朋友</h1>
-      <div class="rzone" id="p27_content" style="">
-        <p>
-          Here is the explaination for this page. 27
-        </p>
-        <h2>
-          【名字】最近在参加一个才艺比赛
-        </h2>
-        <div class="poll-form">
-          <br>
-          为赢得“花园镇月才艺之星”的称号，【名字】正尽全力在网上拉票。【名字】非常重视这个比赛。赢了的话，他/她非常会开心。输了的话，他/她会非常难过。
-          <br><br>下面是【名字】的计票器。你可以点击计票器下方的“+”按钮使他/她的票数增加，或点击“–”按钮他/她的票数减少。你也可以点击中间的“弃权”按钮使他/她的票数保持不变。
-          <br><br>请注意，你仅有15秒的时间来点击按钮。在这15秒内，你可以多次反复点击计票器下方的按钮来改变【名字】的票数。15秒结束后，网页将自动跳到下一页。
-          <br><br><button id="startt">点击此处开始15秒倒计时</button>
-          <br><br>
-          <div style="margin-left:225px;">
-            <div style="float:left;height:70px;line-height:60px;text-align:center;font-size:20px;font-weight:900">
-              给 
-            </div>
-            <div  style="float:left;">
-              <span id="avatt"></span>
-            </div>
-            <div style="float:left;height:70px;line-height:60px;text-align:center;font-size:20px;font-weight:900">
-              [ 名字 ] 投票，你还剩 <span id="timer">15</span> 秒
-            </div>
-          </div>
-          <div style="clear:both"></div>
-          <div style="box-shadow: 2px 2px 0px 0px #c4c4c4;user-select:none;margin:0px auto;width:300px;height:180px;border:1px rgb(255,95,95) solid;border-radius:20px;background-color:rgb(255,95,95)">
-            <div style="box-shadow: inset 2px 2px 0px 0px #c4c4c4;margin:15px auto;text-align:center;width:260px;height:100px;border-radius:10px;background-color:rgb(249,249,249)">
-              <div style="box-shadow: 2px 2px 0px 0px #c4c4c4;margin:0px auto;width:90px;height:30px;line-height:30px;background-color:rgb(255,95,95);color:white;border-radius:0px 0px 10px 10px;">
-              计票器
-              </div>
-              <div style="margin:5px auto;width:130px;height:60px;line-height:60px;font-size:50px;font-weight:900" id="tpcnt"></div>
-            </div>
-            <div style="margin:0px auto;width:260px;height:50px;">
-              <div style="float:left;width:33.33333%;padding:0px 6px 0px 0px;">
-                <div class="p2s3" id="tp1">-</div>
-              </div>
-              <div style="float:left;width:33.33333%;padding:0px 3px 0px 3px;">
-                <div class="p2s3" id="tp2">弃权</div>
-              </div>
-              <div style="float:right;width:33.33333%;padding:0px 0px 0px 6px;">
-                <div class="p2s3" id="tp3">+</div>
-              </div>
-            </div>
-          </div>
-          <br>
-          <div style="text-align:center;margin:0px auto;width:300px;height:30px;color:rgb(255,95,95);font-weight:900" id="tptext"></div>
-          <br>
-          <button style="visibility:hidden">继续</button>
-          <button id="p27d" style="float:right;margin-right: 0px;">下一页</button><br> 
-        </div>
-       </div> 
-
-        <!-- ADD LINK FROM TODO -->
-      <div class="rzone" id="p31_content"  style="display:none">
-        <p>
-          Here is the explaination for this page. 31
-        </p>
-        <h2>
-          最后，我们要测试另一个网站 - 在线抛球!
-        </h2>
-        <div class="poll-form">
-          <br><p>这是一个能让人体验在网络上抛球的小游戏。</p>
-          你将继续与其他学校的学生随机组队，三人一组来测试网站。这个网站测试很简单，当球扔给你的时候，你点击其他学生的头像，就可以把球扔给其他学生。你想扔给谁都行。这个游戏持续大概2-3分钟。
-          <br><br>准备好后，点击下方 [ PLAY ] 按钮开始<br><br>
-          <iframe id="ifr" width="100%" height="432" style="border:none;" src="https://cyberball.empirisoft.com/web?cbe=2d773911-3fd0-40cb-9109-387569bc4d2a&condition=1&pid=">
-          </iframe><br><br>
-          <button style="visibility:hidden">继续</button>
-          <button id="p31d" style="float:right;margin-right: 0px;visibility:hidden;">点此结束</button><br><br>
-        </div>
-       </div>
-      <div class="rzone" id="p34_content" style="display:none">
-        <p>
-          Here is the explaination for this page. 34
-        </p>
-        <h2>
-          你已完成所有内容，谢谢！
-        </h2>
-        <div class="poll-form">
-          <br>
-          为避免干扰其他未完成的学生，请在座位上坐好并安静等待，不要和周围同学讲话，<b>不要关闭此页面！</b>
-          <br>所有学生都完成之后，刘老师会和大家一起结束，然后分发礼物。
-          <br><br><b>有问题请举手，刘老师会过来回答你的问题。</b>
-          <br><br>
-        </div>
-       </div> 
-
+<div class="rzone" id="p27_content" style="">
+  <p>
+    Here is the explaination for this page. 27
+  </p>
+  <h2>
+    【名字】最近在参加一个才艺比赛
+  </h2>
+  <div class="poll-form">
+    <br>
+    为赢得“花园镇月才艺之星”的称号，【名字】正尽全力在网上拉票。【名字】非常重视这个比赛。赢了的话，他/她非常会开心。输了的话，他/她会非常难过。
+    <br><br>下面是【名字】的计票器。你可以点击计票器下方的“+”按钮使他/她的票数增加，或点击“–”按钮他/她的票数减少。你也可以点击中间的“弃权”按钮使他/她的票数保持不变。
+    <br><br>请注意，你仅有15秒的时间来点击按钮。在这15秒内，你可以多次反复点击计票器下方的按钮来改变【名字】的票数。15秒结束后，网页将自动跳到下一页。
+    <br><br><button id="startt">点击此处开始15秒倒计时</button>
+    <br><br>
+    <div style="margin-left:225px;">
+      <div style="float:left;height:70px;line-height:60px;text-align:center;font-size:20px;font-weight:900">
+        给 
+      </div>
+      <div  style="float:left;">
+        <span id="avatt"></span>
+      </div>
+      <div style="float:left;height:70px;line-height:60px;text-align:center;font-size:20px;font-weight:900">
+        [ 名字 ] 投票，你还剩 <span id="timer">15</span> 秒
+      </div>
     </div>
- 
-  </div><br><br>
-  <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
-  <footer class="footer">
-    <div class="links"></div>
-    <a href="/">Home</a>
-    <span class="divider">|</span>
-    <a href="/logs">Admin</a>
-    <a class="corner--remix" target="_top" href="#">
-      Powered by Glitch <span class="divider">|</span> Designed by Universiteit Utrecht
-    </a>
-  </footer>
-</body>
-<script src="/main.js"></script>
-</html>
+    <div style="clear:both"></div>
+    <div style="box-shadow: 2px 2px 0px 0px #c4c4c4;user-select:none;margin:0px auto;width:300px;height:180px;border:1px rgb(255,95,95) solid;border-radius:20px;background-color:rgb(255,95,95)">
+      <div style="box-shadow: inset 2px 2px 0px 0px #c4c4c4;margin:15px auto;text-align:center;width:260px;height:100px;border-radius:10px;background-color:rgb(249,249,249)">
+        <div style="box-shadow: 2px 2px 0px 0px #c4c4c4;margin:0px auto;width:90px;height:30px;line-height:30px;background-color:rgb(255,95,95);color:white;border-radius:0px 0px 10px 10px;">
+        计票器
+        </div>
+        <div style="margin:5px auto;width:130px;height:60px;line-height:60px;font-size:50px;font-weight:900" id="tpcnt"></div>
+      </div>
+      <div style="margin:0px auto;width:260px;height:50px;">
+        <div style="float:left;width:33.33333%;padding:0px 6px 0px 0px;">
+          <div class="p2s3" id="tp1">-</div>
+        </div>
+        <div style="float:left;width:33.33333%;padding:0px 3px 0px 3px;">
+          <div class="p2s3" id="tp2">弃权</div>
+        </div>
+        <div style="float:right;width:33.33333%;padding:0px 0px 0px 6px;">
+          <div class="p2s3" id="tp3">+</div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div style="text-align:center;margin:0px auto;width:300px;height:30px;color:rgb(255,95,95);font-weight:900" id="tptext"></div>
+    <br>
+    <button style="visibility:hidden">继续</button>
+    <button id="p27d" style="float:right;margin-right: 0px;">下一页</button><br> 
+  </div>
+ </div> 
+
+  <!-- ADD LINK FROM TODO -->
+<div class="rzone" id="p31_content"  style="display:none">
+  <p>
+    Here is the explaination for this page. 31
+  </p>
+  <h2>
+    最后，我们要测试另一个网站 - 在线抛球!
+  </h2>
+  <div class="poll-form">
+    <br><p>这是一个能让人体验在网络上抛球的小游戏。</p>
+    你将继续与其他学校的学生随机组队，三人一组来测试网站。这个网站测试很简单，当球扔给你的时候，你点击其他学生的头像，就可以把球扔给其他学生。你想扔给谁都行。这个游戏持续大概2-3分钟。
+    <br><br>准备好后，点击下方 [ PLAY ] 按钮开始<br><br>
+    <iframe id="ifr" width="100%" height="432" style="border:none;" src="https://cyberball.empirisoft.com/web?cbe=2d773911-3fd0-40cb-9109-387569bc4d2a&condition=1&pid=">
+    </iframe><br><br>
+    <button style="visibility:hidden">继续</button>
+    <button id="p31d" style="float:right;margin-right: 0px;visibility:hidden;">点此结束</button><br><br>
+  </div>
+ </div>
+<div class="rzone" id="p34_content" style="display:none">
+  <p>
+    Here is the explaination for this page. 34
+  </p>
+  <h2>
+    你已完成所有内容，谢谢！
+  </h2>
+  <div class="poll-form">
+    <br>
+    为避免干扰其他未完成的学生，请在座位上坐好并安静等待，不要和周围同学讲话，<b>不要关闭此页面！</b>
+    <br>所有学生都完成之后，刘老师会和大家一起结束，然后分发礼物。
+    <br><br><b>有问题请举手，刘老师会过来回答你的问题。</b>
+    <br><br>
+  </div>
+ </div> 
+<br><br>
+
 <script type="text/javascript">
   $(function(){
     

@@ -75,6 +75,8 @@
  // alert(1);
 </script>
 
+<div class="rzone" id="p17_content" style="">
+
 <p>page - 17</p><br>
 <div id="root">
   <div class="item">
@@ -180,13 +182,16 @@
     <div style="clear:both"></div>
     <button id="p17d" style="margin-left:390px;">继续</button>
 <br><br>
-
+</div>
+<div id="p17_27"></div>
 
 <script>
   $(".interava").html(Avataaars.create({width:50}));
   
-  
-  
+  $("#p17d").click(function(){
+    $("#p17_content").hide();
+    $("#p17_27").load("cball.html");
+  })
   
   
   
