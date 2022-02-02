@@ -44,6 +44,7 @@
   .Btn{
     border-top: 1px solid #d7d7d7;
     padding: 5px 0px;
+    height:36px;
   }
   
   .btn17{
@@ -167,10 +168,26 @@
         let downTime = o.popTime[1].split(",");
         
         for(let zan = 0; zan < parseInt(o.finalZanVsCai[0]); zan++){
-          setTimeout(function(){$("#up"+i).text(parseInt($("#up"+i).text())+1)}, 1000*parseInt(upTime[zan]));
+          setTimeout(function(){
+            $("#up"+i).text(parseInt($("#up"+i).text())+1);
+            $("#up"+i).css("color","red");
+            $("#up"+i).css("font-size","10px");
+            setTimeout(function(){
+              $("#up"+i).css("color","#fbff00");
+              $("#up"+i).css("font-size","16px");
+            },500)
+          }, 1000*parseInt(upTime[zan]));
         }
         for(let cai = 0; cai < parseInt(o.finalZanVsCai[1]); cai++){
-          setTimeout(function(){$("#down"+i).text(parseInt($("#down"+i).text())+1)}, 1000*parseInt(downTime[cai]));
+          setTimeout(function(){
+            $("#up"+i).text(parseInt($("#up"+i).text())+1);
+            $("#up"+i).css("color","red");
+            $("#up"+i).css("font-size","10px");
+            setTimeout(function(){
+              $("#up"+i).css("color","#fbff00");
+              $("#up"+i).css("font-size","16px");
+            },500)
+          }, 1000*parseInt(downTime[cai]));
         }
       
       }
