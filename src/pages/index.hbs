@@ -33,7 +33,7 @@
   
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
-  <script src="https://unpkg.com/driver.js/dist/driver.min.js"></script>
+  <script src="/driver.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
   
   
@@ -102,17 +102,17 @@ $(function(){
       {
         element: '.p1a',
         popover: {
-          allowClose: false,
-           
+          showCloseButton: false,
           className: 'first-step-popover-class',
           title: 'Title on Popover',
           description: 'Body of the popover',
           position: 'right'
         }
-      },
+      },/*
       {
         element: '#p1b',
         popover: {
+          showCloseButton: false,
           title: 'Title on Popover',
           description: 'Body of the popover',
           position: 'top'
@@ -121,6 +121,7 @@ $(function(){
       {
         element: '#p1c',
         popover: {
+          showCloseButton: false,
           title: 'Title on Popover',
           description: 'Body of the popover',
           position: 'right'
@@ -129,11 +130,12 @@ $(function(){
       {
         element: '#p1d',
         popover: {
+          showCloseButton: false,
           title: 'Title on Popover',
           description: 'Body of the popover',
           position: 'right'
         }
-      },
+      },*/
     ]);
     // Start the introduction
     driver.start();
