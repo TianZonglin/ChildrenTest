@@ -102,7 +102,26 @@
     <div style="clear:both"></div>
   
   <div>剩余时间<br><span id="leftTime"></span></div>
-  
+  <div>
+    <div style="margin:0px auto; width:200px; height:270px; border:1px black solid">
+      <div class="once">
+        <div style="float:left; width:65%; height:270px; border:1px black solid">
+          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第一名</div>
+          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第二名</div>
+          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第三名</div>
+          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第四名</div>
+          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第五名</div>
+          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第六名</div>
+          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第七名</div>
+          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第八名</div>
+          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第九名</div>
+        </div>
+        <div style="float:left; width:35%; height:270px; border:1px black solid" id="ranky">
+
+        </div>
+      </div>
+    </div>
+  </div>
   
   
   
@@ -130,6 +149,7 @@
     $.getJSON("fakers.json",function(e){
 
       let str = "";
+      let rky = "<div style='text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid'>PDD</div>";
       for(let i = 0; i < e.length; i++){
         let obj = e[i];
         let avaStr = obj.avator.split(";");
@@ -160,9 +180,11 @@
         str += "<div class='Btn'>顶&nbsp;<span class='cnt' id='up"+i+"' value="+obj.finalZanVsCai[0]+">0</span><button  class='btn17' style='float:right'>顶&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
         str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.finalZanVsCai[1]+">0</span><button  class='btn17' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div>";
+        rky += "<div style='text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid'>"+obj.name+"</div>";
 
       }
       $("#itor").html(str);
+      $("#ranky").html(rky);
  
       //开始自动fake
       for(let i = 0; i < e.length; i++){
