@@ -121,8 +121,8 @@
       </div>
      
     </div>
-  </div>
-  
+  </div><br>
+  <div id="mailbox"></div>
   
   
     <button id="p17d" style="margin-left:390px;">继续</button>
@@ -231,8 +231,11 @@
             },500)
           }, 1000*parseInt(downTime[cai]));
         }
-        for(let msg = 0; msg < parseInt(o.finalZanVsCai[0]); msg++){
-          
+        for(let msg = 0; msg < parseInt(o.messageToUser.length); msg++){
+          setTimeout(function(){
+            $("#mailbox").append(o.name+"对你说：<span>"+o.messageToUser[msg].sendText+"</span><br>");
+  
+          }, 1000*parseInt(o.messageToUser[msg].sendTime));
         }
       
       }
