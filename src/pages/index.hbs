@@ -96,17 +96,48 @@
     }
     
 $(function(){
-    const driver = new Driver({
-        allowClose: false,
-    });
-
-    driver.highlight({
-      element: '#p1_content',
-      popover: {
-        title: '<em>An italicized title</em>',
-        description: 'Description may also contain <strong>HTML</strong>'
-      }
-    });
+    const driver = new Driver();
+    // Define the steps for introduction
+    driver.defineSteps([
+      {
+        element: '.p1a',
+        popover: {
+          allowClose: false,
+           
+          className: 'first-step-popover-class',
+          title: 'Title on Popover',
+          description: 'Body of the popover',
+          position: 'right'
+        }
+      },
+      {
+        element: '#p1b',
+        popover: {
+          title: 'Title on Popover',
+          description: 'Body of the popover',
+          position: 'top'
+        }
+      },
+      {
+        element: '#p1c',
+        popover: {
+          title: 'Title on Popover',
+          description: 'Body of the popover',
+          position: 'right'
+        }
+      },
+      {
+        element: '#p1d',
+        popover: {
+          title: 'Title on Popover',
+          description: 'Body of the popover',
+          position: 'right'
+        }
+      },
+    ]);
+    // Start the introduction
+    driver.start();
+    $(".driver-close-btn").hide();
  });   
     
     
