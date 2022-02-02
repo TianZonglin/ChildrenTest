@@ -118,20 +118,14 @@
     "name": "SDG",
     "introText": "最喜欢...最喜欢...最喜欢...",
     "boy": {
-    "finalZanVsCai": [4,1],
-    "popTime": ["5,6,7,8","11"],
-      "avator": "froAndBand;rgb(48,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(48,0,255)"
+      "finalZanVsCai": [4,1],
+      "popTime": ["5,6,7,8","11"],
+      "avator": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)"
     },
     "girl": {
       "finalZanVsCai": [4,1],
-      "popTime": ["23,26,29,34","25"],
-      "avator": "froAndBand;rgb(48,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(48,0,255)"
-    },
-    "finalZanVsCai": [4,1],
-    "popTime": ["5,6,7,8","11"],
-    "avator": {
-      "boy": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)",
-      "girl": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)"
+      "popTime": ["5,6,7,8","11"],
+      "avator": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)"
     },
     "optionToUser": {
       "opTime": 6, 
@@ -146,11 +140,15 @@
     "fakeUserID": 6,
     "name": "QWF",
     "introText": "最喜欢...最喜欢...最喜欢...",
-    "finalZanVsCai": [4,1],
-    "popTime": ["7,11,13,14","8"],
-    "avator": {
-      "boy": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)",
-      "girl": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)"
+    "boy": {
+      "finalZanVsCai": [4,1],
+      "popTime": ["7,11,13,14","8"],
+      "avator": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)"
+    },
+    "girl": {
+      "finalZanVsCai": [4,1],
+      "popTime": ["7,11,13,14","8"],
+      "avator": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)"
     },
     "optionToUser": {
       "opTime": 3, 
@@ -165,11 +163,15 @@
     "fakeUserID": 7,
     "name": "VSA",
     "introText": "最喜欢...最喜欢...最喜欢...",
-    "finalZanVsCai": [4,1],
-    "popTime": ["13,16,19,24","5"],
-    "avator": {
-      "boy": "froAndBand;rgb(142,44,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(142,44,255)",
-      "girl": "froAndBand;rgb(142,44,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(142,44,255)"
+    "boy": {
+      "finalZanVsCai": [4,1],
+      "popTime": ["13,16,19,24","5"],
+      "avator": "froAndBand;rgb(142,44,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(142,44,255)"
+    },
+    "girl": {
+      "finalZanVsCai": [4,1],
+      "popTime": ["13,16,19,24","5"],
+      "avator": "froAndBand;rgb(142,44,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(142,44,255)"
     },
     "optionToUser": {
       "opTime": 10, 

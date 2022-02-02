@@ -85,12 +85,12 @@
     <div class="item">
       <div class="userInfo">
         <a class="interava"></a>
-        <span class="username">PDD</span>
+        <span class="username">PDD</span><span>你自己</span> 
       </div>
       <div class="textInfo">
         网站中有三个问题，请大家使用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这三道题你都做对，网站会自动跳转到下一页；否则，网站会提示你做错，然后让你继续做，直到你都做对。
       </div>
-      <div class="Btn"><div style="float:left">顶&nbsp;</div><span class="cnt" id="up8">0</span>
+      <div class="Btn"><div style="float:left">赞&nbsp;</div><span class="cnt" id="up8">0</span>
         <div style="float:right">踩&nbsp;<span class="cnt" id="down8">0</span></div></div>
  
     </div>
@@ -173,7 +173,7 @@
       let rky = "<div value='0' class='rankcnt' id='rankcnt8' style='text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid'>PDD</div>";
       for(let i = 0; i < e.length; i++){
         let obj = e[i];
-        let avaStr = obj.avator.man.split(";");
+        let avaStr = obj.boy.avator.split(";");
  
         let svg = Avataaars.create({
             width: 50,
@@ -198,8 +198,8 @@
         str += "<div class='textInfo'>";
         str += obj.introText;
         str += "</div>";
-        str += "<div class='Btn'>顶&nbsp;<span class='cnt' id='up"+i+"' value="+obj.finalZanVsCai[0]+">0</span><button  class='btn17' style='float:right'>顶&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
-        str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.finalZanVsCai[1]+">0</span><button  class='btn17' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
+        str += "<div class='Btn'>赞&nbsp;<span class='cnt' id='up"+i+"' value="+obj.boy.finalZanVsCai[0]+">0</span><button  class='btn17' style='float:right'>顶&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
+        str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.boy.finalZanVsCai[1]+">0</span><button  class='btn17' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div>";
         rky += "<div value='0' class='rankcnt' id='rankcnt"+i+"' style='text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid'>"+obj.name+"</div>";
 
@@ -213,7 +213,7 @@
         
         
         if(o.optionToUser.opTime != 0){
-          let iavaStr = o.avator.man.split(";");
+          let iavaStr = o.boy.avator.split(";");
           let isvg = Avataaars.create({
               width: 50,
               top: iavaStr[0],
@@ -256,10 +256,10 @@
           
         }
  
-        let upTime = o.popTime[0].split(",");
-        let downTime = o.popTime[1].split(",");
+        let upTime = o.boy.popTime[0].split(",");
+        let downTime = o.boy.popTime[1].split(",");
         
-        for(let zan = 0; zan < parseInt(o.finalZanVsCai[0]); zan++){
+        for(let zan = 0; zan < parseInt(o.boy.finalZanVsCai[0]); zan++){
           setTimeout(function(){
             $("#up"+i).text(parseInt($("#up"+i).text())+1);
             $("#up"+i).css("color","rgb(255,160,0)");
@@ -273,7 +273,7 @@
             },500)
           }, 1000*parseInt(upTime[zan]));
         }
-        for(let cai = 0; cai < parseInt(o.finalZanVsCai[1]); cai++){
+        for(let cai = 0; cai < parseInt(o.boy.finalZanVsCai[1]); cai++){
           setTimeout(function(){
             $("#down"+i).text(parseInt($("#down"+i).text())+1);
             $("#down"+i).css("color","rgb(255,160,0)");
@@ -288,7 +288,7 @@
           }, 1000*parseInt(downTime[cai]));
         }
         for(let msg = 0; msg < parseInt(o.messageToUser.length); msg++){
-          let avaStr = o.avator.man.split(";");
+          let avaStr = o.boy.avator.split(";");
           let svg = Avataaars.create({
               width: 50,
               top: avaStr[0],
