@@ -111,33 +111,7 @@
 <div id="p17_27"></div>
 
 <script>
-  
-  
-  let cutTime = 0.1 * 60;
-  let summer = setInterval(counClock, 1000);
-
-  function counClock() {
-      let min = '';
-      let sec = '';
-
-      if (cutTime > 0) {
-          min = Math.floor(cutTime / 60);
-          sec = Math.floor(cutTime % 60);
-          if (sec < 10) {
-              sec = '0' + sec;
-          };
-          cutTime--;
-      } else {
-          $("#leftTime").text('0:00');
-          clearInterval(summer);
-      }
-
-      $("#leftTime").text(min + ':' + sec);
-  }
-
-  
-  
-  
+ 
   $(".interava").html(Avataaars.create({width:50}));
   
   $("#p17d").click(function(){
@@ -146,6 +120,12 @@
   })
   
   $(function(){
+    
+    
+    function rank(){
+      
+    }
+    
     $.getJSON("fakers.json",function(e){
 
       let str = "";
@@ -214,6 +194,31 @@
           }, 1000*parseInt(downTime[cai]));
         }
       
+      }
+      
+      
+      let cutTime = 0.1 * 60;
+      let summer = setInterval(counClock, 1000);
+
+      function counClock() {
+          let min = '';
+          let sec = '';
+
+          if (cutTime > 0) {
+              min = Math.floor(cutTime / 60);
+              sec = Math.floor(cutTime % 60);
+              if (sec < 10) {
+                  sec = '0' + sec;
+              };
+              cutTime--;
+              $("#leftTime").text(min + ':' + sec);
+          } else {
+              $("#leftTime").text('0:00');
+              $(".btn17").addClass('disabled');
+              clearInterval(summer);
+          }
+
+
       }
 
     });
