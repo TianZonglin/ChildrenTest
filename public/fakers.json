@@ -5,7 +5,10 @@
     "introText": "最喜欢...最喜欢...最喜欢...",
     "finalZanVsCai": [2,3],
     "popTime": ["6,11","1,3,5"],
-    "avator": "froAndBand;red;shirtVNeck;pastelYellow;xDizzy;concerned;red",
+    "avator": {
+      "man": "froAndBand;red;shirtVNeck;pastelYellow;xDizzy;concerned;red",
+      "woman": "froAndBand;red;shirtVNeck;pastelYellow;xDizzy;concerned;red"
+    },
     "optionToUser": {
       "opTime": 10, 
       "option": "like"
@@ -22,7 +25,10 @@
     "introText": "最喜欢...最喜欢...最喜欢...",
     "finalZanVsCai": [4,1],
     "popTime": ["5,11,19,22","25"],
-    "avator": "froAndBand;red;shirtVNeck;pastelYellow;xDizzy;concerned;red",
+    "avator": {
+      "man": "froAndBand;rgb(250,138,251);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(250,138,251)",
+      "woman": "froAndBand;rgb(250,138,251);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(250,138,251)"
+    },
     "optionToUser": {
       "opTime": 3, 
       "option": "dislike"
@@ -39,7 +45,10 @@
     "introText": "最喜欢...最喜欢...最喜欢...",
     "finalZanVsCai": [3,2],
     "popTime": ["4,7,19","7,9"],
-    "avator": "froAndBand;rgb(140,233,18);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(140,233,18)",
+    "avator": {
+      "man": "froAndBand;rgb(140,233,18);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(140,233,18)",
+      "woman": "froAndBand;rgb(140,233,18);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(140,233,18)"
+    },
     "optionToUser": {
       "opTime": 33, 
       "option": "like"
@@ -56,7 +65,10 @@
     "introText": "最喜欢...最喜欢...最喜欢...",
     "finalZanVsCai": [4,1],
     "popTime": ["23,26,29,34","25"],
-    "avator": "froAndBand;rgb(0,175,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(0,175,255)",
+    "avator": {
+      "man": "froAndBand;rgb(0,175,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(0,175,255)",
+      "woman": "froAndBand;rgb(0,175,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(0,175,255)"
+    },
     "optionToUser": {
       "opTime": 22, 
       "option": "like"
@@ -73,7 +85,10 @@
     "introText": "最喜欢...最喜欢...最喜欢...",
     "finalZanVsCai": [4,1],
     "popTime": ["4,21,29,54","15"],
-    "avator": "froAndBand;rgb(48,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(48,0,255)",
+    "avator": {
+      "man": "froAndBand;rgb(48,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(48,0,255)",
+      "woman": "froAndBand;rgb(48,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(48,0,255)"
+    },
     "optionToUser": {
       "opTime": 19, 
       "option": "dislike"
@@ -90,7 +105,10 @@
     "introText": "最喜欢...最喜欢...最喜欢...",
     "finalZanVsCai": [4,1],
     "popTime": ["5,6,7,8","11"],
-    "avator": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)",
+    "avator": {
+      "man": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)",
+      "woman": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)"
+    },
     "optionToUser": {
       "opTime": 6, 
       "option": "like"
@@ -107,7 +125,10 @@
     "introText": "最喜欢...最喜欢...最喜欢...",
     "finalZanVsCai": [4,1],
     "popTime": ["7,11,13,14","8"],
-    "avator": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)",
+    "avator": {
+      "man": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)",
+      "woman": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)"
+    },
     "optionToUser": {
       "opTime": 3, 
       "option": "like"
@@ -124,7 +145,11 @@
     "introText": "最喜欢...最喜欢...最喜欢...",
     "finalZanVsCai": [4,1],
     "popTime": ["13,16,19,24","5"],
-    "avator": "froAndBand;rgb(142,44,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(142,44,255)",
+    "avator": "",
+    "avator": {
+      "man": "froAndBand;rgb(250,138,251);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(250,138,251)",
+      "woman": "froAndBand;rgb(250,138,251);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(250,138,251)"
+    },
     "optionToUser": {
       "opTime": 10, 
       "option": "like"
