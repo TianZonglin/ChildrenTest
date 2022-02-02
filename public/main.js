@@ -67,10 +67,18 @@ $(function(){
   });
   
   //page 3
+  //$("#p1_button").click(function(){
+  //  $("#p1_content").hide();
+  //  $("#p3_content").show();
+  //});
+  
   $("#p1_button").click(function(){
     $("#p1_content").hide();
     $("#p3_content").show();
+    $("#p3_content").load("itact.html");
   });
+  
+  
   
   $("#p3_button").click(function(){
     $("#p3_content").hide();
