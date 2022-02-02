@@ -27,15 +27,14 @@
 
   <!-- Import the webpage's stylesheet -->
   <link rel="stylesheet" href="/style.css" />
-  <link rel="stylesheet" href="/pg/enjoyhint.css" />
-
+ 
   <!-- Show choice chart on poll submission -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/kineticjs/5.2.0/kinetic.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
-  <script src="/pg/enjoyhint.js"></script>
+  
+  <script src="https://unpkg.com/driver.js/dist/driver.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
   
   
   
@@ -97,27 +96,17 @@
     }
     
 
-    //initialize instance
-    var enjoyhint_instance = new EnjoyHint({});
+    const driver = new Driver({
+        allowClose: false,
+    });
 
-    //simple config. 
-    //Only one step - highlighting(with description) "New" button 
-    //hide EnjoyHint after a click on the button.
-    var enjoyhint_script_steps = [
-      {
-        'click .new_btn' : 'Click the "New" button to start creating your project'
-      }  
-    ];
-
-    //set script config
-    enjoyhint_instance.set(enjoyhint_script_steps);
-
-    //run Enjoyhint script
-    enjoyhint_instance.run();
-    
-    
-    
-    
+    driver.highlight({
+      element: '#p1_content',
+      popover: {
+        title: '<em>An italicized title</em>',
+        description: 'Description may also contain <strong>HTML</strong>'
+      }
+    });
     
     
     
