@@ -145,10 +145,9 @@
     "introText": "最喜欢...最喜欢...最喜欢...",
     "finalZanVsCai": [4,1],
     "popTime": ["13,16,19,24","5"],
-    "avator": "",
     "avator": {
-      "man": "froAndBand;rgb(250,138,251);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(250,138,251)",
-      "woman": "froAndBand;rgb(250,138,251);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(250,138,251)"
+      "man": "froAndBand;rgb(142,44,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(142,44,255)",
+      "woman": "froAndBand;rgb(142,44,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(142,44,255)"
     },
     "optionToUser": {
       "opTime": 10, 
