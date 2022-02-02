@@ -104,22 +104,22 @@
   <div>剩余时间<br><span id="leftTime"></span></div>
   <div>
     <div style="margin:0px auto; width:200px; height:270px; border:1px black solid">
-      <div class="once">
-        <div style="float:left; width:65%; height:270px; border:1px black solid">
-          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第一名</div>
-          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第二名</div>
-          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第三名</div>
-          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第四名</div>
-          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第五名</div>
-          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第六名</div>
-          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第七名</div>
-          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第八名</div>
-          <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第九名</div>
-        </div>
-        <div style="float:left; width:35%; height:270px; border:1px black solid" id="ranky">
 
-        </div>
+      <div style="float:left; width:65%; height:270px; border:1px black solid">
+        <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第一名</div>
+        <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第二名</div>
+        <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第三名</div>
+        <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第四名</div>
+        <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第五名</div>
+        <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第六名</div>
+        <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第七名</div>
+        <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第八名</div>
+        <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第九名</div>
       </div>
+      <div style="float:left; width:35%; height:270px; border:1px black solid" id="ranky">
+
+      </div>
+     
     </div>
   </div>
   
@@ -141,17 +141,18 @@
   
   $(function(){
     
-    
-     var domList = $(".once").get();
-     domList.sort(function(a,b){
-       var elOne = $(a).find('.rankcnt').text();
-       var elTwo = $(b).find('.rankcnt').text();
-       if(parseInt(elOne) > parseInt(elTwo)) return -1;
-       if(parseInt(elOne) < parseInt(elTwo)) return 1;
-       return 0;
-     });
-     $('.modal-body ul').append(domList);
-    
+     function rank() { 
+       var domList = $(".rankcnt").get();
+       domList.sort(function(a,b){
+         var elOne = $(a).find('.rankcnt').text();
+         var elTwo = $(b).find('.rankcnt').text();
+         if(parseInt(elOne) > parseInt(elTwo)) return -1;
+         if(parseInt(elOne) < parseInt(elTwo)) return 1;
+         return 0;
+       });
+      
+       $('#ranky').append(domList);
+    }
     $.getJSON("fakers.json",function(e){
 
       let str = "";
@@ -186,7 +187,7 @@
         str += "<div class='Btn'>顶&nbsp;<span class='cnt' id='up"+i+"' value="+obj.finalZanVsCai[0]+">0</span><button  class='btn17' style='float:right'>顶&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
         str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.finalZanVsCai[1]+">0</span><button  class='btn17' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div>";
-        rky += "<div value='0' class='rankcnt' style='text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid'>"+obj.name+"</div>";
+        rky += "<div value='0' class='rankcnt' id='rankcnt"+i+"' style='text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid'>"+obj.name+"</div>";
 
       }
       $("#itor").html(str);
@@ -204,6 +205,10 @@
             $("#up"+i).css("color","rgb(255,160,0)");
             $("#up"+i).css("font-size","10px");
             $("#up"+i).css("font-weight","900");
+            $("#rankcnt"+i).val(parseInt($("#up"+i).text())-parseInt($("#down"+i).text()));
+            console.log(parseInt($("#up"+i).val())-parseInt($("#down"+i).val()));
+            
+            rank();
             setTimeout(function(){
               $("#up"+i).css("color","red");
               $("#up"+i).css("font-size","16px");
@@ -216,6 +221,8 @@
             $("#down"+i).css("color","rgb(255,160,0)");
             $("#down"+i).css("font-size","10px");
             $("#down"+i).css("font-weight","900");
+            $("#rankcnt"+i).val(parseInt($("#up"+i).text())-parseInt($("#down"+i).text()));
+            rank();
             setTimeout(function(){
               $("#down"+i).css("color","red");
               $("#down"+i).css("font-size","16px");
