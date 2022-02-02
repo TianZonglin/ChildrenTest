@@ -151,7 +151,7 @@
         str += "<div class='textInfo'>";
         str += obj.introText;
         str += "</div>";
-        str += "<div class='Btn'>顶&nbsp;<span class='cnt' value="+obj.finalZanVsCai[0]+" time="+obj.popTime[0]+">0</span><button  class='btn17' style='float:right'>顶&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
+        str += "<div class='Btn'>顶&nbsp;<span class='cnt' id='cnt"+i+"' value="+obj.finalZanVsCai[0]+" time="+obj.popTime[0]+">0</span><button  class='btn17' style='float:right'>顶&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
         str += "<div class='Btn'>踩&nbsp;<span class='cnt' value="+obj.finalZanVsCai[1]+" time="+obj.popTime[1]+">0</span><button  class='btn17' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div>";
 
@@ -163,9 +163,15 @@
       //开始自动fake
       for(let i = 0; i < e.length; i++){
         let o = e[i];
+        let upTime = o.popTimep[0].split(",");
+        let downTime = o.popTimep[1].split(",");
         
-        for(let )
-        setTimeout(myGreeting, 5000);
+        for(let zanT = 0; zanT < parseInt(o.finalZanVsCai[0]); zanT++){
+          setTimeout($("#cnt"+i).text(parseInt($("#cnt"+i).text()+1)), 1000*parseInt(upTime[zanT]);
+        }
+        for(let cai = 0; zanT < parseInt(o.finalZanVsCai[1]); cai++){
+          setTimeout($("#cnt"+i).text(parseInt($("#cnt"+i).text()+1)), 1000*parseInt(upTime[zanT]);
+        }
       
       }
 
