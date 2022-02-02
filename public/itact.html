@@ -142,9 +142,15 @@
   $(function(){
     
     
-    function rank(){
-      
-    }
+     var domList = $(".once").get();
+     domList.sort(function(a,b){
+       var elOne = $(a).find('.rankcnt').text();
+       var elTwo = $(b).find('.rankcnt').text();
+       if(parseInt(elOne) > parseInt(elTwo)) return -1;
+       if(parseInt(elOne) < parseInt(elTwo)) return 1;
+       return 0;
+     });
+     $('.modal-body ul').append(domList);
     
     $.getJSON("fakers.json",function(e){
 
@@ -180,7 +186,7 @@
         str += "<div class='Btn'>顶&nbsp;<span class='cnt' id='up"+i+"' value="+obj.finalZanVsCai[0]+">0</span><button  class='btn17' style='float:right'>顶&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
         str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.finalZanVsCai[1]+">0</span><button  class='btn17' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div>";
-        rky += "<div style='text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid'>"+obj.name+"</div>";
+        rky += "<div value='0' class='rankcnt' style='text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid'>"+obj.name+"</div>";
 
       }
       $("#itor").html(str);
