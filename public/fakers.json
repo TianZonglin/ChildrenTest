@@ -4,6 +4,7 @@
   "gender": "女",
   "introText": "最喜欢...最喜欢...最喜欢...",
   "finalZanVsCai": [4,1],
+  "popTime": ["3,6,9,14","25"],
   "avator": "froAndBand;red;shirtVNeck;pastelYellow;xDizzy;concerned;red",
   "messageToUser": [{
     "sendTime": 5,
@@ -21,6 +22,7 @@
   "gender": "女",
   "introText": "最喜欢...最喜欢...最喜欢...",
   "finalZanVsCai": [4,1],
+  "popTime": ["3,6,9,14","25"],
   "avator": "froAndBand;rgb(255,169,0);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(255,169,0)",
   "messageToUser": [{
     "sendTime": 5,
