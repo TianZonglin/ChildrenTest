@@ -112,12 +112,26 @@ fastify.post("/", async (request, reply) => {
     ? reply.send(params)
     : reply.view("/src/pages/index.hbs", params);
 });
-
+    
 /**
  * Admin endpoint returns log of votes
  *
  * Send raw json or the admin handlebars page
  */
+fastify.get("/test", async (request, reply) => {
+  let params = request.query.raw ? {} : { site: site };
+
+  // Get the log history from the db
+  params.optionHistory = await db.getLogs();
+
+  // Let the user know if there's an error
+  params.error = params.optionHistory ? null : data.errorMessage;
+
+  // Send the log list
+  request.query.raw
+    ? reply.send(params)
+    : reply.view("/src/pages/test.hbs", params);
+});
 fastify.get("/logs", async (request, reply) => {
   let params = request.query.raw ? {} : { site: site };
 
@@ -132,7 +146,6 @@ fastify.get("/logs", async (request, reply) => {
     ? reply.send(params)
     : reply.view("/src/pages/admin.hbs", params);
 });
-
 /**
  * Admin endpoint to empty all logs
  *

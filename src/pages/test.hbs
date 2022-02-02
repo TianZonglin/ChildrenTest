@@ -72,7 +72,7 @@
         choices=["No votes! Reload and vote again."];
         colors=["#00000000"]; // we'll show an empty doughnut shape
         border=["#000000"];
-      }
+      } 
       
       // Build the chart in the page element
       var myLineChart = new Chart(ctx, {
@@ -173,132 +173,7 @@ $(function(){
  
         <!-- ADD LINK FROM TODO -->
       <div class="rzone" id="p1_content">
-        <p>
-          Here is the explaination for this page. 1
-        </p><br>
-        <h2>
-          请完成以下四个问题，测试你的鼠标和键盘是否正常
-        </h2>
-        <div class="poll-form">
-          <p>一、请在下面依次点击 <b>健 康 是 福</b> 四个汉字</p>
-          <input class="p1a" type="button" value="康" style="background-color:#65647c;color:white;height:49px;"/>&emsp;
-          <input class="p1a" type="button" value="是" style="background-color:#65647c;color:white;height:49px;"/>&emsp;
-          <input class="p1a" type="button" value="福" style="background-color:#65647c;color:white;height:49px;"/>&emsp;
-          <input class="p1a" type="button" value="健" style="background-color:#65647c;color:white;height:49px;"/>&emsp;
-          <span id="p1a_text"></span>
-        </div>
-        <br>
-        <div class="poll-form">
-          <p>二、请选择数字 <b>18</b></p>
-          <select id="p1b" style="background-color:#e1e1e1;height:49px;width:85px;color:#65647c;border-radius:5px">
-            <option value="0">点击选择</option>
-            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
-            <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
-            <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
-            <option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option>
-            <option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option>
-          </select>&emsp;
-          <span id="p1b_text"></span>
-        </div>
-        <br>      
-        <div class="poll-form">
-          <p>三、请在下面输入数字 <b>6 7 5 2</b></p>
-          <input id="p1c" maxlength="4" type="text" style="background-color:#e1e1e1;color:#65647c;height:49px;width:100px;"/>&emsp;
-          <span id="p1c_text"></span>
-        </div>
-        <br>      
-        <div class="poll-form">
-          <p>四、请在下面内依次输入 <b>E N G L I S H</b> 七个字母</p>
-          <input id="p1d" type="text" maxlength="7" style="background-color:#e1e1e1;color:#65647c;height:49px;width:115px;"/>&emsp;
-          <span id="p1d_text"></span>
-        </div>
 
-        <!-- Instructions on using this project -->
-        <div class="">
-          <span id="p1_text" style="color:green;visibility:hidden"><h2>测试完成，请点击按钮进入下一页！</h2></span>
-          <button id="p1_button" style="visibility:visible">下一页</button>
-        </div>
-      </div>
-      
-      <div  class="rzone" id="p3_content" style="max-width:800px;display:none">
-        <p>
-          Here is the explaination for this page. 3
-        </p><br>
-        <div class="poll-form">
-          <p>很好，你的鼠标和键盘功能正常！</p>
-          <span>现在，刘老师正逐一帮助遇到问题的同学。<b>请你在座位上安静等待，不要提前进入下一页。</b>稍后，刘老师会带所有同学一起进入下一页。</span>
-        </div><br>
-        <button id="p3_button">下一页</button>
-      </div>
-      
-      <div  class="rzone" id="p4_content" style="max-width:800px;display:none">
-        <p>
-          Here is the explaination for this page. 4
-        </p><br>
-        <h2>
-          请对照发给你的纸条，完成下列内容
-        </h2>
-        <div class="poll-form">
-          <p>一、请选择你的班级号</p>
-          <select id="p4a" style="background-color:#e1e1e1;height:49px;width:80px;color:#65647c;border-radius:5px">
-            <option value="501">501</option><option value="502">502</option><option value="503">503</option><option value="504">504</option>
-            <option value="505">505</option><option value="506">506</option><option value="507">507</option><option value="508">508</option>
-            <option value="509">509</option><option value="510">510</option>
-          </select>&emsp;
-          <span id="p4a_text"></span>
-        </div>
-        <br>      
-        <div class="poll-form">
-          <p>二、请在下面输入纸条上的两位编号</p>
-          <input id="p4b" maxlength="2" type="text" style="background-color:#e1e1e1;color:#65647c;height:49px;width:80px;"/>&emsp;
-          <span id="p4b_text"></span>
-        </div>
-        <br>  
-        <div class="poll-form">
-          <p>三、请选择纸条上的网站版本号 </p>
-          <select id="p4c" style="background-color:#e1e1e1;height:49px;width:80px;color:#65647c;border-radius:5px">
-            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
-            <option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option>
-            <option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
-          </select>&emsp;
-
-          <span id="p4c_text"></span>
-        </div>
-        <br>  
-        <div class="poll-form">
-          <p>四、请将纸条放在桌子右上角，安静的等待刘老师来检查你的信息是否填写正确。</p>
-        </div>
-        <br>    
-        <div class="poll-form">
-          <p>五、检查无误后刘老师会统一告知验证码，将验证码正确输入下列方框中后，网页会自动进入下一页。</p>
-          <input id="p4d" type="text" maxlength="7" style="background-color:#e1e1e1;color:#65647c;height:49px;width:130px;"/>&emsp;
-          <span id="p4d_text"></span>
-        </div> 
-      </div>
-      <br> <br> 
-      <div  class="rzone" id="p6_content" style="max-width:800px;display:none">
-        <p>
-          Here is the explaination for this page. 6
-        </p><br>
-        <div class="poll-form">
-          <p>请点击下方链接开始测试网站。<br>打开网站后，根据网站内的指示进行操作</p>
-        </div><br>
-        <button id="p6d">点击前往</button>
- 
-      </div>
-      <div  class="rzone" id="p7_content" style="max-width:800px;display:none">
-        <p>
-          你即将前往认识人网，这是一个能把不同地方的人联系起来的网站。你会和<b>镇上其他学校的学生</b>一起测试这个网站，你们之间互相不认识。 7
-        </p><br>
-        <div class="poll-form">
-          <br>
-          <b>首先，你需要完成个人简介。</b>个人简介包括一个头像和一段简短的自我介绍，稍后用于向别人介绍自己。<br>
-          <b>随后，你会进入“介绍环节”。</b>在此环节中，你会和镇上其他学校的学生在网上在线连接。你将有三分钟的时间浏览其他学生的个人简介并做出反应。
-        </div><br>
-        <button id="p7d">继续</button>
-      </div>
-      <div  class="rzone" id="p8-21" style="max-width:800px;display:none">
-        
       </div>
     </div>
   </div>
@@ -314,4 +189,7 @@ $(function(){
   </footer>
 </body>
 <script src="/main.js"></script>
+<script>
+  $("#p1_content").load("itact.html");
+  </script>
 </html>
