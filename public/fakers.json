@@ -17,7 +17,7 @@
     "gender": "女",
     "introText": "最喜欢...最喜欢...最喜欢...",
     "finalZanVsCai": [4,1],
-    "popTime": null,
+    "popTime": ["5,11,19,22","25"],
     "avator": "froAndBand;rgb(255,169,0);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(255,169,0)",
     "messageToUser": [
         {"sendTime": 5, "sendText": "balabalabala....."},
