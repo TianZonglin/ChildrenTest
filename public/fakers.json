@@ -92,8 +92,8 @@
     "popTime": ["5,6,7,8","11"],
     "avator": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)",
     "optionToUser": {
-      "opTime": 0, 
-      "option": ""
+      "opTime": 6, 
+      "option": "like"
     },
     "messageToUser": [
         {"sendTime": 8, "sendText": "balabalabala....."},
@@ -109,8 +109,8 @@
     "popTime": ["7,11,13,14","8"],
     "avator": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)",
     "optionToUser": {
-      "opTime": 0, 
-      "option": ""
+      "opTime": 3, 
+      "option": "like"
     },
     "messageToUser": [
         {"sendTime": 17, "sendText": "balabalabala....."},
@@ -126,8 +126,8 @@
     "popTime": ["13,16,19,24","5"],
     "avator": "froAndBand;rgb(142,44,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(142,44,255)",
     "optionToUser": {
-      "opTime": 0, 
-      "option": ""
+      "opTime": 10, 
+      "option": "like"
     },
     "messageToUser": [
         {"sendTime": 2, "sendText": "balabalabala....."},
