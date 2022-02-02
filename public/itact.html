@@ -90,8 +90,8 @@
       <div class="textInfo">
         网站中有三个问题，请大家使用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这三道题你都做对，网站会自动跳转到下一页；否则，网站会提示你做错，然后让你继续做，直到你都做对。
       </div>
-      <div class="Btn">顶&nbsp;<span class="cnt">0</span><button  class="btn17" style="float:right">顶&nbsp;<img class="imgbtn" src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png"/></button></div>
-      <div class="Btn">踩&nbsp;<span class="cnt">0</span><button  class="btn17" style="float:right">踩&nbsp;<img class="imgbtn" src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png"/></button></div>
+      <div class="Btn" style="float:left">顶&nbsp;<span class="cnt">0</span>踩&nbsp;<span class="cnt">0</span></div>
+       <br><br>
     </div>
 
 
@@ -170,22 +170,24 @@
         for(let zan = 0; zan < parseInt(o.finalZanVsCai[0]); zan++){
           setTimeout(function(){
             $("#up"+i).text(parseInt($("#up"+i).text())+1);
-            $("#up"+i).css("color","red");
+            $("#up"+i).css("color","rgb(255,160,0)");
             $("#up"+i).css("font-size","10px");
+            $("#up"+i).css("font-weight","900");
             setTimeout(function(){
-              $("#up"+i).css("color","#fbff00");
+              $("#up"+i).css("color","red");
               $("#up"+i).css("font-size","16px");
             },500)
           }, 1000*parseInt(upTime[zan]));
         }
         for(let cai = 0; cai < parseInt(o.finalZanVsCai[1]); cai++){
           setTimeout(function(){
-            $("#up"+i).text(parseInt($("#up"+i).text())+1);
-            $("#up"+i).css("color","red");
-            $("#up"+i).css("font-size","10px");
+            $("#down"+i).text(parseInt($("#down"+i).text())+1);
+            $("#down"+i).css("color","rgb(255,160,0)");
+            $("#down"+i).css("font-size","10px");
+            $("#down"+i).css("font-weight","900");
             setTimeout(function(){
-              $("#up"+i).css("color","#fbff00");
-              $("#up"+i).css("font-size","16px");
+              $("#down"+i).css("color","red");
+              $("#down"+i).css("font-size","16px");
             },500)
           }, 1000*parseInt(downTime[cai]));
         }
