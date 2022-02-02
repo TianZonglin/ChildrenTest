@@ -158,20 +158,19 @@
       }
   
       $("#itor").html(str);
-      console.log();
-      
+ 
       //开始自动fake
+ 
       for(let i = 0; i < e.length; i++){
         let o = e[i];
         let upTime = o.popTime[0].split(",");
         let downTime = o.popTime[1].split(",");
         
         for(let zan = 0; zan < parseInt(o.finalZanVsCai[0]); zan++){
-          setTimeout($("#up"+i).text(parseInt($("#up"+i).text())+1), 1000*parseInt(upTime[zan]));
-          console.log(1000*parseInt(upTime[zan]));
+          setTimeout(function(){$("#up"+i).text(parseInt($("#up"+i).text())+1)}, 1000*parseInt(upTime[zan]));
         }
         for(let cai = 0; cai < parseInt(o.finalZanVsCai[1]); cai++){
-          setTimeout($("#down"+i).text(parseInt($("#down"+i).text())+1), 1000*parseInt(downTime[cai]));
+          setTimeout(function(){$("#down"+i).text(parseInt($("#down"+i).text())+1)}, 1000*parseInt(downTime[cai]));
         }
       
       }
