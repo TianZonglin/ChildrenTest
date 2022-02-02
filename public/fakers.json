@@ -1,0 +1,137 @@
+[{
+  "fakeUserID": 1,
+  "name": "LDN",
+  "gender": "女",
+  "introText": "最喜欢...最喜欢...最喜欢...",
+  "finalZanVsCai": [4,1],
+  "avator": "froAndBand,red,shirtVNeck,pastelYellow,xDizzy,concerned,#8F69DB",
+  "messageToUser": [{
+    "sendTime": 5,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 23,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 57,
+    "sendText": "balabalabala....."
+  }]
+},{
+  "fakeUserID": 2,
+  "name": "LDN",
+  "gender": "女",
+  "introText": "最喜欢...最喜欢...最喜欢...",
+  "finalZanVsCai": [4,1],
+  "avator": "froAndBand,rgb(255,169,0),shirtVNeck,pastelYellow,xDizzy,concerned,#8F69DB",
+  "messageToUser": [{
+    "sendTime": 5,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 23,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 57,
+    "sendText": "balabalabala....."
+  }]
+},{
+  "fakeUserID": 3,
+  "name": "LDN",
+  "gender": "女",
+  "introText": "最喜欢...最喜欢...最喜欢...",
+  "finalZanVsCai": [4,1],
+  "avator": "froAndBand,rgb(140,233,18),shirtVNeck,pastelYellow,xDizzy,concerned,#8F69DB",
+  "messageToUser": [{
+    "sendTime": 5,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 23,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 57,
+    "sendText": "balabalabala....."
+  }]
+},{
+  "fakeUserID": 4,
+  "name": "LDN",
+  "gender": "女",
+  "introText": "最喜欢...最喜欢...最喜欢...",
+  "finalZanVsCai": [4,1],
+  "avator": "froAndBand,rgb(0,175,255),shirtVNeck,pastelYellow,xDizzy,concerned,#8F69DB",
+  "messageToUser": [{
+    "sendTime": 5,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 23,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 57,
+    "sendText": "balabalabala....."
+  }]
+},{
+  "fakeUserID": 5,
+  "name": "LDN",
+  "gender": "女",
+  "introText": "最喜欢...最喜欢...最喜欢...",
+  "finalZanVsCai": [4,1],
+  "avator": "froAndBand,rgb(48,0,255),shirtVNeck,pastelYellow,xDizzy,concerned,#8F69DB",
+  "messageToUser": [{
+    "sendTime": 5,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 23,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 57,
+    "sendText": "balabalabala....."
+  }]
+},{
+  "fakeUserID": 6,
+  "name": "LDN",
+  "gender": "女",
+  "introText": "最喜欢...最喜欢...最喜欢...",
+  "finalZanVsCai": [4,1],
+  "avator": "froAndBand,rgb(252,0,255),shirtVNeck,pastelYellow,xDizzy,concerned,#8F69DB",
+  "messageToUser": [{
+    "sendTime": 5,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 23,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 57,
+    "sendText": "balabalabala....."
+  }]
+},{
+  "fakeUserID": 7,
+  "name": "LDN",
+  "gender": "女",
+  "introText": "最喜欢...最喜欢...最喜欢...",
+  "finalZanVsCai": [4,1],
+  "avator": "froAndBand,rgb(165,165,165),shirtVNeck,pastelYellow,xDizzy,concerned,#8F69DB",
+  "messageToUser": [{
+    "sendTime": 5,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 23,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 57,
+    "sendText": "balabalabala....."
+  }]
+},{
+  "fakeUserID": 8,
+  "name": "LDN",
+  "gender": "女",
+  "introText": "最喜欢...最喜欢...最喜欢...",
+  "finalZanVsCai": [4,1],
+  "avator": "froAndBand,rgb(142,44,255),shirtVNeck,pastelYellow,xDizzy,concerned,#8F69DB",
+  "messageToUser": [{
+    "sendTime": 5,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 23,
+    "sendText": "balabalabala....."
+  },{
+    "sendTime": 57,
+    "sendText": "balabalabala....."
+  }]
+}]
