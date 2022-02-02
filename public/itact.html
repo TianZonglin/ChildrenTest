@@ -241,8 +241,14 @@
               $("#up8").css("font-size","10px");
               $("#up8").css("font-weight","900");
               $("#rankcnt8").val(parseInt($("#up8").text())-parseInt($("#down8").text()));
-              Dreamer.success("("+o.name+")给你点了一个赞！",2000);
-           
+              //Dreamer.success("("+o.name+")给你点了一个赞！",2000);
+              GrowlNotification.notify({
+                title: 'Well Done!',
+                description: "("+o.name+")给你点了一个赞！",
+                type: 'success',
+                position: 'bottom-left',
+                closeTimeout: 2000
+              });
               rank();
               setTimeout(function(){
                 $("#up8").css("color","red");
@@ -300,7 +306,7 @@
         for(let msg = 0; msg < parseInt(o.messageToUser.length); msg++){
           let avaStr = o.boy.avator.split(";");
           let svg = Avataaars.create({
-              width: 50,
+              width: 20,
               top: avaStr[0],
               hairColor: avaStr[1],
               clothing: avaStr[2],
@@ -310,12 +316,16 @@
               skin:"yellow",
               background: avaStr[6]
           });
+
           setTimeout(function(){
-            $("#mailbox").append(svg+"("+o.name+")对你说：<span>"+o.messageToUser[msg].sendText+"</span><br>");
-  
+            GrowlNotification.notify({
+              description: svg+"("+o.name+")对你说：<span>"+o.messageToUser[msg].sendText+"</span><br>",
+              type: 'info',
+              position: 'bottom-right',
+              closeTimeout: 3000
+            });
           }, 1000*parseInt(o.messageToUser[msg].sendTime));
         }
-      
       }
       
       
@@ -323,31 +333,24 @@
       let summer = setInterval(counClock, 1000);
 
       function counClock() {
-          let min = '';
-          let sec = '';
+        let min = '';
+        let sec = '';
 
-          if (cutTime > 0) {
-              min = Math.floor(cutTime / 60);
-              sec = Math.floor(cutTime % 60);
-              if (sec < 10) {
-                  sec = '0' + sec;
-              };
-              cutTime--;
-              $("#leftTime").text(min + ':' + sec);
-          } else {
-              $("#leftTime").text('0:00');
-              $(".btn17").addClass('disabled');
-              clearInterval(summer);
-          }
-
-
+        if (cutTime > 0) {
+            min = Math.floor(cutTime / 60);
+            sec = Math.floor(cutTime % 60);
+            if (sec < 10) {
+                sec = '0' + sec;
+            };
+            cutTime--;
+            $("#leftTime").text(min + ':' + sec);
+        } else {
+            $("#leftTime").text('0:00');
+            $(".btn17").addClass('disabled');
+            clearInterval(summer);
+        }
       }
-
     });
-
-
   });
-  
-  
-  
+
 </script>
