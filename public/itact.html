@@ -120,7 +120,8 @@
       let str = "";
       for(let i = 0; i < e.length; i++){
         let obj = e[i];
-        let avaStr = obj.avator.split(",");
+        let avaStr = obj.avator.split(";");
+        console.log(avaStr[1]);
         let svg = Avataaars.create({
             width: 60,
             top: avaStr[0],
@@ -137,6 +138,7 @@
 
 
         str += "<div class='item'>";
+        str += "<div class='userInfo'>";
         str += "<a class='interava'>";
         str += svg;
         str += "</a>";
