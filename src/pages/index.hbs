@@ -36,7 +36,12 @@
   <script src="/driver.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
   
-  <script src="https://cdn.jsdelivr.net/gh/iGaoWei/Dream-Msg/lib/dream-msg.min.js"></script>
+  <link rel="stylesheet" href="/notice/light-theme.min.css">
+  <link rel="stylesheet" href="/notice/colored-theme.min.css">
+  <link rel="stylesheet" href="/notice/dark-theme.min.css">
+ 
+
+  <script src="/notice/growl-notification.min.js"></script>
   
   <script src="/avataaars.js"></script>
   
@@ -96,7 +101,7 @@
     }
     
 $(function(){
-    const driver = new Driver();
+    /*const driver = new Driver();
     // Define the steps for introduction
     driver.defineSteps([
       {
@@ -108,7 +113,7 @@ $(function(){
           description: 'Body of the popover',
           position: 'right'
         }
-      },/*
+      },
       {
         element: '#p1b',
         popover: {
@@ -135,11 +140,21 @@ $(function(){
           description: 'Body of the popover',
           position: 'right'
         }
-      },*/
+      },
     ]);
     // Start the introduction
-    driver.start();
+    driver.start();*/
     $(".driver-close-btn").hide();
+  
+    GrowlNotification.notify({
+      title: 'Well Done!',
+      description: 'You just submit your resume successfully.',
+      image: 'img/success.png',
+      type: 'success',
+      position: 'top-right',
+      closeTimeout: 1000
+    });
+  
  });   
     
     
