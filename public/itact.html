@@ -151,14 +151,23 @@
         str += "<div class='textInfo'>";
         str += obj.introText;
         str += "</div>";
-        str += "<div class='Btn'>顶&nbsp;<span class='cnt' value="+obj.finalZanVsCai[0]+">0</span><button  class='btn17' style='float:right'>顶&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
-        str += "<div class='Btn'>踩&nbsp;<span class='cnt' value="+obj.finalZanVsCai[1]+">0</span><button  class='btn17' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
+        str += "<div class='Btn'>顶&nbsp;<span class='cnt' value="+obj.finalZanVsCai[0]+" time="+obj.popTime[0]+">0</span><button  class='btn17' style='float:right'>顶&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
+        str += "<div class='Btn'>踩&nbsp;<span class='cnt' value="+obj.finalZanVsCai[1]+" time="+obj.popTime[1]+">0</span><button  class='btn17' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div>";
 
       }
   
       $("#itor").html(str);
  
+      
+      //开始自动fake
+      for(let i = 0; i < e.length; i++){
+        let o = e[i];
+        
+        for(let )
+        setTimeout(myGreeting, 5000);
+      
+      }
 
     });
   
