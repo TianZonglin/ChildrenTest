@@ -33,12 +33,17 @@
   
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
-  <script src="/driver.min.js"></script>
+  <script src="/notice/driver.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
   
-  <link rel="stylesheet" href="/notice/light-theme.min.css">
+<!-- 
+ <link rel="stylesheet" href="/notice/dark-theme.min.css">
+ <link rel="stylesheet" href="/notice/light-theme.min.css">
+-->
+  
+  
   <link rel="stylesheet" href="/notice/colored-theme.min.css">
-  <link rel="stylesheet" href="/notice/dark-theme.min.css">
+  
  
 
   <script src="/notice/growl-notification.min.js"></script>
@@ -146,14 +151,7 @@ $(function(){
     driver.start();*/
     $(".driver-close-btn").hide();
   
-    GrowlNotification.notify({
-      title: 'Well Done!',
-      description: 'You just submit your resume successfully.',
-      image: 'img/success.png',
-      type: 'success',
-      position: 'top-right',
-      closeTimeout: 1000
-    });
+
   
  });   
     
@@ -172,8 +170,7 @@ $(function(){
       <!-- This is the start of content for our page -->
       <h1>认识更多小朋友 <h3>v<span id="version"></span></h3></h1>
  
-
-
+ 
         <!-- ADD LINK FROM TODO -->
       <div class="rzone" id="p1_content">
         <p>
