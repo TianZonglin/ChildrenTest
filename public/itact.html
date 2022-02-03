@@ -112,7 +112,7 @@
   <div>
     <div style="margin:0px auto; width:200px; height:270px; border:1px black solid">
 
-      <div style="float:left; width:65%; height:270px; border:1px black solid">
+      <div style="float:left; width:65%; height:270px; border:1px black solid;background-color:#a2a4c6;color:#FFFFFF">
         <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第一名</div>
         <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第二名</div>
         <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第三名</div>
@@ -175,6 +175,7 @@
        });
        
        $('#ranky').html(domList);
+       console.log(domList);
     }
     $.getJSON("fakers.json",function(e){
 
