@@ -76,6 +76,14 @@
     border-radius: 3px;
     color: #fbff00;
   }
+  .order{
+    text-align:center;
+    line-height:26px;
+    loat:left; 
+    width:100%; 
+    height:30px; 
+    border:1px black solid;
+  }
 </style>
 
 <script>
@@ -113,7 +121,7 @@
     <div style="margin:0px auto; width:200px; height:270px; border:1px black solid">
 
       <div style="float:left; width:65%; height:270px; border:1px black solid;background-color:#a2a4c6;color:#FFFFFF">
-        <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第一名</div>
+        <div class="order">第一名</div>
         <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第二名</div>
         <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第三名</div>
         <div style="text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid">第四名</div>
@@ -175,12 +183,12 @@
        });
        
        $('#ranky').html(domList);
-       console.log(domList);
+       console.log($('.rankcnt').index($('#rankcnt8')));
     }
     $.getJSON("fakers.json",function(e){
 
       let str = "";
-      let rky = "<div value='0' class='rankcnt' id='rankcnt8' style='text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid'>PDD</div>";
+      let rky = "<div value='0' class='rankcnt' id='rankcnt8' style='background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:30px; border:1px black solid'>PDD</div>";
       for(let i = 0; i < e.length; i++){
         let obj = e[i];
         let avaStr = obj.boy.avator.split(";");
