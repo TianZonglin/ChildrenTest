@@ -82,6 +82,8 @@
     loat:left; 
     width:100%; 
     height:30px; 
+    border-radius:5px 5px 5px5px;
+    background-color:#a2a4c6;
   }
 </style>
 
@@ -116,11 +118,11 @@
     <div style="clear:both"></div>
   
   <div>剩余时间<br><span id="leftTime"></span></div>
-  <div style="margin:0px auto; text-align:center;width:170px; height:300px;background-color:white">
-    <div style="margin-top:10px;>实时排行榜</div>
+  <div style="border-radius:5px;margin:0px auto; text-align:center;width:170px; height:320px;background-color:white;padding: 10px;">
+    <span>实时排行榜</span>
     <div style="margin:10px auto; width:150px; height:270px;margin-top:10px">
 
-      <div style="float:left; font-size:15px;font-weight:900;width:55%; height:270px;background-color:#a2a4c6;color:#FFFFFF">
+      <div style="float:left; font-size:15px;font-weight:900;width:55%; height:270px;color:#FFFFFF">
         <div class="order">第一名</div>
         <div class="order">第二名</div>
         <div class="order">第三名</div>
@@ -131,7 +133,7 @@
         <div class="order">第八名</div>
         <div class="order">第九名</div>
       </div>
-      <div style="float:left; font-size:15px;font-weight:900;width:45%; height:270px;" id="ranky">
+      <div style=" float:left; font-size:15px;font-weight:900;width:45%; height:270px;" id="ranky">
 
       </div>
      
@@ -191,7 +193,7 @@
 
       let str = "";
       $('.order')[0].style.backgroundColor='#DD9F4B';
-      let rky = "<div value='0' class='rankcnt' id='rankcnt8' style='background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:30px; '>PDD</div>";
+      let rky = "<div value='0' class='rankcnt' id='rankcnt8' style='border-radius:5px;background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:30px; '>PDD</div>";
       for(let i = 0; i < e.length; i++){
         let obj = e[i];
         let avaStr = obj.boy.avator.split(";");
