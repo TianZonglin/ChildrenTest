@@ -2,13 +2,14 @@
     pointer-events: none;
     cursor: default;
     opacity: 0.6;
+    
 }
 
 .content0 {
  
   align-items: left;
   justify-content: left;
-  width: 20%;
+  width: 23%;
 
 }
 
@@ -16,7 +17,7 @@
  
   align-items: left;
   justify-content: left;
-  width: 60%;
+  width: 54%;
   margin: 0px auto;
 }
 
@@ -24,14 +25,14 @@
   float:left;
   align-items: left;
   justify-content: left;
-  width: 20%;
+  width: 23%;
 
 }
 
 /* Page structure */
 .wrapper {
   min-height: var(--wrapper-height);
- 
+  width: 100%;
   place-items: ;
   display: flex;
   flex-direction: row;
