@@ -4,35 +4,33 @@
     "introText": "最喜欢...最喜欢...最喜欢...",
     "boy": {
       "finalZanVsCai": [2,3],
-      "popTime": ["6,11","1,3,5"],
+      "popTime": ["1,2","3,4,5"],
       "avator": "froAndBand;red;shirtVNeck;pastelYellow;xDizzy;concerned;red"
     },
     "girl": {
       "finalZanVsCai": [2,3],
-      "popTime": ["6,11","1,3,5"],
+      "popTime": ["3,4","1,2,3"],
       "avator": "froAndBand;red;shirtVNeck;pastelYellow;xDizzy;concerned;red"
     },
     "optionToUser": {
-      "opTime": 10, 
+      "opTime": 2, 
       "option": "like"
     },
     "messageToUser": [
-        {"sendTime": 1, "sendText": "balabalabala....."},
-        {"sendTime": 2,  "sendText": "balabalabala....."},
-        {"sendTime": 3, "sendText": "balabalabala....."}
+        {"sendTime": 1, "sendText": "balabalabala....."}
     ]
   },{
     "fakeUserID": 1,
     "name": "SDF",
     "introText": "最喜欢...最喜欢...最喜欢...",
     "boy": {
-      "finalZanVsCai": [4,1],
-      "popTime": ["5,11,19,22","25"],
+      "finalZanVsCai": [2,1],
+      "popTime": ["1,5","1"],
       "avator": "froAndBand;rgb(250,138,251);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(250,138,251)"
     },
     "girl": {
-      "finalZanVsCai": [4,1],
-      "popTime": ["5,11,19,22","25"],
+      "finalZanVsCai": [1,1],
+      "popTime": ["3","1"],
       "avator": "froAndBand;rgb(250,138,251);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(250,138,251)"
     },
     "optionToUser": {
@@ -40,9 +38,7 @@
       "option": "dislike"
     },
     "messageToUser": [
-        {"sendTime": 5, "sendText": "balabalabala....."},
-        {"sendTime": 12,  "sendText": "balabalabala....."},
-        {"sendTime": 15, "sendText": "balabalabala....."}
+        {"sendTime": 5, "sendText": "balabalabala....."}
     ]
   },{
     "fakeUserID": 2,
@@ -50,35 +46,34 @@
     "introText": "最喜欢...最喜欢...最喜欢...",
     "boy": {
       "finalZanVsCai": [3,2],
-      "popTime": ["4,7,19","7,9"],
+      "popTime": ["4,5,6","1,2"],
       "avator": "froAndBand;rgb(140,233,18);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(140,233,18)"
     },
     "girl": {
       "finalZanVsCai": [3,2],
-      "popTime": ["4,7,19","7,9"],
+      "popTime": ["2,3,4","5,6"],
       "avator": "froAndBand;rgb(140,233,18);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(140,233,18)"
     },
     "optionToUser": {
-      "opTime": 33, 
+      "opTime": 0, 
       "option": "like"
     },
     "messageToUser": [
         {"sendTime": 3, "sendText": "balabalabala....."},
-        {"sendTime": 5,  "sendText": "balabalabala....."},
-        {"sendTime": 7, "sendText": "balabalabala....."}
+        {"sendTime": 5,  "sendText": "balabalabala....."}
     ]
   },{
     "fakeUserID": 3,
     "name": "EWR",
     "introText": "最喜欢...最喜欢...最喜欢...",
     "boy": {
-      "finalZanVsCai": [4,1],
-      "popTime": ["23,26,29,34","25"],
+      "finalZanVsCai": [2,1],
+      "popTime": ["1,2","4"],
       "avator": "froAndBand;rgb(0,175,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(0,175,255)"
     },
     "girl": {
-      "finalZanVsCai": [4,1],
-      "popTime": ["23,26,29,34","25"],
+      "finalZanVsCai": [2,2],
+      "popTime": ["2,4","5,6"],
       "avator": "froAndBand;rgb(0,175,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(0,175,255)"
     },
     "optionToUser": {
@@ -86,22 +81,19 @@
       "option": "like"
     },
     "messageToUser": [
-        {"sendTime": 8, "sendText": "balabalabala....."},
-        {"sendTime": 14,  "sendText": "balabalabala....."},
-        {"sendTime": 16, "sendText": "balabalabala....."}
     ]
   },{
     "fakeUserID": 4,
     "name": "BSS",
     "introText": "最喜欢...最喜欢...最喜欢...",
     "boy": {
-      "finalZanVsCai": [4,1],
-      "popTime": ["4,21,29,54","15"],
+      "finalZanVsCai": [2,1],
+      "popTime": ["4,5","1"],
       "avator": "froAndBand;rgb(48,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(48,0,255)"
     },
     "girl": {
-      "finalZanVsCai": [4,1],
-      "popTime": ["23,26,29,34","25"],
+      "finalZanVsCai": [1,2],
+      "popTime": ["1","4,5"],
       "avator": "froAndBand;rgb(48,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(48,0,255)"
     },
     "optionToUser": {
@@ -109,22 +101,19 @@
       "option": "dislike"
     },
     "messageToUser": [
-        {"sendTime": 15, "sendText": "balabalabala....."},
-        {"sendTime": 23,  "sendText": "balabalabala....."},
-        {"sendTime": 57, "sendText": "balabalabala....."}
     ]
   },{
     "fakeUserID": 5,
     "name": "SDG",
     "introText": "最喜欢...最喜欢...最喜欢...",
     "boy": {
-      "finalZanVsCai": [4,1],
-      "popTime": ["5,6,7,8","11"],
+      "finalZanVsCai": [1,3],
+      "popTime": ["1","2,3,4"],
       "avator": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)"
     },
     "girl": {
-      "finalZanVsCai": [4,1],
-      "popTime": ["5,6,7,8","11"],
+      "finalZanVsCai": [2,1],
+      "popTime": ["5,6","2"],
       "avator": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)"
     },
     "optionToUser": {
@@ -132,22 +121,19 @@
       "option": "like"
     },
     "messageToUser": [
-        {"sendTime": 8, "sendText": "balabalabala....."},
-        {"sendTime": 13,  "sendText": "balabalabala....."},
-        {"sendTime": 16, "sendText": "balabalabala....."}
     ]
   },{
     "fakeUserID": 6,
     "name": "QWF",
     "introText": "最喜欢...最喜欢...最喜欢...",
     "boy": {
-      "finalZanVsCai": [4,1],
-      "popTime": ["7,11,13,14","8"],
+      "finalZanVsCai": [3,1],
+      "popTime": ["2,4,5","1"],
       "avator": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)"
     },
     "girl": {
-      "finalZanVsCai": [4,1],
-      "popTime": ["7,11,13,14","8"],
+      "finalZanVsCai": [2,2],
+      "popTime": ["1,4","3,5"],
       "avator": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)"
     },
     "optionToUser": {
@@ -155,31 +141,25 @@
       "option": "like"
     },
     "messageToUser": [
-        {"sendTime": 17, "sendText": "balabalabala....."},
-        {"sendTime": 22,  "sendText": "balabalabala....."},
-        {"sendTime": 27, "sendText": "balabalabala....."}
     ]
   },{
     "fakeUserID": 7,
     "name": "VSA",
     "introText": "最喜欢...最喜欢...最喜欢...",
     "boy": {
-      "finalZanVsCai": [4,1],
-      "popTime": ["13,16,19,24","5"],
+      "finalZanVsCai": [2,2],
+      "popTime": ["4,5","1,3"],
       "avator": "froAndBand;rgb(142,44,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(142,44,255)"
     },
     "girl": {
-      "finalZanVsCai": [4,1],
-      "popTime": ["13,16,19,24","5"],
+      "finalZanVsCai": [2,2],
+      "popTime": ["4,6","1,2"],
       "avator": "froAndBand;rgb(142,44,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(142,44,255)"
     },
     "optionToUser": {
-      "opTime": 10, 
+      "opTime": 0, 
       "option": "like"
     },
     "messageToUser": [
-        {"sendTime": 2, "sendText": "balabalabala....."},
-        {"sendTime": 6,  "sendText": "balabalabala....."},
-        {"sendTime": 8, "sendText": "balabalabala....."}
     ]
   }]
