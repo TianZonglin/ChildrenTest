@@ -298,6 +298,9 @@
   $("#p13d").click(function(){
     $("#p13_content").hide();
     $("#p14_content").show();
+    window.onload = function() { 
+      window.onmousewheel = document.onmousewheel=function() {return false}
+    }
     setTimeout(() => window.scrollTo(0,0), 150);  
     GrowlNotification.notify({
       description: "(LDN)给你点了一个赞！",
@@ -370,7 +373,9 @@
       }
       $("#itor").html(str);
       $("#ranky").html(rky);
-      const driver = new Driver();
+      const driver = new Driver({
+          allowClose: false,
+      });
       driver.defineSteps([
         {
           element: '#root',
@@ -388,7 +393,7 @@
             showCloseButton: false,
             title: 'Title on Popover',
             description: 'Body of the popover',
-            position: 'top'
+            position: 'left'
           }
         },
         {
@@ -397,7 +402,7 @@
             showCloseButton: false,
             title: 'Title on Popover',
             description: 'Body of the popover',
-            position: 'right'
+            position: 'top'
           }
         },
         {
@@ -406,7 +411,7 @@
             showCloseButton: false,
             title: 'Title on Popover',
             description: 'Body of the popover',
-            position: 'right'
+            position: 'top'
           }
         },
       ]);
