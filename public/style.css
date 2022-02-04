@@ -4,29 +4,37 @@
     opacity: 0.6;
 }
 
-.content {
-  display: block;
-  flex-direction: column;
+.content0 {
+ 
   align-items: left;
   justify-content: left;
-  width: 700px;
+  width: 20%;
+
+}
+
+.content {
+ 
+  align-items: left;
+  justify-content: left;
+  width: 60%;
   margin: 0px auto;
 }
 
 .content2 {
-  width: 80px;
-  display: block;
-  background-color:red;
-  width:50px;
-  height:300px;
+  float:left;
+  align-items: left;
+  justify-content: left;
+  width: 20%;
+
 }
 
 /* Page structure */
 .wrapper {
   min-height: var(--wrapper-height);
-  display: grid;
+ 
   place-items: ;
-  width: 1300px;
+  display: flex;
+  flex-direction: row;
 }
 
 .rzone{
