@@ -298,16 +298,17 @@
   $("#p13d").click(function(){
     $("#p13_content").hide();
     $("#p14_content").show();
-    window.onload = function() { 
-      window.onmousewheel = document.onmousewheel=function() {return false}
-    }
+    
+    document.body.style.overflow='hidden';       
+    document.addEventListener("touchmove", function(e){e.preventDefault();},{passive:false});
+    
     setTimeout(() => window.scrollTo(0,0), 150);  
     GrowlNotification.notify({
       description: "(LDN)给你点了一个赞！",
       type: 'success',
       position: 'bottom-left',
       closeTimeout: 0
-    });    
+    });  
     let s = Avataaars.create({width:20});
     GrowlNotification.notify({
       description: s+"(LDN)对你说：<span>你真有趣。</span><br>",
