@@ -292,46 +292,59 @@
 
   function drivers(){
       const driver = new Driver({
-          allowClose: false,
+        allowClose: false, // Whether clicking on overlay should close or not
+        overlayClickNext: false, // Should it move to next step on overlay click
+        doneBtnText: '教程结束', // Text on the final button
+        closeBtnText: 'Close', // Text on the close button for this step
+        nextBtnText: '继续', // Next button text for this step
+        prevBtnText: '返回', // Previous button text for this step
+        showCloseButton: false, // Do not show control buttons in footer
+        onNext: (Element) => {},      // Called when moving to next step on any step
       });
       driver.defineSteps([
         {
           element: '.item',
           popover: {
-            showCloseButton: false,
             className: 'first-step-popover-class',
-            title: 'Title on Popover',
-            description: 'Body of the popover',
+            title: '模块名称',
+            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
             position: 'right'
           }
         },
         {
-          element: '.item2',
+          element: '.Btn',
           popover: {
-            showCloseButton: false,
             className: 'first-step-popover-class',
-            title: 'Title on Popover',
-            description: 'Body of the popover',
+            title: '模块名称',
+            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
             position: 'right'
           }
         },
         {
-          element: '#up2',
+          element: '#item2',
           popover: {
-            showCloseButton: false,
+
             className: 'first-step-popover-class',
-            title: 'Title on Popover',
-            description: 'Body of the popover',
+            title: '模块名称',
+            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
             position: 'right'
           }
         },
         {
-          element: '#btn',
+          element: '#up1',
           popover: {
-            showCloseButton: false,
             className: 'first-step-popover-class',
-            title: 'Title on Popover',
-            description: 'Body of the popover',
+            title: '模块名称',
+            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
+            position: 'right'
+          }
+        },
+        {
+          element: '.btn17',
+          popover: {
+            className: 'first-step-popover-class',
+            title: '模块名称',
+            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
             position: 'right'
           }
         },
@@ -339,8 +352,32 @@
           element: '.content2',
           popover: {
             showCloseButton: false,
-            title: 'Title on Popover',
-            description: 'Body of the popover',
+            title: '模块名称',
+            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
+            position: 'left'
+          }
+        },
+        {
+          element: '.r1',
+          popover: {
+            title: '模块名称',
+            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
+            position: 'left'
+          }
+        },
+        {
+          element: '.r2',
+          popover: {
+            title: '模块名称',
+            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
+            position: 'left'
+          }
+        },
+        {
+          element: '.r3',
+          popover: {
+            title: '模块名称',
+            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
             position: 'left'
           }
         },
@@ -348,8 +385,8 @@
           element: '.growl-notification--success',
           popover: {
             showCloseButton: false,
-            title: 'Title on Popover',
-            description: 'Body of the popover',
+            title: '模块名称',
+            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
             position: 'top'
           }
         },
@@ -357,8 +394,8 @@
           element: '.growl-notification--info',
           popover: {
             showCloseButton: false,
-            title: 'Title on Popover',
-            description: 'Body of the popover',
+            title: '模块名称',
+            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
             position: 'top'
           }
         },
@@ -427,7 +464,7 @@
         if(b){
           bstr = "<span style='color:red'>"+b+"</span>";
         } 
-        str += "<div class='item,item2'>";
+        str += "<div class='item' id='item2'>";
         str += "<div class='userInfo'>";
         str += "<a class='interava'>";
         str += svg;
