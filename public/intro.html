@@ -331,7 +331,7 @@
           }
         },
         {
-          element: '#up1',
+          element: '#up0',
           popover: {
             className: 'first-step-popover-class',
             title: '模块名称',
@@ -495,9 +495,11 @@
   
   $("#p14d").click(function(){
     
-    $("#msgnum").html("");
+    $("#msgnum").text(0);
     GrowlNotification.closeAll();
-    
+      var mo=function(e){passive: false };
+      document.body.style.overflow='';//出现滚动条
+      document.removeEventListener("touchmove",mo,false);
     
     $("#p14_content").html("");
     $("#p15_content").show();
