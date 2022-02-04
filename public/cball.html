@@ -150,6 +150,7 @@
         $("#tp1").unbind("click");
         $("#tp3").unbind("click"); 
         $("#tptext").text("您已弃权，无法继续投票！");
+        $("#p27d").removeAttr("disabled");
         clearInterval(sid);
       });
       $("#tp3").click(function(){
