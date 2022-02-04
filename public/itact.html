@@ -120,8 +120,8 @@
 
   <div id="mailbox"></div>
   <div id="popzan"></div>
-  
-    <button id="p17d" style="margin-left:390px;" disabled>继续</button>
+    <br>
+    <button id="p17d" style="margin-left:390px;" disabled>进入下一页</button>
 <br><br>
 </div>
 
@@ -323,7 +323,7 @@
           }, 1000*parseInt(o.messageToUser[msg].sendTime));
         }
         $("#check").click(function(){
-          
+          $("#p17d").removeAttr("disabled");
           for(let msg = 0; msg < parseInt(o.messageToUser.length); msg++){
             let avaStr = o.boy.avator.split(";");
             let svg = Avataaars.create({
@@ -341,7 +341,7 @@
               description: svg+"("+o.name+")对你说：<span>"+o.messageToUser[msg].sendText+"</span><br>",
               type: 'info',
               position: 'bottom-right',
-              closeTimeout: 5000
+              closeTimeout: 2000
             });
           }
           
@@ -369,11 +369,14 @@
         } else {
             $("#leftTime").text('0:00');
             $(".btn17").addClass('disabled');
-            $("#p17d").removeClass("disabled");
-            $("#check").removeClass("disabled");
+            $("#check").removeAttr("disabled");
             clearInterval(summer);
+            alert("时间结束，你无法继续点赞或踩别人。其他人给你发送的消息可以点击右侧按钮查看！");
         }
       }
+      
+ 
+        
     });
   });
 
