@@ -121,7 +121,7 @@
   <div id="mailbox"></div>
   <div id="popzan"></div>
   
-    <button id="p17d" style="margin-left:390px;">继续</button>
+    <button id="p17d" style="margin-left:390px;" disabled>继续</button>
 <br><br>
 </div>
 
@@ -311,14 +311,43 @@
           });
 
           setTimeout(function(){
+            $("#msgnum").text(parseInt($("#msgnum").text())+1);
+            $("#msgnum").css("color","rgb(255,160,0)");
+            $("#msgnum").css("font-size","10px");
+            $("#msgnum").css("font-weight","900");
+       
+            setTimeout(function(){
+              $("#msgnum").css("color","red");
+              $("#msgnum").css("font-size","16px");
+            },500)
+          }, 1000*parseInt(o.messageToUser[msg].sendTime));
+        }
+        $("#check").click(function(){
+          
+          for(let msg = 0; msg < parseInt(o.messageToUser.length); msg++){
+            let avaStr = o.boy.avator.split(";");
+            let svg = Avataaars.create({
+                width: 20,
+                top: avaStr[0],
+                hairColor: avaStr[1],
+                clothing: avaStr[2],
+                clothingColor: avaStr[3],
+                eyes: avaStr[4],
+                mouth: avaStr[5],
+                skin:"yellow",
+                background: avaStr[6]
+            });
             GrowlNotification.notify({
               description: svg+"("+o.name+")对你说：<span>"+o.messageToUser[msg].sendText+"</span><br>",
               type: 'info',
               position: 'bottom-right',
-              closeTimeout: 3000
+              closeTimeout: 5000
             });
-          }, 1000*parseInt(o.messageToUser[msg].sendTime));
-        }
+          }
+          
+        })
+
+        
       }
       
       
@@ -340,6 +369,8 @@
         } else {
             $("#leftTime").text('0:00');
             $(".btn17").addClass('disabled');
+            $("#p17d").removeClass("disabled");
+            $("#check").removeClass("disabled");
             clearInterval(summer);
         }
       }
