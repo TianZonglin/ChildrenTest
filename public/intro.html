@@ -204,8 +204,10 @@
   
   
   
-
+    <button style="float:left;margin-bottom: 30px;" id="resee">重新观看教程</button>
+    <button id="p14d" style="float:right;margin-bottom: 30px;">进入下一页</button><br><br>
       <div id="root">
+        
         <div class="item">
           <div class="userInfo">
             <a class="interava"></a>
@@ -229,13 +231,6 @@
       <div id="mailbox"></div>
       <div id="popzan"></div>
 
-
-  
-      
-
-    
-    <button style="visibility:hidden">继续</button>
-    <button id="p14d" style="float:right;margin-right: 20px;">继续</button>
   
   
   
@@ -294,7 +289,85 @@
   });
   
   
-  
+
+  function drivers(){
+      const driver = new Driver({
+          allowClose: false,
+      });
+      driver.defineSteps([
+        {
+          element: '.item',
+          popover: {
+            showCloseButton: false,
+            className: 'first-step-popover-class',
+            title: 'Title on Popover',
+            description: 'Body of the popover',
+            position: 'right'
+          }
+        },
+        {
+          element: '.item2',
+          popover: {
+            showCloseButton: false,
+            className: 'first-step-popover-class',
+            title: 'Title on Popover',
+            description: 'Body of the popover',
+            position: 'right'
+          }
+        },
+        {
+          element: '#up2',
+          popover: {
+            showCloseButton: false,
+            className: 'first-step-popover-class',
+            title: 'Title on Popover',
+            description: 'Body of the popover',
+            position: 'right'
+          }
+        },
+        {
+          element: '#btn',
+          popover: {
+            showCloseButton: false,
+            className: 'first-step-popover-class',
+            title: 'Title on Popover',
+            description: 'Body of the popover',
+            position: 'right'
+          }
+        },
+        {
+          element: '.content2',
+          popover: {
+            showCloseButton: false,
+            title: 'Title on Popover',
+            description: 'Body of the popover',
+            position: 'left'
+          }
+        },
+        {
+          element: '.growl-notification--success',
+          popover: {
+            showCloseButton: false,
+            title: 'Title on Popover',
+            description: 'Body of the popover',
+            position: 'top'
+          }
+        },
+        {
+          element: '.growl-notification--info',
+          popover: {
+            showCloseButton: false,
+            title: 'Title on Popover',
+            description: 'Body of the popover',
+            position: 'top'
+          }
+        },
+      ]);
+      driver.start(); 
+  }
+  $("#resee").click(function(){
+    drivers();
+  });
   $("#p13d").click(function(){
     $("#p13_content").hide();
     $("#p14_content").show();
@@ -354,7 +427,7 @@
         if(b){
           bstr = "<span style='color:red'>"+b+"</span>";
         } 
-        str += "<div class='item'>";
+        str += "<div class='item,item2'>";
         str += "<div class='userInfo'>";
         str += "<a class='interava'>";
         str += svg;
@@ -374,49 +447,7 @@
       }
       $("#itor").html(str);
       $("#ranky").html(rky);
-      const driver = new Driver({
-          allowClose: false,
-      });
-      driver.defineSteps([
-        {
-          element: '#root',
-          popover: {
-            showCloseButton: false,
-            className: 'first-step-popover-class',
-            title: 'Title on Popover',
-            description: 'Body of the popover',
-            position: 'right'
-          }
-        },
-        {
-          element: '.content2',
-          popover: {
-            showCloseButton: false,
-            title: 'Title on Popover',
-            description: 'Body of the popover',
-            position: 'left'
-          }
-        },
-        {
-          element: '.growl-notification--success',
-          popover: {
-            showCloseButton: false,
-            title: 'Title on Popover',
-            description: 'Body of the popover',
-            position: 'top'
-          }
-        },
-        {
-          element: '.growl-notification--info',
-          popover: {
-            showCloseButton: false,
-            title: 'Title on Popover',
-            description: 'Body of the popover',
-            position: 'top'
-          }
-        },
-      ]);
-      driver.start(); 
+      drivers();
     });
 
   });
