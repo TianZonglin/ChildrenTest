@@ -75,7 +75,7 @@ $(function(){
   $("#p1_button").click(function(){
     $("#p1_content").hide();
     $("#p3_content").show();
- 
+    setTimeout(() => window.scrollTo(0,0), 150);
   });
   
   
@@ -83,6 +83,7 @@ $(function(){
   $("#p3_button").click(function(){
     $("#p3_content").hide();
     $("#p4_content").show();
+    setTimeout(() => window.scrollTo(0,0), 150);
   });
 
    //page 4
@@ -104,6 +105,7 @@ $(function(){
   $("#p6d").click(function(){
     $("#p6_content").hide();
     $("#p7_content").show();
+    setTimeout(() => window.scrollTo(0,0), 150);
     //$("#p8_content").load('intro.html');
 
   });
@@ -112,7 +114,8 @@ $(function(){
   $("#p7d").click(function(){
     $("#p7_content").hide();
     $("#p8-21").show();
+     window.onbeforeunload = function(){document.body.scrollTop = 0;} 
     $("#p8-21").load('intro.html');
-
+     window.onbeforeunload = function(){document.body.scrollTop = 0;} 
   });
 });

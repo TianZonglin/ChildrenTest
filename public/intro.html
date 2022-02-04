@@ -214,7 +214,7 @@
           <div class="textInfo">
             网站中有三个问题，请大家使用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这三道题你都做对，网站会自动跳转到下一页；否则，网站会提示你做错，然后让你继续做，直到你都做对。
           </div>
-          <div class="Btn"><div style="float:left">赞&nbsp;</div><span class="cnt" id="up8">0</span>
+          <div class="Btn"><div style="float:left">赞&nbsp;</div><span class="cnt" id="up8" style="color:red">2</span>
             <div style="float:right">踩&nbsp;<span class="cnt" id="down8">0</span></div></div>
 
         </div>
@@ -267,25 +267,30 @@
 <div id="2ndiv"></div>
 
 <script>
+ 
       //page 9
   $("#p8d").click(function(){
     $("#p8_content").hide();
     $("#p9_content").show();
+    setTimeout(() => window.scrollTo(0,0), 150);
   });
   
   $("#p9d").click(function(){
     $("#p9_content").hide();
     $("#p10_content").show();
+     setTimeout(() => window.scrollTo(0,0), 150);
   });
   
   $("#p10d").click(function(){
     $("#p10_content").hide();
     $("#p11_content").show();
+    setTimeout(() => window.scrollTo(0,0), 150); 
   });
   
   $("#p11d").click(function(){
     $("#p11_content").hide();
     $("#p13_content").show();
+    setTimeout(() => window.scrollTo(0,0), 150);
   });
   
   
@@ -293,7 +298,7 @@
   $("#p13d").click(function(){
     $("#p13_content").hide();
     $("#p14_content").show();
-    
+    setTimeout(() => window.scrollTo(0,0), 150);  
     GrowlNotification.notify({
       description: "(LDN)给你点了一个赞！",
       type: 'success',
@@ -387,7 +392,7 @@
   $("#p14d").click(function(){
     
     $("#msgnum").html("");
-    
+    GrowlNotification.closeAll();
     
     
     $("#p14_content").html("");
@@ -397,12 +402,13 @@
       $("#p15_text").html("...连接成功，可以开始。");
     },4000);
     $(".content2").css("visibility","hidden");
-    
+    setTimeout(() => window.scrollTo(0,0), 150);
   });
   $("#p15d").click(function(){
     $("#p15_content").hide();
     $("#2ndiv").load("itact.html");
     $(".content2").css("visibility","visible");
+    setTimeout(() => window.scrollTo(0,0), 150);
   });
   
   let selectNum = 0;
