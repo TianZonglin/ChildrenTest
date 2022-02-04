@@ -64,7 +64,7 @@
     <div style="text-align:center;margin:0px auto;width:300px;height:30px;color:rgb(255,95,95);font-weight:900" id="tptext"></div>
     <br>
     <button style="visibility:hidden">继续</button>
-    <button id="p27d" style="float:right;margin-right: 0px;">下一页</button><br> 
+    <button id="p27d" style="float:right;margin-right: 0px;" disabled>下一页</button><br> 
   </div>
  </div> 
 
@@ -83,7 +83,7 @@
     <iframe id="ifr" width="100%" height="432" style="border:none;" src="https://cyberball.empirisoft.com/web?cbe=2d773911-3fd0-40cb-9109-387569bc4d2a&condition=1&pid=">
     </iframe><br><br>
     <button style="visibility:hidden">继续</button>
-    <button id="p31d" style="float:right;margin-right: 0px;visibility:hidden;">点此结束</button><br><br>
+    <button id="p31d" style="float:right;margin-right: 0px;" disabled>点此结束</button><br><br>
   </div>
  </div>
 <div class="rzone" id="p34_content" style="display:none">
@@ -117,7 +117,7 @@
     });
     
     setTimeout(function(){
-      $("#p31d").css("visibility","visible");
+      $("#p31d").removeAttr("disabled");
     }, 60000);
   
     
@@ -134,6 +134,7 @@
           $("#tp1").unbind("click");
           $("#tp2").unbind("click");
           $("#tp3").unbind("click"); 
+          $("#p27d").removeAttr("disabled");
           $("#tptext").text("您已完成投票，当前显示即为最终得票！");
         }
         timer.innerText = number + 0 }, 
