@@ -287,6 +287,9 @@
     $("#p11_content").hide();
     $("#p13_content").show();
   });
+  
+  
+  
   $("#p13d").click(function(){
     $("#p13_content").hide();
     $("#p14_content").show();
@@ -314,8 +317,79 @@
     }); 
     $(".content2").css("visibility","visible");
     
+    $("#msgnum").html("<span style='color:red'>3</span>");
+ 
+    
+    $.getJSON("fakers.json",function(e){
+
+      let str = "";
+      $('.order')[0].style.backgroundColor='#DD9F4B';
+      let rky = "<div value='0' class='rankcnt' id='rankcnt8' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:27px; '>PDD</div>";
+      for(let i = 0; i < e.length; i++){
+        let obj = e[i];
+        let avaStr = obj.boy.avator.split(";");
+ 
+        let svg = Avataaars.create({
+            width: 50,
+            top: avaStr[0],
+            hairColor: avaStr[1],
+            clothing: avaStr[2],
+            clothingColor: avaStr[3],
+            eyes: avaStr[4],
+            mouth: avaStr[5],
+            skin:"yellow",
+            background: avaStr[6]
+        });
+        
+        let a = Math.round(Math.random()*4);
+        let b = Math.round(Math.random()*4);
+        let astr = a;
+        let bstr = b;
+        if(a){
+          astr = "<span style='color:red'>"+a+"</span>";
+        }
+        if(b){
+          bstr = "<span style='color:red'>"+b+"</span>";
+        }
+        
+        str += "<div class='item'>";
+        str += "<div class='userInfo'>";
+        str += "<a class='interava'>";
+        str += svg;
+        str += "</a>";
+        str += "<span class='username'>";
+        str += obj.name;
+        str += "</span>";
+        str += "</div>";
+        str += "<div class='textInfo'>";
+        str += obj.introText;
+        str += "</div>";
+        str += "<div class='Btn'>赞&nbsp;<span class='cnt' id='up"+i+"' value="+obj.boy.finalZanVsCai[0]+">"+astr+"</span><button  class='btn17' style='float:right'>顶&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
+        str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.boy.finalZanVsCai[1]+">"+bstr+"</span><button  class='btn17' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
+        str += "</div>";
+        rky += "<div value='0' class='rankcnt' id='rankcnt"+i+"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#a2a4c6;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"+obj.name+"</div>";
+
+      }
+      $("#itor").html(str);
+      $("#ranky").html(rky);
+ 
+    });
+    
+    
+    
+    
   });
+  
+  
+  
+  
+  
   $("#p14d").click(function(){
+    
+    $("#msgnum").html("");
+    
+    
+    
     $("#p14_content").html("");
     $("#p15_content").show();
     setTimeout(function(){
@@ -435,59 +509,9 @@
     $("#p17_27").load("cball.html");
     $(".content2").css("visibility","hidden");
   })
-  
-
-  
-  
-  
-    
-    
-    
-    
-    
-    
-    $.getJSON("fakers.json",function(e){
-
-      let str = "";
-      $('.order')[0].style.backgroundColor='#DD9F4B';
-      let rky = "<div value='0' class='rankcnt' id='rankcnt8' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:27px; '>PDD</div>";
-      for(let i = 0; i < e.length; i++){
-        let obj = e[i];
-        let avaStr = obj.boy.avator.split(";");
  
-        let svg = Avataaars.create({
-            width: 50,
-            top: avaStr[0],
-            hairColor: avaStr[1],
-            clothing: avaStr[2],
-            clothingColor: avaStr[3],
-            eyes: avaStr[4],
-            mouth: avaStr[5],
-            skin:"yellow",
-            background: avaStr[6]
-        });
-        str += "<div class='item'>";
-        str += "<div class='userInfo'>";
-        str += "<a class='interava'>";
-        str += svg;
-        str += "</a>";
-        str += "<span class='username'>";
-        str += obj.name;
-        str += "</span>";
-        str += "</div>";
-        str += "<div class='textInfo'>";
-        str += obj.introText;
-        str += "</div>";
-        str += "<div class='Btn'>赞&nbsp;<span class='cnt' id='up"+i+"' value="+obj.boy.finalZanVsCai[0]+">"+Math.round(Math.random()*5)+"</span><button  class='btn17' style='float:right'>顶&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
-        str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.boy.finalZanVsCai[1]+">"+Math.round(Math.random()*5)+"</span><button  class='btn17' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
-        str += "</div>";
-        rky += "<div value='0' class='rankcnt' id='rankcnt"+i+"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#a2a4c6;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"+obj.name+"</div>";
+    
 
-      }
-      $("#itor").html(str);
-      $("#ranky").html(rky);
- 
-    });
   });    
     
     
