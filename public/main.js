@@ -75,6 +75,7 @@ $(function(){
   $("#p1_button").click(function(){
     $("#p1_content").hide();
     $("#p3_content").show();
+    $(".content2").css("visibility","visible");
     $("#p3_content").load("itact.html");
   });
   
