@@ -17,15 +17,16 @@
  
   align-items: left;
   justify-content: left;
-  width: 54%;
+  width: 800px;
   margin: 0px auto;
+  display: inline-block;
 }
 
 .content2 {
   float:left;
   align-items: left;
   justify-content: left;
-  width: 23%;
+  width: 100px
 
 }
 
