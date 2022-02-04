@@ -238,41 +238,42 @@
               skin:"yellow",
               background: iavaStr[6]
           });
-          if(o.optionToUser.option == "like"){
-            setTimeout(function(){
-              $("#up8").text(parseInt($("#up8").text())+1);
-              $("#up8").css("color","rgb(255,160,0)");
-              $("#up8").css("font-size","10px");
-              $("#up8").css("font-weight","900");
-              $("#rankcnt8").val(parseInt($("#up8").text())-parseInt($("#down8").text()));
-              //Dreamer.success("("+o.name+")给你点了一个赞！",2000);
-              GrowlNotification.notify({
-                description: "("+o.name+")给你点了一个赞！",
-                type: 'success',
-                position: 'bottom-left',
-                closeTimeout: 2000
-              });
-              rank();
+          if(o.optionToUser.opTime){
+            if(o.optionToUser.option == "like"){
               setTimeout(function(){
-                $("#up8").css("color","red");
-                $("#up8").css("font-size","16px");
-              },500)
-            }, 1000*parseInt(o.optionToUser.opTime));
-          }else{
-            setTimeout(function(){
-              $("#down8").text(parseInt($("#down8").text())+1);
-              $("#down8").css("color","rgb(255,160,0)");
-              $("#down8").css("font-size","10px");
-              $("#down8").css("font-weight","900");
-              $("#rankcnt").val(parseInt($("#up8").text())-parseInt($("#down8").text()));
-              rank();
+                $("#up8").text(parseInt($("#up8").text())+1);
+                $("#up8").css("color","rgb(255,160,0)");
+                $("#up8").css("font-size","10px");
+                $("#up8").css("font-weight","900");
+                $("#rankcnt8").val(parseInt($("#up8").text())-parseInt($("#down8").text()));
+                //Dreamer.success("("+o.name+")给你点了一个赞！",2000);
+                GrowlNotification.notify({
+                  description: "("+o.name+")给你点了一个赞！",
+                  type: 'success',
+                  position: 'bottom-left',
+                  closeTimeout: 2000
+                });
+                rank();
+                setTimeout(function(){
+                  $("#up8").css("color","red");
+                  $("#up8").css("font-size","16px");
+                },500)
+              }, 1000*parseInt(o.optionToUser.opTime));
+            }else{
               setTimeout(function(){
-                $("#down8").css("color","red");
-                $("#down8").css("font-size","16px");
-              },500)
-            }, 1000*parseInt(o.optionToUser.opTime));
+                $("#down8").text(parseInt($("#down8").text())+1);
+                $("#down8").css("color","rgb(255,160,0)");
+                $("#down8").css("font-size","10px");
+                $("#down8").css("font-weight","900");
+                $("#rankcnt").val(parseInt($("#up8").text())-parseInt($("#down8").text()));
+                rank();
+                setTimeout(function(){
+                  $("#down8").css("color","red");
+                  $("#down8").css("font-size","16px");
+                },500)
+              }, 1000*parseInt(o.optionToUser.opTime));
+            }
           }
-          
         }
  
         let upTime = o.boy.popTime[0].split(",");

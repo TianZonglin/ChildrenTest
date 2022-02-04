@@ -13,7 +13,7 @@
       "avator": "froAndBand;red;shirtVNeck;pastelYellow;xDizzy;concerned;red"
     },
     "optionToUser": {
-      "opTime": 2, 
+      "opTime": 6, 
       "option": "like"
     },
     "messageToUser": [
@@ -34,7 +34,7 @@
       "avator": "froAndBand;rgb(250,138,251);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(250,138,251)"
     },
     "optionToUser": {
-      "opTime": 3, 
+      "opTime": 1, 
       "option": "dislike"
     },
     "messageToUser": [
@@ -55,7 +55,7 @@
       "avator": "froAndBand;rgb(140,233,18);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(140,233,18)"
     },
     "optionToUser": {
-      "opTime": 0, 
+      "opTime": 5, 
       "option": "like"
     },
     "messageToUser": [
@@ -77,7 +77,7 @@
       "avator": "froAndBand;rgb(0,175,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(0,175,255)"
     },
     "optionToUser": {
-      "opTime": 22, 
+      "opTime": 4, 
       "option": "like"
     },
     "messageToUser": [
@@ -97,7 +97,7 @@
       "avator": "froAndBand;rgb(48,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(48,0,255)"
     },
     "optionToUser": {
-      "opTime": 19, 
+      "opTime": 2, 
       "option": "dislike"
     },
     "messageToUser": [
@@ -117,7 +117,7 @@
       "avator": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)"
     },
     "optionToUser": {
-      "opTime": 6, 
+      "opTime": 5, 
       "option": "like"
     },
     "messageToUser": [
@@ -137,7 +137,7 @@
       "avator": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)"
     },
     "optionToUser": {
-      "opTime": 3, 
+      "opTime": 0, 
       "option": "like"
     },
     "messageToUser": [
