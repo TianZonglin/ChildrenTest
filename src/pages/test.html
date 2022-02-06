@@ -27,7 +27,7 @@ $(function(){
       var oDiv = document.getElementById(id),
           sText = oDiv.innerHTML,
           bgColor = bgColor || "orange",
-          sKey = "<span style='background-color: "+bgColor+";'>"+key+"</span>",
+          sKey = "<span style='padding: 0px 5px 1px 5px; border-radius: 5px;background-color: "+bgColor+";'>"+key+"</span>",
           num = -1,
           rStr = new RegExp(key, "g"),
           rHtml = new RegExp("\<.*?\>","ig"), //匹配html元素
@@ -64,7 +64,7 @@ $(function(){
            for(let i=0;i<data.length;i++){
              $("#p2_content").append("<div style='margin-bottom:10px'><b>"+data[i].title+"</b><br/>"+data[i].authors+"<br/>"+data[i].abstract+"</div>");
            }
-           var key1 = keyLight('p2_content', 'trust');
+           var key1 = keyLight('p2_content', 'trust','#9fe68ec4');
          }
       });
     });
