@@ -163,12 +163,16 @@ fastify.get("/qCount", async (request, reply) => {
 
 
 fastify.post("/qList", async (request, reply) => {
+    const sql3 = require('better-sqlite3');
+    const   db = new sql3( 'memory.db' );
+    const  csv = require('csv-parser');
+    const   fs = require('fs'); 
   let params = request.query.raw;
   console.log(params);
   try {
  
      const ss = db.prepare("SELECT id,title,authors,abstract FROM articles WHERE title IN(SELECT title FROM articles WHERE title LIKE '%trust%' AND title LIKE '%happiness%') OR abstract IN(SELECT abstract FROM articles WHERE abstract LIKE '%trust%' AND title LIKE '%happiness%' )").all();
-      reply.send(ss.length); 
+      reply.send(ss); 
  
         
     } catch (dbError) {

@@ -76,8 +76,17 @@ $(function(){
        }
     });
     $("#check").click(function(){
-      
-      
+      $.ajax({
+         type:'post',
+         dataType:'json',
+         url:'/qList',
+         success:function(data){
+             //$("#p2_content").text(data.count[0]["count(id)"]);
+           for(let i=0;i<data.length;i++){
+             $("#p2_content").append(data[i].title+"\t"+data[i].authors+"\t"+data[i].abstract);
+           }
+         }
+      });
     });
     
   
@@ -99,7 +108,7 @@ $(function(){
           <textarea style="resize:none;height:300px; width:100%;border-radius:5px"></textarea>
         <button style="width:100%;background-color:#eb8f8f" id="check">🔎</button>
       </div>
-      <div style="border:1px black solid;width:85%;float:right" id="p2_content">
+      <div style="border:1px black solid;width:85%;float:right;overflow:scroll" id="p2_content">
          
       </div>  
     </div>
