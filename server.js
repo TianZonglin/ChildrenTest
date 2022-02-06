@@ -54,23 +54,6 @@ const db = require("./src/" + data.database);
  * Client can request raw data using a query parameter
  */
 fastify.get("/", async (request, reply) => {
-
-});
-
-/**
- * Post route to process user vote
- *
- * Retrieve vote from body data
- * Send vote to database helper
- * Return updated list of votes
- */
-fastify.post("/", async (request, reply) => { 
-
-});
-    
-
-
-fastify.get("/test", async (request, reply) => { 
   /* 
   Params is the data we pass to the client
   - SITE values for front-end UI but not for raw data
@@ -96,6 +79,23 @@ fastify.get("/test", async (request, reply) => {
   request.query.raw
     ? reply.send(params)
     : reply.view("/src/pages/index.hbs", params);
+});
+
+/**
+ * Post route to process user vote
+ *
+ * Retrieve vote from body data
+ * Send vote to database helper
+ * Return updated list of votes
+ */
+fastify.post("/", async (request, reply) => { 
+
+});
+    
+
+
+fastify.get("/test", async (request, reply) => { 
+
 });
 
 
