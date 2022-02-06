@@ -113,32 +113,36 @@ fastify.get("/q", async (request, reply) => {
     const  csv = require('csv-parser');
     const   fs = require('fs'); 
   
-  
+ 
    try {
+     
+      /*
       // create table
       db.exec( 'DROP TABLE IF EXISTS articles'  ); 
       db.exec( 'CREATE TABLE  articles (  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  key TEXT,  title TEXT,  year TEXT,  month TEXT,  day TEXT,  journal TEXT,  issn TEXT,  volume TEXT,  issue TEXT,  pages TEXT,  authors TEXT,  url TEXT,  language TEXT,  publisher TEXT,  location TEXT,  abstract TEXT,  notes TEXT,  pubmed_id TEXT,  pmc_id TEXT )' );
       //db.exec( 'DROP TABLE menuItems;' );
 
-      const insrow = db.prepare( 'insert into papers (title,year,month,day,journal,issn,volume,issue,pages,authors,url,language,publisher,location,abstract,notes,pubmed_id,pmc_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? )' );
+      const insrow = db.prepare( 'insert into articles (title,year,month,day,journal,issn,volume,issue,pages,authors,url,language,publisher,location,abstract,notes,pubmed_id,pmc_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? )' );
 
-      let s = "";
+      let s = 1;
       fs.createReadStream('public/articles.csv')
         .pipe(csv({"separator":","}))
         .on('data', (row) => {
-          console.log
+          console.log(s++);
           insrow.run( row.title,row.year,row.month,row.day,row.journal,row.issn,row.volume,row.issue,row.pages,row.authors,row.url,row.language,row.publisher,row.location,row.abstract,row.notes,row.pubmed_id,row.pmc_id );
         })
         .on('end', () => {
           console.log('CSV file successfully processed');
           db.close();
         });
+       */ 
+     const ss = db.prepare('SELECT id,title,authors,abstract FROM articles WHERE title IN(SELECT title FROM "articles" WHERE title LIKE '%trust%' AND title LIKE '%happiness%') OR abstract IN(SELECT abstract FROM "articles" WHERE abstract LIKE '%trust%' AND title LIKE '%happiness%' )').all();
+        console.log(ss); 
+        
     } catch (dbError) {
       console.error(dbError);
     }
-  
-  
-  
+ 
   
   
   
