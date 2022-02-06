@@ -161,7 +161,7 @@ fastify.get("/qCount", async (request, reply) => {
     }
 });
 
-
+/*
 fastify.post("/qList", async (request, reply) => {
     const sql3 = require('better-sqlite3');
     const   db = new sql3( 'memory.db' );
@@ -181,8 +181,18 @@ fastify.post("/qList", async (request, reply) => {
 
 });
 
+*/
 
 
+
+fastify.post("/qList", function(req, res) {
+  try {
+     console.log(req.body);
+    return res.send({"list":123});
+  } catch (e) {
+    return res.send({ msg: e.message });
+  }
+});
 
 
 fastify.get("/logs", async (request, reply) => {
