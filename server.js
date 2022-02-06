@@ -136,44 +136,36 @@ fastify.get("/q", async (request, reply) => {
           db.close();
         });
        */ 
-     const ss = db.prepare("SELECT id,title,authors,abstract FROM articles WHERE title IN(SELECT title FROM articles WHERE title LIKE '%trust%' AND title LIKE '%happiness%') OR abstract IN(SELECT abstract FROM articles WHERE abstract LIKE '%trust%' AND title LIKE '%happiness%' )").all();
-      reply.send(ss.length); 
+     const count = db.prepare("SELECT count(id) FROM articles").all();
+     reply.view("/src/pages/test.hbs", {"count":count});
         
     } catch (dbError) {
       console.error(dbError);
     }
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  let params = request.query.raw ? {} : { site: site };
-
-  // Get the log history from the db
-  params.optionHistory = await db.getLogs();
-
-  // Let the user know if there's an error
-  params.error = params.optionHistory ? null : data.errorMessage;
-
-  // Send the log list
-  request.query.raw
-    ? reply.send(params)
-    : reply.view("/src/pages/test.hbs", params);
 });
+
+
+
+
+fastify.post("/qList", async (request, reply) => {
+  let params = request.query.raw;
+  console.log(params);
+  try {
+ 
+     const ss = db.prepare("SELECT id,title,authors,abstract FROM articles WHERE title IN(SELECT title FROM articles WHERE title LIKE '%trust%' AND title LIKE '%happiness%') OR abstract IN(SELECT abstract FROM articles WHERE abstract LIKE '%trust%' AND title LIKE '%happiness%' )").all();
+      reply.send(ss.length); 
+ 
+        
+    } catch (dbError) {
+      console.error(dbError);
+    }
+
+});
+
+
+
+
+
 fastify.get("/logs", async (request, reply) => {
   let params = request.query.raw ? {} : { site: site };
 
