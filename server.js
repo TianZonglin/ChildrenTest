@@ -136,8 +136,8 @@ fastify.get("/q", async (request, reply) => {
           db.close();
         });
        */ 
-     const ss = db.prepare('SELECT id,title,authors,abstract FROM articles WHERE title IN(SELECT title FROM "articles" WHERE title LIKE '%trust%' AND title LIKE '%happiness%') OR abstract IN(SELECT abstract FROM "articles" WHERE abstract LIKE '%trust%' AND title LIKE '%happiness%' )').all();
-        console.log(ss); 
+     const ss = db.prepare("SELECT id,title,authors,abstract FROM articles WHERE title IN(SELECT title FROM articles WHERE title LIKE '%trust%' AND title LIKE '%happiness%') OR abstract IN(SELECT abstract FROM articles WHERE abstract LIKE '%trust%' AND title LIKE '%happiness%' )").all();
+      reply.send(ss.length); 
         
     } catch (dbError) {
       console.error(dbError);
