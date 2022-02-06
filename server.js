@@ -191,14 +191,16 @@ fastify.post("/qList", function(req, res) {
     let param = req.body.data;
     let groups = param.split(";");
     
+    let ci = [];
+    let ss = [];
     for(let i=0;i<groups.length;i++){
       let abname = groups.split(",");
-      let ss = db.prepare("SELECT id,title,authors,abstract FROM articles WHERE title IN(SELECT title FROM articles WHERE title LIKE '%"+abname[0]+"%' AND title LIKE '%"+abname[1]+"%') OR abstract IN(SELECT abstract FROM articles WHERE abstract LIKE '%"+abname[0]+"%' AND title LIKE '%"+abname[1]+"%' )").all();
-      console.log(ss);break;
+      ss.push(db.prepare("SELECT id,title,authors,abstract FROM articles WHERE title IN(SELECT title FROM articles WHERE title LIKE '%"+abname[0]+"%' AND title LIKE '%"+abname[1]+"%') OR abstract IN(SELECT abstract FROM articles WHERE abstract LIKE '%"+abname[0]+"%' AND title LIKE '%"+abname[1]+"%' )").all());
+      ci.push[groups[i]];
     }
       
  
-    return res.send({"list":123});
+    return res.send({"ci":ci,"ss":ss});
   } catch (e) {
     return res.send({ msg: e.message });
   }
