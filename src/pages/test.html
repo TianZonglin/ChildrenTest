@@ -23,49 +23,28 @@
   <script type="text/javascript">
     
 $(function(){
-    /*const driver = new Driver();
-    // Define the steps for introduction
-    driver.defineSteps([
-      {
-        element: '.p1a',
-        popover: {
-          showCloseButton: false,
-          className: 'first-step-popover-class',
-          title: 'Title on Popover',
-          description: 'Body of the popover',
-          position: 'right'
-        }
-      },
-      {
-        element: '#p1b',
-        popover: {
-          showCloseButton: false,
-          title: 'Title on Popover',
-          description: 'Body of the popover',
-          position: 'top'
-        }
-      },
-      {
-        element: '#p1c',
-        popover: {
-          showCloseButton: false,
-          title: 'Title on Popover',
-          description: 'Body of the popover',
-          position: 'right'
-        }
-      },
-      {
-        element: '#p1d',
-        popover: {
-          showCloseButton: false,
-          title: 'Title on Popover',
-          description: 'Body of the popover',
-          position: 'right'
-        }
-      },
-    ]);
-    // Start the introduction
-    driver.start();*/
+    function keyLight(id, key, bgColor){
+      var oDiv = document.getElementById(id),
+          sText = oDiv.innerHTML,
+          bgColor = bgColor || "orange",
+          sKey = "<span style='background-color: "+bgColor+";'>"+key+"</span>",
+          num = -1,
+          rStr = new RegExp(key, "g"),
+          rHtml = new RegExp("\<.*?\>","ig"), //匹配html元素
+          aHtml = sText.match(rHtml); //存放html元素的数组
+          sText = sText.replace(rHtml, '{~}');  //替换html标签
+          sText = sText.replace(rStr,sKey); //替换key
+          sText = sText.replace(/{~}/g,function(){  //恢复html标签
+        num++;
+        return aHtml[num];
+      });
+
+      oDiv.innerHTML = sText;
+    }
+
+
+
+  
     $(".driver-close-btn").hide();
     $.ajax({
        type:'get',
@@ -83,8 +62,9 @@ $(function(){
          success:function(data){
              //$("#p2_content").text(data.count[0]["count(id)"]);
            for(let i=0;i<data.length;i++){
-             $("#p2_content").append(data[i].title+"\t"+data[i].authors+"\t"+data[i].abstract);
+             $("#p2_content").append("<div style='margin-bottom:10px'><b>"+data[i].title+"</b><br/>"+data[i].authors+"<br/>"+data[i].abstract+"</div>");
            }
+           var key1 = keyLight('p2_content', 'trust');
          }
       });
     });
@@ -108,7 +88,7 @@ $(function(){
           <textarea style="resize:none;height:300px; width:100%;border-radius:5px"></textarea>
         <button style="width:100%;background-color:#eb8f8f" id="check">🔎</button>
       </div>
-      <div style="border:1px black solid;width:85%;float:right;overflow:scroll" id="p2_content">
+      <div style="border:1px black solid;width:85%;float:right;" id="p2_content">
          
       </div>  
     </div>
