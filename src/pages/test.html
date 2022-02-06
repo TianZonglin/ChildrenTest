@@ -59,13 +59,17 @@ $(function(){
          type:'post',
          dataType:'json',
          url:'/qList',
+        data:$('#text').,
          success:function(data){
              //$("#p2_content").text(data.count[0]["count(id)"]);
            for(let i=0;i<data.length;i++){
              $("#p2_content").append("<div style='margin-bottom:10px'><b>["+(i+1)+"] "+data[i].title+"</b><br/><span style='font-size:10px'>"+data[i].authors+"<br/>"+data[i].abstract+"</div>");
            }
            keyLight('p2_content', 'trust','#9fe68ec4');
+           keyLight('p2_content', 'trust'.replace(/^\S/, s => s.toUpperCase()),'#9fe68ec4');
            keyLight('p2_content', 'happiness','#9fe68ec4');
+           keyLight('p2_content', 'happiness'.replace(/^\S/, s => s.toUpperCase()),'#9fe68ec4');
+           
          }
       });
     });
@@ -86,7 +90,7 @@ $(function(){
     <div style="height:800px;" role="main">
       <div style="border:1px black solid;width:15%;float:left" id="p1_content">
           <br>当前文献数量：<span id="counter"></span><br><br>
-          <textarea style="resize:none;height:300px; width:100%;border-radius:5px"></textarea>
+          <textarea id="text" style="resize:none;height:300px; width:100%;border-radius:5px">trust,happiness;</textarea>
         <button style="width:100%;background-color:#eb8f8f" id="check">🔎</button>
       </div>
       <div style="border:1px black solid;width:85%;float:right;" id="p2_content">
