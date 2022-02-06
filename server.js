@@ -163,10 +163,7 @@ fastify.get("/qCount", async (request, reply) => {
 
 /*
 fastify.post("/qList", async (request, reply) => {
-    const sql3 = require('better-sqlite3');
-    const   db = new sql3( 'memory.db' );
-    const  csv = require('csv-parser');
-    const   fs = require('fs'); 
+
   let params = request.query;
   console.log(params);
   try {
@@ -186,8 +183,21 @@ fastify.post("/qList", async (request, reply) => {
 
 
 fastify.post("/qList", function(req, res) {
+  const sql3 = require('better-sqlite3');
+  const   db = new sql3( 'memory.db' );
+  const  csv = require('csv-parser');
+  const   fs = require('fs'); 
   try {
-     console.log(req.body);
+    let param = req.body.data;
+    let groups = param.split(";");
+    
+    for(let i=0;i<groups.length;i++){
+      let abname = groups.split(",");
+      let ss = db.prepare("SELECT id,title,authors,abstract FROM articles WHERE title IN(SELECT title FROM articles WHERE title LIKE '%"+abname[0]+"%' AND title LIKE '%"+abname[1]+"%') OR abstract IN(SELECT abstract FROM articles WHERE abstract LIKE '%"+abname[0]+"%' AND title LIKE '%"+abname[1]+"%' )").all();
+      console.log(ss);break;
+    }
+      
+ 
     return res.send({"list":123});
   } catch (e) {
     return res.send({ msg: e.message });
