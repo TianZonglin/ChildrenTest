@@ -62,9 +62,10 @@ $(function(){
          success:function(data){
              //$("#p2_content").text(data.count[0]["count(id)"]);
            for(let i=0;i<data.length;i++){
-             $("#p2_content").append("<div style='margin-bottom:10px'><b>"+data[i].title+"</b><br/>"+data[i].authors+"<br/>"+data[i].abstract+"</div>");
+             $("#p2_content").append("<div style='margin-bottom:10px'><b>["+(i+1)+"] "+data[i].title+"</b><br/><span style='font-size:10px'>"+data[i].authors+"<br/>"+data[i].abstract+"</div>");
            }
-           var key1 = keyLight('p2_content', 'trust','#9fe68ec4');
+           keyLight('p2_content', 'trust','#9fe68ec4');
+           keyLight('p2_content', 'happiness','#9fe68ec4');
          }
       });
     });
