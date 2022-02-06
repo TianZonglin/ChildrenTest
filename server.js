@@ -167,7 +167,7 @@ fastify.post("/qList", async (request, reply) => {
     const   db = new sql3( 'memory.db' );
     const  csv = require('csv-parser');
     const   fs = require('fs'); 
-  let params = request;
+  let params = request.query;
   console.log(params);
   try {
  
