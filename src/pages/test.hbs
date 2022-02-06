@@ -72,7 +72,7 @@ $(function(){
        dataType:'json',
        url:'/qCount',
        success:function(data){
-           console.log(data);
+           $("#counter").text(data.count[0]["count(id)"]);
        }
     });
  
@@ -91,14 +91,9 @@ $(function(){
   
   <div class="wrapper">
     <div class="content" role="main">
-
-      <!-- This is the start of content for our page -->
-      <h1>{{count}} <h3>v<span id="version"></span></h3></h1>
- 
- 
-        <!-- ADD LINK FROM TODO -->
       <div class="rzone" id="p1_content">
-
+          <br><br><br><br>当前文献数量：<span id="counter"></span><br><br>
+          <input style="height:300px; width:150px"/>
       </div>
     </div>
   </div>
