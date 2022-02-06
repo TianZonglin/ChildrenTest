@@ -194,9 +194,11 @@ fastify.post("/qList", function(req, res) {
     let ci = [];
     let ss = [];
     for(let i=0;i<groups.length;i++){
-      let abname = groups.split(",");
-      ss.push(db.prepare("SELECT id,title,authors,abstract FROM articles WHERE title IN(SELECT title FROM articles WHERE title LIKE '%"+abname[0]+"%' AND title LIKE '%"+abname[1]+"%') OR abstract IN(SELECT abstract FROM articles WHERE abstract LIKE '%"+abname[0]+"%' AND title LIKE '%"+abname[1]+"%' )").all());
-      ci.push[groups[i]];
+      if(groups[i]!=""){
+        let abname = groups.split(",");
+        ss.push(db.prepare("SELECT id,title,authors,abstract FROM articles WHERE title IN(SELECT title FROM articles WHERE title LIKE '%"+abname[0]+"%' AND title LIKE '%"+abname[1]+"%') OR abstract IN(SELECT abstract FROM articles WHERE abstract LIKE '%"+abname[0]+"%' AND title LIKE '%"+abname[1]+"%' )").all());
+        ci.push[groups[i]];
+      }
     }
       
  
