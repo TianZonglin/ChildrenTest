@@ -283,7 +283,7 @@
         overlayClickNext: false, // Should it move to next step on overlay click
         doneBtnText: '教程结束', // Text on the final button
         closeBtnText: 'Close', // Text on the close button for this step
-        nextBtnText: '继续', // Next button text for this step
+        nextBtnText: '知道啦', // Next button text for this step
         prevBtnText: '返回', // Previous button text for this step
         showCloseButton: false, // Do not show control buttons in footer
         onNext: (Element) => {},      // Called when moving to next step on any step
@@ -293,8 +293,8 @@
           element: '.item',
           popover: {
             className: 'first-step-popover-class',
-            title: '模块名称',
-            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
+            title: '你的个人简介',
+            description: '其他学生看得到你的个人简介！你可以给其他学生点赞或点踩，你也收得到其他学生的赞或踩噢。',
             position: 'right'
           }
         },
@@ -302,8 +302,8 @@
           element: '.Btn',
           popover: {
             className: 'first-step-popover-class',
-            title: '模块名称',
-            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
+            title: '你的收到的赞和踩数',
+            description: '',
             position: 'right'
           }
         },
@@ -312,8 +312,8 @@
           popover: {
 
             className: 'first-step-popover-class',
-            title: '模块名称',
-            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
+            title: '其他学生的个人简介',
+            description: '',
             position: 'right'
           }
         },
@@ -321,8 +321,8 @@
           element: '.btn17',
           popover: {
             className: 'first-step-popover-class',
-            title: '模块名称',
-            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
+            title: '给他人点赞',
+            description: '如果你喜欢某个学生的简介，就点击“赞”键',
             position: 'right'
           }
         },
@@ -330,8 +330,8 @@
           element: '#up0',
           popover: {
             className: 'first-step-popover-class',
-            title: '模块名称',
-            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
+            title: '其他人的赞数',
+            description: '实时显示这个同学收到的点赞数量',
             position: 'right'
           }
         },
@@ -339,8 +339,8 @@
           element: '.btn17c',
           popover: {
             className: 'first-step-popover-class',
-            title: '模块名称',
-            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
+            title: '给他人点踩',
+            description: '如果你不喜欢某个学生的简介，就点击“踩”键',
             position: 'right'
           }
         },
@@ -349,8 +349,8 @@
           popover: {
 
             className: 'first-step-popover-class',
-            title: '模块名称',
-            description: '功能解释功能解释功能解释功能解释功能解释功能解释功能解释功能解释',
+            title: '其他人的踩数',
+            description: '实时显示这个同学收到的踩的数量',
             position: 'right'
           }
         },
@@ -450,12 +450,6 @@
       position: 'bottom-right',
       closeTimeout: 0
     });
-    GrowlNotification.notify({
-      description: s+"(XSS)对你说：<span>我也和你一样！</span><br>",
-      type: 'info',
-      position: 'bottom-right',
-      closeTimeout: 0
-    }); 
     $(".content2").css("margin-top","371px");
     $(".content2").css("visibility","visible");
     $("#msgnum").html("<span style='color:red'>3</span>");
@@ -500,7 +494,7 @@
         str += "<div class='textInfo'>";
         str += obj.introText;
         str += "</div>";
-        str += "<div class='Btn'>赞&nbsp;<span class='cnt' id='up"+i+"' value="+obj.boy.finalZanVsCai[0]+">"+astr+"</span><button  class='btn17' style='float:right'>顶&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
+        str += "<div class='Btn'>赞&nbsp;<span class='cnt' id='up"+i+"' value="+obj.boy.finalZanVsCai[0]+">"+astr+"</span><button  class='btn17' style='float:right'>赞&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
         str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.boy.finalZanVsCai[1]+">"+bstr+"</span><button  class='btn17c' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div>";
         rky += "<div value='0' class='rankcnt' id='rankcnt"+i+"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#a2a4c6;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"+obj.name+"</div>";
