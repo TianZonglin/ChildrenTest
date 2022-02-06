@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "better-sqlite3": "^7.5.0",
+    "csv-parser": "^3.0.0",
     "fastify": "^3.25.0",
     "fastify-formbody": "^5.2.0",
     "fastify-static": "^4.5.0",

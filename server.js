@@ -54,6 +54,23 @@ const db = require("./src/" + data.database);
  * Client can request raw data using a query parameter
  */
 fastify.get("/", async (request, reply) => {
+
+});
+
+/**
+ * Post route to process user vote
+ *
+ * Retrieve vote from body data
+ * Send vote to database helper
+ * Return updated list of votes
+ */
+fastify.post("/", async (request, reply) => { 
+
+});
+    
+
+
+fastify.get("/test", async (request, reply) => { 
   /* 
   Params is the data we pass to the client
   - SITE values for front-end UI but not for raw data
@@ -81,74 +98,36 @@ fastify.get("/", async (request, reply) => {
     : reply.view("/src/pages/index.hbs", params);
 });
 
-/**
- * Post route to process user vote
- *
- * Retrieve vote from body data
- * Send vote to database helper
- * Return updated list of votes
- */
-fastify.post("/", async (request, reply) => { 
-
-});
-    
-
-
-fastify.post("/q", async (request, reply) => { 
-  // We only send site if the client is requesting the front-end ui
-  let params = request.query.raw ? {} : { site: site };
-
-  // Flag to indicate we want to show the poll results instead of the poll form
-  params.results = true;
-  let options;
-
-  // We have a vote - send to the db helper to process and return results
-  if (request.body.language) {
-    options = await db.processVote(request.body.language);
-    if (options) {
-      // We send the choices and numbers in parallel arrays
-      params.optionNames = options.map(choice => choice.language);
-      params.optionCounts = options.map(choice => choice.picks);
-    }
-  }
-  params.error = options ? null : data.errorMessage;
-
-  // Return the info to the client
-  request.query.raw
-    ? reply.send(params)
-    : reply.view("/src/pages/index.hbs", params);
-});
-
 
 /**
  * Admin endpoint returns log of votes
  *
  * Send raw json or the admin handlebars page
  */
-fastify.get("/test", async (request, reply) => {
+fastify.get("/q", async (request, reply) => {
   
   
   
     const sql3 = require('better-sqlite3');
     const   db = new sql3( 'memory.db' );
     const  csv = require('csv-parser');
-    const   fs = require('fs');
+    const   fs = require('fs'); 
   
   
    try {
       // create table
-      db.exec( 'CREATE TABLE IF NOT EXISTS menuItems ( itemName TEXT, itemDescription TEXT, unitPrice REAL );' );
+      db.exec( 'DROP TABLE IF EXISTS articles'  ); 
+      db.exec( 'CREATE TABLE  articles (  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,  key TEXT,  title TEXT,  year TEXT,  month TEXT,  day TEXT,  journal TEXT,  issn TEXT,  volume TEXT,  issue TEXT,  pages TEXT,  authors TEXT,  url TEXT,  language TEXT,  publisher TEXT,  location TEXT,  abstract TEXT,  notes TEXT,  pubmed_id TEXT,  pmc_id TEXT )' );
       //db.exec( 'DROP TABLE menuItems;' );
 
-      const insrow = db.prepare( 'insert into menuItems ( itemName, itemDescription, unitPrice ) VALUES (?, ?, ?)' );
+      const insrow = db.prepare( 'insert into papers (title,year,month,day,journal,issn,volume,issue,pages,authors,url,language,publisher,location,abstract,notes,pubmed_id,pmc_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,? )' );
 
-
+      let s = "";
       fs.createReadStream('public/articles.csv')
-        .pipe(csv({"separator":";"}))
+        .pipe(csv({"separator":","}))
         .on('data', (row) => {
-
-          insrow.run( row.itemName, row.itemDescription, row.unitPrice );
-          console.log(row);
+          console.log
+          insrow.run( row.title,row.year,row.month,row.day,row.journal,row.issn,row.volume,row.issue,row.pages,row.authors,row.url,row.language,row.publisher,row.location,row.abstract,row.notes,row.pubmed_id,row.pmc_id );
         })
         .on('end', () => {
           console.log('CSV file successfully processed');
