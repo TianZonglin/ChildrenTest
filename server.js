@@ -137,7 +137,7 @@ fastify.get("/q", async (request, reply) => {
         });
        */ 
      const count = db.prepare("SELECT count(id) FROM articles").all();
-     reply.view("/src/pages/test.hbs", {"count":count});
+     reply.view("/src/pages/test.html", {"count":count});
         
     } catch (dbError) {
       console.error(dbError);

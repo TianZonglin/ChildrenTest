@@ -75,7 +75,10 @@ $(function(){
            $("#counter").text(data.count[0]["count(id)"]);
        }
     });
- 
+    $("#check").click(function(){
+      
+      
+    });
     
   
  });   
@@ -90,13 +93,14 @@ $(function(){
  
   
   <div style="border:1px black solid">
-    <div class="" role="main">
-      <div style="border:1px black solid;width:15%;height:800px;float:left" id="p1_content">
+    <div style="height:800px;" role="main">
+      <div style="border:1px black solid;width:15%;float:left" id="p1_content">
           <br>当前文献数量：<span id="counter"></span><br><br>
           <textarea style="resize:none;height:300px; width:100%;border-radius:5px"></textarea>
-        <button style="width:100%"></button>
+        <button style="width:100%;background-color:#eb8f8f" id="check">🔎</button>
       </div>
-      <div style="border:1px black solid;width:85%;height:800px;float:right" id="p2_content">
+      <div style="border:1px black solid;width:85%;float:right" id="p2_content">
+         
       </div>  
     </div>
   </div>
