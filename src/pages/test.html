@@ -59,7 +59,7 @@ $(function(){
          type:'post',
          dataType:'json',
          url:'/qList',
-        data:$('#text').,
+         data:$('#text').text(),
          success:function(data){
              //$("#p2_content").text(data.count[0]["count(id)"]);
            for(let i=0;i<data.length;i++){
@@ -73,7 +73,7 @@ $(function(){
          }
       });
     });
-    
+  
   
  });   
     
