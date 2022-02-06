@@ -89,6 +89,12 @@ fastify.get("/", async (request, reply) => {
  * Return updated list of votes
  */
 fastify.post("/", async (request, reply) => { 
+
+});
+    
+
+
+fastify.post("/q", async (request, reply) => { 
   // We only send site if the client is requesting the front-end ui
   let params = request.query.raw ? {} : { site: site };
 
@@ -112,13 +118,66 @@ fastify.post("/", async (request, reply) => {
     ? reply.send(params)
     : reply.view("/src/pages/index.hbs", params);
 });
-    
+
+
 /**
  * Admin endpoint returns log of votes
  *
  * Send raw json or the admin handlebars page
  */
 fastify.get("/test", async (request, reply) => {
+  
+  
+  
+    const sql3 = require('better-sqlite3');
+    const   db = new sql3( 'memory.db' );
+    const  csv = require('csv-parser');
+    const   fs = require('fs');
+  
+  
+   try {
+      // create table
+      db.exec( 'CREATE TABLE IF NOT EXISTS menuItems ( itemName TEXT, itemDescription TEXT, unitPrice REAL );' );
+      //db.exec( 'DROP TABLE menuItems;' );
+
+      const insrow = db.prepare( 'insert into menuItems ( itemName, itemDescription, unitPrice ) VALUES (?, ?, ?)' );
+
+
+      fs.createReadStream('public/articles.csv')
+        .pipe(csv({"separator":";"}))
+        .on('data', (row) => {
+
+          insrow.run( row.itemName, row.itemDescription, row.unitPrice );
+          console.log(row);
+        })
+        .on('end', () => {
+          console.log('CSV file successfully processed');
+          db.close();
+        });
+    } catch (dbError) {
+      console.error(dbError);
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   let params = request.query.raw ? {} : { site: site };
 
   // Get the log history from the db
