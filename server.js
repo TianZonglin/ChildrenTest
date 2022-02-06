@@ -144,7 +144,22 @@ fastify.get("/q", async (request, reply) => {
     }
 });
 
+fastify.get("/qCount", async (request, reply) => {
 
+  
+    const sql3 = require('better-sqlite3');
+    const   db = new sql3( 'memory.db' );
+    const  csv = require('csv-parser');
+    const   fs = require('fs'); 
+ 
+   try {
+     const count = db.prepare("SELECT count(id) FROM articles").all();
+     reply.send({"count":count});
+        
+    } catch (dbError) {
+      console.error(dbError);
+    }
+});
 
 
 fastify.post("/qList", async (request, reply) => {
