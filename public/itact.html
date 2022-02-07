@@ -16,9 +16,9 @@
     <div class="item">
       <div class="userInfo">
         <a class="interava"></a>
-        <span class="username">PDD</span><span class="self">你自己</span> 
+        <span class="username" id="yname">PDD</span><span class="self">你自己</span> 
       </div>
-      <div class="textInfo">
+      <div class="textInfo" id="ytext">
         网站中有三个问题，请大家使用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这三道题你都做对，网站会自动跳转到下一页；否则，网站会提示你做错，然后让你继续做，直到你都做对。
       </div>
       <div class="Btn"><div style="float:left">赞&nbsp;</div><span class="cnt" id="up8">0</span>
@@ -69,6 +69,32 @@
   
   
   $(function(){
+    let yname = INTRODUCTION[0];
+    let introTextFinal = INTRODUCTION[1];
+    let heads = INTRODUCTION[2];
+    let yoursvg = Avataaars.create({
+        width: 50,
+        top: heads[0],
+        hairColor: heads[1],
+        clothing: heads[2],
+        clothingColor: heads[3],
+        eyes: heads[4],
+        mouth: heads[5],
+        skin:"yellow",
+        background: heads[6]
+    });
+    let m = INTRODUCTION[3].split(",");
+    let c = INTRODUCTION[4].split(",");
+    for(let i=0;i<m.length;i++){
+      if(i==m.length-1)
+        introTextFinal += m[i]+c[i]+"。";
+      else
+        introTextFinal += m[i]+c[i]+"，";
+    }
+    $(".interava").html(yoursvg);
+    $("#yname").text(yname);
+    $("#ytext").text(introTextFinal);
+    
     
      function rank() { 
        var domList = $(".rankcnt").get();

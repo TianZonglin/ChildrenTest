@@ -288,6 +288,7 @@
     $("#p10_content").show();
     setTimeout(() => window.scrollTo(0,0), 150);
     INTRODUCTION[2] = $(".cheng").attr("value");
+    console.log(INTRODUCTION[2]);
   });
   
 
@@ -569,7 +570,7 @@
     
     let yname = INTRODUCTION[0];
     let introTextFinal = INTRODUCTION[1];
-    let heads = INTRODUCTION[2];
+    let heads = INTRODUCTION[2].split(";");
     let yoursvg = Avataaars.create({
         width: 50,
         top: heads[0],
@@ -691,10 +692,12 @@
     setTimeout(() => window.scrollTo(0,0), 150);
   });
   $("#p15d").click(function(){
-    $("#p15_content").hide();
+    $("#p15_content").html("");
     $("#2ndiv").load("itact.html");
     $(".content2").css("visibility","visible");
     setTimeout(() => window.scrollTo(0,0), 150);
+ 
+    
   });
   
 
