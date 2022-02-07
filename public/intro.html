@@ -309,7 +309,7 @@
     $("#p10_content").hide();
     $("#p11_content").show();
     setTimeout(() => window.scrollTo(0,0), 150); 
-    INTRODUCTION[2] = $(".cheng").attr("value");
+    INTRODUCTION[2] = $(".blockLight").map(function () { return this.text; }).get().join(",");
     myset.forEach (function(value) {
        $("#sub"+value).show();
     });
