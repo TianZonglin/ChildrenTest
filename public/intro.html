@@ -30,7 +30,7 @@
   }
   .blockLight { 
     background-color: rgb(175,175,214);
-    color:white;
+    color:white !important;
   }
 
     .sublocks{
@@ -269,13 +269,13 @@
 
   $(".blockInput").focus(function () {
     $(this).val("");
+    $(this).addClass("blockLight");
+    $(this).siblings().removeClass("blockLight"); 
     if($("#"+$(this).parent().attr("id")+" > .blockLight").length == 0){
       subselectNum += 1;
-      $(this).addClass("blockLight");
-      $(this).siblings().removeClass("blockLight"); 
-
     }
   }).blur(function () {
+    if($(this).val()=="")
       $(this).val("其他, 在此处书写");
   });
  
