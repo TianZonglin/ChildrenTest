@@ -149,7 +149,7 @@
       <a class="blocks" value="dw">最喜欢的动物</a> 
     <br>
     <button style="visibility:hidden">提交</button>
-    <button id="p10d" style="float:right;margin-right: 20px;" disabled>提交</button>
+    <button id="p10d" style="float:right;margin-right: 20px;" class="disabled">提交</button>
     
   </div>
 </div>
@@ -172,7 +172,7 @@
       <br><br><div id="dw" style=""><b>最喜欢的动物</b>&emsp;<a class="sublocks">小狗</a><a class="sublocks">小猫</a><a class="sublocks">兔子</a><a class="sublocks">熊猫</a><a class="sublocks">老虎</a><a class="sublocks">仓鼠</a><a class="sublocks">狮子</a><a class="sublocks">松鼠</a><a class="sublocks">蛇</a><a class="sublocks">牛</a><a class="sublocks">鸟</a><a class="sublocks">金鱼</a><a class="sublocks">猴子</a><a class="sublocks">小羊</a><a class="sublocks">考拉</a>&emsp;<input class="blockInput" value="其他, 在此处书写"/></div>
     <br>
     <button style="visibility:hidden">提交</button>&emsp;<span id="sublocktext"></span>
-    <button id="p11d" style="float:right;margin-right: 20px;" disabled>提交</button>
+    <button id="p11d" style="float:right;margin-right: 20px;" class="disabled">提交</button>
     
   </div>
 </div>
@@ -546,7 +546,7 @@
   
   let selectNum = 0;
   $(".blocks").click(function(){
-    console.log($(this).css("color"));
+    
     if($(this).val()=="selected"){
       selectNum -= 1;
       $(this).val("");
@@ -558,17 +558,18 @@
     }
     if(selectNum === 6){
       $("#blocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
-      $("#p10d").removeAttr("disabled");
+      $("#p10d").removeClass("disabled");
     }else{
       $("#blocktext").html("");
       $("#p10d").addClass("disabled");
     }
+    console.log(selectNum);
   });
   selectNum = 0;
   $(".sublocks").click(function(){
     if(selectNum === 6){
       $("#sublocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
-      $("#p11d").removeAttr("disabled");
+      $("#p11d").removeClass("disabled");
     }else{
       $("#sublocktext").html("");
       $("#p11d").addClass("disabled");
