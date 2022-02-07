@@ -308,15 +308,12 @@
       subselectNum -= 1;
       $(this).val("");
       $(this).toggleClass("blockLight");
-      myset.add($(this).text());
+
     }else if(subselectNum < 6){
       subselectNum += 1;
       $(this).val("selected");
       $(this).toggleClass("blockLight");
-      myset.remove($(this).text());
-      obj
-
-      
+      $(this).siblings().removeClass("blockLight");
       
     }
     if(subselectNum === 6){
