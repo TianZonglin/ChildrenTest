@@ -125,7 +125,34 @@ $(function(){
   <div class="wrapper">
     
    <div class="content0" style="display: inline-block;background-color:red;height:300px;">
-    0000000000000000000000
+        <div style="border-radius:5px; text-align:center;width:170px; height:60px;background-color:white;padding: 10px;"> 
+          <div class="r1">剩余时间<br><span id="leftTime" style="color:red;font-weight:900"></span></div>
+        </div><br>
+        <div class="r2" style="  display: flex;   flex-direction: column;   align-items: left;   justify-content: left;   width: 100px;border-radius:5px; text-align:center;width:170px; height:310px;background-color:white;padding: 10px;">
+          <span>实时排行榜</span>
+          <div style=" width:150px; height:243px;margin-top:10px">
+
+            <div style="float:left; font-size:15px;font-weight:900;width:55%; height:270px;color:#FFFFFF">
+              <div class="order">第一名</div>
+              <div class="order">第二名</div>
+              <div class="order">第三名</div>
+              <div class="order">第四名</div>
+              <div class="order">第五名</div>
+              <div class="order">第六名</div>
+              <div class="order">第七名</div>
+              <div class="order">第八名</div>
+              <div class="order">第九名</div>
+            </div>
+            <div style=" float:left; font-size:15px;font-weight:900;width:45%; height:270px;" id="ranky">
+
+            </div>
+
+          </div>
+        </div><br>
+        <div class="r3" style="border-radius:5px; text-align:center;width:170px; height:100px;background-color:white;padding: 10px;"> 
+          <div>已收到&nbsp;<span class="cnt" id="msgnum">0</span> 条消息</div> 
+          <button style="margin-top:15px" id="check" disabled>点击查看</button>
+        </div><br>
     </div>
     <div class="content" style="" role="main">
 
