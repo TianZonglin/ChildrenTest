@@ -304,20 +304,19 @@
   let obj = [];
   
   $(".sublocks").click(function(){
-    if($(this).val()=="selected"){
-      subselectNum -= 1;
-      $(this).val("");
-      $(this).toggleClass("blockLight");
-
-    }else if(subselectNum < 6){
-      console.log($("#"+$(this).parent().attr("id")+" > .blockLight").length);
-      $(this).val("selected");
-      $(this).toggleClass("blockLight");
+    if($("#"+$(this).parent().attr("id")+" > .blockLight").length == 0){
+      subselectNum += 1;
+      $(this).addClass("blockLight");
       $(this).siblings().removeClass("blockLight"); 
-      if($("#"+$(this).parent().attr("id")+" > .blockLight").length == 0){
-        subselectNum += 1;
-      }
 
+    }else{
+      if($(this).hasClass("blockLight")){
+        subselectNum -= 1;
+        $(this).removeClass("blockLight");
+      }else{
+        $(this).addClass("blockLight");
+        $(this).siblings().removeClass("blockLight"); 
+      }
     }
     if(subselectNum === 6){
       $("#sublocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
