@@ -267,10 +267,19 @@
   });
   
 
-  $(".blockInput").click(function(){
+  $(".blockInput").focus(function () {
     $(this).val("");
+    if($("#"+$(this).parent().attr("id")+" > .blockLight").length == 0){
+      subselectNum += 1;
+      $(this).addClass("blockLight");
+      $(this).siblings().removeClass("blockLight"); 
+
+    }
+  }).blur(function () {
+      $(this).val("其他, 在此处书写");
   });
-    
+ 
+  
   let selectNum = 0;
   let myset = new Set([]);
   $(".blocks").click(function(){
@@ -681,12 +690,9 @@
       $(this).addClass("cheng");
       $(this).siblings().removeClass("cheng");
       $("#p9_text").html("<span style='color:green'>选择成功，点击提交按钮！</span>");
+      $("#p9d").removeClass("disabled");
     });
 
-
- 
-    
-    
  
   $(".interava").html(Avataaars.create({width:50}));
   
