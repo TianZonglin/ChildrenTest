@@ -171,7 +171,7 @@
       <br><br><div id="sw" style=""><b>最不喜欢的食物</b>&emsp;<a class="sublocks">味道过淡的食物</a><a class="sublocks">胡萝卜</a><a class="sublocks">土豆</a><a class="sublocks">香菜</a><a class="sublocks">西红柿</a><a class="sublocks">黄瓜</a><a class="sublocks">苦瓜</a><a class="sublocks">冬瓜</a><a class="sublocks">鱼</a><a class="sublocks">辣椒</a><a class="sublocks">软糖</a><a class="sublocks">茄子</a><a class="sublocks">肥肉</a><a class="sublocks">洋葱</a><a class="sublocks">芹菜</a>&emsp;<input class="blockInput" value="其他, 在此处书写"/></div>
       <br><br><div id="dw" style=""><b>最喜欢的动物</b>&emsp;<a class="sublocks">小狗</a><a class="sublocks">小猫</a><a class="sublocks">兔子</a><a class="sublocks">熊猫</a><a class="sublocks">老虎</a><a class="sublocks">仓鼠</a><a class="sublocks">狮子</a><a class="sublocks">松鼠</a><a class="sublocks">蛇</a><a class="sublocks">牛</a><a class="sublocks">鸟</a><a class="sublocks">金鱼</a><a class="sublocks">猴子</a><a class="sublocks">小羊</a><a class="sublocks">考拉</a>&emsp;<input class="blockInput" value="其他, 在此处书写"/></div>
     <br>
-    <button style="visibility:hidden">提交</button>
+    <button style="visibility:hidden">提交</button>&emsp;<span id="sublocktext"></span>
     <button id="p11d" style="float:right;margin-right: 20px;" disabled>提交</button>
     
   </div>
@@ -558,11 +558,22 @@
     }
     if(selectNum === 6){
       $("#blocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
+      $("#p10d").removeAttr("disabled");
     }else{
       $("#blocktext").html("");
+      $("#p10d").addClass("disabled");
     }
   });
-  
+  selectNum = 0;
+  $(".sublocks").click(function(){
+    if(selectNum === 6){
+      $("#sublocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
+      $("#p11d").removeAttr("disabled");
+    }else{
+      $("#sublocktext").html("");
+      $("#p11d").addClass("disabled");
+    }
+  });
   
   
   
