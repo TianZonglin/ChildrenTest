@@ -4,6 +4,7 @@
     margin-right: 9px;
     margin-bottom: 5px;
     cursor: pointer;
+    border: 3px solid white;
   }
   .svgg:hover, .svgg:hover{
       color: #9A1A4A;
@@ -64,7 +65,9 @@
     cursor:pointer;
     text-align: center;
   }
- 
+  .cheng {
+      border: 3px solid #fe8732;
+  }
 </style>
 
 
@@ -619,7 +622,7 @@
 
     
     
-      for(let i=0;i<99;i++){
+      for(let i=0;i<54;i++){
         let t = mtop[Math.floor(Math.random() * mtop.length)];
         let h = hairColor[Math.floor(Math.random() * hairColor.length)];
         let c = clothing[Math.floor(Math.random() * clothing.length)];
@@ -644,7 +647,7 @@
       }
     $("#reset").click(function(){
       $("#avat").html("");
-      for(let i=0;i<99;i++){
+      for(let i=0;i<54;i++){
         let t = mtop[Math.floor(Math.random() * mtop.length)];
         let h = hairColor[Math.floor(Math.random() * hairColor.length)];
         let c = clothing[Math.floor(Math.random() * clothing.length)];
@@ -672,6 +675,8 @@
     
     $("body").on("click", ".svgg",function(){
       console.log($(this).attr("value"));
+      $(this).addClass("cheng");
+      $(this).siblings().removeClass("cheng");
       $("#p9_text").html("<span style='color:green'>选择成功，点击提交按钮！</span>");
     });
 
