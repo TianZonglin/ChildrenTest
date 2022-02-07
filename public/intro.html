@@ -263,6 +263,61 @@
      setTimeout(() => window.scrollTo(0,0), 150);
   });
   
+
+  
+  let selectNum = 0;
+  let myset = new Set([]);
+  $(".blocks").click(function(){
+    
+    if($(this).val()=="selected"){
+      selectNum -= 1;
+      $(this).val("");
+      $(this).toggleClass("blockLight");
+      myset.add($(this).text());
+    }else if(selectNum < 6){
+      selectNum += 1;
+      $(this).val("selected");
+      $(this).toggleClass("blockLight");
+      myset.remove($(this).text());
+    }
+    if(selectNum === 6){
+      $("#blocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
+      $("#p10d").removeClass("disabled");
+    }else{
+      $("#blocktext").html("");
+      $("#p10d").addClass("disabled");
+    }
+  });
+        letters.forEach (function(value) {
+        text += value;
+     
+      console.log(myset);
+  
+  
+  
+  let subselectNum = 0;
+  $(".sublocks").click(function(){
+    if($(this).val()=="selected"){
+      subselectNum -= 1;
+      $(this).val("");
+      $(this).toggleClass("blockLight");
+      myset.add($(this).text());
+    }else if(subselectNum < 6){
+      subselectNum += 1;
+      $(this).val("selected");
+      $(this).toggleClass("blockLight");
+      myset.remove($(this).text());
+    }
+    if(subselectNum === 6){
+      $("#sublocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
+      $("#p11d").removeClass("disabled");
+    }else{
+      $("#sublocktext").html("");
+      $("#p11d").addClass("disabled");
+    }
+  });
+  
+  
   $("#p10d").click(function(){
     $("#p10_content").hide();
     $("#p11_content").show();
@@ -274,9 +329,9 @@
     $("#p13_content").show();
     setTimeout(() => window.scrollTo(0,0), 150);
   });
-  
-  
-
+          
+          
+          
   function drivers(){
       const driver = new Driver({
         allowClose: false, // Whether clicking on overlay should close or not
@@ -545,9 +600,7 @@
   });
   
 
-  
-  
-
+ 
   $(function(){
     
     let mtop = ["dreads01","frizzle","shaggyMullet","shaggy","shortCurly","shortFlat","shortRound","sides","shortWaved","theCaesarAndSidePart","theCaesar","bigHair","bob","bun","curly","curvy","dreads","frida","froAndBand","fro","longButNotTooLong","miaWallace","shavedSides","straightAndStrand","straight01","eyepatch","turban","hijab","hat","winterHat01"];
