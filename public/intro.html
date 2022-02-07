@@ -303,13 +303,17 @@
   let subselectNum = 0;
   let obj = [];
   
+  function checked(item){
+    item.parent().
+  }
+  
   $(".sublocks").click(function(){
     if($(this).val()=="selected"){
       subselectNum -= 1;
       $(this).val("");
       $(this).toggleClass("blockLight");
 
-    }else if(subselectNum < 6){
+    }else if(subselectNum < 6 && $("#sub"++" > .blockLight").length == 0){
       subselectNum += 1;
       $(this).val("selected");
       $(this).toggleClass("blockLight");
