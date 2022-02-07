@@ -267,18 +267,7 @@
   });
   
 
-  $(".blockInput").focus(function () {
-    $(this).val("");
-    $(this).addClass("blockLight");
-    $(this).siblings().removeClass("blockLight"); 
-    if($("#"+$(this).parent().attr("id")+" > .blockLight").length == 0){
-      subselectNum += 1;
-    }
-  }).blur(function () {
-    if($(this).val()=="")
-      $(this).val("其他, 在此处书写");
-  });
- 
+
   
   let selectNum = 0;
   let myset = new Set([]);
@@ -318,6 +307,34 @@
   let subselectNum = 0;
   let obj = [];
   
+  $(".blockInput").focus(function () {
+    $(this).val("");
+  }).blur(function () {
+    if($("#"+$(this).parent().attr("id")+" > .blockLight").length == 0 && $(this).val()!="" && $(this).val()!=""){
+      subselectNum += 1;
+      $(this).addClass("blockLight");
+      $(this).siblings().removeClass("blockLight"); 
+
+    }else{
+      if($(this).hasClass("blockLight")){
+        subselectNum -= 1;
+        $(this).removeClass("blockLight");
+      }else{
+        $(this).addClass("blockLight");
+        $(this).siblings().removeClass("blockLight"); 
+      }
+    }
+    if(subselectNum === 6){
+      $("#sublocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
+      $("#p11d").removeClass("disabled");
+    }else{
+      $("#sublocktext").html("");
+      $("#p11d").addClass("disabled");
+    }
+    console.log(subselectNum);
+  });
+  
+  
   $(".sublocks").click(function(){
     if($("#"+$(this).parent().attr("id")+" > .blockLight").length == 0){
       subselectNum += 1;
@@ -342,7 +359,8 @@
     }
   });
   
-  
+
+ 
 
   
   $("#p11d").click(function(){
