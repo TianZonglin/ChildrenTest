@@ -5,14 +5,14 @@
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [2,3],
       "popTime": ["1,2","3,4,5"],
-      "avator": "froAndBand;red;shirtVNeck;pastelYellow;xDizzy;concerned;red"
+      "avator": "dreads01;black;blazerAndSweater;pastelYellow;side;disbelief;#8F69DB"
     },
     "girl": {
       "name": "LDN",
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [2,3],
       "popTime": ["3,4","1,2,3"],
-      "avator": "froAndBand;red;shirtVNeck;pastelYellow;xDizzy;concerned;red"
+      "avator": "dreads01;black;blazerAndSweater;pastelYellow;side;disbelief;#8F69DB"
     },
     "optionToUser": {
       "opTime": 6, 
@@ -28,14 +28,15 @@
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [2,1],
       "popTime": ["1,5","1"],
-      "avator": "froAndBand;rgb(250,138,251);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(250,138,251)"
+      "avator": "straight01,platinum,hoodie,pastelGreen,happy,eating,#A59101"
+                                   
     },
     "girl": {
       "name": "SDF",
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [1,1],
       "popTime": ["3","1"],
-      "avator": "froAndBand;rgb(250,138,251);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(250,138,251)"
+      "avator": "straight01,platinum,hoodie,pastelGreen,happy,eating,#A59101"
     },
     "optionToUser": {
       "opTime": 1, 
@@ -47,18 +48,18 @@
   },{
     "fakeUserID": 2,
     "boy": {
-      "name": "EWR",
+      "name": "FGG",
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [3,2],
       "popTime": ["4,5,6","1,2"],
-      "avator": "froAndBand;rgb(140,233,18);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(140,233,18)"
+      "avator": "shortRound;silverGray;shirtVNeck;blue02;happy;serious;#DD8FE4"
     },
     "girl": {
-      "name": "EWR",
+      "name": "FGG",
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [3,2],
       "popTime": ["2,3,4","5,6"],
-      "avator": "froAndBand;rgb(140,233,18);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(140,233,18)"
+      "avator": "shortRound;silverGray;shirtVNeck;blue02;happy;serious;#DD8FE4"
     },
     "optionToUser": {
       "opTime": 5, 
@@ -75,14 +76,14 @@
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [2,1],
       "popTime": ["1,2","4"],
-      "avator": "froAndBand;rgb(0,175,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(0,175,255)"
+      "avator": "shaggy;black;blazerAndShirt;blue03;winkWacky;smile;#DD8FE4"
     },
     "girl": {
       "name": "EWR",
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [2,2],
       "popTime": ["2,4","5,6"],
-      "avator": "froAndBand;rgb(0,175,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(0,175,255)"
+      "avator": "shaggy;black;blazerAndShirt;blue03;winkWacky;smile;#DD8FE4"
     },
     "optionToUser": {
       "opTime": 4, 
@@ -97,14 +98,14 @@
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [2,1],
       "popTime": ["4,5","1"],
-      "avator": "froAndBand;rgb(48,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(48,0,255)"
+      "avator": "theCaesarAndSidePart;dauburn;shirtCrewNeck;pink;wink;tongue;#DD8FE4"
     },
     "girl": {
       "name": "BSS",
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [1,2],
       "popTime": ["1","4,5"],
-      "avator": "froAndBand;rgb(48,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(48,0,255)"
+      "avator": "theCaesarAndSidePart;dauburn;shirtCrewNeck;pink;wink;tongue;#DD8FE4"
     },
     "optionToUser": {
       "opTime": 2, 
@@ -119,14 +120,14 @@
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [1,3],
       "popTime": ["1","2,3,4"],
-      "avator": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)"
+      "avator": "shortRound;red;blazerAndShirt;pastelOrange;side;twinkle;#8F69DB"
     },
     "girl": {
       "name": "SDG",
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [2,1],
       "popTime": ["5,6","2"],
-      "avator": "froAndBand;rgb(252,0,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(252,0,255)"
+      "avator": "shortRound;red;blazerAndShirt;pastelOrange;side;twinkle;#8F69DB"
     },
     "optionToUser": {
       "opTime": 5, 
@@ -141,14 +142,14 @@
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [3,1],
       "popTime": ["2,4,5","1"],
-      "avator": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)"
+      "avator": "shortRound;brown;hoodie;blue02;side;twinkle;#A59101"
     },
     "girl": {
       "name": "QWF",
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [2,2],
       "popTime": ["1,4","3,5"],
-      "avator": "froAndBand;rgb(165,165,165);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(165,165,165)"
+      "avator": "shortRound;brown;hoodie;blue02;side;twinkle;#A59101"
     },
     "optionToUser": {
       "opTime": 0, 
@@ -163,14 +164,14 @@
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [2,2],
       "popTime": ["4,5","1,3"],
-      "avator": "froAndBand;rgb(142,44,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(142,44,255)"
+      "avator": "shortWaved;blonde;shirtCrewNeck;white;happy;serious;#8F69DB"
     },
     "girl": {
       "name": "VSA",
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [2,2],
       "popTime": ["4,6","1,2"],
-      "avator": "froAndBand;rgb(142,44,255);shirtVNeck;pastelYellow;xDizzy;concerned;rgb(142,44,255)"
+      "avator": "shortWaved;blonde;shirtCrewNeck;white;happy;serious;#8F69DB"
     },
     "optionToUser": {
       "opTime": 0, 
