@@ -310,7 +310,11 @@
   $(".blockInput").focus(function () {
     $(this).val("");
   }).blur(function () {
-    if($("#"+$(this).parent().attr("id")+" > .blockLight").length == 0 && $(this).val()!="" && $(this).val()!=""){
+    if($(this).val()==""){
+      $(this).val("其他, 在此处书写");
+      $(this).removeClass("blockLight");
+    }
+    if($("#"+$(this).parent().attr("id")+" > .blockLight").length == 0 && $(this).val()!="" && $(this).val()!="其他, 在此处书写"){
       subselectNum += 1;
       $(this).addClass("blockLight");
       $(this).siblings().removeClass("blockLight"); 
@@ -320,8 +324,10 @@
         subselectNum -= 1;
         $(this).removeClass("blockLight");
       }else{
-        $(this).addClass("blockLight");
-        $(this).siblings().removeClass("blockLight"); 
+        if($(this).val()!="其他, 在此处书写"){
+          $(this).addClass("blockLight");
+          $(this).siblings().removeClass("blockLight");  
+        }
       }
     }
     if(subselectNum === 6){
