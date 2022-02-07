@@ -255,18 +255,30 @@
  
   let INTRODUCTION = new Array();
   
-  if($("#p8a").val()!=""&&$("#p8a").val()!="点击选择"&&$("#p8a").val()!="点击选择"){
-    $("#p8d").removeClass("disabled");
-  }
   
+  $("#p8q").click(function(){
+    if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"){
+      $("#p8d").removeClass("disabled");
+    }
+  });
   
+  $("#p8b").click(function(){
+    if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"){
+      $("#p8d").removeClass("disabled");
+    }
+  });  
   
+  $("#p8c").click(function(){
+    if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"){
+      $("#p8d").removeClass("disabled");
+    }
+  }); 
   
   $("#p8d").click(function(){
     $("#p8_content").hide();
     $("#p9_content").show();
     setTimeout(() => window.scrollTo(0,0), 150);
-    INTRODUCTION[0] = "大家好！我是一个五年级的"+("#p8b").val()+"生。我今年"+("#p8c").val()+"岁了。"
+    INTRODUCTION[0] = "大家好！我是一个五年级的"+$("#p8b").val()+"生。我今年"+$("#p8c").val()+"岁了。"
   });
   
   $("#p9d").click(function(){
@@ -283,14 +295,14 @@
   let myset = new Set([]);
   $(".blocks").click(function(){
     
-    if($(this).val()=="selected"){
+    if($(this).hasClass("blockLight")){
       selectNum -= 1;
       $(this).val("");
       $(this).toggleClass("blockLight");
       myset.delete($(this).attr("id"));
     }else if(selectNum < 6){
       selectNum += 1;
-      $(this).val("selected");
+      $(this).val($(this).text());
       $(this).toggleClass("blockLight");
       myset.add($(this).attr("id"));
     }
