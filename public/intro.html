@@ -78,7 +78,7 @@
   <div class="poll-form">
     <p>请输入你的基本信息</p>
     请在给你的纸条上找到你的拼音首字母，并将其输入到下面的方框中。为保护你的隐私，你只需输入姓名的拼音首字母，而不是全名。例如，我的姓名是刘丹霓，拼音是 Liu Dan Ni，所以我的拼音首字母是LDN。
-    <input id="p8a" maxlength="4" type="text" style="background-color:#e1e1e1;color:#65647c;height:49px;width:100px;"/>&emsp;
+    <input id="p8a" maxlength="4" type="text" oninput="value=value.toUpperCase()"  onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')" style="background-color:#e1e1e1;color:#65647c;height:49px;width:100px;"/>&emsp;
     <span id="p8a_text"></span>
   </div>
   <br>
