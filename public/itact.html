@@ -154,7 +154,7 @@
                 $("#rankcnt8").val(parseInt($("#up8").text())-parseInt($("#down8").text()));
                 //Dreamer.success("("+o.name+")给你点了一个赞！",2000);
                 GrowlNotification.notify({
-                  description: "("+o.name+")给你点了一个赞！",
+                  description: "[ 你 ] 收到了一个赞！",
                   type: 'success',
                   position: 'bottom-left',
                   closeTimeout: 2000
@@ -192,6 +192,12 @@
             $("#up"+i).css("font-size","10px");
             $("#up"+i).css("font-weight","900");
             $("#rankcnt"+i).val(parseInt($("#up"+i).text())-parseInt($("#down"+i).text()));
+            GrowlNotification.notify({
+              description: "[ "+o.name+" ] 收到了一个赞！",
+              type: 'success',
+              position: 'bottom-left',
+              closeTimeout: 2000
+            });
             rank();
             setTimeout(function(){
               $("#up"+i).css("color","red");
@@ -286,9 +292,13 @@
         } else {
             $("#leftTime").text('0:00');
             $(".btn17").addClass('disabled');
+            $(".btn17c").addClass('disabled');
             $("#check").removeAttr("disabled");
             clearInterval(summer);
-            alert("时间结束，你无法继续点赞或踩别人。其他人给你发送的消息可以点击右侧按钮查看！");
+            setTimeout(function(){
+              alert("时间结束，你无法继续点赞或踩别人。其他人给你发送的消息可以点击右侧按钮查看！");
+            },1000)
+            
         }
       }
       
