@@ -255,6 +255,7 @@
  
   let INTRODUCTION = new Array();
   
+
   
   $("#p8q").click(function(){
     if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"){
@@ -302,7 +303,6 @@
       myset.delete($(this).attr("id"));
     }else if(selectNum < 6){
       selectNum += 1;
-      $(this).val($(this).text());
       $(this).toggleClass("blockLight");
       myset.add($(this).attr("id"));
     }
@@ -401,6 +401,7 @@
           
           
   function drivers(){
+    
       const driver = new Driver({
         allowClose: false, // Whether clicking on overlay should close or not
         overlayClickNext: false, // Should it move to next step on overlay click
@@ -671,6 +672,10 @@
 
  
   $(function(){
+    
+          $(".sublocks").map(function () { 
+        $(this).val($(this).text());
+      })
     
     let mtop = ["dreads01","frizzle","shaggyMullet","shaggy","shortCurly","shortFlat","shortRound","sides","shortWaved","theCaesarAndSidePart","theCaesar","bigHair","bob","bun","curly","curvy","dreads","frida","froAndBand","fro","longButNotTooLong","miaWallace","shavedSides","straightAndStrand","straight01","eyepatch","turban","hijab","hat","winterHat01"];
     let hairColor = ["dauburn","black","blonde","brown","pastelPink","platinum","red","silverGray"];
