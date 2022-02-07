@@ -1,7 +1,7 @@
 <style>
   .svgg{
     display:inline-block;
-    margin-right: 9px;
+    margin-right: 6px;
     margin-bottom: 5px;
     cursor: pointer;
     border: 3px solid white;
@@ -117,11 +117,11 @@
     page - 9
   </p><br>
   <div class="poll-form">
-    <p>点击选择一个头像 <a id="reset" style="cursor: pointer; ">[重置]</a></p> 
+    <p>点击选择一个头像</p> 
     这个头像将在“介绍环节”中代表你。<br><br>
     <div id="avat"></div>
     <br>
-    <button style="visibility:hidden">提交</button>
+    <button id="reset">重置</button>
     <div  style="float:right;">
       <span id="p9_text"></span>&emsp;<button id="p9d" style="margin-right: 20px;">提交</button>
     </div>
@@ -594,7 +594,7 @@
     $("#p14_content").html("");
     $("#p15_content").show();
     setTimeout(function(){
-      $("#p15_img").html("<img width='100' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/img/avv.png'/>");
+      $("#p15_img").css("visibility","hidden");
       $("#p15_text").html("...连接成功，可以开始。");
     },4000);
     $(".content2").css("visibility","hidden");
