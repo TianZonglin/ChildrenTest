@@ -52,6 +52,7 @@
     $("#p17_content").hide();
     $("#p17_27").load("cball.html");
     $(".content2").css("visibility","hidden");
+    $(".content0").css("visibility","hidden");
     setTimeout(() => window.scrollTo(0,0), 150);
   })
   
@@ -321,6 +322,7 @@
             $(".btn17c").addClass('disabled');
             $("#check").removeAttr("disabled");
             clearInterval(summer);
+            $(".content2").css("visibility","visible");
             setTimeout(function(){
               alert("时间结束，你无法继续点赞或踩别人。其他人给你发送的消息可以点击右侧按钮查看！");
             },1000)

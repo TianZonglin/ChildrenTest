@@ -541,6 +541,15 @@
           }
         },
         {
+          element: '.r0',
+          popover: {
+            showCloseButton: false,
+            title: '最终结果',
+            description: '三分钟结束后，这里会显示你最终得到的赞和踩的数量。',
+            position: 'left'
+          }
+        },
+        {
           element: '#resee',
           popover: {
             showCloseButton: false,
@@ -613,7 +622,8 @@
     });
     $(".content2").css("margin-top","371px");
     $(".content2").css("visibility","visible");
-    
+    $(".content0").css("margin-top","371px");
+    $(".content0").css("visibility","visible");
     $("#msgnum").html("<span style='color:red'>3</span>");
     $("#leftTime").text("0:06");
     $.getJSON("fakers.json",function(e){
@@ -690,12 +700,15 @@
     },4000);
     $(".content2").css("visibility","hidden");
     $(".content2").css("margin-top","274px");
+    $(".content0").css("visibility","hidden");
+    $(".content0").css("margin-top","274px");
     setTimeout(() => window.scrollTo(0,0), 150);
   });
   $("#p15d").click(function(){
     $("#p15_content").html("");
     $("#2ndiv").load("itact.html");
     $(".content2").css("visibility","visible");
+    $(".content0").css("visibility","visible");
     setTimeout(() => window.scrollTo(0,0), 150);
  
     
