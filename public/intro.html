@@ -413,6 +413,7 @@
         nextBtnText: '知道啦', // Next button text for this step
         prevBtnText: '返回', // Previous button text for this step
         showCloseButton: false, // Do not show control buttons in footer
+        animate: false,
         onNext: (Element) => {},      // Called when moving to next step on any step
       });
       driver.defineSteps([
@@ -546,7 +547,7 @@
             showCloseButton: false,
             title: '最终结果',
             description: '三分钟结束后，这里会显示你最终得到的赞和踩的数量。',
-            position: 'left'
+            position: 'right'
           }
         },
         {
@@ -620,9 +621,9 @@
       position: 'bottom-right',
       closeTimeout: 0
     });
-    $(".content2").css("margin-top","371px");
+    $(".content2").css("margin-top","372px");
     $(".content2").css("visibility","visible");
-    $(".content0").css("margin-top","371px");
+    $(".content0").css("margin-top","372px");
     $(".content0").css("visibility","visible");
     $("#msgnum").html("<span style='color:red'>3</span>");
     $("#leftTime").text("0:06");
@@ -708,7 +709,7 @@
     $("#p15_content").html("");
     $("#2ndiv").load("itact.html");
     $(".content2").css("visibility","visible");
-    $(".content0").css("visibility","visible");
+
     setTimeout(() => window.scrollTo(0,0), 150);
  
     
