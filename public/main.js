@@ -73,7 +73,7 @@ $(function(){
   //});
   
   $("#p1_button").click(function(){
-    $("#p1_content").html("");
+    $("#p1_content").hide();
     $("#p3_content").show();
     setTimeout(() => window.scrollTo(0,0), 150);
   });
