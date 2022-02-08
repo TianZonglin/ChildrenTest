@@ -141,36 +141,36 @@
     
     
     $("body").on("click", ".svgg",function(){
-      let tmp = $(this).val().split(";");
-      console.log($(this));
-      let t = tmp[0];
-      let h = tmp[1];
-      let c = tmp[2];
-      let cc =tmp[3];
-      let e = tmp[4];
-      let m = tmp[5];
-      let b = tmp[6];
-      let arr = [t,h,c,cc,e,m,b];
-      var svg = Avataaars.create({
-          width: 70,
-          top: t,
-          hairColor: h,
-          clothing: c,
-          clothingColor: cc,
-          eyes: e,
-          mouth: m,
-          skin:"yellow",
-          background: b
-      });
-      $("#xuanze").append("<a class='' value='"+arr.join(";")+"'>"+svg+"</a>");
-
-      $(this).addClass("cheng");
-      $("#p9_text").html("<span style='color:green'>选择成功，点击提交按钮！</span>");
-      $("#p9d").removeClass("disabled");
+      if(!$(this).hasClass("cheng")){
+        let tmp = $(this).attr("value").split(";");
+        let t = tmp[0];
+        let h = tmp[1];
+        let c = tmp[2];
+        let cc =tmp[3];
+        let e = tmp[4];
+        let m = tmp[5];
+        let b = tmp[6];
+        let arr = [t,h,c,cc,e,m,b];
+        var svg = Avataaars.create({
+            width: 70,
+            top: t,
+            hairColor: h,
+            clothing: c,
+            clothingColor: cc,
+            eyes: e,
+            mouth: m,
+            skin:"yellow",
+            background: b
+        });
+        $("#xuanze").append("<a class='sele' value='"+arr.join(";")+"'>"+svg+"</a>");
+        $(this).addClass("cheng");  
+      }
     });
 
     
-    
+    $("#shengcheng").click(function(){
+      $("#final").text($(".sele").map(function () { return ($(this).attr("value")); }).get().join("^"));
+    });
     
     
     
@@ -201,7 +201,7 @@
         <button id="chongzhi" style="float:left">换一页头像</button>
         <button id="shengcheng" style="float:right">生成结果</button>
       </div> 
-      <div style="float:left; height:20%;width:100%;border: 2px solid black">
+      <div style="float:left; height:20%;width:100%;border: 2px solid black;word-break: break-word;" id="final">
         1.点击头像，就会被选择到右侧；<br>
         2.左侧头像可以无限次刷新，点换一页；<br>
         3.如果右侧选择的头像不好看，点一下就删除了；<br>
