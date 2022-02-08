@@ -54,10 +54,67 @@
  
 
   $(function(){
-      /**/
+    
+    let mtop = ["dreads01","frizzle","shaggyMullet","shaggy","shortCurly","shortFlat","shortRound","sides","shortWaved","theCaesarAndSidePart","theCaesar","bigHair","bob","bun","curly","curvy","dreads","frida","froAndBand","fro","longButNotTooLong","miaWallace","shavedSides","straightAndStrand","straight01","eyepatch","turban","hijab","hat","winterHat01"];
+    let hairColor = ["dauburn","black","blonde","brown","pastelPink","platinum","red","silverGray"];
+    let clothing = ["blazerAndShirt","blazerAndSweater","collarAndSweater","graphicShirt","hoodie","overall","shirtCrewNeck","shirtScoopNeck","shirtVNeck"];
+    let clothingColor = ["black","blue01","blue02","blue03","gray01","gray02","heather","pastelBlue","pastelGreen","pastelOrange","pastelRed","pastelYellow","pink","red","white"];
+    let eyes = ["squint","closed","cry","eyeRoll","happy","hearts","side","surprised","wink","winkWacky","xDizzy"];
+    let mouth = ["concerned","disbelief","eating","grimace","sad","screamOpen","serious","smile","tongue","twinkle","vomit"];
+    let background = ["#DD8FE4","#76D18D","#839BFF","#A59101","#8F69DB"];
 
+    
+    
+    for(let i=0;i<99;i++){
+      let t = mtop[Math.floor(Math.random() * mtop.length)];
+      let h = hairColor[Math.floor(Math.random() * hairColor.length)];
+      let c = clothing[Math.floor(Math.random() * clothing.length)];
+      let cc = clothingColor[Math.floor(Math.random() * clothingColor.length)];
+      let e = eyes[Math.floor(Math.random() * eyes.length)];
+      let m = mouth[Math.floor(Math.random() * mouth.length)];
+      let b = background[Math.floor(Math.random() * background.length)];
+      let arr = [t,h,c,cc,e,m,b];
+      var svg = Avataaars.create({
+          width: 60,
+          top: t,
+          hairColor: h,
+          clothing: c,
+          clothingColor: cc,
+          eyes: e,
+          mouth: m,
+          skin:"yellow",
+          background: b
+      });
+      $("#touxiang").append("<a class='svgg' value='"+arr.join(";")+"'>"+svg+"</a>");
 
+    }
+    
+    $("#chongzhi").click(function(){
+      $("#touxiang").html("");
+      for(let i=0;i<54;i++){
+        let t = mtop[Math.floor(Math.random() * mtop.length)];
+        let h = hairColor[Math.floor(Math.random() * hairColor.length)];
+        let c = clothing[Math.floor(Math.random() * clothing.length)];
+        let cc = clothingColor[Math.floor(Math.random() * clothingColor.length)];
+        let e = eyes[Math.floor(Math.random() * eyes.length)];
+        let m = mouth[Math.floor(Math.random() * mouth.length)];
+        let b = background[Math.floor(Math.random() * background.length)];
+        let arr = [t,h,c,cc,e,m,b];
+        var svg = Avataaars.create({
+            width: 60,
+            top: t,
+            hairColor: h,
+            clothing: c,
+            clothingColor: cc,
+            eyes: e,
+            mouth: m,
+            skin:"yellow",
+            background: b
+        });
+        $("#touxiang").append("<a class='svgg' value='"+arr.join(";")+"'>"+svg+"</a>");
 
+      }
+    });
 
   });   
     
@@ -71,17 +128,26 @@
  
   
   <div class="wrapper" style="border: 2px solid black">
-    <div style="float:left; width:80%;border: 2px solid black">
-      <div style="float:left; height:80%;width:100%;border: 2px solid black">
+    <div style="float:left; width:70% ">
+      <div id="touxiang"></div>
 
-      </div> 
-      <div style="float:left; height:20%;width:100%;border: 2px solid black">
-
-      </div> 
-    </div>
-    <div style="float:left; width:20% ">
       
     </div>
+    <div style="float:left; width:30%;border: 2px solid black">
+      <div style="float:left; height:73%;width:100%;border: 2px solid black">
+        <div id="xuanze"></div>
+
+        
+      </div> 
+      <div style="float:left; height:7%;width:100%;border: 2px solid black">
+        <button id="chongzhi" style="float:left">换一页头像</button>
+        <button id="shengcheng" style="float:right">生成结果</button>
+      </div> 
+      <div style="float:left; height:20%;width:100%;border: 2px solid black">
+    
+      </div> 
+    </div>
+
   </div>
 
   <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
