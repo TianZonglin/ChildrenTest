@@ -58,16 +58,7 @@
   
 
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
   
   $(function(){
     
@@ -75,7 +66,7 @@
     
     let yname = INTRODUCTION[0];
     let introTextFinal = INTRODUCTION[1];
-    let heads = INTRODUCTION[2].split(",");;
+    let heads = INTRODUCTION[2].split(";");;
     let yoursvg = Avataaars.create({
         width: 50,
         top: heads[0],
@@ -305,7 +296,7 @@
       }
       
       
-      let cutTime = 0.1 * 6000;
+      let cutTime = 0.1 * 60;
       let summer = setInterval(counClock, 1000);
 
       function counClock() {
