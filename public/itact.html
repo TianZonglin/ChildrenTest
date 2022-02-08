@@ -70,6 +70,9 @@
   
   
   $(function(){
+    
+
+    
     let yname = INTRODUCTION[0];
     let introTextFinal = INTRODUCTION[1];
     let heads = INTRODUCTION[2].split(",");;
@@ -301,7 +304,7 @@
       }
       
       
-      let cutTime = 0.1 * 60;
+      let cutTime = 0.1 * 6000;
       let summer = setInterval(counClock, 1000);
 
       function counClock() {
@@ -333,7 +336,8 @@
         }
       }
       
- 
+           $(".btn17").click(function(){$(this).prev().text(parseInt($(this).prev().text())+1);});  
+      $(".btn17c").click(function(){$(this).prev().text(parseInt($(this).prev().text())+1);});    
         
     });
   });
