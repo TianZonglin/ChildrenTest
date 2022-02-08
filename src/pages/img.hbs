@@ -172,8 +172,9 @@
       $("#final").text($(".sele").map(function () { return ($(this).attr("value")); }).get().join("^"));
     });
     
-    
-    
+    $("body").on("click", ".sele",function(){
+      $(this).html("");  
+    });
 
   });   
     
