@@ -95,6 +95,7 @@
       else
         introTextFinal += m[i]+c[i]+"，";
     }
+    console.log(yoursvg);
     $(".interava").html(yoursvg);
     $("#yname").text(yname);
     $("#ytext").text(introTextFinal);
@@ -338,13 +339,13 @@
       $("body").on("click", ".btn17",function(){
         $(this).prev().text(parseInt($(this).prev().text())+1);
         $(this).addClass('disabled');
-        $(this).parent().find(".btn17c").addClass("disabled");
+        $(this).parent().next().find(".btn17c").addClass("disabled");
  
       });
       $("body").on("click", ".btn17c",function(){
         $(this).prev().text(parseInt($(this).prev().text())+1);
         $(this).addClass('disabled');
-        $(this).parent().find(".btn17c").addClass("disabled");
+        $(this).parent().prev().find(".btn17").addClass("disabled");
       });
   
         
