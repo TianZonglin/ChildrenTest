@@ -335,9 +335,18 @@
             
         }
       }
-      
-           $(".btn17").click(function(){$(this).prev().text(parseInt($(this).prev().text())+1);});  
-      $(".btn17c").click(function(){$(this).prev().text(parseInt($(this).prev().text())+1);});    
+      $("body").on("click", ".btn17",function(){
+        $(this).prev().text(parseInt($(this).prev().text())+1);
+        $(this).addClass('disabled');
+        $(this).parent().find(".btn17c").addClass("disabled");
+ 
+      });
+      $("body").on("click", ".btn17c",function(){
+        $(this).prev().text(parseInt($(this).prev().text())+1);
+        $(this).addClass('disabled');
+        $(this).parent().find(".btn17c").addClass("disabled");
+      });
+  
         
     });
   });
