@@ -60,7 +60,7 @@
     border: 3px solid white;
   }
   .svgg:hover, .svgg:hover{
-      color: #9A1A4A;
+      color: #ff6a00;
   }
   svg:hover {
     fill: red;
@@ -86,7 +86,7 @@
 
     
     
-    for(let i=0;i<200;i++){
+    for(let i=0;i<150;i++){
       let t = mtop[Math.floor(Math.random() * mtop.length)];
       let h = hairColor[Math.floor(Math.random() * hairColor.length)];
       let c = clothing[Math.floor(Math.random() * clothing.length)];
@@ -114,7 +114,7 @@
     
     $("#chongzhi").click(function(){
       $("#touxiang").html("");
-      for(let i=0;i<200;i++){
+      for(let i=0;i<150;i++){
         let t = mtop[Math.floor(Math.random() * mtop.length)];
         let h = hairColor[Math.floor(Math.random() * hairColor.length)];
         let c = clothing[Math.floor(Math.random() * clothing.length)];
@@ -142,13 +142,14 @@
     
     $("body").on("click", ".svgg",function(){
       let tmp = $(this).val().split(";");
-      let t = tmp [];
-      let h = tmp[];
-      let c = tmp[];
-      let cc =tmp[];
-      let e = tmp[];
-      let m = tmp[];
-      let b = tmp[];
+      console.log($(this));
+      let t = tmp[0];
+      let h = tmp[1];
+      let c = tmp[2];
+      let cc =tmp[3];
+      let e = tmp[4];
+      let m = tmp[5];
+      let b = tmp[6];
       let arr = [t,h,c,cc,e,m,b];
       var svg = Avataaars.create({
           width: 70,
@@ -161,7 +162,7 @@
           skin:"yellow",
           background: b
       });
-      $("#xuanze").append("<a class='svgg' value='"+arr.join(";")+"'>"+svg+"</a>");
+      $("#xuanze").append("<a class='' value='"+arr.join(";")+"'>"+svg+"</a>");
 
       $(this).addClass("cheng");
       $("#p9_text").html("<span style='color:green'>选择成功，点击提交按钮！</span>");
@@ -192,7 +193,7 @@
       </div>
 
       <div style="float:left; width:30%;border: 2px solid black">
-        <div id="xuanze" >11</div>
+        <div id="xuanze" ></div>
       </div>
 
     
