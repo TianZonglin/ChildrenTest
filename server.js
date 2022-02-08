@@ -144,6 +144,20 @@ fastify.get("/q", async (request, reply) => {
     }
 });
 
+
+fastify.get("/img", async (request, reply) => {
+ 
+   try {
+ 
+     reply.view("/src/pages/img.hbs");
+        
+    } catch (dbError) {
+      console.error(dbError);
+    }
+});
+
+
+
 fastify.get("/qCount", async (request, reply) => {
 
   

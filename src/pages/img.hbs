@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- 
+    This is the main Handlebars template for the site 
+    - When the user visits the homepage or submits a choice the app calls the endpoints in server.js
+    - The server script passes data in here and the Handlebars code builds it into the HTML page
+  -->
+
+  <meta charset="utf-8" />
+  <link rel="icon" href="{{site.ico}}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{{site.title}}</title>
+
+  <!-- Meta tags for SEO and social sharing -->
+  <link rel="canonical" href="{{site.url}}">
+  <meta name="description" content="{{site.description}}">
+  <meta property="og:title" content="{{site.title}}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="{{site.url}}">
+  <meta property="og:description" content="{{site.description}}">
+  <meta property="og:image" content="{{site.image}}">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Import the webpage's stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
+ 
+  <!-- Show choice chart on poll submission -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <script src="/notice/driver.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/driver.js/dist/driver.min.css">
+  
+<!-- 
+ <link rel="stylesheet" href="/notice/dark-theme.min.css">
+ <link rel="stylesheet" href="/notice/light-theme.min.css">
+-->
+  
+  
+  <link rel="stylesheet" href="/notice/colored-theme.min.css">
+  
+ 
+
+  <script src="/notice/growl-notification.min.js"></script>
+  
+  <script src="/avataaars.js"></script>
+  
+  <script type="text/javascript">
+ 
+
+  $(function(){
+      /**/
+
+
+
+
+  });   
+    
+    
+    
+  </script>
+
+</head>
+
+<body>
+ 
+  
+  <div class="wrapper" style="border: 2px solid black">
+    <div style="float:left; width:80%;border: 2px solid black">
+      <div style="float:left; height:80%;width:100%;border: 2px solid black">
+
+      </div> 
+      <div style="float:left; height:20%;width:100%;border: 2px solid black">
+
+      </div> 
+    </div>
+    <div style="float:left; width:20% ">
+      
+    </div>
+  </div>
+
+  <!-- The footer holds our remix button — you can use it for structure or cut it out ✂ -->
+  <footer class="footer">
+    <div class="links"></div>
+    <a href="/">Home</a>
+    <span class="divider">|</span>
+    <a href="/logs">Admin</a>
+    <a class="corner--remix" target="_top" href="#">
+      Stored in SQLite <span class="divider">|</span> Designed by Universiteit Utrecht
+    </a>
+  </footer>
+</body>
+<script src="/main.js"></script>
+</html>
