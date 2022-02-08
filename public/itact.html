@@ -46,7 +46,7 @@
 
 <script>
  
-  $(".interava").html(Avataaars.create({width:50}));
+ 
   
   $("#p17d").click(function(){
     $("#p17_content").hide();
@@ -72,7 +72,7 @@
   $(function(){
     let yname = INTRODUCTION[0];
     let introTextFinal = INTRODUCTION[1];
-    let heads = INTRODUCTION[2];
+    let heads = INTRODUCTION[2].split(",");;
     let yoursvg = Avataaars.create({
         width: 50,
         top: heads[0],
