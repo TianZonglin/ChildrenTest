@@ -318,11 +318,11 @@
             $("#check").removeAttr("disabled");
             clearInterval(summer);
             $(".content2").css("visibility","visible");
-            $(".content0").css("visibility","visible");
+            $(".szan").text($("#up8").text());
+            $(".scai").text($("#down8").text());
             setTimeout(function(){
               alert("时间结束，你无法继续点赞或踩别人。其他人给你发送的消息可以点击右侧按钮查看！");
-              $(".szan").text($("#up8").text());
-              $(".scai").text($("#down8").text());
+              $(".content0").css("visibility","visible");
             },1000)
             
         }
