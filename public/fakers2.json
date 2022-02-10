@@ -29,8 +29,8 @@
       "name": "LDN(girl1)",
       "gender": "女",
       "introText": "这是女生",
-      "finalZanVsCai": [4,3],
-      "popTime": ["1,2,3，5","1，3,4"],
+      "finalZanVsCai": [4,1],
+      "popTime": ["1,2,3，5","4"],
       "avator": "longButNotTooLong;dauburn;blazerAndSweater;gray02;side;eating;#839BFF"
                                    
     },
@@ -150,19 +150,19 @@
   },{
     "fakeUserID": 6,
     "boy": {
-      "name": "QWF",
+      "name": "QWF(girl4)",
       "gender": "女",
-      "introText": "男生的简介",
-      "finalZanVsCai": [2,2],
-      "popTime": ["1,4","3,5"],
+      "introText": "这是女生",
+      "finalZanVsCai": [1,0],
+      "popTime": ["4",""],
       "avator": "shortWaved;brown;overall;white;side;disbelief;#8F69DB"
     },
     "girl": {
-      "name": "QWF",
+      "name": "QWF(boy4)",
       "gender": "男",
-      "introText": "这是女生",
-      "finalZanVsCai": [2,2],
-      "popTime": ["1,4","3,5"],
+      "introText": "男生的简介",
+      "finalZanVsCai": [1,0],
+      "popTime": ["4",""],
       "avator": "bob;black;blazerAndShirt;pink;side;disbelief;#DD8FE4"
     },
     "optionToUser": {
@@ -174,19 +174,19 @@
   },{
     "fakeUserID": 7,
     "boy": {
-      "name": "VSA",
+      "name": "VSA(boy4)",
       "gender": "男",
       "introText": "男生的简介",
-      "finalZanVsCai": [2,2],
-      "popTime": ["4,5","1,3"],
+      "finalZanVsCai": [1,1],
+      "popTime": ["4","1"],
       "avator": "shortFlat;platinum;graphicShirt;red;side;twinkle;#A59101"
     },
     "girl": {
-      "name": "VSA",
+      "name": "VSA(girl4)",
       "gender": "女",
       "introText": "这是女生",
-      "finalZanVsCai": [2,2],
-      "popTime": ["4,6","1,2"],
+      "finalZanVsCai": [1,1],
+      "popTime": ["4","1"],
       "avator": "straight01;brown;overall;black;side;concerned;#76D18D"
     },
     "optionToUser": {
