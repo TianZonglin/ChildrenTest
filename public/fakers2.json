@@ -26,21 +26,21 @@
   },{
     "fakeUserID": 1,
     "boy": {
-      "name": "SDF(boy1)",
+      "name": "LDN(girl1)",
       "gender": "女",
       "introText": "这是女生",
       "finalZanVsCai": [4,3],
       "popTime": ["1,2,3，5","1，3,4"],
-      "avator": "theCaesar;brown;graphicShirt;gray01;surprised;grimace;#A59101"
+      "avator": "longButNotTooLong;dauburn;blazerAndSweater;gray02;side;eating;#839BFF"
                                    
     },
     "girl": {
       "name": "LDN(boy1)",
       "gender": "男",
       "introText": "男生的简介",
-      "finalZanVsCai": [4,1],
+      "finalZanVsCai": [4,3],
       "popTime": ["1,4,5,6","2,3,4"],
-      "avator": "longButNotTooLong;dauburn;blazerAndSweater;gray02;side;eating;#839BFF"
+      "avator": "theCaesar;brown;graphicShirt;gray01;surprised;grimace;#A59101"
     },
     "optionToUser": {
       "opTime": 1, 
@@ -52,17 +52,17 @@
   },{
     "fakeUserID": 2,
     "boy": {
-      "name": "FGG",
+      "name": "FGG(girl2)",
       "gender": "女",
-      "introText": "男生的简介",
+      "introText": "这是女生",
       "finalZanVsCai": [3,2],
       "popTime": ["4,5,6","1,2"],
       "avator": "theCaesarAndSidePart;black;blazerAndSweater;blue02;surprised;disbelief;#A59101"
     },
     "girl": {
-      "name": "FGG",
+      "name": "FGG(boy2)",
       "gender": "男",
-      "introText": "这是女生",
+      "introText": "男生的简介",
       "finalZanVsCai": [3,2],
       "popTime": ["2,3,4","5,6"],
       "avator": "straightAndStrand;dauburn;hoodie;blue03;winkWacky;smile;#A59101"
