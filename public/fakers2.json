@@ -1,18 +1,18 @@
 [{
     "fakeUserID": 0,
     "boy": {
-      "name": "LDN",
-      "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [2,3],
-      "popTime": ["1,2","3,4,5"],
-      "avator": "dreads01;black;blazerAndSweater;pastelYellow;side;disbelief;#8F69DB"
+      "name": "LDN(boy1)",
+      "introText": "男生的简介",
+      "finalZanVsCai": [4,1],
+      "popTime": ["3,4,5,6","3"],
+      "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB"
     },
     "girl": {
-      "name": "LDN",
-      "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [2,3],
-      "popTime": ["3,4","1,2,3"],
-      "avator": "dreads01;black;blazerAndSweater;pastelYellow;side;disbelief;#8F69DB"
+      "name": "LDN(girl1)",
+      "introText": "这是女生",
+      "finalZanVsCai": [4,1],
+      "popTime": ["3,4,5,6","3"],
+      "avator": "shaggyMullet;brown;hoodie;pink;wink;smile;#8F69DB"
     },
     "optionToUser": {
       "opTime": 6, 
@@ -25,18 +25,18 @@
     "fakeUserID": 1,
     "boy": {
       "name": "SDF",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "男生的简介",
       "finalZanVsCai": [2,1],
       "popTime": ["1,5","1"],
-      "avator": "straight01,platinum,hoodie,pastelGreen,happy,eating,#A59101"
+      "avator": "theCaesar;brown;graphicShirt;gray01;surprised;grimace;#A59101"
                                    
     },
     "girl": {
       "name": "SDF",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "这是女生",
       "finalZanVsCai": [1,1],
       "popTime": ["3","1"],
-      "avator": "straight01,platinum,hoodie,pastelGreen,happy,eating,#A59101"
+      "avator": "longButNotTooLong;dauburn;blazerAndSweater;gray02;side;eating;#839BFF"
     },
     "optionToUser": {
       "opTime": 1, 
@@ -49,17 +49,17 @@
     "fakeUserID": 2,
     "boy": {
       "name": "FGG",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "男生的简介",
       "finalZanVsCai": [3,2],
       "popTime": ["4,5,6","1,2"],
-      "avator": "shortRound;silverGray;shirtVNeck;blue02;happy;serious;#DD8FE4"
+      "avator": "theCaesarAndSidePart;black;blazerAndSweater;blue02;surprised;disbelief;#A59101"
     },
     "girl": {
       "name": "FGG",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "这是女生",
       "finalZanVsCai": [3,2],
       "popTime": ["2,3,4","5,6"],
-      "avator": "shortRound;silverGray;shirtVNeck;blue02;happy;serious;#DD8FE4"
+      "avator": "straightAndStrand;dauburn;hoodie;blue03;winkWacky;smile;#A59101"
     },
     "optionToUser": {
       "opTime": 5, 
@@ -73,17 +73,17 @@
     "fakeUserID": 3,
     "boy": {
       "name": "EWR",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "男生的简介",
       "finalZanVsCai": [2,1],
       "popTime": ["1,2","4"],
-      "avator": "shaggy;black;blazerAndShirt;blue03;winkWacky;smile;#DD8FE4"
+      "avator": "theCaesarAndSidePart;platinum;collarAndSweater;pastelGreen;surprised;eating;#A59101"
     },
     "girl": {
       "name": "EWR",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "这是女生",
       "finalZanVsCai": [2,2],
       "popTime": ["2,4","5,6"],
-      "avator": "shaggy;black;blazerAndShirt;blue03;winkWacky;smile;#DD8FE4"
+      "avator": "miaWallace;dauburn;shirtScoopNeck;blue01;side;smile;#839BFF"
     },
     "optionToUser": {
       "opTime": 4, 
@@ -95,17 +95,17 @@
     "fakeUserID": 4,
     "boy": {
       "name": "BSS",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "男生的简介",
       "finalZanVsCai": [2,1],
       "popTime": ["4,5","1"],
-      "avator": "theCaesarAndSidePart;dauburn;shirtCrewNeck;pink;wink;tongue;#DD8FE4"
+      "avator": "shortWaved;dauburn;blazerAndShirt;blue03;eyeRoll;twinkle;#8F69DB"
     },
     "girl": {
       "name": "BSS",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "这是女生",
       "finalZanVsCai": [1,2],
       "popTime": ["1","4,5"],
-      "avator": "theCaesarAndSidePart;dauburn;shirtCrewNeck;pink;wink;tongue;#DD8FE4"
+      "avator": "straight01;pastelPink;blazerAndShirt;blue03;closed;eating;#76D18D"
     },
     "optionToUser": {
       "opTime": 2, 
@@ -117,17 +117,17 @@
     "fakeUserID": 5,
     "boy": {
       "name": "SDG",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "男生的简介",
       "finalZanVsCai": [1,3],
       "popTime": ["1","2,3,4"],
-      "avator": "shortRound;red;blazerAndShirt;pastelOrange;side;twinkle;#8F69DB"
+      "avator": "shortCurly;black;collarAndSweater;heather;closed;smile;#76D18D"
     },
     "girl": {
       "name": "SDG",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "这是女生",
       "finalZanVsCai": [2,1],
       "popTime": ["5,6","2"],
-      "avator": "shortRound;red;blazerAndShirt;pastelOrange;side;twinkle;#8F69DB"
+      "avator": "straightAndStrand;black;shirtScoopNeck;pastelRed;squint;serious;#DD8FE4"
     },
     "optionToUser": {
       "opTime": 5, 
@@ -139,17 +139,17 @@
     "fakeUserID": 6,
     "boy": {
       "name": "QWF",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "男生的简介",
       "finalZanVsCai": [3,1],
       "popTime": ["2,4,5","1"],
-      "avator": "shortRound;brown;hoodie;blue02;side;twinkle;#A59101"
+      "avator": "shortWaved;brown;overall;white;side;disbelief;#8F69DB"
     },
     "girl": {
       "name": "QWF",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "这是女生",
       "finalZanVsCai": [2,2],
       "popTime": ["1,4","3,5"],
-      "avator": "shortRound;brown;hoodie;blue02;side;twinkle;#A59101"
+      "avator": "bob;black;blazerAndShirt;pink;side;disbelief;#DD8FE4"
     },
     "optionToUser": {
       "opTime": 0, 
@@ -161,17 +161,17 @@
     "fakeUserID": 7,
     "boy": {
       "name": "VSA",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "男生的简介",
       "finalZanVsCai": [2,2],
       "popTime": ["4,5","1,3"],
-      "avator": "shortWaved;blonde;shirtCrewNeck;white;happy;serious;#8F69DB"
+      "avator": "shortFlat;platinum;graphicShirt;red;side;twinkle;#A59101"
     },
     "girl": {
       "name": "VSA",
-      "introText": "最喜欢...最喜欢...最喜欢...",
+      "introText": "这是女生",
       "finalZanVsCai": [2,2],
       "popTime": ["4,6","1,2"],
-      "avator": "shortWaved;blonde;shirtCrewNeck;white;happy;serious;#8F69DB"
+      "avator": "straight01;brown;overall;black;side;concerned;#76D18D"
     },
     "optionToUser": {
       "opTime": 0, 
