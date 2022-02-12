@@ -90,15 +90,63 @@ $(function(){
   $('#p4d').on('input propertychange',function() {
     let strInput = $(this).val();
     let GENDER = strInput[0]; //2
-    let GROUP = strInput[1];  ///2
+    let GROUP = strInput[1];  //3
     let VERSION = strInput[2]; //2
-    if(strInput === "1111111"){
-      $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
-      setTimeout(function(){
-        $("#p4_content").hide();
-        $("#p6_content").show();
-  
-      },1000);
+    if(GENDER=="1"){
+      if(GROUP=="1"){
+        if(GROUP=="1"){
+          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
+          setTimeout(function(){
+            $("#p4_content").hide();
+            $("#p6_content").show();
+
+          },1000);
+        }else if(GROUP=="2"){
+
+          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
+          setTimeout(function(){
+            $("#p4_content").hide();
+            $("#p6_content").show();
+
+          },1000);
+        }else if(GROUP=="3"){
+
+          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
+          setTimeout(function(){
+            $("#p4_content").hide();
+            $("#p6_content").show();
+
+          },1000);
+        }
+      }
+    }else if(GENDER=="2"){
+      if(GROUP=="1"){
+        if(GROUP=="1"){
+          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
+          setTimeout(function(){
+            $("#p4_content").hide();
+            $("#p6_content").show();
+
+          },1000);
+        }else if(GROUP=="2"){
+
+          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
+          setTimeout(function(){
+            $("#p4_content").hide();
+            $("#p6_content").show();
+
+          },1000);
+        }else if(GROUP=="3"){
+
+          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
+          setTimeout(function(){
+            $("#p4_content").hide();
+            $("#p6_content").show();
+
+          },1000);
+        }
+      }
+      
     }else if(strInput.length == 7){
       $("#p4d_text").html("<span style='color:red'>输入错误，请重新输入！</span>");  
     }
