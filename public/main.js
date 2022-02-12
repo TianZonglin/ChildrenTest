@@ -89,6 +89,9 @@ $(function(){
    //page 4
   $('#p4d').on('input propertychange',function() {
     let strInput = $(this).val();
+    let GENDER = strInput[0]; //2
+    let GROUP = strInput[1];  ///2
+    let VERSION = strInput[2]; //2
     if(strInput === "1111111"){
       $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
       setTimeout(function(){
