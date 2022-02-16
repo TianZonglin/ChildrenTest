@@ -189,6 +189,9 @@
       "popTime": ["4","1"],
       "avator": "straight01;brown;overall;black;side;concerned;#76D18D"
     },
+    "profile":{
+      
+    },
     "optionToUser": {
       "opTime": 0, 
       "option": "like"
