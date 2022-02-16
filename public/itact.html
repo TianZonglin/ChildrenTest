@@ -139,10 +139,16 @@
         str += "<div class='textInfo'>";
         str += obj.boy.introText;
         str += "</div>";
-        str += "<div class='Btn'>赞&nbsp;<span class='cnt' id='up"+i+"' value="+obj.boy.finalZanVsCai[0]+">0</span><button  class='btn17' style='float:right'>赞&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
-        str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.boy.finalZanVsCai[1]+">0</span><button  class='btn17c' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
+        str += "<div class='Btn'>赞&nbsp;<span class='cnt' id='up"+i
+          +"' value="+obj.boy.finalZanVsCai[0]
+          +">0</span><button  class='btn17' style='float:right'>赞&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
+        str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i
+          +"' value="+obj.boy.finalZanVsCai[1]
+          +">0</span><button  class='btn17c' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div>";
-        rky += "<div value='0' class='rankcnt' id='rankcnt"+i+"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#a2a4c6;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"+obj.boy.name+"</div>";
+        rky += "<div value='0' class='rankcnt' id='rankcnt"+i
+          +"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#a2a4c6;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"
+          +obj.boy.name+"</div>";
 
       }
       $("#itor").html(str);
