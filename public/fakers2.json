@@ -1,7 +1,7 @@
 [{
     "fakeUserID": 0,
     "boy": {
-      "name": "LDN(boy1)",
+      "name": "PC1(boy1)",
       "gender": "男",
       "introText": "男生的简介",
       "finalZanVsCai": [4,1],
@@ -9,7 +9,7 @@
       "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB"
     },
     "girl": {
-      "name": "LDN(girl1)",
+      "name": "PC1(girl1)",
       "gender": "女",
       "introText": "这是女生",
       "finalZanVsCai": [4,1],
@@ -26,7 +26,7 @@
   },{
     "fakeUserID": 1,
     "boy": {
-      "name": "LDN(girl1)",
+      "name": "PC2(girl1)",
       "gender": "女",
       "introText": "这是女生",
       "finalZanVsCai": [4,1],
@@ -35,7 +35,7 @@
                                    
     },
     "girl": {
-      "name": "LDN(boy1)",
+      "name": "PC2(boy1)",
       "gender": "男",
       "introText": "男生的简介",
       "finalZanVsCai": [4,3],
@@ -52,7 +52,7 @@
   },{
     "fakeUserID": 2,
     "boy": {
-      "name": "FGG(girl2)",
+      "name": "PC3(girl2)",
       "gender": "女",
       "introText": "这是女生",
       "finalZanVsCai": [3,2],
@@ -60,7 +60,7 @@
       "avator": "straightAndStrand;dauburn;hoodie;blue03;winkWacky;smile;#A59101"
     },
     "girl": {
-      "name": "FGG(boy2)",
+      "name": "PC3(boy2)",
       "gender": "男",
       "introText": "男生的简介",
       "finalZanVsCai": [3,2],
@@ -78,7 +78,7 @@
   },{
     "fakeUserID": 3,
     "boy": {
-      "name": "FGG(boy2)",
+      "name": "PC4(boy2)",
       "gender": "男",
       "introText": "男生的简介",
       "finalZanVsCai": [3,3],
@@ -86,7 +86,7 @@
       "avator": "theCaesarAndSidePart;platinum;collarAndSweater;pastelGreen;surprised;eating;#A59101"
     },
     "girl": {
-      "name": "FGG(girl2)",
+      "name": "PC4(girl2)",
       "gender": "女",
       "introText": "这是女生",
       "finalZanVsCai": [3,3],
@@ -102,7 +102,7 @@
   },{
     "fakeUserID": 4,
     "boy": {
-      "name": "BSS(boy3)",
+      "name": "PC5(boy3)",
       "gender": "男",
       "introText": "男生的简介",
       "finalZanVsCai": [2,0],
@@ -110,7 +110,7 @@
       "avator": "shortWaved;dauburn;blazerAndShirt;blue03;eyeRoll;twinkle;#8F69DB"
     },
     "girl": {
-      "name": "BSS(girl3)",
+      "name": "PC5(girl3)",
       "gender": "女",
       "introText": "这是女生",
       "finalZanVsCai": [2,0],
@@ -126,7 +126,7 @@
   },{
     "fakeUserID": 5,
     "boy": {
-      "name": "BSS(girl3)",
+      "name": "PC6(girl3)",
       "gender": "女",
       "introText": "这是女生",
       "finalZanVsCai": [2,2],
@@ -134,7 +134,7 @@
       "avator": "straightAndStrand;black;shirtScoopNeck;pastelRed;squint;serious;#DD8FE4"
     },
     "girl": {
-      "name": "BSS(boy3)",
+      "name": "PC6(boy3)",
       "gender": "男",
       "introText": "男生的简介",
       "finalZanVsCai": [2,2],
@@ -150,7 +150,7 @@
   },{
     "fakeUserID": 6,
     "boy": {
-      "name": "QWF(girl4)",
+      "name": "PC7(girl4)",
       "gender": "女",
       "introText": "这是女生",
       "finalZanVsCai": [1,0],
@@ -158,7 +158,7 @@
       "avator": "bob;black;blazerAndShirt;pink;side;disbelief;#DD8FE4"
     },
     "girl": {
-      "name": "QWF(boy4)",
+      "name": "PC7(boy4)",
       "gender": "男",
       "introText": "男生的简介",
       "finalZanVsCai": [1,0],
@@ -174,7 +174,7 @@
   },{
     "fakeUserID": 7,
     "boy": {
-      "name": "VSA(boy4)",
+      "name": "PC8(boy4)",
       "gender": "男",
       "introText": "男生的简介",
       "finalZanVsCai": [1,1],
@@ -182,7 +182,7 @@
       "avator": "shortFlat;platinum;graphicShirt;red;side;twinkle;#A59101"
     },
     "girl": {
-      "name": "VSA(girl4)",
+      "name": "PC8(girl4)",
       "gender": "女",
       "introText": "这是女生",
       "finalZanVsCai": [1,1],
