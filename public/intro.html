@@ -92,6 +92,7 @@
       <option value="男">男</option>
       <option value="女">女</option>
     </select> 
+    <span style="color:red">选择性别后对应出现进入的控制组(性别在这里确认？还是在验证码那里确认？) <span id="texture"></span></span>
   </div>
   <br>
   <div class="poll-form">
@@ -255,6 +256,15 @@
  
   let INTRODUCTION = new Array();
   
+  
+  
+  $("#p8b").blur(function(){
+    if($(this).val()=="男"){
+      
+    }else if($(this).val()=="女"){
+      
+    }
+  });
 
   
   $("#p8q").click(function(){
