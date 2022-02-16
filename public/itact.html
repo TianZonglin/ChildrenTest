@@ -114,7 +114,7 @@
       let rky = "<div value='0' class='rankcnt' id='rankcnt8' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:27px; '>你自己</div>";
       for(let i = 0; i < e.length; i++){
         let obj = e[i];
-        let avaStr = obj.sexVersion.boy.avator.split(";");
+        let avaStr = obj.sexVersion["boy"].avator.split(";");
  
         let svg = Avataaars.create({
             width: 50,
@@ -133,22 +133,22 @@
         str += svg;
         str += "</a>";
         str += "<span class='username'>";
-        str += obj.sexVersion.boy.name;
+        str += obj.sexVersion["boy"].name;
         str += "</span>";
         str += "</div>";
         str += "<div class='textInfo'>";
         str += obj.profileVersion.version1;
         str += "</div>";
         str += "<div class='Btn'>赞&nbsp;<span class='cnt' id='up"+i
-          +"' value="+obj.sexVersion.boy.finalZanVsCai[0]
+          +"' value="+obj.sexVersion["boy"].finalZanVsCai[0]
           +">0</span><button  class='btn17' style='float:right'>赞&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
         str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i
-          +"' value="+obj.sexVersion.boy.finalZanVsCai[1]
+          +"' value="+obj.sexVersion["boy"].finalZanVsCai[1]
           +">0</span><button  class='btn17c' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div>";
         rky += "<div value='0' class='rankcnt' id='rankcnt"+i
           +"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#a2a4c6;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"
-          +obj.sexVersion.boy.name+"</div>";
+          +obj.sexVersion["boy"].name+"</div>";
 
       }
       $("#itor").html(str);
@@ -160,7 +160,7 @@
         
         
         if(o.optionToUser.opTime != 0){
-          let iavaStr = o.boy.avator.split(";");
+          let iavaStr = o.sexVersion["boy"].avator.split(";");
           let isvg = Avataaars.create({
               width: 50,
               top: iavaStr[0],
@@ -210,10 +210,10 @@
           }
         }
  
-        let upTime = o.boy.popTime[0].split(",");
-        let downTime = o.boy.popTime[1].split(",");
+        let upTime = o.sexVersion["boy"].popTime[0].split(",");
+        let downTime = o.sexVersion["boy"].popTime[1].split(",");
         
-        for(let zan = 0; zan < parseInt(o.boy.finalZanVsCai[0]); zan++){
+        for(let zan = 0; zan < parseInt(o.sexVersion["boy"].finalZanVsCai[0]); zan++){
           setTimeout(function(){
             $("#up"+i).text(parseInt($("#up"+i).text())+1);
             $("#up"+i).css("color","rgb(255,160,0)");
@@ -221,7 +221,7 @@
             $("#up"+i).css("font-weight","900");
             $("#rankcnt"+i).val(parseInt($("#up"+i).text())-parseInt($("#down"+i).text()));
             GrowlNotification.notify({
-              description: "[ "+o.boy.name+" ] 收到了一个赞！",
+              description: "[ "+o.sexVersion["boy"].name+" ] 收到了一个赞！",
               type: 'success',
               position: 'bottom-left',
               closeTimeout: 2000
@@ -233,7 +233,7 @@
             },500)
           }, 1000*parseInt(upTime[zan]));
         }
-        for(let cai = 0; cai < parseInt(o.boy.finalZanVsCai[1]); cai++){
+        for(let cai = 0; cai < parseInt(o.sexVersion["boy"].finalZanVsCai[1]); cai++){
           setTimeout(function(){
             $("#down"+i).text(parseInt($("#down"+i).text())+1);
             $("#down"+i).css("color","rgb(255,160,0)");
@@ -248,7 +248,7 @@
           }, 1000*parseInt(downTime[cai]));
         }
         for(let msg = 0; msg < parseInt(o.messageToUser.length); msg++){
-          let avaStr = o.boy.avator.split(";");
+          let avaStr = o.sexVersion["boy"].avator.split(";");
           let svg = Avataaars.create({
               width: 20,
               top: avaStr[0],
@@ -276,7 +276,7 @@
         $("#check").click(function(){
           $("#p17d").removeAttr("disabled");
           for(let msg = 0; msg < parseInt(o.messageToUser.length); msg++){
-            let avaStr = o.boy.avator.split(";");
+            let avaStr = o.sexVersion["boy"].avator.split(";");
             let svg = Avataaars.create({
                 width: 20,
                 top: avaStr[0],
@@ -289,7 +289,7 @@
                 background: avaStr[6]
             });
             GrowlNotification.notify({
-              description: svg+"("+o.boy.name+")对你说：<span>"+o.messageToUser[msg].sendText+"</span><br>",
+              description: svg+"("+o.sexVersion["boy"].name+")对你说：<span>"+o.messageToUser[msg].sendText+"</span><br>",
               type: 'info',
               position: 'bottom-right',
               closeTimeout: 2000
