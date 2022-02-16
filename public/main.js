@@ -89,9 +89,9 @@ $(function(){
    //page 4
   $('#p4d').on('input propertychange',function() {
     let strInput = $(this).val();
-    let GENDER = strInput[0]; //2
-    let GROUP = strInput[1];  //3
-    let VERSION = strInput[2]; //2
+    let GROUP = strInput[1]; //2
+    let VERSION = strInput[2];  //3
+    let GENDER = strInput[3]; //2
     if(GENDER=="1"){
       if(GROUP=="1"){
         if(GROUP=="1"){
