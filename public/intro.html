@@ -259,8 +259,9 @@
   
   
   $("#p8b").blur(function(){
+    let hvalue = $("#hidevalue").text();
     if($(this).val()=="男"){
-      
+      $("#hidevalue").text(hvalue+",nan")
     }else if($(this).val()=="女"){
       
     }
