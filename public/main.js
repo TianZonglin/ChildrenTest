@@ -92,16 +92,24 @@ $(function(){
     let GROUP = strInput[1]; //2
     let VERSION = strInput[2];  //3
     let GENDER = strInput[3]; //2
-    if(GENDER=="1"){
-      if(GROUP=="1"){
-        if(GROUP=="1"){
+    switch(GROUP) {
+      case "1":
+        // code block
+        break;
+
+        
+      default:
+        // code block
+    }
+      if(VERSION=="1"){
+        if(GENDER=="1"){ //111
           $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
           setTimeout(function(){
             $("#p4_content").hide();
             $("#p6_content").show();
 
           },1000);
-        }else if(GROUP=="2"){
+        }else if(GENDER=="2"){ //112
 
           $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
           setTimeout(function(){
@@ -109,7 +117,16 @@ $(function(){
             $("#p6_content").show();
 
           },1000);
-        }else if(GROUP=="3"){
+        }
+      }else if(VERSION=="2"){
+        if(GENDER=="1"){ //121
+          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
+          setTimeout(function(){
+            $("#p4_content").hide();
+            $("#p6_content").show();
+
+          },1000);
+        }else if(GENDER=="2"){ //122
 
           $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
           setTimeout(function(){
@@ -119,7 +136,7 @@ $(function(){
           },1000);
         }
       }
-    }else if(GENDER=="2"){
+    }else if(GROUP=="2"){
       if(GROUP=="1"){
         if(GROUP=="1"){
           $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
