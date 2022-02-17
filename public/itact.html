@@ -92,7 +92,7 @@
       else
         introTextFinal += m[i]+c[i]+"，";
     }
-    console.log(yoursvg);
+    //console.log(yoursvg);
     $(".interava").html(yoursvg);
     $("#yname").text(yname);
     $("#ytext").text(introTextFinal);
@@ -110,7 +110,9 @@
        
        $('#ranky').html(domList);
        $('.order').css("background-color","#a2a4c6");
-       $('.order')[$('.rankcnt').index($('#rankcnt8'))].style.backgroundColor='#DD9F4B';
+       if($("#hidevalue").text().split(",")[0]!="normal"){
+         $('.order')[$('.rankcnt').index($('#rankcnt8'))].style.backgroundColor='#DD9F4B';
+       }
        
     }
     $.getJSON("fakers2.json",function(e){
@@ -298,7 +300,8 @@
                 skin:"yellow",
                 background: avaStr[6]
             });
-            let tt = o.messageToUser[msg].sendText.split(";");
+            let tt = o.messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";");
+            console.log(tt);
             for(let t=0;t<tt.length;t++){
               GrowlNotification.notify({
                 description: svg+"("+o.sexVersion[sexVesion].name+")对你说：<span>"+tt[t]+"</span><br>",
@@ -344,11 +347,11 @@
               alert("时间结束，你无法继续点赞或踩别人。其他人给你发送的消息可以点击右侧按钮查看！");
               $(".content0").css("visibility","visible");
               if($("#hidevalue").text().split(",")[0]=="accept"){
-                $("#finals").text("你得到了<b>最多的赞</b>(6个赞)和<b>最少的踩</b>(0个踩)");
+                $("#finals").html("你得到了<b>最多的赞</b>(6个赞)和<b>最少的踩</b>(0个踩)");
               }else if($("#hidevalue").text().split(",")[0]=="normal"){
-                $("#finals").text("你一共给别的同学点了<b>X个赞</b>和<b>X个踩</b>。");
+                $("#finals").html("你一共给别的同学点了<b>X个赞</b>和<b>X个踩</b>。");
               }else if($("#hidevalue").text().split(",")[0]=="refuse"){
-                $("#finals").text("你得到了<b>最多的踩</b>(5个踩)和<b>最少的赞</b>(1个赞)。");
+                $("#finals").html("你得到了<b>最多的踩</b>(5个踩)和<b>最少的赞</b>(1个赞)。");
               }
             },1000)
             
