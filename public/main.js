@@ -92,15 +92,41 @@ $(function(){
     let GROUP = strInput[1]; //2
     let VERSION = strInput[2];  //3
     let GENDER = strInput[3]; //2
+    let hideVlaue = "";
     switch(GROUP) {
       case "1":
         // code block
         break;
-
-        
+      case "2":
+        // code block
+        break;
+      case "3":
+        // code block
+        break;
       default:
         // code block
     }
+    switch(VERSION) {
+      case "1":
+        $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version1"));
+        break;
+      case "2":
+        $("#hidevalue").text(hideVlaue.replaceAll("profileVersion","version2"));
+        break;
+      default:
+        $("#hidevalue").text(hideVlaue.replaceAll("profileVersion","version1"));
+    }
+    switch(GENDER) {
+      case "1":
+        $("#hidevalue").text(hideVlaue.replaceAll("sexVersion","boy"));
+        break;
+      case "2":
+        $("#hidevalue").text(hideVlaue.replaceAll("sexVersion","girl"));
+        break;
+      default:
+        $("#hidevalue").text(hideVlaue.replaceAll("sexVersion","boy"));
+        // code block
+    } 
       if(VERSION=="1"){
         if(GENDER=="1"){ //111
           $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
