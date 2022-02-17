@@ -338,8 +338,13 @@
             $(".scai").text($("#down8").text());
             setTimeout(function(){
               alert("时间结束，你无法继续点赞或踩别人。其他人给你发送的消息可以点击右侧按钮查看！");
-              if($("#hidevalue").text().split(",")[0]!="normal"){
-                $(".content0").css("visibility","visible");
+              $(".content0").css("visibility","visible");
+              if($("#hidevalue").text().split(",")[0]=="accept"){
+                $("#finals").text("你得到了<b>最多的赞</b>(6个赞)和<b>最少的踩</b>(0个踩)");
+              }else if($("#hidevalue").text().split(",")[0]=="normal"){
+                $("#finals").text("你一共给别的同学点了<b>X个赞</b>和<b>X个踩</b>。");
+              }else if($("#hidevalue").text().split(",")[0]=="refuse"){
+                $("#finals").text("你得到了<b>最多的踩</b>(5个踩)和<b>最少的赞</b>(1个赞)。");
               }
             },1000)
             

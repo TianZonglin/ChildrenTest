@@ -24,9 +24,11 @@
       "opTime": 6, 
       "option": "like"
     },
-    "messageToUser": [
-        {"sendTime": 1, "sendText": "balabalabala....."}
-    ]
+    "messageToUser": { 
+        "accept":{"sendTime": 1, "sendText": "balabalabala....."},
+        "normal":{"sendTime": 1, "sendText": "balabalabala....."},
+        "refuse":{"sendTime": 1, "sendText": "balabalabala....."}
+    }
   },{
     "fakeUserID": 1,
     "sexVersion":{
@@ -54,9 +56,11 @@
       "opTime": 1, 
       "option": "dislike"
     },
-    "messageToUser": [
-        {"sendTime": 5, "sendText": "balabalabala....."}
-    ]
+    "messageToUser": { 
+        "accept":{"sendTime": 1, "sendText": "balabalabala....."},
+        "normal":{"sendTime": 1, "sendText": "balabalabala....."},
+        "refuse":{"sendTime": 1, "sendText": "balabalabala....."}
+    }
   },{
     "fakeUserID": 2,
     "sexVersion":{
@@ -83,10 +87,11 @@
       "opTime": 5, 
       "option": "like"
     },
-    "messageToUser": [
-        {"sendTime": 3, "sendText": "balabalabala....."},
-        {"sendTime": 5,  "sendText": "balabalabala....."}
-    ]
+    "messageToUser": { 
+        "accept":{"sendTime": 1, "sendText": "balabalabala....."},
+        "normal":{"sendTime": 1, "sendText": "balabalabala....."},
+        "refuse":{"sendTime": 1, "sendText": "balabalabala....."}
+    }
   },{
     "fakeUserID": 3,
     "sexVersion":{
@@ -141,8 +146,11 @@
       "opTime": 2, 
       "option": "dislike"
     },
-    "messageToUser": [
-    ]
+    "messageToUser": { 
+        "accept":{"sendTime": 1, "sendText": "balabalabala....."},
+        "normal":{"sendTime": 1, "sendText": "balabalabala....."},
+        "refuse":{"sendTime": 1, "sendText": "balabalabala....."}
+    }
   },{
     "fakeUserID": 5,
     "sexVersion":{
@@ -169,8 +177,11 @@
       "opTime": 5, 
       "option": "like"
     },
-    "messageToUser": [
-    ]
+    "messageToUser": { 
+        "accept":{"sendTime": 1, "sendText": "balabalabala....."},
+        "normal":{"sendTime": 1, "sendText": "balabalabala....."},
+        "refuse":{"sendTime": 1, "sendText": "balabalabala....."}
+    }
   },{
     "fakeUserID": 6,
     "sexVersion":{
@@ -197,8 +208,11 @@
       "opTime": 0, 
       "option": "like"
     },
-    "messageToUser": [
-    ]
+    "messageToUser": { 
+        "accept":{"sendTime": 0, "sendText": "balabalabala....."},
+        "normal":{"sendTime": 0, "sendText": "balabalabala....."},
+        "refuse":{"sendTime": 0, "sendText": "balabalabala....."}
+    }
   },{
     "fakeUserID": 7,
     "sexVersion":{
@@ -225,6 +239,9 @@
       "opTime": 0, 
       "option": "like"
     },
-    "messageToUser": [
-    ]
+    "messageToUser": { 
+        "accept":{"sendTime": 0, "sendText": "balabalabala....."},
+        "normal":{"sendTime": 0, "sendText": "balabalabala....."},
+        "refuse":{"sendTime": 0, "sendText": "balabalabala....."}
+    }
   }]
