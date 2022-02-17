@@ -95,36 +95,36 @@ $(function(){
     let hideVlaue = "";
     switch(GROUP) {
       case "1":
-        // code block
+         $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","positive")
         break;
       case "2":
-        // code block
+         $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","version1"));
         break;
       case "3":
-        // code block
+         $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","version1"));
         break;
       default:
-        // code block
+         $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","version1"));
     }
     switch(VERSION) {
       case "1":
         $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version1"));
         break;
       case "2":
-        $("#hidevalue").text(hideVlaue.replaceAll("profileVersion","version2"));
+        $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version2"));
         break;
       default:
-        $("#hidevalue").text(hideVlaue.replaceAll("profileVersion","version1"));
+        $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version1"));
     }
     switch(GENDER) {
       case "1":
-        $("#hidevalue").text(hideVlaue.replaceAll("sexVersion","boy"));
+        $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","boy"));
         break;
       case "2":
-        $("#hidevalue").text(hideVlaue.replaceAll("sexVersion","girl"));
+        $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","girl"));
         break;
       default:
-        $("#hidevalue").text(hideVlaue.replaceAll("sexVersion","boy"));
+        $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","boy"));
         // code block
     } 
       if(VERSION=="1"){
