@@ -50,6 +50,7 @@
   
   $("#p17d").click(function(){
     $("#p17_content").hide();
+    GrowlNotification.closeAll();
     $("#p17_27").load("cball.html");
     $(".content2").css("visibility","hidden");
     $(".content0").css("visibility","hidden");
@@ -272,9 +273,9 @@
             skin:"yellow",
             background: avaStr[6]
         });
-        if(parseInt(o.messageToUser[$("#hidevalue").text().split(",")[0]].sendTime))!=0) {
+        if(parseInt(o.messageToUser[$("#hidevalue").text().split(",")[0]].sendTime)!=0) {
           setTimeout(function(){
-            $("#msgnum").text(parseInt($("#msgnum").text())+1);
+            $("#msgnum").text(parseInt($("#msgnum").text())+o.messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";").length);
             $("#msgnum").css("color","rgb(255,160,0)");
             $("#msgnum").css("font-size","10px");
             $("#msgnum").css("font-weight","900");
@@ -286,6 +287,7 @@
           }, 1000*parseInt(o.messageToUser[$("#hidevalue").text().split(",")[0]].sendTime));
         }
         $("#check").click(function(){
+          $("#check").addClass("disabled");
           $("#p17d").removeAttr("disabled");
           let avaStr = o.sexVersion[sexVesion].avator.split(";");
           let svg = Avataaars.create({
@@ -299,15 +301,17 @@
               skin:"yellow",
               background: avaStr[6]
           });
-          let tt = o.messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";");
-          console.log(tt);
-          for(let t=0;t<tt.length;t++){
-            GrowlNotification.notify({
-              description: svg+"("+o.sexVersion[sexVesion].name+")对你说：<span>"+tt[t]+"</span><br>",
-              type: 'info',
-              position: 'bottom-right',
-              closeTimeout: 0
-            });
+          if(parseInt(o.messageToUser[$("#hidevalue").text().split(",")[0]].sendTime)!=0) {
+            let tt = o.messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";");
+            console.log(tt);
+            for(let t=0;t<tt.length;t++){
+              GrowlNotification.notify({
+                description: svg+"("+o.sexVersion[sexVesion].name+")对你说：<span>"+tt[t]+"</span><br>",
+                type: 'info',
+                position: 'bottom-right',
+                closeTimeout: 0
+              });
+            }
           }
         })
 
