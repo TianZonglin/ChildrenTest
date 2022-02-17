@@ -259,7 +259,34 @@
             },500)
           }, 1000*parseInt(downTime[cai]));
         }
-        for(let msg = 0; msg < parseInt(o.messageToUser.length); msg++){
+
+        let avaStr = o.sexVersion[sexVesion].avator.split(";");
+        let svg = Avataaars.create({
+            width: 20,
+            top: avaStr[0],
+            hairColor: avaStr[1],
+            clothing: avaStr[2],
+            clothingColor: avaStr[3],
+            eyes: avaStr[4],
+            mouth: avaStr[5],
+            skin:"yellow",
+            background: avaStr[6]
+        });
+        if(parseInt(o.messageToUser[$("#hidevalue").text().split(",")[0]].sendTime))!=0) {
+          setTimeout(function(){
+            $("#msgnum").text(parseInt($("#msgnum").text())+1);
+            $("#msgnum").css("color","rgb(255,160,0)");
+            $("#msgnum").css("font-size","10px");
+            $("#msgnum").css("font-weight","900");
+
+            setTimeout(function(){
+              $("#msgnum").css("color","red");
+              $("#msgnum").css("font-size","16px");
+            },500)
+          }, 1000*parseInt(o.messageToUser[$("#hidevalue").text().split(",")[0]].sendTime));
+        }
+        $("#check").click(function(){
+          $("#p17d").removeAttr("disabled");
           let avaStr = o.sexVersion[sexVesion].avator.split(";");
           let svg = Avataaars.create({
               width: 20,
@@ -272,47 +299,16 @@
               skin:"yellow",
               background: avaStr[6]
           });
-
-          setTimeout(function(){
-            $("#msgnum").text(parseInt($("#msgnum").text())+1);
-            $("#msgnum").css("color","rgb(255,160,0)");
-            $("#msgnum").css("font-size","10px");
-            $("#msgnum").css("font-weight","900");
-       
-            setTimeout(function(){
-              $("#msgnum").css("color","red");
-              $("#msgnum").css("font-size","16px");
-            },500)
-          }, 1000*parseInt(o.messageToUser[msg].sendTime));
-        }
-        $("#check").click(function(){
-          $("#p17d").removeAttr("disabled");
-          for(let msg = 0; msg < parseInt(o.messageToUser.length); msg++){
-            let avaStr = o.sexVersion[sexVesion].avator.split(";");
-            let svg = Avataaars.create({
-                width: 20,
-                top: avaStr[0],
-                hairColor: avaStr[1],
-                clothing: avaStr[2],
-                clothingColor: avaStr[3],
-                eyes: avaStr[4],
-                mouth: avaStr[5],
-                skin:"yellow",
-                background: avaStr[6]
+          let tt = o.messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";");
+          console.log(tt);
+          for(let t=0;t<tt.length;t++){
+            GrowlNotification.notify({
+              description: svg+"("+o.sexVersion[sexVesion].name+")对你说：<span>"+tt[t]+"</span><br>",
+              type: 'info',
+              position: 'bottom-right',
+              closeTimeout: 0
             });
-            let tt = o.messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";");
-            console.log(tt);
-            for(let t=0;t<tt.length;t++){
-              GrowlNotification.notify({
-                description: svg+"("+o.sexVersion[sexVesion].name+")对你说：<span>"+tt[t]+"</span><br>",
-                type: 'info',
-                position: 'bottom-right',
-                closeTimeout: 0
-              });
-            }
-
           }
-          
         })
 
         
@@ -347,11 +343,11 @@
               alert("时间结束，你无法继续点赞或踩别人。其他人给你发送的消息可以点击右侧按钮查看！");
               $(".content0").css("visibility","visible");
               if($("#hidevalue").text().split(",")[0]=="accept"){
-                $("#finals").html("你得到了<b>最多的赞</b>(6个赞)和<b>最少的踩</b>(0个踩)");
+                $("#finals").html("你得到了<br><b>最多的赞</b>(6个赞)<br>和<b>最少的踩</b>(0个踩)");
               }else if($("#hidevalue").text().split(",")[0]=="normal"){
-                $("#finals").html("你一共给别的同学点了<b>X个赞</b>和<b>X个踩</b>。");
+                $("#finals").html("你一共给别的同学<br>点了<br><b>X个赞</b>和<b>X个踩</b>。");
               }else if($("#hidevalue").text().split(",")[0]=="refuse"){
-                $("#finals").html("你得到了<b>最多的踩</b>(5个踩)和<b>最少的赞</b>(1个赞)。");
+                $("#finals").html("你得到了<br><b>最多的踩</b>(5个踩)<br>和<b>最少的赞</b>(1个赞)。");
               }
             },1000)
             
