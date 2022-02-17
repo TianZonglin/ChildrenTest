@@ -304,7 +304,7 @@
           if(parseInt(o.messageToUser[$("#hidevalue").text().split(",")[0]].sendTime)!=0) {
             let tt = o.messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";");
             console.log(tt);
-            for(let t=0;t<tt.length;t++){
+            for(let t=tt.length-1;t>=0;t--){
               GrowlNotification.notify({
                 description: svg+"("+o.sexVersion[sexVesion].name+")对你说：<span>"+tt[t]+"</span><br>",
                 type: 'info',
