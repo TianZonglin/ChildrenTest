@@ -298,12 +298,16 @@
                 skin:"yellow",
                 background: avaStr[6]
             });
-            GrowlNotification.notify({
-              description: svg+"("+o.sexVersion[sexVesion].name+")对你说：<span>"+o.messageToUser[msg].sendText+"</span><br>",
-              type: 'info',
-              position: 'bottom-right',
-              closeTimeout: 2000
-            });
+            let tt = o.messageToUser[msg].sendText.split(";");
+            for(let t=0;t<tt.length;t++){
+              GrowlNotification.notify({
+                description: svg+"("+o.sexVersion[sexVesion].name+")对你说：<span>"+tt[t]+"</span><br>",
+                type: 'info',
+                position: 'bottom-right',
+                closeTimeout: 0
+              });
+            }
+
           }
           
         })

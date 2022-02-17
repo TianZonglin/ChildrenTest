@@ -25,9 +25,9 @@
       "option": "like"
     },
     "messageToUser": { 
-        "accept":{"sendTime": 1, "sendText": "balabalabala....."},
-        "normal":{"sendTime": 1, "sendText": "balabalabala....."},
-        "refuse":{"sendTime": 1, "sendText": "balabalabala....."}
+        "accept":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>很喜欢</b>你的个人简介。;我<b>很想</b>和你交朋友！"},
+        "normal":{"sendTime": 4, "sendText": "我看了所有人的个人简介。有些我喜欢，有些我不喜欢。;有些人我想交朋友，有些人我不想。"},
+        "refuse":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>不是很喜欢</b>你的个人简介。;我<b>不想</b>和你交朋友！"}
     }
   },{
     "fakeUserID": 1,
@@ -57,9 +57,9 @@
       "option": "dislike"
     },
     "messageToUser": { 
-        "accept":{"sendTime": 1, "sendText": "balabalabala....."},
-        "normal":{"sendTime": 1, "sendText": "balabalabala....."},
-        "refuse":{"sendTime": 1, "sendText": "balabalabala....."}
+        "accept":{"sendTime": 0, "sendText": "balabalabala....."},
+        "normal":{"sendTime": 0, "sendText": "balabalabala....."},
+        "refuse":{"sendTime": 0, "sendText": "balabalabala....."}
     }
   },{
     "fakeUserID": 2,
@@ -88,9 +88,9 @@
       "option": "like"
     },
     "messageToUser": { 
-        "accept":{"sendTime": 1, "sendText": "balabalabala....."},
-        "normal":{"sendTime": 1, "sendText": "balabalabala....."},
-        "refuse":{"sendTime": 1, "sendText": "balabalabala....."}
+        "accept":{"sendTime": 0, "sendText": "balabalabala....."},
+        "normal":{"sendTime": 0, "sendText": "balabalabala....."},
+        "refuse":{"sendTime": 0, "sendText": "balabalabala....."}
     }
   },{
     "fakeUserID": 3,
@@ -118,8 +118,11 @@
       "opTime": 4, 
       "option": "like"
     },
-    "messageToUser": [
-    ]
+    "messageToUser": { 
+        "accept":{"sendTime": 0, "sendText": "balabalabala....."},
+        "normal":{"sendTime": 0, "sendText": "balabalabala....."},
+        "refuse":{"sendTime": 0, "sendText": "balabalabala....."}
+    }
   },{
     "fakeUserID": 4,
     "sexVersion":{
@@ -147,9 +150,9 @@
       "option": "dislike"
     },
     "messageToUser": { 
-        "accept":{"sendTime": 1, "sendText": "balabalabala....."},
-        "normal":{"sendTime": 1, "sendText": "balabalabala....."},
-        "refuse":{"sendTime": 1, "sendText": "balabalabala....."}
+        "accept":{"sendTime": 0, "sendText": "balabalabala....."},
+        "normal":{"sendTime": 0, "sendText": "balabalabala....."},
+        "refuse":{"sendTime": 0, "sendText": "balabalabala....."}
     }
   },{
     "fakeUserID": 5,
@@ -178,9 +181,9 @@
       "option": "like"
     },
     "messageToUser": { 
-        "accept":{"sendTime": 1, "sendText": "balabalabala....."},
-        "normal":{"sendTime": 1, "sendText": "balabalabala....."},
-        "refuse":{"sendTime": 1, "sendText": "balabalabala....."}
+        "accept":{"sendTime": 0, "sendText": "balabalabala....."},
+        "normal":{"sendTime": 0, "sendText": "balabalabala....."},
+        "refuse":{"sendTime": 0, "sendText": "balabalabala....."}
     }
   },{
     "fakeUserID": 6,
