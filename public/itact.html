@@ -21,7 +21,7 @@
       <div class="textInfo" id="ytext">
         网站中有三个问题，请大家使用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这用鼠标或键盘来回答问题。如果这三道题你都做对，网站会自动跳转到下一页；否则，网站会提示你做错，然后让你继续做，直到你都做对。
       </div>
-      <div class="Btn"><div style="float:left">赞&nbsp;</div><span class="cnt" id="up8">0</span>
+      <div class="Btn" id="ybtn"><div style="float:left">赞&nbsp;</div><span class="cnt" id="up8">0</span>
         <div style="float:right">踩&nbsp;<span class="cnt" id="down8">0</span></div></div>
  
     </div>
@@ -62,7 +62,10 @@
   
   $(function(){
     
-
+    if($("#hidevalue").text().split(",")[0]=="normal"){
+      $("#ytext").css("filter","blur(5px)");
+      $("#ybtn").css("visibility","hidden");
+    }
     
     let yname = INTRODUCTION[0];
     let introTextFinal = INTRODUCTION[1];
@@ -176,7 +179,7 @@
               skin:"yellow",
               background: iavaStr[6]
           });
-          if(o.optionToUser.opTime){
+          if(o.optionToUser.opTime ){
             if(o.optionToUser.option == "like"){
               setTimeout(function(){
                 $("#up8").text(parseInt($("#up8").text())+1);
