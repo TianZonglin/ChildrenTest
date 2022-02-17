@@ -329,7 +329,9 @@
             $(".scai").text($("#down8").text());
             setTimeout(function(){
               alert("时间结束，你无法继续点赞或踩别人。其他人给你发送的消息可以点击右侧按钮查看！");
-              $(".content0").css("visibility","visible");
+              if($("#hidevalue").text().split(",")[0]!="normal"){
+                $(".content0").css("visibility","visible");
+              }
             },1000)
             
         }
