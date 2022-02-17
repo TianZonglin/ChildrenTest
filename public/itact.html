@@ -64,7 +64,10 @@
     
     if($("#hidevalue").text().split(",")[0]=="normal"){
       $("#ytext").css("filter","blur(5px)");
-      $("#ybtn").css("visibility","hidden");
+      $("#ybtn").css("filter","blur(5px)");
+      $("#ytext").css("user-select","none");
+      $("#ybtn").css("user-select","none");
+      $("#hiding").hide();
     }
     
     let yname = INTRODUCTION[0];
@@ -179,7 +182,7 @@
               skin:"yellow",
               background: iavaStr[6]
           });
-          if(o.optionToUser.opTime ){
+          if(o.optionToUser.opTime && $("#hidevalue").text().split(",")[0]!="normal"){
             if(o.optionToUser.option == "like"){
               setTimeout(function(){
                 $("#up8").text(parseInt($("#up8").text())+1);
