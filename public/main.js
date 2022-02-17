@@ -89,108 +89,57 @@ $(function(){
    //page 4
   $('#p4d').on('input propertychange',function() {
     let strInput = $(this).val();
-    let GROUP = strInput[1]; //2
-    let VERSION = strInput[2];  //3
-    let GENDER = strInput[3]; //2
-    let hideVlaue = "";
-    let reg=/^[0-9]+.?[0-9]*$/;
-    if(reg.test(strInput)){
-      switch(GROUP) {
-        case "1":
-           $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","accept"));
-          break;
-        case "2":
-           $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","normal"));
-          break;
-        case "3":
-           $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","refuse"));
-          break;
-        default:
-           $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","accept"));
-      }
-      switch(VERSION) {
-        case "1":
-          $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version1"));
-          break;
-        case "2":
-          $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version2"));
-          break;
-        default:
-          $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version1"));
-      }
-      switch(GENDER) {
-        case "1":
-          $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","boy"));
-          break;
-        case "2":
-          $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","girl"));
-          break;
-        default:
-          $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","boy"));
-          // code block
-      }
-    }
-      if(VERSION=="1"){
-        if(GENDER=="1"){ //111
-          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
-          setTimeout(function(){
-            $("#p4_content").hide();
-            $("#p6_content").show();
-
-          },1000);
-        }else if(GENDER=="2"){ //112
-
-          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
-          setTimeout(function(){
-            $("#p4_content").hide();
-            $("#p6_content").show();
-
-          },1000);
+    if(strInput.length == 7){
+      let GROUP = strInput[1]; //2
+      let VERSION = strInput[2];  //3
+      let GENDER = strInput[3]; //2
+      let hideVlaue = "";
+      let reg=/^[0-9]+.?[0-9]*$/;
+      if(reg.test(strInput)){
+        switch(GROUP) {
+          case "1":
+             $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","accept"));
+            break;
+          case "2":
+             $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","normal"));
+            break;
+          case "3":
+             $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","refuse"));
+            break;
+          default:
+             $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","accept"));
         }
-      }else if(VERSION=="2"){
-        if(GENDER=="1"){ //121
-          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
-          setTimeout(function(){
-            $("#p4_content").hide();
-            $("#p6_content").show();
-
-          },1000);
-        }else if(GENDER=="2"){ //122
-
-
+        switch(VERSION) {
+          case "1":
+            $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version1"));
+            break;
+          case "2":
+            $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version2"));
+            break;
+          default:
+            $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version1"));
         }
-      }
-    }else if(GROUP=="2"){
-      if(GROUP=="1"){
-        if(GROUP=="1"){
-          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
-          setTimeout(function(){
-            $("#p4_content").hide();
-            $("#p6_content").show();
-
-          },1000);
-        }else if(GROUP=="2"){
-
-          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
-          setTimeout(function(){
-            $("#p4_content").hide();
-            $("#p6_content").show();
-
-          },1000);
-        }else if(GROUP=="3"){
-
-          $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
-          setTimeout(function(){
-            $("#p4_content").hide();
-            $("#p6_content").show();
-
-          },1000);
+        switch(GENDER) {
+          case "1":
+            $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","boy"));
+            break;
+          case "2":
+            $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","girl"));
+            break;
+          default:
+            $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","boy"));
+            // code block
         }
+        $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
+        setTimeout(function(){
+          $("#p4_content").hide();
+          $("#p6_content").show();
+          console.log($("#hidevalue").text());
+        },1000);
+      }else{
+        $("#p4d_text").html("<span style='color:red'>输入错误，请重新输入！</span>");  
       }
-      
-    }else if(strInput.length == 7){
-      $("#p4d_text").html("<span style='color:red'>输入错误，请重新输入！</span>");  
-    }
+    } 
   });
  
   //page 7
