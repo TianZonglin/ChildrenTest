@@ -85,14 +85,14 @@ $(function(){
     $("#p4_content").show();
     setTimeout(() => window.scrollTo(0,0), 150);
   });
-  $("#p4_content").show();
+
    //page 4
   $('#p4d').on('input propertychange',function() {
     let strInput = $(this).val();
-    if(strInput.length == 3){
-      let GROUP = strInput[0]; //2
-      let VERSION = strInput[1];  //3
-      let GENDER = strInput[2]; //2
+    if(strInput.length == 7){
+      let GROUP = strInput[1]; //2
+      let VERSION = strInput[2];  //3
+      let GENDER = strInput[3]; //2
       let hideVlaue = "";
       let reg=/^[0-9]+.?[0-9]*$/;
       if(reg.test(strInput)){
