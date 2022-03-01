@@ -197,7 +197,7 @@
                 $("#up8").css("color","rgb(255,160,0)");
                 $("#up8").css("font-size","10px");
                 $("#up8").css("font-weight","900");
-                $("#rankcnt8").val($("#up8").text()+","+parseInt($("#down8").text());
+                $("#rankcnt8").val($("#up8").text()+","+$("#down8").text());
                 //Dreamer.success("("+o.name+")给你点了一个赞！",2000);
                 GrowlNotification.notify({
                   description: "[ 你 ] 收到了一个赞！",
@@ -217,7 +217,7 @@
                 $("#down8").css("color","rgb(255,160,0)");
                 $("#down8").css("font-size","10px");
                 $("#down8").css("font-weight","900");
-                $("#rankcnt").val($("#up8").text()+","+parseInt($("#down8").text());
+                $("#rankcnt").val($("#up8").text()+","+$("#down8").text());
                 rank();
                 setTimeout(function(){
                   $("#down8").css("color","red");
@@ -237,7 +237,7 @@
             $("#up"+i).css("color","rgb(255,160,0)");
             $("#up"+i).css("font-size","10px");
             $("#up"+i).css("font-weight","900");            
-            $("#rankcnt"+i).val($("#up"+i).text()+","+parseInt($("#down"+i).text());
+            $("#rankcnt"+i).val($("#up"+i).text()+","+$("#down"+i).text());
             GrowlNotification.notify({
               description: "[ "+o.sexVersion[sexVesion].name+" ] 收到了一个赞！",
               type: 'success',
@@ -257,7 +257,7 @@
             $("#down"+i).css("color","rgb(255,160,0)");
             $("#down"+i).css("font-size","10px");
             $("#down"+i).css("font-weight","900");
-            $("#rankcnt"+i).val($("#up"+i).text()+","+parseInt($("#down"+i).text());
+            $("#rankcnt"+i).val($("#up"+i).text()+","+$("#down"+i).text());
             rank();
             setTimeout(function(){
               $("#down"+i).css("color","red");
