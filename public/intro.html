@@ -668,7 +668,7 @@
     $(".content2").css("visibility","visible");
     $(".content0").css("margin-top","372px");
     $(".content0").css("visibility","visible");
-    $("#msgnum").html("<span style='color:red'>3</span>");
+    $("#msgnum").html("<span style='color:red'>1</span>");
     $("#leftTime").text("0:06");
     $.getJSON("fakers.json",function(e){
       let str = "";
@@ -771,7 +771,7 @@
     $("#p15_content").show();
     setTimeout(function(){
       $("#p15_img").css("visibility","hidden");
-      $("#p15_text").html("...连接成功，可以开始。");
+      $("#p15_text").html("<span class='big'>... 连接成功，可以开始。</span>");
       $("#p15d").removeClass("disabled");
     },4000);
     $(".content2").css("visibility","hidden");
@@ -795,7 +795,7 @@
   $(function(){
     
       if($("#hidevalue").text().split(",")[0]=="normal"){
-        $("#ytext").css("filter","blur(5px)");
+        $("#ytext").css("filter","blur(20px)");
         $("#ybtn").hide();
         $("#ytext").css("user-select","none");
         $("#hiding").hide();
