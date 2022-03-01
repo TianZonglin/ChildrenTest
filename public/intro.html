@@ -477,14 +477,6 @@
           }
         },
         {
-          element: '#rankcnt8',
-          popover: {
-            title: '你的排序位置',
-            description: '在三分钟内，所有人的排序会动态变化，橙色突出的是“你自己”的排序位置。',
-            position: 'left'
-          }
-        },
-        {
           element: '#resee',
           popover: {
             showCloseButton: false,
@@ -542,7 +534,7 @@
           element: '.Btns',
           popover: {
             className: 'first-step-popover-class',
-            title: '如果你<b>喜欢</b>某个人的简介，就点<b>“赞”</b>键；如果你<b>不喜欢</b>某个人的简介，就点<b>“踩”</b>建',
+            title: '如果你<span style="color:red">喜欢</span>某个人的简介，就点<span style="color:red">“赞”</span>键；如果你<span style="color:red">不喜欢</span>某个人的简介，就点<span style="color:red">“踩”</span>建',
             position: 'right'
           }
         },
@@ -581,15 +573,7 @@
         {
           element: '.r2',
           popover: {
-            title: '实时动态展现所有学生的赞数排行',
-            position: 'left'
-          }
-        },
-        {
-          element: '#rankcnt8',
-          popover: {
-            title: '你的排序位置',
-            description: '在三分钟内，所有人的排序会动态变化。',
+            title: '实时动态展现所有学生的赞数排行；橙色突出显示你的排行',
             position: 'left'
           }
         },
@@ -632,23 +616,29 @@
   });
   
   
-   function rank() { 
-     var domList = $(".rankcnt").get();
-     domList.sort(function(a,b){
-       var elOne = $(a).val();
-       var elTwo = $(b).val();
-       if(parseInt(elOne) > parseInt(elTwo)) return -1;
-       if(parseInt(elOne) < parseInt(elTwo)) return 1;
-       return 0;
-     });
-
-     $('#ranky').html(domList);
-     $('.order').css("background-color","#a2a4c6");
-     if($("#hidevalue").text().split(",")[0]!="normal"){
-       $('.order')[$('.rankcnt').index($('#rankcnt8'))].style.backgroundColor='#DD9F4B';
-     }
-
-  }
+     function rank() { 
+       var domList = $(".rankcnt").get();
+       domList.sort(function(a,b){
+         let zanA = parseInt($(a).val().split(",")[0]);
+         let zanB = parseInt($(b).val().split(",")[0]);
+         let caiA = parseInt($(a).val().split(",")[1]);
+         let caiB = parseInt($(b).val().split(",")[1]);
+         if(zanA > zanB) return -1;
+         else if(zanA = zanB){
+           if(caiA < caiB) return -1;
+           else if(caiA = caiB) return 0;
+           else return 1;
+         }
+         else return 1;
+       });
+       
+       $('#ranky').html(domList);
+       $('.order').css("background-color","#a2a4c6");
+       if($("#hidevalue").text().split(",")[0]!="normal"){
+         $('.order')[$('.rankcnt').index($('#rankcnt8'))].style.backgroundColor='#DD9F4B';
+       }
+       
+    }
   
   
   $("#p13d").click(function(){
@@ -710,7 +700,7 @@
       let rky = "";
       if($("#hidevalue").text().split(",")[0]!="normal"){
         $('.order')[0].style.backgroundColor='#DD9F4B';
-        rky = "<div value='0' class='rankcnt' id='rankcnt8' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:27px; '>你自己</div>";
+        rky = "<div value='0' class='rankcnt' id='rankcnt8' value='2,0' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:27px; '>你自己</div>";
       }
       for(let i = 0; i < e.length; i++){
         let obj = e[i];
@@ -751,12 +741,12 @@
         str += "<div class='Btn'>赞&nbsp;<span class='cnt' id='up"+i+"' value="+obj.boy.finalZanVsCai[0]+">"+astr+"</span><button  class='btn17' style='float:right'>赞&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
         str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.boy.finalZanVsCai[1]+">"+bstr+"</span><button  class='btn17c' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div></div>";
-        rky += "<div value='0' class='rankcnt' id='rankcnt"+i+"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#a2a4c6;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"+obj.boy.name+"</div>";
+        rky += "<div value='0' class='rankcnt' id='rankcnt"+i+"' value='"+obj.boy.finalZanVsCai[0]+","+obj.boy.finalZanVsCai[1]+"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#a2a4c6;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"+obj.boy.name+"</div>";
 
       }
       $("#itor").html(str);
       $("#ranky").html(rky);
-      
+      rank();
       if($("#hidevalue").text().split(",")[0]=="normal"){
         driversNormal();
       }else{
@@ -804,6 +794,13 @@
 
  
   $(function(){
+    
+      if($("#hidevalue").text().split(",")[0]=="normal"){
+        $("#ytext").css("filter","blur(5px)");
+        $("#ybtn").hide();
+        $("#ytext").css("user-select","none");
+        $("#hiding").hide();
+      }
     
       $(".sublocks").click(function () { 
         $(this).val($(this).text());
