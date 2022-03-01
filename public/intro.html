@@ -396,7 +396,7 @@
       let driver = new Driver({
         allowClose: true, // Whether clicking on overlay should close or not
         overlayClickNext: true, // Should it move to next step on 
-        doneBtnText: '进入介绍环节', // Text on the final button
+        doneBtnText: '知道啦', // Text on the final button
         closeBtnText: '关闭', // Text on the close button for this step
         nextBtnText: '知道啦', // Next button text for this step
         prevBtnText: '返回', // Previous button text for this step
@@ -665,7 +665,7 @@
     
     setTimeout(() => window.scrollTo(0,0), 150);  
     GrowlNotification.notify({
-      description: "<span class='big'>你  收到了一个赞！</span>",
+      description: "<span class='big'>LYP 收到了一个赞！</span>",
       type: 'success',
       position: 'bottom-left',
       closeTimeout: 0
