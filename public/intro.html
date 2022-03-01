@@ -416,7 +416,7 @@
           
   function driversRefuse(){
     
-      const driver = new Driver({
+      let driver = new Driver({
         allowClose: false, // Whether clicking on overlay should close or not
         overlayClickNext: false, // Should it move to next step on overlay click
         doneBtnText: '教程结束', // Text on the final button
@@ -586,7 +586,7 @@
   
   function driversAccept(){
     
-      const driver = new Driver({
+      let driver = new Driver({
         allowClose: false, // Whether clicking on overlay should close or not
         overlayClickNext: false, // Should it move to next step on overlay click
         doneBtnText: '教程结束', // Text on the final button
@@ -1038,7 +1038,16 @@
       }
       $("#itor").html(str);
       $("#ranky").html(rky);
-      drivers();
+      
+  
+      if($("#hidevalue").text().split(",")[0]=="accept"){
+        driversAccept();
+      }else if($("#hidevalue").text().split(",")[0]=="normal"){
+        $("#hiding").hide();
+        driversNormal();
+      }else if($("#hidevalue").text().split(",")[0]=="refuse"){
+        driversRefuse();
+      }
     });
 
   });
