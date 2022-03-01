@@ -615,31 +615,7 @@
     
   });
   
-  
-     function rank() { 
-       var domList = $(".rankcnt").get();
-       domList.sort(function(a,b){
-         let zanA = parseInt($(a).val().split(",")[0]);
-         let zanB = parseInt($(b).val().split(",")[0]);
-         let caiA = parseInt($(a).val().split(",")[1]);
-         let caiB = parseInt($(b).val().split(",")[1]);
-         if(zanA > zanB) return -1;
-         else if(zanA = zanB){
-           if(caiA < caiB) return -1;
-           else if(caiA = caiB) return 0;
-           else return 1;
-         }
-         else return 1;
-       });
-       
-       $('#ranky').html(domList);
-       $('.order').css("background-color","#a2a4c6");
-       if($("#hidevalue").text().split(",")[0]!="normal"){
-         $('.order')[$('.rankcnt').index($('#rankcnt8'))].style.backgroundColor='#DD9F4B';
-       }
-       
-    }
-  
+ 
   
   $("#p13d").click(function(){
     $("#p13_content").hide();
@@ -746,7 +722,31 @@
       }
       $("#itor").html(str);
       $("#ranky").html(rky);
-      rank();
+      
+      
+      var domList = $(".rankcnt").get();
+      domList.sort(function(a,b){
+        console.log(a,b);
+       let zanA = parseInt($(a).val().split(",")[0]);
+       let zanB = parseInt($(b).val().split(",")[0]);
+       let caiA = parseInt($(a).val().split(",")[1]);
+       let caiB = parseInt($(b).val().split(",")[1]);
+       if(zanA > zanB) return -1;
+       else if(zanA = zanB){
+         if(caiA < caiB) return -1;
+         else if(caiA = caiB) return 0;
+         else return 1;
+       }
+       else return 1;
+      });
+
+      
+      $('#ranky').html(domList);
+      $('.order').css("background-color","#a2a4c6");
+      if($("#hidevalue").text().split(",")[0]!="normal"){
+       $('.order')[$('.rankcnt').index($('#rankcnt8'))].style.backgroundColor='#DD9F4B';
+      }
+      
       if($("#hidevalue").text().split(",")[0]=="normal"){
         driversNormal();
       }else{
