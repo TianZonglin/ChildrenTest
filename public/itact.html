@@ -13,7 +13,8 @@
 
 <p>page - 17</p><br>
   <div id="root">
-    <div class="item" style="position: relative;">
+    <div id="mb" style="position: absolute;background:rgb(82 83 88 / 56%);width:220px;height:250px;border-radius:5px;z-index:11111"></div>
+    <div class="item" style="position: relative;" id="yitem">
       <div class="userInfo">
         <a class="interava"></a>
         <span class="username" id="yname">PDD</span><span class="self">你自己</span> 
@@ -24,7 +25,7 @@
       <div class="Btn" id="ybtn"><div style="float:left">赞&nbsp;</div><span class="cnt" id="up8">0</span>
         <div style="float:right">踩&nbsp;<span class="cnt" id="down8">0</span></div></div>
     </div>
-    <div id="mb" style="position: absolute;background: rgba(0,0,0,.5);"></div>
+     
     
     
     
@@ -77,9 +78,10 @@
     let interactFinalUp = 0;
     let interactFinalDown = 0;
     
-    
+    $("#mb").hide();
+     
     if($("#hidevalue").text().split(",")[0]=="normal"){
-      $("#ytext").css("filter","blur(20px)");
+      $("#mb").show();
       $("#ybtn").hide();
       $("#ytext").css("user-select","none");
       $("#hiding").hide();
@@ -370,6 +372,8 @@
   
         
     });
+    
+    $("#mb").css("height",$("#yitem").css("height"));
   });
 
 </script>
