@@ -1,16 +1,16 @@
 [{
     "fakeUserID": 0,
     "boy": {
-      "name": "LDN",
+      "name": "ZNN",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [2,3],
+      "finalZanVsCai": [3,0],
       "popTime": ["1,2","3,4,5"],
       "avator": "dreads01;black;blazerAndSweater;pastelYellow;side;disbelief;#8F69DB"
     },
     "girl": {
-      "name": "LDN",
+      "name": "ZNN",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [2,3],
+      "finalZanVsCai": [3,0],
       "popTime": ["3,4","1,2,3"],
       "avator": "dreads01;black;blazerAndSweater;pastelYellow;side;disbelief;#8F69DB"
     },
@@ -24,17 +24,17 @@
   },{
     "fakeUserID": 1,
     "boy": {
-      "name": "SDF",
+      "name": "LYP",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [2,1],
+      "finalZanVsCai": [3,1],
       "popTime": ["1,5","1"],
       "avator": "straight01,platinum,hoodie,pastelGreen,happy,eating,#A59101"
                                    
     },
     "girl": {
-      "name": "SDF",
+      "name": "LYP",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [1,1],
+      "finalZanVsCai": [3,1],
       "popTime": ["3","1"],
       "avator": "straight01,platinum,hoodie,pastelGreen,happy,eating,#A59101"
     },
@@ -48,14 +48,14 @@
   },{
     "fakeUserID": 2,
     "boy": {
-      "name": "FGG",
+      "name": "DSY",
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [3,2],
       "popTime": ["4,5,6","1,2"],
       "avator": "shortRound;silverGray;shirtVNeck;blue02;happy;serious;#DD8FE4"
     },
     "girl": {
-      "name": "FGG",
+      "name": "DSY",
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [3,2],
       "popTime": ["2,3,4","5,6"],
@@ -72,16 +72,16 @@
   },{
     "fakeUserID": 3,
     "boy": {
-      "name": "EWR",
+      "name": "SY",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [2,1],
+      "finalZanVsCai": [3,3],
       "popTime": ["1,2","4"],
       "avator": "shaggy;black;blazerAndShirt;blue03;winkWacky;smile;#DD8FE4"
     },
     "girl": {
-      "name": "EWR",
+      "name": "SY",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [2,2],
+      "finalZanVsCai": [3,3],
       "popTime": ["2,4","5,6"],
       "avator": "shaggy;black;blazerAndShirt;blue03;winkWacky;smile;#DD8FE4"
     },
@@ -94,16 +94,16 @@
   },{
     "fakeUserID": 4,
     "boy": {
-      "name": "BSS",
+      "name": "WY",
       "introText": "最喜欢...最喜欢...最喜欢...",
       "finalZanVsCai": [2,1],
       "popTime": ["4,5","1"],
       "avator": "theCaesarAndSidePart;dauburn;shirtCrewNeck;pink;wink;tongue;#DD8FE4"
     },
     "girl": {
-      "name": "BSS",
+      "name": "WY",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [1,2],
+      "finalZanVsCai": [2,1],
       "popTime": ["1","4,5"],
       "avator": "theCaesarAndSidePart;dauburn;shirtCrewNeck;pink;wink;tongue;#DD8FE4"
     },
@@ -116,16 +116,16 @@
   },{
     "fakeUserID": 5,
     "boy": {
-      "name": "SDG",
+      "name": "CAQ",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [1,3],
+      "finalZanVsCai": [2,2],
       "popTime": ["1","2,3,4"],
       "avator": "shortRound;red;blazerAndShirt;pastelOrange;side;twinkle;#8F69DB"
     },
     "girl": {
-      "name": "SDG",
+      "name": "CAQ",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [2,1],
+      "finalZanVsCai": [2,2],
       "popTime": ["5,6","2"],
       "avator": "shortRound;red;blazerAndShirt;pastelOrange;side;twinkle;#8F69DB"
     },
@@ -138,16 +138,16 @@
   },{
     "fakeUserID": 6,
     "boy": {
-      "name": "QWF",
+      "name": "XMT",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [3,1],
+      "finalZanVsCai": [1,0],
       "popTime": ["2,4,5","1"],
       "avator": "shortRound;brown;hoodie;blue02;side;twinkle;#A59101"
     },
     "girl": {
-      "name": "QWF",
+      "name": "XMT",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [2,2],
+      "finalZanVsCai": [1,0],
       "popTime": ["1,4","3,5"],
       "avator": "shortRound;brown;hoodie;blue02;side;twinkle;#A59101"
     },
@@ -160,16 +160,16 @@
   },{
     "fakeUserID": 7,
     "boy": {
-      "name": "VSA",
+      "name": "TXL",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [2,2],
+      "finalZanVsCai": [1,1],
       "popTime": ["4,5","1,3"],
       "avator": "shortWaved;blonde;shirtCrewNeck;white;happy;serious;#8F69DB"
     },
     "girl": {
-      "name": "VSA",
+      "name": "TXL",
       "introText": "最喜欢...最喜欢...最喜欢...",
-      "finalZanVsCai": [2,2],
+      "finalZanVsCai": [1,1],
       "popTime": ["4,6","1,2"],
       "avator": "shortWaved;blonde;shirtCrewNeck;white;happy;serious;#8F69DB"
     },
