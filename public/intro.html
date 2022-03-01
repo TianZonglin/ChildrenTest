@@ -462,14 +462,6 @@
           }
         },
         {
-          element: '.Btn',
-          popover: {
-            className: 'first-step-popover-class',
-            title: '你收到的“赞”和“踩”数',
-            position: 'right'
-          }
-        },
-        {
           element: '.Btns',
           popover: {
 
@@ -536,7 +528,7 @@
       let driver = new Driver({
         allowClose: false, // Whether clicking on overlay should close or not
         overlayClickNext: false, // Should it move to next step on overlay click
-        doneBtnText: '教程结束', // Text on the final button
+        doneBtnText: '进入介绍环节', // Text on the final button
         closeBtnText: 'Close', // Text on the close button for this step
         nextBtnText: '知道啦', // Next button text for this step
         prevBtnText: '返回', // Previous button text for this step
@@ -550,16 +542,6 @@
           popover: {
             className: 'first-step-popover-class',
             title: '你的个人简介',
-            description: '其他学生看得到你的个人简介！你可以给其他学生点赞或点踩，你也收得到其他学生的赞或踩噢。',
-            position: 'right'
-          }
-        },
-        {
-          element: '.Btn',
-          popover: {
-            className: 'first-step-popover-class',
-            title: '你的收到的赞和踩数',
-            description: '',
             position: 'right'
           }
         },
@@ -569,113 +551,69 @@
 
             className: 'first-step-popover-class',
             title: '其他学生的个人简介',
-            description: '',
             position: 'right'
           }
         },
         {
-          element: '.btn17',
+          element: '.Btns',
           popover: {
             className: 'first-step-popover-class',
-            title: '给他人点赞',
-            description: '如果你喜欢某个学生的简介，就点击“赞”键。',
+            title: '如果你<b>喜欢</b>某个人的简介，就点<b>“赞”</b>键；如果你<b>不喜欢</b>某个人的简介，就点<b>“踩”</b>建',
             position: 'right'
           }
         },
         {
-          element: '#up0',
+          element: '.item',
           popover: {
             className: 'first-step-popover-class',
-            title: '其他人的赞数',
-            description: '实时显示这个同学收到的点赞数量。',
+            title: '其他学生不能看到你的个人简介',bu能给你点“赞”或“踩”,
             position: 'right'
           }
         },
         {
-          element: '.btn17c',
-          popover: {
-            className: 'first-step-popover-class',
-            title: '给他人点踩',
-            description: '如果你不喜欢某个学生的简介，就点击“踩”键。',
-            position: 'right'
-          }
-        },
-        {
-          element: '#down0',
+          element: '.Btns',
           popover: {
 
             className: 'first-step-popover-class',
-            title: '其他人的踩数',
-            description: '实时显示这个同学收到的踩的数量。',
+            title: '其他学生收到的“赞”和“踩”数',
             position: 'right'
-          }
-        },
-        {
-          element: '.content2',
-          popover: {
-            showCloseButton: false,
-            title: '统计区域',
-            description: '包含“计时器”、“排行榜”、“留言”三部分。',
-            position: 'left'
-          }
-        },
-        {
-          element: '.r1',
-          popover: {
-            title: '计时器',
-            description: '三分钟倒计时，时间用完后无法进行点赞、踩操作。',
-            position: 'left'
-          }
-        },
-        {
-          element: '.r2',
-          popover: {
-            title: '排行榜',
-            description: '在三分钟内，你和其他人的赞数排行榜，点赞相同时踩数约少越靠前。',
-            position: 'left'
-          }
-        },
-        {
-          element: '.r3',
-          popover: {
-            title: '留言',
-            description: '如果三分钟内有同学给你发送消息，那么你会在这里收到提醒，并且在三分钟结束后可以点击查看按钮进行查看',
-            position: 'left'
           }
         },
         {
           element: '.growl-notification--success',
           popover: {
             showCloseButton: false,
-            title: '赞、踩通知',
-            description: '你和其他同学收到赞和踩时，这里会显示一个通知。',
+            title: '你和其他学生收到时，都会在这里通知',
             position: 'top'
           }
         },
         {
-          element: '.growl-notification--info',
+          element: '.r1',
           popover: {
-            showCloseButton: false,
-            title: '消息通知',
-            description: '三分钟结束后，如果你点击查看消息，这里会显示别人发给你的消息内容。',
-            position: 'top'
+            title: '三分钟倒计时',
+            position: 'left'
           }
         },
         {
-          element: '.r0',
+          element: '.r2',
           popover: {
-            showCloseButton: false,
-            title: '最终结果',
-            description: '三分钟结束后，这里会显示你最终得到的赞和踩的数量。',
-            position: 'right'
+            title: '实时动态展现所有学生的赞数排行；橙色突出显示你的排行',
+            position: 'left'
+          }
+        },
+        {
+          element: '#rankcnt8',
+          popover: {
+            title: '你的排序位置',
+            description: '在三分钟内，所有人的排序会动态变化，橙色突出的是“你自己”的排序位置。',
+            position: 'left'
           }
         },
         {
           element: '#resee',
           popover: {
             showCloseButton: false,
-            title: '重新观看教程',
-            description: '如果你没有完全看懂某部分的功能，可以选择重新观看。',
+            title: '点击此键可以再次观看“新手引导”教程',
             position: 'top'
           }
         },
@@ -683,8 +621,7 @@
           element: '#p14d',
           popover: {
             showCloseButton: false,
-            title: '进入下一页',
-            description: '如果你已经完全了解此页面，那么请继续进入下一页。',
+            title: '若已了解此页面，点击进入“介绍环节”',
             position: 'top'
           }
         },
