@@ -49,7 +49,7 @@
   <script src="/notice/growl-notification.min.js"></script>
   
   <script src="/avataaars.js"></script>
-  
+  <script src="/jqmodel.js"></script>
   <script type="text/javascript">
     /*
     The chart uses chart.js - try tweaking the config!
@@ -108,14 +108,7 @@
 $(function(){
     /**/
  
-	// 点击取消按钮关闭模态框
-	var cancel = modal.querySelector('.cancel');
-	cancel.addEventListener('click',function(){
-		// 关闭模态框
-		modal.style.display = 'none';
-		// 关闭盖子
-		gz.style.transform = 'none';
-	})
+    $('#dialog').jqm();
  
     
   
@@ -130,18 +123,16 @@ $(function(){
 <body>
   
   
-<!-- 模态框 -->
-<section class="modal">
-	<div class="modal-info center-self-xy mYBounceInDown">
-		<div class="modal-t">
-			<p class="center-self-xy">你确定删除这个商品么?</p>
-		</div>
-		<div class="modal-b clearfix">
-			<button class="fl cancel">取消</button>
-			<button class="fr sure">确定</button>
-		</div>
-	</div>
-</section>
+<a href="#" class="jqModal">view</a>
+...
+<div class="jqmWindow" id="dialog">
+
+<button href="#" class="jqmClose">Close</button>
+<hr>
+  
+  
+  
+  </div>
   
    <!--
   
