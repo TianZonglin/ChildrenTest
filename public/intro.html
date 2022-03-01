@@ -91,7 +91,6 @@
       <option value="男">男</option>
       <option value="女">女</option>
     </select> 
-    <span style="color:red">选择性别后对应出现进入的控制组(性别在这里确认？还是在验证码那里确认？) <span id="texture"></span></span>
   </div>
   <br>
   <div class="poll-form">
@@ -631,6 +630,27 @@
     
     
   });
+  
+  
+   function rank() { 
+     var domList = $(".rankcnt").get();
+     domList.sort(function(a,b){
+       var elOne = $(a).val();
+       var elTwo = $(b).val();
+       if(parseInt(elOne) > parseInt(elTwo)) return -1;
+       if(parseInt(elOne) < parseInt(elTwo)) return 1;
+       return 0;
+     });
+
+     $('#ranky').html(domList);
+     $('.order').css("background-color","#a2a4c6");
+     if($("#hidevalue").text().split(",")[0]!="normal"){
+       $('.order')[$('.rankcnt').index($('#rankcnt8'))].style.backgroundColor='#DD9F4B';
+     }
+
+  }
+  
+  
   $("#p13d").click(function(){
     $("#p13_content").hide();
     $("#p14_content").show();
