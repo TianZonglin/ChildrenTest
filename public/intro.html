@@ -728,16 +728,15 @@
       domList.sort(function(a,b){
 
        let zanA = parseInt($(a).attr("value").split(",")[0]);
-       let zanB = parseInt($(b).attr("value").split(",")[0]);
        let caiA = parseInt($(a).attr("value").split(",")[1]);
+        
+       let zanB = parseInt($(b).attr("value").split(",")[0]);
        let caiB = parseInt($(b).attr("value").split(",")[1]);
-       if(zanA > zanB) return -1;
-       else if(zanA == zanB){
-         if(caiA < caiB) return -1;
-         else if(caiA == caiB) return 0;
-         else return 1;
-       }
-       else return 1;
+       
+       if(zanA > zanB) return 1;
+       else if(zanA < zanB) return -1;
+ 
+
       });
       console.log(domList);
       
@@ -750,7 +749,7 @@
       if($("#hidevalue").text().split(",")[0]=="normal"){
         //driversNormal();
       }else{
-        driversTest();
+        //driversTest();
       }
     });
 
