@@ -401,7 +401,10 @@
         prevBtnText: '返回', // Previous button text for this step
         showCloseButton: false, // Do not show control buttons in footer
         animate: false,
-        onNext: (Element) => {},      // Called when moving to next step on any step
+        onNext: (Element) => {
+          $("#mb").css("height",$("#yitem").css("height"));
+          
+        },      // Called when moving to next step on any step
       });
       driver.defineSteps([
         {
@@ -494,15 +497,19 @@
   function driversNormal(){
     
       let driver = new Driver({
-        allowClose: false,
-        overlayClickNext: false, // Should it move to next step on overlay click
+        allowClose: true,
+        opacity: 1,
+        overlayClickNext: true, // Should it move to next step on overlay click
         doneBtnText: '进入介绍环节', // Text on the final button
         closeBtnText: '关闭', // Text on the close button for this step
         nextBtnText: '知道啦', // Next button text for this step
         prevBtnText: '返回', // Previous button text for this step
         showCloseButton: false, // Do not show control buttons in footer
         animate: false,
-        onNext: (Element) => {},      // Called when moving to next step on any step
+        onNext: (Element) => {
+          $("#mb").css("height",$("#yitem").css("height"));
+          
+        },      // Called when moving to next step on any step
       });
       driver.defineSteps([
         {
