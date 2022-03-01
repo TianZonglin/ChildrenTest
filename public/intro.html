@@ -112,7 +112,7 @@
     <div id="avat"></div><br>
     <div  style="float:right;"> 
       <span id="p9_text"></span>&emsp;<button id="p9d" style="margin-right: 20px;" class="disabled">提交</button>
-    </div>
+    </div><br><br>
   </div>
   <br>
 
@@ -275,25 +275,6 @@
   //  }
   //});
 
-  
-  $("#p8q").click(function(){
-    if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"){
-      $("#p8d").removeClass("disabled");
-    }
-  });
-  
-  $("#p8b").click(function(){
-    if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"){
-      $("#p8d").removeClass("disabled");
-    }
-  });  
-  
-  $("#p8c").click(function(){
-    if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"){
-      $("#p8d").removeClass("disabled");
-    }
-  }); 
-  
  
   
   $("#p9d").click(function(){
@@ -868,16 +849,40 @@
       }
     });
     
+   
+    
+
     
     $("body").on("click", ".svgg",function(){
       console.log($(this).attr("value"));
       $(this).addClass("cheng");
       $(this).siblings().removeClass("cheng");
-      $("#p9_text").html("<span style='color:green'>选择成功，点击提交按钮！</span>");
-      $("#p9d").removeClass("disabled");
+      if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"){
+        $("#p9_text").html("<span style='color:green'>信息填写完毕，点击提交按钮！</span>");
+        $("#p9d").removeClass("disabled");
+      }
     });
 
- 
+    $("#p8q").click(function(){
+      if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"&& $(".svgg").hasClass("cheng")){
+        $("#p9_text").html("<span style='color:green'>信息填写完毕，点击提交按钮！</span>");
+        $("#p9d").removeClass("disabled");
+      }
+    });
+
+    $("#p8b").click(function(){
+      if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"&& $(".svgg").hasClass("cheng")){
+        $("#p9_text").html("<span style='color:green'>信息填写完毕，点击提交按钮！</span>");
+        $("#p9d").removeClass("disabled");
+      }
+    });  
+
+    $("#p8c").click(function(){
+      if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"&& $(".svgg").hasClass("cheng")){
+        $("#p9_text").html("<span style='color:green'>信息填写完毕，点击提交按钮！</span>");
+        $("#p9d").removeClass("disabled");
+      }
+    });  
   
   
   $("#p17d").click(function(){
