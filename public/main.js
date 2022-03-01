@@ -133,7 +133,7 @@ $(function(){
         $("#p4d_text").html("<span style='color:green'>输入正确！5秒后自动跳转...</span>");  
         setTimeout(function(){
           $("#p4_content").hide();
-          $("#p6_content").show();
+          $("#p7_content").show();
           console.log($("#hidevalue").text());
         },1000);
       }else{
@@ -143,13 +143,13 @@ $(function(){
   });
  
   //page 7
-  $("#p6d").click(function(){
-    $("#p6_content").hide();
-    $("#p7_content").show();
-    setTimeout(() => window.scrollTo(0,0), 150);
+  //$("#p6d").click(function(){
+  //  $("#p6_content").hide();
+  //  $("#p7_content").show();
+  //  setTimeout(() => window.scrollTo(0,0), 150);
     //$("#p8_content").load('intro.html');
 
-  });
+  //});
   
     //page 8
   $("#p7d").click(function(){
