@@ -115,9 +115,7 @@
     </div>
   </div>
   <br>
- 
 
-  <button id="p8d" class="disabled">提交</button>
 </div>
 
 <!--  
@@ -296,18 +294,14 @@
     }
   }); 
   
-  $("#p8d").click(function(){
+ 
+  
+  $("#p9d").click(function(){
     $("#p8_content").hide();
-    $("#p9_content").show();
+    $("#p10_content").show();
     setTimeout(() => window.scrollTo(0,0), 150);
     INTRODUCTION[0] = $("#p8a").val();
     INTRODUCTION[1] = "大家好！我是一个五年级的"+$("#p8b").val()+"生。我今年"+$("#p8c").val()+"岁了。"
-  });
-  
-  $("#p9d").click(function(){
-    $("#p9_content").hide();
-    $("#p10_content").show();
-    setTimeout(() => window.scrollTo(0,0), 150);
     INTRODUCTION[2] = $(".cheng").attr("value");
     console.log(INTRODUCTION[2]);
   });
@@ -467,7 +461,7 @@
           element: '.item',
           popover: {
             className: 'first-step-popover-class',
-            title: '其他学生也能看到你的个人简介',也能给你点“赞”或“踩”,
+            title: '其他学生也能看到你的个人简介，也能给你点“赞”或“踩”',
             position: 'right'
           }
         },
@@ -576,7 +570,7 @@
           element: '.item',
           popover: {
             className: 'first-step-popover-class',
-            title: '其他学生不能看到你的个人简介',不能给你点“赞”或“踩”,
+            title: '其他学生不能看到你的个人简介，不能给你点“赞”或“踩”',
             position: 'right'
           }
         },
@@ -691,14 +685,14 @@
     
     setTimeout(() => window.scrollTo(0,0), 150);  
     GrowlNotification.notify({
-      description: "[ 你 ] 收到了一个赞！",
+      description: " 你  收到了一个赞！",
       type: 'success',
       position: 'bottom-left',
       closeTimeout: 0
     });  
     let s = Avataaars.create({width:20}); //////
     GrowlNotification.notify({
-      description: s+"(LDN)对你说：<span>你真有趣。</span><br>",
+      description: s+"(SY)对你说：<span>我挺喜欢这个认识人网的。</span><br>",
       type: 'info',
       position: 'bottom-right',
       closeTimeout: 0
