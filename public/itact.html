@@ -99,21 +99,20 @@
     
     
      function rank() { 
-       var domList = $(".rankcnt").get();
-       domList.sort(function(a,b){
-         
+        var domList = $(".rankcnt").get();
+        domList.sort(function(a,b){
          let zanA = parseInt($(a).attr("value").split(",")[0]);
-         let zanB = parseInt($(b).attr("value").split(",")[0]);
          let caiA = parseInt($(a).attr("value").split(",")[1]);
+         let zanB = parseInt($(b).attr("value").split(",")[0]);
          let caiB = parseInt($(b).attr("value").split(",")[1]);
          if(zanA > zanB) return -1;
-         else if(zanA = zanB){
+         else if(zanA < zanB) return 1;
+         else{
            if(caiA < caiB) return -1;
-           else if(caiA = caiB) return 0;
-           else return 1;
+           else if(caiA > caiB) return 1;
+           else return 0;
          }
-         else return 1;
-       });
+        });
        
        $('#ranky').html(domList);
        $('.order').css("background-color","#a2a4c6");

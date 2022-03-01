@@ -433,7 +433,7 @@
           element: '.Btns',
           popover: {
             className: 'first-step-popover-class',
-            title: '如果你<b>喜欢</b>某个人的简介，就点<b>“赞”</b>键；如果你<b>不喜欢</b>某个人的简介，就点<b>“踩”</b>建',
+            title: '如果你<span style="color:red">喜欢</span>某个人的简介，就点<span style="color:red">“赞”</span>键；如果你<span style="color:red">不喜欢</span>某个人的简介，就点<span style="color:red">“踩”</span>建',
             position: 'right'
           }
         },
@@ -676,7 +676,7 @@
       let rky = "";
       if($("#hidevalue").text().split(",")[0]!="normal"){
         $('.order')[0].style.backgroundColor='#DD9F4B';
-        rky = "<div value='0' class='rankcnt' id='rankcnt8' value='2,0' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:27px; '>你自己</div>";
+        rky = "<div class='rankcnt' id='rankcnt8' value='2,0' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:27px; '>你自己</div>";
       }
       for(let i = 0; i < e.length; i++){
         let obj = e[i];
@@ -692,8 +692,8 @@
             skin:"yellow",
             background: avaStr[6]
         });
-        let a = Math.round(Math.random()*4);
-        let b = Math.round(Math.random()*4);
+        let a = obj.boy.finalZanVsCai[0];
+        let b = obj.boy.finalZanVsCai[1];
         let astr = a;
         let bstr = b;
         if(a){
@@ -726,19 +726,19 @@
       
       var domList = $(".rankcnt").get();
       domList.sort(function(a,b){
-
        let zanA = parseInt($(a).attr("value").split(",")[0]);
        let caiA = parseInt($(a).attr("value").split(",")[1]);
-        
        let zanB = parseInt($(b).attr("value").split(",")[0]);
        let caiB = parseInt($(b).attr("value").split(",")[1]);
-       
-       if(zanA > zanB) return 1;
-       else if(zanA < zanB) return -1;
- 
-
+       if(zanA > zanB) return -1;
+       else if(zanA < zanB) return 1;
+       else{
+         if(caiA < caiB) return -1;
+         else if(caiA > caiB) return 1;
+         else return 0;
+       }
       });
-      console.log(domList);
+
       
       $('#ranky').html(domList);
       $('.order').css("background-color","#a2a4c6");
@@ -747,9 +747,9 @@
       }
       
       if($("#hidevalue").text().split(",")[0]=="normal"){
-        //driversNormal();
+        driversNormal();
       }else{
-        //driversTest();
+        driversTest();
       }
     });
 
