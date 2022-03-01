@@ -732,14 +732,14 @@
        let caiA = parseInt($(a).attr("value").split(",")[1]);
        let caiB = parseInt($(b).attr("value").split(",")[1]);
        if(zanA > zanB) return -1;
-       else if(zanA = zanB){
+       else if(zanA == zanB){
          if(caiA < caiB) return -1;
-         else if(caiA = caiB) return 0;
+         else if(caiA == caiB) return 0;
          else return 1;
        }
        else return 1;
       });
-
+      console.log(domList);
       
       $('#ranky').html(domList);
       $('.order').css("background-color","#a2a4c6");
