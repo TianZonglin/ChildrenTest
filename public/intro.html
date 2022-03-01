@@ -419,7 +419,7 @@
       let driver = new Driver({
         allowClose: false, // Whether clicking on overlay should close or not
         overlayClickNext: false, // Should it move to next step on overlay click
-        doneBtnText: '教程结束', // Text on the final button
+        doneBtnText: '进入介绍环节', // Text on the final button
         closeBtnText: 'Close', // Text on the close button for this step
         nextBtnText: '知道啦', // Next button text for this step
         prevBtnText: '返回', // Previous button text for this step
@@ -494,65 +494,25 @@
           }
         },
         {
-          element: '#rankcnt8',
-          popover: {
-            title: '实时动态展现所有学生的赞数排行',
-            description: '在三分钟内，所有人的排序会动态变化，橙色突出的是“你自己”的排序位置。',
-            position: 'left'
-          }
-        },
-        {
-          element: '.content2',
-          popover: {
-            showCloseButton: false,
-            title: '统计区域',
-            description: '包含“计时器”、“排行榜”、“留言”三部分。',
-            position: 'left'
-          }
-        },
-
-        {
           element: '.r2',
           popover: {
-            title: '排行榜',
-            description: '在三分钟内，你和其他人的赞数排行榜，点赞相同时踩数约少越靠前。',
+            title: '实时动态展现所有学生的赞数排行；橙色突出显示你的排行',
             position: 'left'
           }
         },
-
         {
-          element: '.r3',
+          element: '#rankcnt8',
           popover: {
-            title: '留言',
-            description: '如果三分钟内有同学给你发送消息，那么你会在这里收到提醒，并且在三分钟结束后可以点击查看按钮进行查看',
+            title: '你的排序位置',
+            description: '在三分钟内，所有人的排序会动态变化，橙色突出的是“你自己”的排序位置。',
             position: 'left'
-          }
-        },
-
-        {
-          element: '.growl-notification--info',
-          popover: {
-            showCloseButton: false,
-            title: '消息通知',
-            description: '三分钟结束后，如果你点击查看消息，这里会显示别人发给你的消息内容。',
-            position: 'top'
-          }
-        },
-        {
-          element: '.r0',
-          popover: {
-            showCloseButton: false,
-            title: '最终结果',
-            description: '三分钟结束后，这里会显示你最终得到的赞和踩的数量。',
-            position: 'right'
           }
         },
         {
           element: '#resee',
           popover: {
             showCloseButton: false,
-            title: '重新观看教程',
-            description: '如果你没有完全看懂某部分的功能，可以选择重新观看。',
+            title: '点击此键可以再次观看“新手引导”教程',
             position: 'top'
           }
         },
@@ -560,8 +520,7 @@
           element: '#p14d',
           popover: {
             showCloseButton: false,
-            title: '进入下一页',
-            description: '如果你已经完全了解此页面，那么请继续进入下一页。',
+            title: '若已了解此页面，点击进入“介绍环节”',
             position: 'top'
           }
         },
