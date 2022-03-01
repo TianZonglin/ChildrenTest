@@ -179,17 +179,7 @@
         
         if(o.optionToUser.opTime != 0){
           let iavaStr = o.sexVersion[sexVesion].avator.split(";");
-          let isvg = Avataaars.create({
-              width: 50,
-              top: iavaStr[0],
-              hairColor: iavaStr[1],
-              clothing: iavaStr[2],
-              clothingColor: iavaStr[3],
-              eyes: iavaStr[4],
-              mouth: iavaStr[5],
-              skin:"yellow",
-              background: iavaStr[6]
-          });
+ 
           if(o.optionToUser.opTime && $("#hidevalue").text().split(",")[0]!="normal"){
             if(o.optionToUser.option == "like"){
               setTimeout(function(){
@@ -200,7 +190,7 @@
                 $("#rankcnt8").val($("#up8").text()+","+$("#down8").text());
                 //Dreamer.success("("+o.name+")给你点了一个赞！",2000);
                 GrowlNotification.notify({
-                  description: "[ 你 ] 收到了一个赞！",
+                  description: "<span class='big'>你  收到了一个赞！</span>",
                   type: 'success',
                   position: 'bottom-left',
                   closeTimeout: 2000
@@ -239,7 +229,7 @@
             $("#up"+i).css("font-weight","900");            
             $("#rankcnt"+i).val($("#up"+i).text()+","+$("#down"+i).text());
             GrowlNotification.notify({
-              description: "[ "+o.sexVersion[sexVesion].name+" ] 收到了一个赞！",
+              description: "<span class='big'>"+o.sexVersion[sexVesion].name+"  收到了一个赞！</span>",
               type: 'success',
               position: 'bottom-left',
               closeTimeout: 2000
@@ -267,17 +257,6 @@
         }
 
         let avaStr = o.sexVersion[sexVesion].avator.split(";");
-        let svg = Avataaars.create({
-            width: 20,
-            top: avaStr[0],
-            hairColor: avaStr[1],
-            clothing: avaStr[2],
-            clothingColor: avaStr[3],
-            eyes: avaStr[4],
-            mouth: avaStr[5],
-            skin:"yellow",
-            background: avaStr[6]
-        });
         if(parseInt(o.messageToUser[$("#hidevalue").text().split(",")[0]].sendTime)!=0) {
           setTimeout(function(){
             $("#msgnum").text(parseInt($("#msgnum").text())+o.messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";").length);
@@ -296,7 +275,7 @@
           $("#p17d").removeAttr("disabled");
           let avaStr = o.sexVersion[sexVesion].avator.split(";");
           let svg = Avataaars.create({
-              width: 20,
+              width: 52,
               top: avaStr[0],
               hairColor: avaStr[1],
               clothing: avaStr[2],
@@ -311,7 +290,7 @@
             console.log(tt);
             for(let t=tt.length-1;t>=0;t--){
               GrowlNotification.notify({
-                description: svg+"("+o.sexVersion[sexVesion].name+")对你说：<span>"+tt[t]+"</span><br>",
+                description: "<div style='float:left;width:60px'>"+svg+"</div><div style='float:left;width:300px'><span class='big'>("+o.sexVersion[sexVesion].name+")对你说："+tt[t]+"</span></div>",
                 type: 'info',
                 position: 'bottom-right',
                 closeTimeout: 0
