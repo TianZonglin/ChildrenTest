@@ -405,9 +405,10 @@
         onNext: (Element) => {
           $("#mb").css("height",$("#yitem").css("height"));
           STEPS++;
+          $(".driver-prev-btn").hide();
           if(STEPS==10){
             STEPS = 0;
-            $(":not(.driver-prev-btn):not(.driver-next-btn)").css("pointer-events","auto");
+            $(":not(#driver-popover-item)").css("pointer-events","auto");
           }
           
         },      // Called when moving to next step on any step
@@ -495,7 +496,7 @@
         },
       ]);
       driver.start(); 
-      $(":not(.driver-prev-btn):not(.driver-next-btn)").css("pointer-events","none");
+      $(":not(#driver-popover-item)").css("pointer-events","none");
   }
   
   
@@ -510,15 +511,16 @@
         doneBtnText: '进入介绍环节', // Text on the final button
         closeBtnText: '关闭', // Text on the close button for this step
         nextBtnText: '知道啦', // Next button text for this step
-        prevBtnText: '返回', // Previous button text for this step
+        prevBtnText: '', // Previous button text for this step
         showCloseButton: false, // Do not show control buttons in footer
         animate: false,
         onNext: (Element) => {
          $("#mb").css("height",$("#yitem").css("height"));
           STEPS++;
+          $(".driver-prev-btn").hide();
           if(STEPS==10){
             STEPS = 0;
-            $(":not(.driver-prev-btn):not(.driver-next-btn)").css("pointer-events","auto");
+            $(":not(#driver-popover-item)").css("pointer-events","auto");
           }
         },      // Called when moving to next step on any step
       });
@@ -605,7 +607,7 @@
         },
       ]);
       driver.start(); 
-      $(":not(.driver-prev-btn):not(.driver-next-btn)").css("pointer-events","none");
+      $(":not(#driver-popover-item)").css("pointer-events","none");
   }
   
   
