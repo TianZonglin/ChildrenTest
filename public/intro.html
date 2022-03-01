@@ -143,8 +143,8 @@
     page - 10
   </p><br>
   <div class="poll-form">
-    <p><b>请选择六个主题来向别人介绍你自己</b></p> 
-    下面是小学生在自我介绍时经常使用的10个主题。<b>请选择 6 个你愿意分享的主题</b>，来向其他同学介绍自己。
+    <p><b>下面请选择五个主题，向其他同学介绍你自己</b></p> 
+    <b>点击选择主题：</b> 
     <br><br>
     <span><b>点击选择主题</b></span> &emsp;<span id="blocktext"></span>
     <br><br>
@@ -789,16 +789,16 @@
         $(this).val($(this).text());
       })
     
-    let mtop = ["dreads01","frizzle","shaggyMullet","shaggy","shortCurly","shortFlat","shortRound","sides","shortWaved","theCaesarAndSidePart","theCaesar","bigHair","bob","bun","curly","curvy","dreads","frida","froAndBand","fro","longButNotTooLong","miaWallace","shavedSides","straightAndStrand","straight01","eyepatch","turban","hijab","hat","winterHat01"];
-    let hairColor = ["dauburn","black","blonde","brown","pastelPink","platinum","red","silverGray"];
-    let clothing = ["blazerAndShirt","blazerAndSweater","collarAndSweater","graphicShirt","hoodie","overall","shirtCrewNeck","shirtScoopNeck","shirtVNeck"];
-    let clothingColor = ["black","blue01","blue02","blue03","gray01","gray02","heather","pastelBlue","pastelGreen","pastelOrange","pastelRed","pastelYellow","pink","red","white"];
-    let eyes = ["squint","closed","cry","eyeRoll","happy","hearts","side","surprised","wink","winkWacky","xDizzy"];
-    let mouth = ["concerned","disbelief","eating","grimace","sad","screamOpen","serious","smile","tongue","twinkle","vomit"];
-    let background = ["#DD8FE4","#76D18D","#839BFF","#A59101","#8F69DB"];
+    //let mtop = ["dreads01","frizzle","shaggyMullet","shaggy","shortCurly","shortFlat","shortRound","sides","shortWaved","theCaesarAndSidePart","theCaesar","bigHair","bob","bun","curly","curvy","dreads","frida","froAndBand","fro","longButNotTooLong","miaWallace","shavedSides","straightAndStrand","straight01","eyepatch","turban","hijab","hat","winterHat01"];
+    //let hairColor = ["dauburn","black","blonde","brown","pastelPink","platinum","red","silverGray"];
+    //let clothing = ["blazerAndShirt","blazerAndSweater","collarAndSweater","graphicShirt","hoodie","overall","shirtCrewNeck","shirtScoopNeck","shirtVNeck"];
+    //let clothingColor = ["black","blue01","blue02","blue03","gray01","gray02","heather","pastelBlue","pastelGreen","pastelOrange","pastelRed","pastelYellow","pink","red","white"];
+    //let eyes = ["squint","closed","cry","eyeRoll","happy","hearts","side","surprised","wink","winkWacky","xDizzy"];
+    //let mouth = ["concerned","disbelief","eating","grimace","sad","screamOpen","serious","smile","tongue","twinkle","vomit"];
+    //let background = ["#DD8FE4","#76D18D","#839BFF","#A59101","#8F69DB"];
 
     
-    
+    /*
       for(let i=0;i<54;i++){
         let t = mtop[Math.floor(Math.random() * mtop.length)];
         let h = hairColor[Math.floor(Math.random() * hairColor.length)];
@@ -849,9 +849,34 @@
       }
     });
     
-   
+   */
     
+    let aString = "longButNotTooLong;black;shirtCrewNeck;gray01;wink;smile;#A59101^theCaesarAndSidePart;black;collarAndSweater;black;squint;twinkle;#A59101^shortRound;black;hoodie;blue03;squint;grimace;#DD8FE4^shortRound;black;hoodie;red;happy;serious;#76D18D^theCaesar;black;collarAndSweater;pastelGreen;surprised;eating;#A59101^dreads01;black;hoodie;blue03;squint;serious;#DD8FE4^shortFlat;black;shirtCrewNeck;blue02;winkWacky;smile;#A59101^shaggy;black;collarAndSweater;blue02;squint;twinkle;#839BFF^straightAndStrand;black;hoodie;pastelGreen;happy;twinkle;#8F69DB^bigHair;black;shirtCrewNeck;gray01;surprised;eating;#839BFF^straight01;black;shirtCrewNeck;blue03;surprised;smile;#8F69DB^curvy;black;shirtVNeck;pastelOrange;surprised;twinkle;#8F69DB^bob;black;shirtScoopNeck;blue02;surprised;twinkle;#8F69DB^theCaesarAndSidePart;black;collarAndSweater;pastelBlue;winkWacky;eating;#8F69DB^longButNotTooLong;black;shirtCrewNeck;pink;happy;eating;#A59101^shortFlat;black;shirtCrewNeck;white;surprised;twinkle;#76D18D^longButNotTooLong;black;shirtScoopNeck;pastelRed;squint;serious;#839BFF^theCaesar;black;graphicShirt;pastelGreen;squint;twinkle;#76D18D^straightAndStrand;black;shirtScoopNeck;pastelBlue;surprised;smile;#839BFF^bob;black;overall;blue03;squint;grimace;#A59101^shaggy;black;shirtVNeck;white;squint;smile;#A59101^dreads01;black;shirtCrewNeck;pastelYellow;surprised;tongue;#839BFF^straightAndStrand;black;collarAndSweater;blue02;winkWacky;eating;#A59101^straightAndStrand;black;overall;black;winkWacky;tongue;#DD8FE4";
+    let Temp = aString.split("^");
+    for(let i=0;i<Temp.length;i++){
+      aTemp = Temp[i].split(";");
+      let t = aTemp[0];//mtop[Math.floor(Math.random() * mtop.length)];
+      let h = aTemp[1];//hairColor[Math.floor(Math.random() * hairColor.length)];
+      let c = aTemp[2];//clothing[Math.floor(Math.random() * clothing.length)];
+      let cc = aTemp[3];//clothingColor[Math.floor(Math.random() * clothingColor.length)];
+      let e = aTemp[4];//eyes[Math.floor(Math.random() * eyes.length)];
+      let m = aTemp[5];//mouth[Math.floor(Math.random() * mouth.length)];
+      let b = aTemp[6];//background[Math.floor(Math.random() * background.length)];
+      let arr = [t,h,c,cc,e,m,b];
+      var svg = Avataaars.create({
+          width: 60,
+          top: t,
+          hairColor: h,
+          clothing: c,
+          clothingColor: cc,
+          eyes: e,
+          mouth: m,
+          skin:"yellow",
+          background: b
+      });
+      $("#avat").append("<a class='svgg' value='"+arr.join(";")+"'>"+svg+"</a>");
 
+    }
     
     $("body").on("click", ".svgg",function(){
       console.log($(this).attr("value"));
