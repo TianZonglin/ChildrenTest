@@ -10,8 +10,7 @@
 
 <div class="rzoneside" id="p17_left" style=""></div>
 <div class="rzone" id="p17_content" style="">
-
-<p>page - 17</p><br>
+  <h2>认识人网</h2>
   <div id="root">
     <div id="mb" style="position: absolute;background:rgb(82 83 88 / 56%);width:220px;height:250px;border-radius:5px;z-index:11111"></div>
     <div class="item" style="position: relative;" id="yitem">
@@ -36,10 +35,17 @@
   <div id="mailbox"></div>
   <div id="popzan"></div>
     <br>
-    <button id="p17d" style="margin-left:390px;" disabled>进入下一页</button>
+    <button id="p17d" style="margin-top:0px;" disabled>进入下一页</button>
 <br><br>
   
-
+  
+  <a href="#" class="jqModal" style="display:none">view</a>
+  <div class="jqmWindow" id="dialog" style="text-align:center;border-radius: 10px;z-index:33333">
+    <span style="font-size:20px;font-weight:900">时间到！</span><br><hr>
+    <span style="font-size:18px;">你不能在点赞或踩了，<br>点击下方按钮查看你的结果。</span>
+    <hr>
+    <button href="#" id="pop" class="jqmClose">查看结果</button>
+  </div>
  
   
   
@@ -75,8 +81,12 @@
     
     
  
-    let interactFinalUp = 0;
-    let interactFinalDown = 0;
+    let outDown = 0;
+    let outUp = 0;
+    
+    let inDown = 0;
+    let inUp = 0;
+    
     
     $("#mb").hide();
      
@@ -345,32 +355,40 @@
             $(".szan").text($("#up8").text());
             $(".scai").text($("#down8").text());
             setTimeout(function(){
-              alert("时间结束，你无法继续点赞或踩别人。其他人给你发送的消息可以点击右侧按钮查看！");
-              $(".content0").css("visibility","visible");
-              if($("#hidevalue").text().split(",")[0]=="accept"){
-                $("#finals").html("你得到了<br><b>最多的赞</b>(6个赞)<br>和<b>最少的踩</b>(0个踩)");
-              }else if($("#hidevalue").text().split(",")[0]=="normal"){
-                $("#finals").html("你一共给别的同学<br>点了<br><b>X个赞</b>和<b>X个踩</b>。");
-              }else if($("#hidevalue").text().split(",")[0]=="refuse"){
-                $("#finals").html("你得到了<br><b>最多的踩</b>(5个踩)<br>和<b>最少的赞</b>(1个赞)。");
-              }
+              $('#dialog').jqm();
+              $('#pop').click(function(){
+                $(".content0").css("visibility","visible");
+                if($("#hidevalue").text().split(",")[0]=="accept"){
+                  $("#finals").html("你得到了<br><b>最多的赞</b>("+$("#up8").text()+"个赞)<br>和<b>最少的踩</b>("+$("#down8").text()+"个踩)");
+                }else if($("#hidevalue").text().split(",")[0]=="normal"){
+                  $("#finals").html("你一共给别的同学<br>点了<br><b>"+outDown+"个赞</b>和<b>"+outUp+"个踩</b>。");
+                }else if($("#hidevalue").text().split(",")[0]=="refuse"){
+                  $("#finals").html("你得到了<br><b>最多的踩</b>("+$("#down8").text()+"个踩)<br>和<b>最少的赞</b>("+$("#up8").text()+"个赞)。");
+                }
+                setTimeout(function(){
+                  $('#check').click();
+                },5000)
+              });
+              $('.jqModal').click();
             },1000)
             
         }
       }
       $("body").on("click", ".btn17",function(){
         $(this).prev().text(parseInt($(this).prev().text())+1);
+        outUp++;
         $(this).addClass('disabled');
         $(this).parent().next().find(".btn17c").addClass("disabled");
  
       });
       $("body").on("click", ".btn17c",function(){
         $(this).prev().text(parseInt($(this).prev().text())+1);
+        outDown++;
         $(this).addClass('disabled');
         $(this).parent().prev().find(".btn17").addClass("disabled");
       });
   
-        
+      $("#mb").css("height",$("#yitem").css("height"));
     });
     
     
