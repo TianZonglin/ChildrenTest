@@ -110,7 +110,7 @@ $(function(){
     window.addEventListener('message',function(){
       console.log(event.data);
         if(event.data=='hello'){
-            document.getElementById('#p0_content').innerText=event.data;
+            $('#p0_content').text(event.data);
         }
     })
  });   
