@@ -34,8 +34,7 @@
     <div style="clear:both"></div>
   <div id="mailbox"></div>
   <div id="popzan"></div>
-    <br>
-    <button id="p17d" style="margin-top:0px;" disabled>进入下一页</button>
+    
 <br><br>
   
   
@@ -83,7 +82,7 @@
     <div  class="rzone" id="p18_content" style="text-align:center;display:none;">
       <h2>在线互动测试结束，请点击按钮退出全屏</h2>
        <br> <br> 
-        <input type="button" onclick="exitFullscreen()" maxlength="3" style="" value="点击进入全屏模式"/>&emsp;
+        <input type="button" onclick="exitFullscreen()" maxlength="3" style="" value="退出全屏模式"/>&emsp;
 
     </div> 
 
@@ -106,6 +105,7 @@
   })*/
   
   $("#p17d").click(function(){
+    $(".rzone").css("min-height","200px");
     $("#p17_content").hide();
     GrowlNotification.closeAll();
     $("#p18_content").show();
