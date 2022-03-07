@@ -107,8 +107,12 @@
     
 $(function(){
     /**/
-    window.parent.postMessage(["255".json()], "https://survey.uu.nl/jfe/form/SV_dparQvRc5ViFyYe");
-
+    window.addEventListener('message',function(){
+      console.log(event.data);
+        if(event.data=='hello'){
+            document.getElementById('#p0_content').innerText=event.data;
+        }
+    })
  });   
     
     
