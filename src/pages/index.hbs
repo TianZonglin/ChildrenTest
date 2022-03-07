@@ -106,13 +106,69 @@
     }
     
 $(function(){
-    /**/
+    /*
     window.addEventListener('message',function(){
       console.log(event.data);
         if(event.data=='hello'){
             $('#p0_content').text(event.data);
         }
-    })
+    })*/
+  
+    function getQueryVariable(variable)
+    {
+           var query = window.location.search.substring(1);
+           var vars = query.split("&");
+           for (var i=0;i<vars.length;i++) {
+                   var pair = vars[i].split("=");
+                   if(pair[0] == variable){return pair[1];}
+           }
+           return(false);
+    }
+   
+    let strInput = getQueryVariable("code");
+    if(strInput.length == 3){
+      let GROUP = strInput[0]; //2
+      let VERSION = strInput[1];  //3
+      let GENDER = strInput[2]; //2
+      let hideVlaue = "";
+      let reg=/^[0-9]+.?[0-9]*$/;
+      if(reg.test(strInput)){
+        switch(GROUP) {
+          case "1":
+             $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","accept"));
+            break;
+          case "2":
+             $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","normal"));
+            break;
+          case "3":
+             $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","refuse"));
+            break;
+          default:
+             $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","accept"));
+        }
+        switch(VERSION) {
+          case "1":
+            $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version1"));
+            break;
+          case "2":
+            $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version2"));
+            break;
+          default:
+            $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version1"));
+        }
+        switch(GENDER) {
+          case "1":
+            $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","boy"));
+            break;
+          case "2":
+            $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","girl"));
+            break;
+          default:
+            $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","boy"));
+            // code block
+        }
+  
+  
  });   
     
     
@@ -219,6 +275,7 @@ $(function(){
        
       </div>     
       
+      <!--
       <div  class="rzone" id="p4_content" style="display:none">
         <h2>欢迎来到认识人网! </h2>
         <div class="poll-form">
@@ -229,6 +286,8 @@ $(function(){
         </div> 
       </div>
       <br> <br> 
+      -->
+      
       <div  class="rzone" id="p6_content" style="display:none">
         <p>
           Here is the explaination for this page. 6

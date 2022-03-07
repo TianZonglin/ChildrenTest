@@ -93,9 +93,9 @@ $(function(){
     
     
     $("#p0_content").hide();
-    $("#p4_content").show();
+    $("#p7_content").show();
   });
-   //page 4
+   /*
   $('#p4d').on('input propertychange',function() {
     let strInput = $(this).val();
     if(strInput.length == 3){
@@ -150,7 +150,7 @@ $(function(){
       }
     } 
   });
- 
+ */ 
   //page 7
   //$("#p6d").click(function(){
   //  $("#p6_content").hide();
