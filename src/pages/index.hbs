@@ -176,18 +176,43 @@ $(function(){
       <!-- This is the start of content for our page -->
       
 
-
+<script>
+    var exitFullscreen = false
+  // 全屏事件
+  function handleFullScreen() {
+    var element = document.documentElement;
+    if (this.fullscreen) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitCancelFullScreen) {
+        document.webkitCancelFullScreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    } else {
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.webkitRequestFullScreen) {
+        element.webkitRequestFullScreen();
+      } else if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+      } else if (element.msRequestFullscreen) {
+        // IE11
+        element.msRequestFullscreen();
+      }
+    }
+  }
+      </script>
 
       v7.3.2022
 
-      <div  class="rzone" id="p0_content" style="display:none">
-        <h2>欢迎来到认识人网! </h2>
-        <div class="poll-form">
-          <p>控制代码，三位，组别+简介+性别，例如3,2,1</p>
-
-          <input id="p4d" type="text" maxlength="3" style="background-color:#e1e1e1;color:#65647c;height:49px;width:130px;"/>&emsp;
-          <span id="p4d_text"></span>
-        </div> 
+      <div  class="rzone" id="p0_content" style="text-align:center">
+        <h2>该实验将会在全屏模式下进行</h2>
+         <br> <br> 
+          <input id="p0d" type="button" onclick="handleFullScreen()" maxlength="3" style="" value="点击进入全屏模式"/>&emsp;
+       
       </div>     
       
       <div  class="rzone" id="p4_content" style="display:none">

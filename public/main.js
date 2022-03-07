@@ -85,7 +85,16 @@ $(function(){
     $("#p4_content").show();
     setTimeout(() => window.scrollTo(0,0), 150);
   });
-  $("#p4_content").show();
+  
+
+  
+  
+  $("#p0d").click(function(){
+    
+    
+    $("#p0_content").hide();
+    $("#p4_content").show();
+  });
    //page 4
   $('#p4d').on('input propertychange',function() {
     let strInput = $(this).val();
