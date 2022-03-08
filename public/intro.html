@@ -401,7 +401,15 @@
           
        
   let STEPS = 0;
-          
+ 
+  $("body").click(function(){
+    STEPS++;
+    if(STEPS==111){
+      STEPS = 0;
+      $(":not(#driver-popover-item)").css("pointer-events","auto");
+    }
+  });     
+  
   function driversTest(){
     
       let driver = new Driver({
@@ -415,13 +423,7 @@
         animate: false,
         onNext: (Element) => {
           $("#mb").css("height",$("#yitem").css("height"));
-          STEPS++;
-          $(".driver-prev-btn").hide();
-          if(STEPS==111){
-            STEPS = 0;
-            $(":not(#driver-popover-item)").css("pointer-events","auto");
-          }
-          
+          $(".driver-prev-btn").hide();  
         },      // Called when moving to next step on any step
       });
       driver.defineSteps([
@@ -535,12 +537,7 @@
         animate: false,
         onNext: (Element) => {
          $("#mb").css("height",$("#yitem").css("height"));
-          STEPS++;
           $(".driver-prev-btn").hide();
-          if(STEPS==111){
-            STEPS = 0;
-            $(":not(#driver-popover-item)").css("pointer-events","auto");
-          }
         },      // Called when moving to next step on any step
       });
       driver.defineSteps([
