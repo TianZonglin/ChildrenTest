@@ -89,8 +89,11 @@ $(function(){
 
   
   
+// call your function
+
+
   $("#p0d").click(function(){
-    
+    $("#hidestart").val(new Date().getTime());
     
     $("#p0_content").hide();
     $("#p7_content").show();
@@ -162,6 +165,9 @@ $(function(){
   
     //page 8
   $("#p7d").click(function(){
+ 
+    $("#hidejsons").append("\"Page1Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
+    $("#hidestart").val(new Date().getTime());
     $("#p7_content").hide();
     $("#p8-21").show();
      window.onbeforeunload = function(){document.body.scrollTop = 0;} 

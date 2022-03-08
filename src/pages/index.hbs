@@ -125,8 +125,13 @@ $(function(){
            return(false);
     }
    
-    let strInput = getQueryVariable("code")!= null ? getQueryVariable("code") : "111";  
+    let strInput = "111";  
+  if(getQueryVariable("code")!= false){
+     strInput = getQueryVariable("code");
+  }
+  console.log(strInput);
     if(strInput.length == 3){
+      
       let GROUP = strInput[0]; //2
       let VERSION = strInput[1];  //3
       let GENDER = strInput[2]; //2
@@ -169,7 +174,7 @@ $(function(){
         }
       }
     }
-    console.log(strInput);
+ 
   
  });   
     
@@ -218,6 +223,9 @@ $(function(){
   
  -->
   
+    
+  <span id="hidestart" style="display:none;">0</span>
+  <span id="hidejsons" style="display:none;"></span>
   <span id="hidevalue" style="display:none;">groupVersion,profileVersion,sexVersion</span>
   <div class="wrapper">
     
@@ -265,10 +273,11 @@ $(function(){
         element.msRequestFullscreen();
       }
     }
+    
   }
       </script>
 
-      v7.3.2022
+     
 
       <div  class="rzone" id="p0_content" style="text-align:center">
         <h2>该实验将会在全屏模式下进行</h2>

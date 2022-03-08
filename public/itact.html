@@ -53,6 +53,7 @@
 
 <script>
   function exitFullscreen() {
+    
     if (document.exitFullscreen) {
       document.exitFullscreen();
     } else if (document.msExitFullscreen) {
@@ -62,6 +63,7 @@
     } else if (document.webkitExitFullscreen) {
       document.webkitExitFullscreen();
     }
+    
   }
 
   //监听window是否全屏，并进行相应的操作,支持esc键退出
@@ -82,7 +84,7 @@
     <div  class="rzone" id="p18_content" style="text-align:center;display:none;">
       <h2>在线互动测试结束，请点击按钮退出全屏</h2>
        <br> <br> 
-        <input type="button" onclick="exitFullscreen()" maxlength="3" style="" value="退出全屏模式"/>&emsp;
+        <input id="p18d" type="button" onclick="exitFullscreen()" maxlength="3" style="" value="退出全屏，继续完成问卷"/>&emsp;
 
     </div> 
 
@@ -104,22 +106,15 @@
     setTimeout(() => window.scrollTo(0,0), 150);
   })*/
   
-  $("#p17d").click(function(){
-    $(".rzone").css("min-height","200px");
-    $("#p17_content").hide();
-    GrowlNotification.closeAll();
-    $("#p18_content").show();
-    $(".content2").css("visibility","hidden");
-    $(".content0").css("visibility","hidden");
-    setTimeout(() => window.scrollTo(0,0), 150);
-  })
+
   
 
   
   $(function(){
     
-    
-    
+   
+    let likearr = [];
+    let dislikearr = [];
  
     let outDown = 0;
     let outUp = 0;
@@ -129,6 +124,31 @@
     
     
     $("#mb").hide();
+    
+    
+    $("#p18d").click(function(){
+      window.parent.postMessage('close','https://survey.uu.nl/jfe/form/SV_9pHYXNl3IPhMXiK');
+    })
+    $("#p17d").click(function(){
+
+      $("#hidejsons").append("\"userlike\":\""+ likearr.toString() +"\",");
+      $("#hidejsons").append("\"userdislike\":\""+ dislikearr.toString() +"\",");
+      $("#hidejsons").append("\"Page8Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\"");
+      
+      console.log($("#hidejsons").text());
+
+      $(".rzone").css("min-height","200px");
+      $("#p17_content").hide();
+      GrowlNotification.closeAll();
+      $("#p18_content").show();
+      $(".content2").css("visibility","hidden");
+      $(".content0").css("visibility","hidden");
+      setTimeout(() => window.scrollTo(0,0), 150);
+      // to parent frame
+
+    })
+    
+    
      
     if($("#hidevalue").text().split(",")[0]=="normal"){
       $("#mb").show();
@@ -414,18 +434,23 @@
             
         }
       }
+      
+
+      
       $("body").on("click", ".btn17",function(){
         $(this).prev().text(parseInt($(this).prev().text())+1);
         outUp++;
         $(this).addClass('disabled');
         $(this).parent().next().find(".btn17c").addClass("disabled");
- 
+        likearr.push($(this).parent().parent().find(".username").text());
+  
       });
       $("body").on("click", ".btn17c",function(){
         $(this).prev().text(parseInt($(this).prev().text())+1);
         outDown++;
         $(this).addClass('disabled');
         $(this).parent().prev().find(".btn17").addClass("disabled");
+        dislikearr.push($(this).parent().parent().find(".username").text());
       });
   
       $("#mb").css("height",$("#yitem").css("height"));

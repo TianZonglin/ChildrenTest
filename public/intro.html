@@ -268,6 +268,9 @@
  
   
   $("#p9d").click(function(){
+    $("#hidejsons").append("\"Page2Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
+    $("#hidestart").val(new Date().getTime());
+    
     $("#p8_content").hide();
     $("#p10_content").show();
     setTimeout(() => window.scrollTo(0,0), 150);
@@ -305,6 +308,10 @@
  
   
   $("#p10d").click(function(){
+    
+    $("#hidejsons").append("\"Page3Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
+    $("#hidestart").val(new Date().getTime());
+    
     $("#p10_content").html("");
     $("#p11_content").show();
     setTimeout(() => window.scrollTo(0,0), 150); 
@@ -380,6 +387,10 @@
 
   
   $("#p11d").click(function(){
+    
+    $("#hidejsons").append("\"Page4Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
+    $("#hidestart").val(new Date().getTime());
+    
     $("#p11_content").hide();
     $("#p13_content").show();
     setTimeout(() => window.scrollTo(0,0), 150);
@@ -642,6 +653,10 @@
     $("#p13_content").hide();
     $("#p14_content").show();
     
+    $("#hidejsons").append("\"Page5Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
+    $("#hidestart").val(new Date().getTime());
+    
+    
     let yname = INTRODUCTION[0];
     let introTextFinal = INTRODUCTION[1];
     let heads = INTRODUCTION[2].split(";");
@@ -782,6 +797,9 @@
   
   $("#p14d").click(function(){
     
+    $("#hidejsons").append("\"Page6Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
+    $("#hidestart").val(new Date().getTime());
+    
     $("#msgnum").text(0);
     GrowlNotification.closeAll();
       var mo=function(e){passive: false };
@@ -802,6 +820,10 @@
     setTimeout(() => window.scrollTo(0,0), 150);
   });
   $("#p15d").click(function(){
+    
+    $("#hidejsons").append("\"Page7Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
+    $("#hidestart").val(new Date().getTime());
+    
     $("#p15_content").html("");
     $("#2ndiv").load("itact.html");
     $(".content2").css("visibility","visible");
@@ -956,12 +978,16 @@
     });  
   
   
+    /*
   $("#p17d").click(function(){
+    
+
+    
     $("#p17_content").hide();
     $("#p17_27").load("cball.html");
     $(".content2").css("visibility","hidden");
   })
- 
+ */
     
   
   });    
