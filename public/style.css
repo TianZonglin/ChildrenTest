@@ -84,12 +84,12 @@ to this section's matching END comment to see page-specific styles.
     margin-bottom: 20px;
     /* 防止多列布局，分页媒体和多区域上下文中的意外中断 */
     break-inside: avoid;
-    background: #fff;
+    background: #f8f7f8;
     border-radius: 5px;
     padding:10px;
   }
   .item:hover {
-    box-shadow: 3px 0px #a2a4c6;
+    /* box-shadow: 3px 0px #a2a4c6; */
   }
   /* 图片 */
   .itemImg {
@@ -371,7 +371,7 @@ h3 {
 /* Styles for our poll form and its results */
 .poll-form,
 .poll-results {
-  background-color: #fbfafb;
+  background-color: #f8f7f8;
   padding: 1px 16px 16px 16px;
   border-radius: 8px;
 }

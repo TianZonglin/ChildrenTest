@@ -418,12 +418,13 @@
           $("#mb").css("height",$("#yitem").css("height"));
           STEPS++;
           $(".driver-prev-btn").hide();
-          if(STEPS==10){
-            STEPS = 0;
-            $(":not(#driver-popover-item)").css("pointer-events","auto");
-          }
+ 
           
         },      // Called when moving to next step on any step
+        onReset: (Element) => {
+          $(":not(#driver-popover-item)").css("pointer-events","auto");
+        
+        }
       });
       driver.defineSteps([
         {
@@ -539,11 +540,12 @@
          $("#mb").css("height",$("#yitem").css("height"));
           STEPS++;
           $(".driver-prev-btn").hide();
-          if(STEPS==10){
-            STEPS = 0;
-            $(":not(#driver-popover-item)").css("pointer-events","auto");
-          }
+    
         },      // Called when moving to next step on any step
+        onReset: (Element) => {
+          $(":not(#driver-popover-item)").css("pointer-events","auto");
+        
+        }
       });
       driver.defineSteps([
         {
