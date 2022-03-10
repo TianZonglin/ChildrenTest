@@ -25,7 +25,7 @@
       }
     },
     "optionToUser": {
-      "opTime": 6, 
+      "opTime": 11, 
       "option": "like"
     },
     "messageToUser": { 
@@ -61,7 +61,7 @@
       }
     },
     "optionToUser": {
-      "opTime": 1, 
+      "opTime": 35, 
       "option": "like"
     },
     "messageToUser": { 
@@ -96,7 +96,7 @@
       }
     },
     "optionToUser": {
-      "opTime": 5, 
+      "opTime": 81, 
       "option": "like"
     },
     "messageToUser": { 
@@ -131,7 +131,7 @@
       }
     },
     "optionToUser": {
-      "opTime": 4, 
+      "opTime": 101, 
       "option": "like"
     },
     "messageToUser": { 
@@ -166,7 +166,7 @@
       }
     },
     "optionToUser": {
-      "opTime": 2, 
+      "opTime": 132, 
       "option": "like"
     },
     "messageToUser": { 
@@ -201,7 +201,7 @@
       }
     },
     "optionToUser": {
-      "opTime": 5, 
+      "opTime": 151, 
       "option": "like"
     },
     "messageToUser": { 
@@ -251,7 +251,7 @@
         "name": "P8(boy4)",
         "gender": "男",
         "finalZanVsCai": [1,1],
-        "popTime": ["4","1"],
+        "popTime": ["49","99"],
         "avator": "shortFlat;platinum;graphicShirt;red;side;twinkle;#A59101",
         "profileVersion":{
           "version1": "大家好！我是一个五年级的男生。我今年11岁了。我的爱好是跳绳。我的理想工作是老板。我最喜欢的书是《三国演义》。我最喜欢的网络游戏是《贪吃蛇》。我最喜欢的食物或零食是辣条。",
@@ -262,7 +262,7 @@
         "name": "P8(girl4)",
         "gender": "女",
         "finalZanVsCai": [1,1],
-        "popTime": ["4","1"],
+        "popTime": ["49","99"],
         "avator": "straight01;brown;overall;black;side;concerned;#76D18D",
         "profileVersion":{
           "version1": "大家好！我是一个五年级的女生。我今年11岁了。我最喜欢的书是中国民间故事。我最喜欢的电视节目或电影是《小猪佩奇》。我最喜欢的食物或零食是热干面。我最不喜欢的食物是味道过淡的食物。我最喜欢的动物是兔子。",
