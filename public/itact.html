@@ -38,16 +38,15 @@
 <br><br>
   
   
-  <a href="#" class="jqModal" style="display:none">view</a>
+  <a href="#" class="jqModal" id="jqModal" style="display:none">view</a>
   <div class="jqmWindow" id="dialog" style="text-align:center;border-radius: 10px;z-index:33333">
-    <span style="font-size:20px;font-weight:900">时间到！</span><br><hr>
-    <span style="font-size:18px;">你不能在点赞或踩了，<br>点击下方按钮查看你的结果。</span>
+    <span style="font-size:20px;font-weight:900" id="jqtitle">时间到！</span><br><hr>
+    <span style="font-size:18px;" id="jqText">你不能在点赞或踩了，<br>点击下方按钮查看你的结果。</span>
     <hr>
     <button href="#" id="pop" class="jqmClose">查看结果</button>
   </div>
  
-  
-  
+ 
   
 </div>
 
@@ -127,22 +126,21 @@
     
     
     $("#p18d").click(function(){
-      window.parent.postMessage('close','https://survey.uu.nl/jfe/form/SV_9pHYXNl3IPhMXiK');
+      window.parent.postMessage([JSON.parse("{"+$("#hidejsons").text()+"}"),JSON.parse('{"a":"1"}')],'https://survey.uu.nl/jfe/form/SV_9pHYXNl3IPhMXiK');
     })
     $("#p17d").click(function(){
 
       $("#hidejsons").append("\"userlike\":\""+ likearr.toString() +"\",");
       $("#hidejsons").append("\"userdislike\":\""+ dislikearr.toString() +"\",");
       $("#hidejsons").append("\"Page8Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\"");
-      
-      console.log($("#hidejsons").text());
-
+ 
       $(".rzone").css("min-height","200px");
       $("#p17_content").hide();
       GrowlNotification.closeAll();
       $("#p18_content").show();
       $(".content2").css("visibility","hidden");
       $(".content0").css("visibility","hidden");
+      $(".r3").css("visibility","hidden");
       setTimeout(() => window.scrollTo(0,0), 150);
       // to parent frame
 
@@ -208,15 +206,21 @@
        }
        
     }
+    
+    let MSGNAME = "";
+    let MSGCOUNT = "";
+    
     $.getJSON("fakers2.json",function(e){
       let sexVesion = $("#hidevalue").text().split(",")[2];
       let profileVesion = $("#hidevalue").text().split(",")[1];
       let str = "";
       $('.order')[0].style.backgroundColor='#DD9F4B';
+      $('.order')[4].style.backgroundColor='rgb(162, 164, 198)';
       let rky = "";
       if($("#hidevalue").text().split(",")[0]!="normal"){
         rky = "<div value='0' class='rankcnt' id='rankcnt8' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:27px; '>你自己</div>";
       }
+  
       for(let i = 0; i < e.length; i++){
         let obj = e[i];
         let avaStr = obj.sexVersion[sexVesion].avator.split(";");
@@ -259,6 +263,9 @@
       $("#itor").html(str);
       $("#ranky").html(rky);
  
+      MSGNAME += e[0].sexVersion[sexVesion].name;
+      MSGCOUNT += e[0].messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";").length;
+        
       //开始自动fake
       for(let i = 0; i < e.length; i++){
         let o = e[i];
@@ -280,6 +287,7 @@
                   description: "<span class='big'>你  收到了一个赞！</span>",
                   type: 'success',
                   position: 'bottom-left',
+                  closeWith: 'button',
                   closeTimeout: 2000
                 });
                 rank();
@@ -318,6 +326,7 @@
             GrowlNotification.notify({
               description: "<span class='big'>"+o.sexVersion[sexVesion].name+"  收到了一个赞！</span>",
               type: 'success',
+              closeWith: 'button',
               position: 'bottom-left',
               closeTimeout: 2000
             });
@@ -357,6 +366,8 @@
             },500)
           }, 1000*parseInt(o.messageToUser[$("#hidevalue").text().split(",")[0]].sendTime));
         }
+        
+
         $("#check").click(function(){
           $("#check").addClass("disabled");
           $("#p17d").removeAttr("disabled");
@@ -379,6 +390,7 @@
               GrowlNotification.notify({
                 description: "<div style='float:left;width:60px'>"+svg+"</div><div style='float:left;width:300px'><span class='big'>("+o.sexVersion[sexVesion].name+")对你说："+tt[t]+"</span></div>",
                 type: 'info',
+                closeWith: 'button',
                 position: 'bottom-right',
                 closeTimeout: 0
               });
@@ -390,7 +402,7 @@
       }
       
       
-      let cutTime = 0.1 * 600 * 3;
+      let cutTime = 0.1 * 600 * 3 ;
       let summer = setInterval(counClock, 1000);
 
       function counClock() {
@@ -406,17 +418,18 @@
             cutTime--;
             $("#leftTime").text(min + ':' + sec);
         } else {
+            clearInterval(summer);
             $("#leftTime").text('0:00');
             $(".btn17").addClass('disabled');
             $(".btn17c").addClass('disabled');
             $("#check").removeAttr("disabled");
-            clearInterval(summer);
             $(".content2").css("visibility","visible");
             $(".szan").text($("#up8").text());
             $(".scai").text($("#down8").text());
             setTimeout(function(){
               $('#dialog').jqm();
               $('#pop').click(function(){
+                $("#known").show();
                 $(".content0").css("visibility","visible");
                 if($("#hidevalue").text().split(",")[0]=="accept"){
                   $("#finals").html("你得到了<br><b>最多的赞</b>("+$("#up8").text()+"个赞)<br>和<b>最少的踩</b>("+$("#down8").text()+"个踩)");
@@ -425,11 +438,22 @@
                 }else if($("#hidevalue").text().split(",")[0]=="refuse"){
                   $("#finals").html("你得到了<br><b>最多的踩</b>("+$("#down8").text()+"个踩)<br>和<b>最少的赞</b>("+$("#up8").text()+"个赞)。");
                 }
-                setTimeout(function(){
-                  $('#check').click();
-                },5000)
+                $("#known").click(function(){
+                   $("#known").addClass("disabled");
+                   $("#known").attr("disabled","true");
+                   $('#jqtitle').text("新消息！");
+                   $('#jqText').html("<span style='color:red;'>"+MSGNAME+"</span>给你发送了<span style='color:red;'>"+MSGCOUNT+"</span>条信息！点击按钮阅读。");
+                   $('#pop').text("查看消息");
+                   setTimeout(function(){
+                      $('#dialog').jqm();
+                      $('#jqModal').click();
+                      $('#pop').click(function(){
+                        $('#check').click();
+                      });
+                    },3000)
+                });
               });
-              $('.jqModal').click();
+              $('#jqModal').click();
             },1000)
             
         }

@@ -29,9 +29,9 @@
       "option": "like"
     },
     "messageToUser": { 
-        "accept":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>很喜欢</b>你的个人简介。;我<b>很想</b>和你交朋友！"},
-        "normal":{"sendTime": 4, "sendText": "我看了所有人的个人简介。有些我喜欢，有些我不喜欢。;有些人我想交朋友，有些人我不想。"},
-        "refuse":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>不是很喜欢</b>你的个人简介。;我<b>不想</b>和你交朋友！"}
+        "accept":{"sendTime": 34, "sendText": "我看了所有人的个人简介，我<b>很喜欢</b>你的个人简介。;我<b>很想</b>和你交朋友！"},
+        "normal":{"sendTime": 34, "sendText": "我看了所有人的个人简介。有些我喜欢，有些我不喜欢。;有些人我想交朋友，有些人我不想。"},
+        "refuse":{"sendTime": 34, "sendText": "我看了所有人的个人简介，我<b>不是很喜欢</b>你的个人简介。;我<b>不想</b>和你交朋友！"}
     }
   },{
     "fakeUserID": 1,
