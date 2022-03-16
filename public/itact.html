@@ -41,7 +41,7 @@
   <a href="#" class="jqModal" id="jqModal" style="display:none">view</a>
   <div class="jqmWindow" id="dialog" style="text-align:center;border-radius: 10px;z-index:33333">
     <span style="font-size:20px;font-weight:900" id="jqtitle">时间到！</span><br><hr>
-    <span style="font-size:18px;" id="jqText">你不能在点赞或踩了，<br>点击下方按钮查看你的结果。</span>
+    <span style="font-size:18px;" id="jqText">你不能再点赞或踩了，<br>点击下方按钮查看你的结果。</span>
     <hr>
     <button href="#" id="pop" class="jqmClose">查看结果</button>
   </div>
@@ -223,7 +223,7 @@
   
       for(let i = 0; i < e.length; i++){
         let obj = e[i];
-        let avaStr = obj.sexVersion[sexVesion].avator.split(";");
+        let avaStr = obj.sexVersion[sexVesion].avator[profileVesion].split(";");
  
         let svg = Avataaars.create({
             width: 50,
@@ -241,7 +241,7 @@
         str += "<a class='interava'>";
         str += svg;
         str += "</a>";
-        str += "<span class='username'>";
+        str += "<span class='username' value='"+i+"'>";
         str += obj.sexVersion[sexVesion].name;
         str += "</span>";
         str += "</div>";
@@ -271,11 +271,11 @@
         let o = e[i];
         
         
-        if(o.optionToUser.opTime != 0){
-          let iavaStr = o.sexVersion[sexVesion].avator.split(";");
+        if(o.optionToUser[$("#hidevalue").text().split(",")[0]].opTime != 0){
+          let iavaStr = o.sexVersion[sexVesion].avator[profileVesion].split(";");
  
-          if(o.optionToUser.opTime && $("#hidevalue").text().split(",")[0]!="normal"){
-            if(o.optionToUser.option == "like"){
+          if(o.optionToUser[$("#hidevalue").text().split(",")[0]].opTime && $("#hidevalue").text().split(",")[0]!="normal"){
+            if(o.optionToUser[$("#hidevalue").text().split(",")[0]].option == "like"){
               setTimeout(function(){
                 $("#up8").text(parseInt($("#up8").text())+1);
                 $("#up8").css("color","rgb(255,160,0)");
@@ -284,7 +284,7 @@
                 $("#rankcnt8").val($("#up8").text()+","+$("#down8").text());
                 //Dreamer.success("("+o.name+")给你点了一个赞！",2000);
                 GrowlNotification.notify({
-                  description: "<span class='big'>你  收到了一个赞！</span>",
+                  description: "<span class='big'>你 收到了一个赞！</span>",
                   type: 'success',
                   position: 'bottom-left',
                   closeWith: 'button',
@@ -295,20 +295,28 @@
                   $("#up8").css("color","red");
                   $("#up8").css("font-size","16px");
                 },500)
-              }, 1000*parseInt(o.optionToUser.opTime));
+              }, 1000*parseInt(o.optionToUser[$("#hidevalue").text().split(",")[0]].opTime));
             }else{
+              
               setTimeout(function(){
                 $("#down8").text(parseInt($("#down8").text())+1);
                 $("#down8").css("color","rgb(255,160,0)");
                 $("#down8").css("font-size","10px");
                 $("#down8").css("font-weight","900");
                 $("#rankcnt").val($("#up8").text()+","+$("#down8").text());
+                GrowlNotification.notify({
+                  description: "<span class='big'>你 收到了一个踩！</span>",
+                  type: 'success',
+                  position: 'bottom-left',
+                  closeWith: 'button',
+                  closeTimeout: 2000
+                });
                 rank();
                 setTimeout(function(){
                   $("#down8").css("color","red");
                   $("#down8").css("font-size","16px");
                 },500)
-              }, 1000*parseInt(o.optionToUser.opTime));
+              }, 1000*parseInt(o.optionToUser[$("#hidevalue").text().split(",")[0]].opTime));
             }
           }
         }
@@ -324,7 +332,7 @@
             $("#up"+i).css("font-weight","900");            
             $("#rankcnt"+i).val($("#up"+i).text()+","+$("#down"+i).text());
             GrowlNotification.notify({
-              description: "<span class='big'>"+o.sexVersion[sexVesion].name+"  收到了一个赞！</span>",
+              description: "<span class='big'>"+o.sexVersion[sexVesion].name+" 收到了一个赞！</span>",
               type: 'success',
               closeWith: 'button',
               position: 'bottom-left',
@@ -344,6 +352,13 @@
             $("#down"+i).css("font-size","10px");
             $("#down"+i).css("font-weight","900");
             $("#rankcnt"+i).val($("#up"+i).text()+","+$("#down"+i).text());
+            GrowlNotification.notify({
+              description: "<span class='big'>"+o.sexVersion[sexVesion].name+" 收到了一个踩！</span>",
+              type: 'success',
+              closeWith: 'button',
+              position: 'bottom-left',
+              closeTimeout: 2000
+            });
             rank();
             setTimeout(function(){
               $("#down"+i).css("color","red");
@@ -352,7 +367,7 @@
           }, 1000*parseInt(downTime[cai]));
         }
 
-        let avaStr = o.sexVersion[sexVesion].avator.split(";");
+        let avaStr = o.sexVersion[sexVesion].avator[profileVesion].split(";");
         if(parseInt(o.messageToUser[$("#hidevalue").text().split(",")[0]].sendTime)!=0) {
           setTimeout(function(){
             $("#msgnum").text(parseInt($("#msgnum").text())+o.messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";").length);
@@ -371,7 +386,7 @@
         $("#check").click(function(){
           $("#check").addClass("disabled");
           $("#p17d").removeAttr("disabled");
-          let avaStr = o.sexVersion[sexVesion].avator.split(";");
+          let avaStr = o.sexVersion[sexVesion].avator[profileVesion].split(";");
           let svg = Avataaars.create({
               width: 52,
               top: avaStr[0],
@@ -431,18 +446,19 @@
               $('#pop').click(function(){
                 $("#known").show();
                 $(".content0").css("visibility","visible");
+                $(".r0").addClass("arrow_box");
                 if($("#hidevalue").text().split(",")[0]=="accept"){
                   $("#finals").html("你得到了<br><b>最多的赞</b>("+$("#up8").text()+"个赞)<br>和<b>最少的踩</b>("+$("#down8").text()+"个踩)");
                 }else if($("#hidevalue").text().split(",")[0]=="normal"){
-                  $("#finals").html("你一共给别的同学<br>点了<br><b>"+outDown+"个赞</b>和<b>"+outUp+"个踩</b>。");
+                  $("#finals").html("你一共给别的同学<br>点了<br><b>"+outUp+"个赞</b>和<b>"+outDown+"个踩</b>。");
                 }else if($("#hidevalue").text().split(",")[0]=="refuse"){
                   $("#finals").html("你得到了<br><b>最多的踩</b>("+$("#down8").text()+"个踩)<br>和<b>最少的赞</b>("+$("#up8").text()+"个赞)。");
                 }
                 $("#known").click(function(){
                    $("#known").addClass("disabled");
                    $("#known").attr("disabled","true");
-                   $('#jqtitle').text("新消息！");
-                   $('#jqText').html("<span style='color:red;'>"+MSGNAME+"</span>给你发送了<span style='color:red;'>"+MSGCOUNT+"</span>条信息！点击按钮阅读。");
+                   $('#jqtitle').text("收到消息！");
+                   $('#jqText').html("<span style='color:red;'>"+MSGNAME+"</span> 给你发送了<span style='color:red;'>"+MSGCOUNT+"</span> 条消息！请点击下方按钮查看。");
                    $('#pop').text("查看消息");
                    setTimeout(function(){
                       $('#dialog').jqm();
@@ -462,19 +478,42 @@
 
       
       $("body").on("click", ".btn17",function(){
-        $(this).prev().text(parseInt($(this).prev().text())+1);
+        //$(this).prev().text(parseInt($(this).prev().text())+1);
         outUp++;
         $(this).addClass('disabled');
         $(this).parent().next().find(".btn17c").addClass("disabled");
         likearr.push($(this).parent().parent().find(".username").text());
-  
+        let iid = $(this).parent().parent().find(".username").attr("value"); 
+        $("#up"+iid).text(parseInt($("#up"+iid).text())+1); 
+        $("#rankcnt"+iid).val($("#up"+iid).text()+","+$("#down"+iid).text());
+        console.log($("#up"+iid).text()+","+$("#down"+iid).text());
+        GrowlNotification.notify({
+          description: "<span class='big'>"+$(this).parent().parent().find(".username").text()+" 收到了一个赞！</span>",
+          type: 'success',
+          position: 'bottom-left',
+          closeWith: 'button',
+          closeTimeout: 2000
+        });
+        rank();
       });
       $("body").on("click", ".btn17c",function(){
-        $(this).prev().text(parseInt($(this).prev().text())+1);
+        //$(this).prev().text(parseInt($(this).prev().text())+1);
         outDown++;
         $(this).addClass('disabled');
         $(this).parent().prev().find(".btn17").addClass("disabled");
         dislikearr.push($(this).parent().parent().find(".username").text());
+        let iid = $(this).parent().parent().find(".username").attr("value"); 
+        $("#down"+iid).text(parseInt($("#down"+iid).text())+1); 
+        $("#rankcnt"+iid).val($("#up"+iid).text()+","+$("#down"+iid).text());
+        console.log($("#up"+iid).text()+","+$("#down"+iid).text());
+        GrowlNotification.notify({
+          description: "<span class='big'>"+$(this).parent().parent().find(".username").text()+" 收到了一个踩！</span>",
+          type: 'success',
+          position: 'bottom-left',
+          closeWith: 'button',
+          closeTimeout: 2000
+        });
+        rank();
       });
   
       $("#mb").css("height",$("#yitem").css("height"));

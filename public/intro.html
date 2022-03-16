@@ -156,15 +156,12 @@
       <a class="blocks" id="sw">最不喜欢的食物</a>
       <a class="blocks" id="dw">最喜欢的动物</a> 
     <br>
-    <button style="visibility:hidden">提交</button>
+    <button style="visibility:hidden">提交</button><span id="stext"></span>
     <button id="p10d" style="float:right;margin-right: 20px;" class="disabled">提交</button>
     
   </div>
 </div>
 <div id="p11_content" style="display:none">
-  <p>
-    page - 11 12
-  </p><br>
   <div class="poll-form">
     <p><b>请为每个主题选择1个最能代表你/最符合你的答案</b></p> 
     <div id="subxg" style="display:none" value="我的性格"><b>性格</b><br><br><a class="sublocks">开朗</a><a class="sublocks">活泼</a><a class="sublocks">有点暴躁</a><a class="sublocks">阳光</a><a class="sublocks">友善</a><!-- <a class="sublocks">温和</a><a class="sublocks">幽默</a><a class="sublocks">乐于助人</a><a class="sublocks">有点爱玩儿</a><a class="sublocks">有耐心</a><a class="sublocks">易怒</a><a class="sublocks">胆小</a><a class="sublocks">大方</a><a class="sublocks">不太爱说话</a><a class="sublocks">爱哭</a> --> <input class="blockInput" value="其他, 在此处书写"/><br><br></div>
@@ -199,7 +196,7 @@
   <h2>“认识人网”新手引导</h2> 
  
     <button style="float:left;margin-bottom: 30px;box-shadow: 2px 2px 0px 1px rgb(255 189 90);" id="resee">重新观看“新手引导”</button>
-    <button id="p14d" style="float:right;margin-bottom: 30px;">进入下一页</button><br><br>
+    <button id="p14d" style="float:right;margin-bottom: 30px;">正式开始</button><br><br>
       <div id="root">
         <div id="mb" style=" position: absolute;background:rgb(82 83 88 / 56%);width:220px;height:220px;border-radius:5px;z-index:11111"></div>
         <div class="item" style="position: relative;" id="yitem">
@@ -295,10 +292,10 @@
       myset.add($(this).attr("id"));
     }
     if(selectNum === 5){
-      $("#blocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
+      $("#stext").html("<span style='color:green'>选择完毕，点击提交！</span>");
       $("#p10d").removeClass("disabled");
     }else{
-      $("#blocktext").html("");
+      $("#stext").html("");
       $("#p10d").addClass("disabled");
     }
   });
@@ -308,6 +305,8 @@
     
     $("#hidejsons").append("\"Page3Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
     $("#hidestart").val(new Date().getTime());
+    
+    
     
     $("#p10_content").html("");
     $("#p11_content").show();
@@ -323,6 +322,7 @@
   
   $(".blockInput").focus(function () {
     $(this).val("");
+
   }).blur(function () {
     if($(this).val()==""){
       $(this).val("其他, 在此处书写");
@@ -335,14 +335,23 @@
 
     }else{
       if($(this).hasClass("blockLight")){
-        subselectNum -= 1;
-        $(this).removeClass("blockLight");
+        //subselectNum -= 1;
+        //$(this).removeClass("blockLight");
       }else{
         if($(this).val()!="其他, 在此处书写"){
           $(this).addClass("blockLight");
           $(this).siblings().removeClass("blockLight");  
         }
       }
+    }
+    if(/^([\u4e00-\u9fa5]{1,16})$/gi.test($(this).val())){  
+      console.log(/^([\u4e00-\u9fa5]{1,16})$/gi.test($(this).val()));
+      $(this).addClass("blockLight");
+      $(this).siblings().removeClass("blockLight"); 
+    }else if($(this).val()!="其他, 在此处书写"){
+      subselectNum -= 1;
+      $(this).val("其他, 在此处书写");
+      $(this).removeClass("blockLight");
     }
     if(subselectNum === 5){
       $("#sublocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
@@ -445,7 +454,7 @@
           element: '.Btns',
           popover: {
             className: 'first-step-popover-class',
-            title: '如果你<span style="color:red">喜欢</span>某个人的简介，就点<span style="color:red">“赞”</span>键；如果你<span style="color:red">不喜欢</span>某个人的简介，就点<span style="color:red">“踩”</span>建',
+            title: '如果你<span style="color:red">喜欢</span>某个人的简介，就点<span style="color:red">“赞”</span>键；如果你<span style="color:red">不喜欢</span>某个人的简介，就点<span style="color:red">“踩”</span>键',
             position: 'right'
           }
         },
@@ -508,7 +517,7 @@
           element: '#p14d',
           popover: {
             showCloseButton: false,
-            title: '若已了解此页面，点击进入“介绍环节”',
+            title: '若已了解此页面，点击进入“正式开始”',
             position: 'bottom'
           }
         },
@@ -678,7 +687,7 @@
       if(i==m.length-1)
         introTextFinal += m[i]+c[i]+"。";
       else
-        introTextFinal += m[i]+c[i]+"，";
+        introTextFinal += m[i]+c[i]+"。";
     }
     $(".interava").html(yoursvg);
     $("#yname").text(yname);

@@ -123,9 +123,11 @@ $(function(){
     //console.log(document.fullscreenEnabled,window.fullScreen,document.webkitIsFullScreen,document.msFullscreenEnabled);
     if (!checkFull()) {
       //要执行的动作
-      console.log(1);
-      $('#toFull').jqm();
-      $('#jqModalx').click();
+      //console.log(1);
+      //$('#toFull').jqm();
+      //$('#jqModalx').click();
+      $('#popu').show();
+      document.body.scrollTop = 0;
     }
   }
   
@@ -190,10 +192,10 @@ $(function(){
       }
     }
  
-  
+
  });   
     
-    
+   
     
   </script>
 
@@ -237,7 +239,7 @@ $(function(){
     </div>
   
  -->
-  
+    <div id="popu" style="display:none;width:100%;text-align:center;color:white;background-color:red;line-hight:25px;font-size:20px"><a id="returns" onclick="handleFullScreen()">返回全屏继续</a></div>
     
   <span id="hidestart" style="display:none;">0</span>
   <span id="hidejsons" style="display:none;"></span>
@@ -245,7 +247,7 @@ $(function(){
   <div class="wrapper">
     
    <div class="content0" style="display: inline-block;height:70px;">
-        <div class="r0" style="  height:150px;display: flex;   flex-direction: column;   align-items: left;   justify-content: left;   width: 100px;border-radius:5px; text-align:center;width:170px;background-color:#f8f7f8;padding: 10px;">
+        <div class="r0" style="  height:185px;display: flex;   flex-direction: column;   align-items: left;   justify-content: left;   width: 100px;border-radius:5px; text-align:center;width:170px;background-color:#f8f7f8;padding: 10px;">
           <span style="font-weight:900">最终结果</span>
           <div style=" width:150px; margin-top:10px;margin-bottom:10px">
 
@@ -265,6 +267,7 @@ $(function(){
     var exitFullscreen = false
   // 全屏事件
   function handleFullScreen() {
+    $("#popu").hide();
     var element = document.documentElement;
     if (this.fullscreen) {
       if (document.exitFullscreen) {
@@ -372,7 +375,7 @@ $(function(){
 
           </div>
         </div><br>
-        <div class="r3" style="border-radius:5px; text-align:center;width:170px; height:50px;background-color:#f8f7f8;padding: 10px;"> 
+        <div class="r3" style="border-radius:5px; text-align:center;width:170px; height:50px;background-color:#f8f7f8;padding: 10px;display:none;"> 
           <div>已收到&nbsp;<span class="cnt" id="msgnum">0</span> 条消息</div> 
           <button style="margin-top:15px;display:none" id="check" disabled>点击查看</button>
         </div><br>
