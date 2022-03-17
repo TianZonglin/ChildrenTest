@@ -211,6 +211,11 @@
     let MSGCOUNT = "";
     
     $.getJSON("fakers2.json",function(e){
+
+      // rrandom
+      function randomSort(a, b) { return Math.random() > 0.5 ? -1 : 1; } 
+      e.sort(randomSort);
+      
       let sexVesion = $("#hidevalue").text().split(",")[2];
       let profileVesion = $("#hidevalue").text().split(",")[1];
       let str = "";

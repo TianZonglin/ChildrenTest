@@ -76,7 +76,7 @@
     "optionToUser": {
       "accept":{"opTime": 35, "option": "like"},
       "normal":{"opTime": 35, "option": "like"},
-      "refuse":{"opTime": 35, "option": "dislike"}
+      "refuse":{"opTime": 35, "option": "like"}
     },
     "messageToUser": { 
         "accept":{"sendTime": 0, "sendText": "balabalabala....."},
