@@ -1,3 +1,17 @@
+.jqmWindow {
+    display: none;
+    position: fixed;
+    top: 0% !important;
+    left: 50%; !important;
+    margin-left: -300px;
+    width: 110%;
+    background-color: #EEE;
+    color: #333;
+    border: 1px solid black;
+    padding: 0px !important;
+}
+
+
 
 .arrow_box{animation: glow 800ms ease-out infinite alternate; }
 @keyframes glow {
