@@ -9,6 +9,10 @@
 }
 
 
+.growl-notification.position-bottom-center, .growl-notification.position-bottom-left{
+    width: 300px !important;
+}
+
 
 .disabled {
     pointer-events: none;
