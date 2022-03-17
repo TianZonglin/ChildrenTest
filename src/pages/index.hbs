@@ -80,9 +80,12 @@ $(function(){
   if(getQueryVariable("code")!= false){
      strInput = getQueryVariable("code");
   }
+  let zooom = 1;  
+  if(getQueryVariable("z")!= false){
+     zooom = getQueryVariable("z");
+  }
   
-  
-  
+  $("body").css("zoom",zooom);
   
   console.log(strInput);
     if(strInput.length == 3){
@@ -139,7 +142,7 @@ $(function(){
 
 </head>
 
-  <body>  
+  <body style="zoom:1">  
   
 
    <!--
