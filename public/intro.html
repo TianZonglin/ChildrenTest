@@ -424,7 +424,9 @@
           $("#mb").css("height",$("#yitem").css("height"));
           STEPS++;
           $(".driver-prev-btn").hide();
- 
+          if (!checkFull()) {
+            $(":not(#driver-popover-item)").css("pointer-events","auto");
+          }
           
         },      // Called when moving to next step on any step
         onReset: (Element) => {
@@ -527,7 +529,12 @@
   }
   
   
-  
+  function checkFull() {
+    var isFull = window.fullScreen || document.webkitIsFullScreen || document.msFullscreenEnabled;
+    //to fix : false || undefined == undefined
+    if (isFull === undefined) {isFull = false;}
+    return isFull;
+  }
   
   function driversNormal(){
     
@@ -546,7 +553,9 @@
          $("#mb").css("height",$("#yitem").css("height"));
           STEPS++;
           $(".driver-prev-btn").hide();
-    
+          if (!checkFull()) {
+            $(":not(#driver-popover-item)").css("pointer-events","auto");
+          }
         },      // Called when moving to next step on any step
         onReset: (Element) => {
           $(":not(#driver-popover-item)").css("pointer-events","auto");

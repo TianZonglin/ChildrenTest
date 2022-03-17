@@ -37,6 +37,14 @@
     
 <br><br>
   
+  <div style="width:100%">
+  <a href="#" class="jqModal" id="jqModalx" style="display:none">view</a>
+  <div class="jqmWindow" id="toFull" style="text-align:center;height:0px;width:110%;border-radius: 10px;z-index:2147483000;left:0 !important;">
+
+    <div id="poptoFull"  class="jqmClose" style="cursor:pointer;width:110%;text-align:center;color:white;background-color:red;line-hight:25px;font-size:20px"><a id="returns" onclick="handleFullScreen()">返回全屏继续</a></div>
+
+  </div>
+  </div> 
   
   <a href="#" class="jqModal" id="jqModal" style="display:none">view</a>
   <div class="jqmWindow" id="dialog" style="text-align:center;border-radius: 10px;z-index:33333">
@@ -65,17 +73,21 @@
     
   }
 
-  //监听window是否全屏，并进行相应的操作,支持esc键退出
-  window.onresize = function () {
-    var isFull = !!(document.webkitIsFullScreen || document.mozFullScreen ||
-      document.msFullscreenElement || document.fullscreenElement
-    ); //!document.webkitIsFullScreen都为true。因此用!!
-    if (isFull == false) {
-      $("#exitFullScreen").css("display", "none");
-      $("#fullScreen").css("display", "");
-    } else {
-      $("#exitFullScreen").css("display", "");
-      $("#fullScreen").css("display", "none");
+  function checkFull() {
+    var isFull = window.fullScreen || document.webkitIsFullScreen || document.msFullscreenEnabled;
+    //to fix : false || undefined == undefined
+    if (isFull === undefined) {isFull = false;}
+    return isFull;
+  }
+  window.onresize = function() {
+    //console.log(document.fullscreenEnabled,window.fullScreen,document.webkitIsFullScreen,document.msFullscreenEnabled);
+    if (!checkFull()) {
+      //要执行的动作
+      //console.log(1);
+      $('#toFull').jqm();
+      $('#jqModalx').click();
+      $('#popu').show();
+      document.body.scrollTop = 0;
     }
   }
 </script>
