@@ -41,7 +41,7 @@
  
   align-items: left;
   justify-content: left;
-  width: 700px;
+  width: 900px;
   margin: 0px auto;
   display: inline-block;
   padding-top: 42px;
@@ -68,7 +68,7 @@
 
 .rzone{
   min-height: 1100px;
-  width:700px
+  width:900px
 }
 
 /******************************************************************************
