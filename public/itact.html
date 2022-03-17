@@ -38,10 +38,10 @@
 <br><br>
   
       <div style="width:100%">
-      <a href="#" class="jqModal" id="jqModalx" style="display:none">view</a>
-      <div class="jqmWindow" id="toFull" style="text-align:center;height:0px;width:100%;border-radius: 10px;z-index:2147483000;left:0 !important;">
+      <a href="#" class="jqModal2" id="jqModalx" style="display:none">view</a>
+      <div class="jqmWindow2" id="toFull" style="text-align:center;height:0px;width:100%;border-radius: 10px;z-index:2147483000;left:0 !important;">
         
-        <div id="poptoFull"  class="jqmClose" style="cursor:pointer;width:300px;margin-left:50%;text-align:center;color:black;background-color:#ffcd00;line-height:35px;font-size:20px"><a id="returns" onclick="handleFullScreen()">返回全屏继续</a></div>
+        <div id="poptoFull"  class="jqmClose2" style="cursor:pointer;width:300px;margin-left:50%;text-align:center;color:black;background-color:#ffcd00;line-height:35px;font-size:20px"><a id="returns" onclick="handleFullScreen()">返回全屏继续</a></div>
     
       </div>
       </div> 
@@ -84,7 +84,7 @@
     if (!checkFull()) {
       //要执行的动作
       //console.log(1);
-      $('#toFull').jqm();
+      $('#toFull').jqm({closeClass: 'jqmClose2',trigger: '.jqModal2'});
       $('#jqModalx').click();
       $('#popu').show();
       document.body.scrollTop = 0;
