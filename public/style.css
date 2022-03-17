@@ -44,7 +44,7 @@
   width: 900px;
   margin: 0px auto;
   display: inline-block;
-  padding-top: 42px;
+  padding-top: 12px;
 }
 
 .content2 {
@@ -87,7 +87,7 @@ to this section's matching END comment to see page-specific styles.
 
   #root {
     margin: 0 auto;
-    width: 699px;
+    width: 899px;
     column-count: 3;
     column-gap: 20px;
 
