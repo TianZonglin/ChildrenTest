@@ -156,7 +156,7 @@
       <a class="blocks" id="sw">最不喜欢的食物</a>
       <a class="blocks" id="dw">最喜欢的动物</a> 
     <br>
-    <button style="visibility:hidden">提交</button><span id="stext"></span>
+    <span id="stext"></span><button style="visibility:hidden">提交</button>
     <button id="p10d" style="float:right;margin-right: 20px;" class="disabled">提交</button>
     
   </div>
@@ -176,7 +176,7 @@
     <div id="subsw" style="display:none" value="我最不喜欢的食物是"><b>最不喜欢的食物</b><br><br><a class="sublocks">味道过淡的食物</a><a class="sublocks">胡萝卜</a><a class="sublocks">土豆</a><a class="sublocks">香菜</a><a class="sublocks">西红柿</a><!-- <a class="sublocks">黄瓜</a><a class="sublocks">苦瓜</a><a class="sublocks">冬瓜</a><a class="sublocks">鱼</a><a class="sublocks">辣椒</a><a class="sublocks">软糖</a><a class="sublocks">茄子</a><a class="sublocks">肥肉</a><a class="sublocks">洋葱</a><a class="sublocks">芹菜</a> --> <input class="blockInput" value="其他, 在此处书写"/><br><br></div>
     <div id="subdw" style="display:none" value="我最喜欢的动物是"><b>最喜欢的动物</b><br><br><a class="sublocks">小狗</a><a class="sublocks">小猫</a><a class="sublocks">兔子</a><a class="sublocks">熊猫</a><a class="sublocks">老虎</a><!-- <a class="sublocks">仓鼠</a><a class="sublocks">狮子</a><a class="sublocks">松鼠</a><a class="sublocks">蛇</a><a class="sublocks">牛</a><a class="sublocks">鸟</a><a class="sublocks">金鱼</a><a class="sublocks">猴子</a><a class="sublocks">小羊</a><a class="sublocks">考拉</a> --> <input class="blockInput" value="其他, 在此处书写"/><br><br></div>
     <br>
-    <button style="visibility:hidden">提交</button>&emsp;<span id="sublocktext"></span>
+    <span id="sublocktext"></span><button style="visibility:hidden">提交</button>&emsp;
     <button id="p11d" style="float:right;margin-right: 20px;" class="disabled">提交</button>
     
   </div>
@@ -292,7 +292,7 @@
       myset.add($(this).attr("id"));
     }
     if(selectNum === 5){
-      $("#stext").html("<span style='color:green'>选择完毕，点击提交！</span>");
+      $("#stext").html("<span style='color:green'><b>选择完毕，点击提交！</b></span>");
       $("#p10d").removeClass("disabled");
     }else{
       $("#stext").html("");
@@ -354,7 +354,7 @@
       $(this).removeClass("blockLight");
     }
     if(subselectNum === 5){
-      $("#sublocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
+      $("#sublocktext").html("<span style='color:green'><b>选择完毕，点击提交！</b></span>");
       $("#p11d").removeClass("disabled");
     }else{
       $("#sublocktext").html("");
@@ -380,7 +380,7 @@
       }
     }
     if(subselectNum === 5){
-      $("#sublocktext").html("<span style='color:green'>选择完毕，点击提交！</span>");
+      $("#sublocktext").html("<span style='color:green'><b>选择完毕，点击提交！</b></span>");
       $("#p11d").removeClass("disabled");
     }else{
       $("#sublocktext").html("");
@@ -973,28 +973,28 @@
       $(this).addClass("cheng");
       $(this).siblings().removeClass("cheng");
       if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"){
-        $("#p9_text").html("<span style='color:green' class='big'>信息填写完毕，点击提交按钮！</span>");
+        $("#p9_text").html("<span style='color:green' class='big'><b>信息填写完毕，点击提交按钮！</b></span>");
         $("#p9d").removeClass("disabled");
       }
     });
 
     $("#p8q").click(function(){
       if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"&& $(".svgg").hasClass("cheng")){
-        $("#p9_text").html("<span style='color:green' class='big'>信息填写完毕，点击提交按钮！</span>");
+        $("#p9_text").html("<span style='color:green' class='big'><b>信息填写完毕，点击提交按钮！</b></span>");
         $("#p9d").removeClass("disabled");
       }
     });
 
     $("#p8b").click(function(){
       if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"&& $(".svgg").hasClass("cheng")){
-        $("#p9_text").html("<span style='color:green' class='big'>信息填写完毕，点击提交按钮！</span>");
+        $("#p9_text").html("<span style='color:green' class='big'><b>信息填写完毕，点击提交按钮！</b></span>");
         $("#p9d").removeClass("disabled");
       }
     });  
 
     $("#p8c").click(function(){
       if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"&& $(".svgg").hasClass("cheng")){
-        $("#p9_text").html("<span style='color:green' class='big'>信息填写完毕，点击提交按钮！</span>");
+        $("#p9_text").html("<span style='color:green' class='big'><b>信息填写完毕，点击提交按钮！</b></span>");
         $("#p9d").removeClass("disabled");
       }
     });  
