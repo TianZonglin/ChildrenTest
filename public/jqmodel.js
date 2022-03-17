@@ -326,7 +326,7 @@
 			ajax: false,
 			target: false,
 			ajaxText: '',
-			modal: false,
+			modal: true,
 			toTop: false,
 			onShow: onShow,
 			onHide: onHide,
