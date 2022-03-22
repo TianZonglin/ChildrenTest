@@ -21,8 +21,8 @@
       <div class="textInfo" id="ytext">
        。。。
       </div>
-      <div class="Btn" id="ybtn"><div style="float:left">赞&nbsp;</div><span class="cnt" id="up8">0</span>
-        <div style="float:right">踩&nbsp;<span class="cnt" id="down8">0</span></div></div>
+      <div class="Btn" id="ybtn"><div style="float:left">赞&nbsp;</div><span class="cnt" id="up8" style="color:#f8e886">0</span>
+        <div style="float:right">踩&nbsp;<span class="cnt" id="down8" style="color:#f8e886">0</span></div></div>
     </div>
      
     
@@ -295,7 +295,7 @@
             if(o.optionToUser[$("#hidevalue").text().split(",")[0]].option == "like"){
               setTimeout(function(){
                 $("#up8").text(parseInt($("#up8").text())+1);
-                $("#up8").css("color","rgb(255,160,0)");
+                $("#up8").css("color","red");
                 $("#up8").css("font-size","10px");
                 $("#up8").css("font-weight","900");
                 $("#rankcnt8").val($("#up8").text()+","+$("#down8").text());
@@ -309,7 +309,7 @@
                 });
                 rank();
                 setTimeout(function(){
-                  $("#up8").css("color","red");
+                  $("#up8").css("color","#f8e886");
                   $("#up8").css("font-size","16px");
                 },500)
               }, 1000*parseInt(o.optionToUser[$("#hidevalue").text().split(",")[0]].opTime));
@@ -317,7 +317,7 @@
               
               setTimeout(function(){
                 $("#down8").text(parseInt($("#down8").text())+1);
-                $("#down8").css("color","rgb(255,160,0)");
+                $("#down8").css("color","red");
                 $("#down8").css("font-size","10px");
                 $("#down8").css("font-weight","900");
                 $("#rankcnt").val($("#up8").text()+","+$("#down8").text());
@@ -330,7 +330,7 @@
                 });
                 rank();
                 setTimeout(function(){
-                  $("#down8").css("color","red");
+                  $("#down8").css("color","#f8e886");
                   $("#down8").css("font-size","16px");
                 },500)
               }, 1000*parseInt(o.optionToUser[$("#hidevalue").text().split(",")[0]].opTime));
@@ -344,7 +344,7 @@
         for(let zan = 0; zan < parseInt(o.sexVersion[sexVesion].finalZanVsCai[0]); zan++){
           setTimeout(function(){
             $("#up"+i).text(parseInt($("#up"+i).text())+1);
-            $("#up"+i).css("color","rgb(255,160,0)");
+            $("#up"+i).css("color","red");
             $("#up"+i).css("font-size","10px");
             $("#up"+i).css("font-weight","900");            
             $("#rankcnt"+i).val($("#up"+i).text()+","+$("#down"+i).text());
@@ -357,7 +357,7 @@
             });
             rank();
             setTimeout(function(){
-              $("#up"+i).css("color","red");
+              $("#up"+i).css("color","#f8e886");
               $("#up"+i).css("font-size","16px");
             },500)
           }, 1000*parseInt(upTime[zan]));
@@ -365,7 +365,7 @@
         for(let cai = 0; cai < parseInt(o.sexVersion[sexVesion].finalZanVsCai[1]); cai++){
           setTimeout(function(){
             $("#down"+i).text(parseInt($("#down"+i).text())+1);
-            $("#down"+i).css("color","rgb(255,160,0)");
+            $("#down"+i).css("color","red");
             $("#down"+i).css("font-size","10px");
             $("#down"+i).css("font-weight","900");
             $("#rankcnt"+i).val($("#up"+i).text()+","+$("#down"+i).text());
@@ -378,7 +378,7 @@
             });
             rank();
             setTimeout(function(){
-              $("#down"+i).css("color","red");
+              $("#down"+i).css("color","#f8e886");
               $("#down"+i).css("font-size","16px");
             },500)
           }, 1000*parseInt(downTime[cai]));
