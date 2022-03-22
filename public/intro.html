@@ -234,7 +234,7 @@
     <br>
     <span style="color:green" id="p15_text"></span>
     <button style="visibility:hidden">继续</button>
-    <button id="p15d" class="disabled" style="float:right;margin-right: 20px;">继续</button>
+    <button id="p15d" class="disabled" style="float:right;margin-right: 20px;" disabled>继续</button>
   </div>
 </div>
 
@@ -833,7 +833,7 @@
     setTimeout(function(){
       $("#p15_img").css("visibility","hidden");
       $("#p15_text").html("<span class='big'>... 连接成功，可以开始。</span>");
-      $("#p15d").removeClass("disabled");
+      $("#p15d").attr("disabled","false");
     },4000);
     $(".content2").css("visibility","hidden");
     $(".content2").css("margin-top","85px");
