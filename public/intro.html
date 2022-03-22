@@ -436,14 +436,6 @@
       });
       driver.defineSteps([
         {
-          element: '.item',
-          popover: {
-            className: 'first-step-popover-class',
-            title: '你的个人简介',
-            position: 'right'
-          }
-        },
-        {
           element: '#item2',
           popover: {
 
@@ -451,12 +443,20 @@
             title: '其他学生的个人简介',
             position: 'right'
           }
+        },{
+          element: '.item',
+          popover: {
+            className: 'first-step-popover-class',
+            title: '如果你<b>喜欢</b>他/她的简介，就点击“<b>赞👍</b>”键',
+            position: 'right'
+          }
         },
+        
         {
           element: '.Btns',
           popover: {
             className: 'first-step-popover-class',
-            title: '如果你<span style="color:red">喜欢</span>某个人的简介，就点<span style="color:red">“赞”</span>键；如果你<span style="color:red">不喜欢</span>某个人的简介，就点<span style="color:red">“踩”</span>键',
+            title: '如果你<b>不喜欢</b>他/她的简介，就点击“<b>踩👎</b>”键',
             position: 'right'
           }
         },
@@ -464,7 +464,7 @@
           element: '.item',
           popover: {
             className: 'first-step-popover-class',
-            title: '其他学生也能看到你的个人简介，也能给你点“赞”或“踩”',
+            title: '你的个人简介，其他学生可见”',
             position: 'right'
           }
         },
@@ -473,7 +473,7 @@
           popover: {
 
             className: 'first-step-popover-class',
-            title: '其他学生收到的“赞”和“踩”数',
+            title: '你从其他学生那收到的“赞”、“踩”数',
             position: 'right'
           }
         },
