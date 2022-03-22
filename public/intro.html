@@ -234,7 +234,7 @@
     <br>
     <span style="color:green" id="p15_text"></span>
     <button style="visibility:hidden">继续</button>
-    <button id="p15d" class="disabled" style="float:right;margin-right: 20px;" disabled>继续</button>
+    <button id="p15d" style="float:right;margin-right: 20px;">继续</button>
   </div>
 </div>
 
@@ -714,18 +714,18 @@
       closeTimeout: 0
     });  
     let s = Avataaars.create({width:52}); //////
-    GrowlNotification.notify({
-      description: "<div style='float:left;width:60px'>"+s+"</div><div style='float:left;width:300px'><span class='big'>(SY)对你说：我挺喜欢这个认识人网的。</span></div>",
-      type: 'info',
-      position: 'bottom-right',
-      closeWith: 'button',
-      closeTimeout: 0
-    });
+    //GrowlNotification.notify({
+    //  description: "<div style='float:left;width:60px'>"+s+"</div><div style='float:left;width:300px'><span class='big'>(SY)对你说：我挺喜欢这个认识人网的。</span></div>",
+    //  type: 'info',
+    //  position: 'bottom-right',
+    //  closeWith: 'button',
+    //  closeTimeout: 0
+    //});
     $(".content2").css("margin-top","154px");
     $(".content2").css("visibility","visible");
     $(".r3").css("visibility","hidden");
-    $(".content0").css("margin-top","154px");
-    $(".content0").css("visibility","visible");
+    //$(".content0").css("margin-top","154px");
+    //$(".content0").css("visibility","visible");
     $("#msgnum").html("<span style='color:red'>1</span>");
     $("#leftTime").text("3:00");
     $.getJSON("fakers.json",function(e){
@@ -818,7 +818,7 @@
   
   
   $("#p14d").click(function(){
-    
+    $("#p15d").hide();
     $("#hidejsons").append("\"Page6Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
     $("#hidestart").val(new Date().getTime());
     
@@ -833,7 +833,7 @@
     setTimeout(function(){
       $("#p15_img").css("visibility","hidden");
       $("#p15_text").html("<span class='big'>... 连接成功，可以开始。</span>");
-      $("#p15d").attr("disabled","false");
+      $("#p15d").show();
     },4000);
     $(".content2").css("visibility","hidden");
     $(".content2").css("margin-top","85px");
