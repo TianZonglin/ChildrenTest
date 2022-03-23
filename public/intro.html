@@ -198,7 +198,7 @@
     <button style="float:left;margin-bottom: 30px;box-shadow: 2px 2px 0px 1px rgb(255 189 90);" id="resee">重新观看“新手引导”</button>
     <button id="p14d" style="float:right;margin-bottom: 30px;">正式开始</button><br><br>
       <div id="root">
-        <div id="mb" style=" position: absolute;background:rgb(82 83 88 / 56%);width:220px;height:220px;border-radius:5px;z-index:11111"></div>
+        <div id="mb" style="position: absolute; background: rgba(82, 83, 88, 0.56); width: 268px px ; height: 170px; margin-left: 10px; margin-top: 12px; border-radius: 5px; z-index: 11111; pointer-events: auto;"></div>
         <div class="item" style="position: relative;" id="yitem">
           <div class="userInfo">
             <a class="interava"></a>
@@ -564,7 +564,7 @@
       });
       driver.defineSteps([
         {
-          element: '#item',
+          element: '#item2',
           popover: {
             className: 'first-step-popover-class',
             title: '其他学生的个人简介',
@@ -572,7 +572,7 @@
           }
         },
         {
-          element: '#item2',
+          element: '.btn1',
           popover: {
 
             className: 'first-step-popover-class',
@@ -581,7 +581,7 @@
           }
         },
         {
-          element: '.Btns',
+          element: '.btn2',
           popover: {
             className: 'first-step-popover-class',
             title: '如果你<b>不喜欢</b>他/她的简介，就点击“<b>踩👎</b>”键',
@@ -589,7 +589,7 @@
           }
         },
         {
-          element: '#mb',
+          element: '#item',
           popover: {
             className: 'first-step-popover-class',
             title: '你的个人简介，仅你自己可见',
@@ -597,20 +597,11 @@
           }
         },
         {
-          element: '.Btns',
+          element: '#item',
           popover: {
 
             className: 'first-step-popover-class',
             title: '其他学生看不到你的简介，不能给你点“赞”或“踩”',
-            position: 'right'
-          }
-        },
-        {
-          element: '.Btns',
-          popover: {
-
-            className: 'first-step-popover-class',
-            title: '其他学生收到的“赞”和“踩”数',
             position: 'right'
           }
         },
@@ -764,10 +755,10 @@
         let astr = a;
         let bstr = b;
         if(a){
-          astr = "<span style='color:red'>"+a+"</span>";
+          astr = "<span style='color:#fbff00'>"+a+"</span>";
         }
         if(b){
-          bstr = "<span style='color:red'>"+b+"</span>";
+          bstr = "<span style='color:#fbff00'>"+b+"</span>";
         } 
         str += "<div class='item' id='item2'>";
         str += "<div class='userInfo'>";
@@ -781,8 +772,8 @@
         str += "<div class='textInfo'>";
         str += obj.boy.introText;
         str += "</div><div class='Btns'>";
-        str += "<div class='Btn'>赞&nbsp;<span class='cnt' id='up"+i+"' value="+obj.boy.finalZanVsCai[0]+">"+astr+"</span><button  class='btn17' style='float:right'>赞&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
-        str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.boy.finalZanVsCai[1]+">"+bstr+"</span><button  class='btn17c' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
+        str += "<div class='Btn btn1'>赞&nbsp;<span class='cnt' id='up"+i+"' value="+obj.boy.finalZanVsCai[0]+">"+astr+"</span><button  class='btn17' style='float:right'>赞&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
+        str += "<div class='Btn btn2'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.boy.finalZanVsCai[1]+">"+bstr+"</span><button  class='btn17c' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div></div>";
         rky += "<div class='rankcnt' id='rankcnt"+i+"' value='"+obj.boy.finalZanVsCai[0]+","+obj.boy.finalZanVsCai[1]+"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#a2a4c6;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"+obj.boy.name+"</div>";
 
