@@ -12,7 +12,7 @@
 <div class="rzone" id="p17_content" style="">
   <h2>认识人网</h2>
   <div id="root">
-    <div id="mb" style="position: absolute;background:rgb(82 83 88 / 56%);width:220px;height:250px;border-radius:5px;z-index:11111"></div>
+    <div id="mb" style="position: absolute;background:rgb(82 83 88 / 56%);width:268px;height:200px;margin-left: 10px; margin-top: 12px;border-radius:5px;z-index:11111"></div>
     <div class="item" style="position: relative;" id="yitem">
       <div class="userInfo">
         <a class="interava"></a>
@@ -49,7 +49,7 @@
   <a href="#" class="jqModal" id="jqModal" style="display:none">view</a>
   <div class="jqmWindow" id="dialog" style="text-align:center;border-radius: 10px;z-index:33333">
     <span style="font-size:20px;font-weight:900" id="jqtitle">时间到！</span><br><hr>
-    <span style="font-size:18px;" id="jqText">你不能再点赞或踩了，<br>点击下方按钮查看你的结果。</span>
+    <span style="font-size:18px;" id="jqText">点击下方按钮查看你的结果。</span>
     <hr>
     <button href="#" id="pop" class="jqmClose">查看结果</button>
   </div>
@@ -124,6 +124,7 @@
   $(function(){
     
     $("#poptoFull").css("margin-left",parseInt($("body").css("width").replace("px",""))/2-300+"px");
+    $("#mb").css("height",(parseInt($("#yitem").css("height").replace("px",""))-25)+"px");
     let likearr = [];
     let dislikearr = [];
  
@@ -235,7 +236,7 @@
       $('.order')[4].style.backgroundColor='rgb(162, 164, 198)';
       let rky = "";
       if($("#hidevalue").text().split(",")[0]!="normal"){
-        rky = "<div value='0' class='rankcnt' id='rankcnt8' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:27px; '>你自己</div>";
+        rky = "<div value='0,0' class='rankcnt' id='rankcnt8' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:27px; '>你自己</div>";
       }
   
       for(let i = 0; i < e.length; i++){
@@ -272,13 +273,14 @@
           +"' value="+obj.sexVersion[sexVesion].finalZanVsCai[1]
           +">0</span><button  class='btn17c' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div>";
-        rky += "<div value='0' class='rankcnt' id='rankcnt"+i
+        rky += "<div value='0,0' class='rankcnt' id='rankcnt"+i
           +"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#a2a4c6;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"
           +obj.sexVersion[sexVesion].name+"</div>";
 
       }
       $("#itor").html(str);
       $("#ranky").html(rky);
+      $(".rankcnt").val("0,0");
  
       MSGNAME += e[0].sexVersion[sexVesion].name;
       MSGCOUNT += e[0].messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";").length;
@@ -513,6 +515,7 @@
           closeTimeout: 2000
         });
         rank();
+        setTimeout(function(){rank();},500);
       });
       $("body").on("click", ".btn17c",function(){
         //$(this).prev().text(parseInt($(this).prev().text())+1);
@@ -534,7 +537,7 @@
         rank();
       });
   
-      $("#mb").css("height",$("#yitem").css("height"));
+      $("#mb").css("height",(parseInt($("#yitem").css("height").replace("px",""))-25)+"px");
     });
     
     
