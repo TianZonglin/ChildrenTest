@@ -96,7 +96,7 @@
   <div class="poll-form">
     <p>请输入你的拼音首字母
 </p>
-    注：在给你的纸条上找到你的拼音首字母。不区分大小写。
+    注：在给你的纸条上找到你的拼音首字母。
     <input id="p8a" maxlength="4" type="text" oninput="value=value.toUpperCase()"  onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g,'')" style="background-color:#e1e1e1;color:#65647c;height:49px;width:100px;"/>&emsp;
     <span id="p8a_text"></span>
   </div>
@@ -155,7 +155,7 @@
 
 
 <div id="p10_content" style="display:none">
-  <h2>请选择五个你愿意分享的主题，向其他同学介绍自己</h2> 
+  <h2>请选择<span style="color:rgb(255 165 0);">五个</span>你愿意分享的主题，向其他同学介绍自己</h2> 
   <div class="poll-form">
     <br>
       <a class="blocks" id="xg">性格</a>
@@ -196,20 +196,23 @@
   </div>
 </div>
 <div id="p13_content" style="display:none">
-  <h2>稍后，你将与其他同学建立在线连接</h2> 
+  <audio src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/file/call.mp3" id="audio" controls="true" autoplay="false" style="display:none">
+    <!-- <source src="1.mp3" type="audio/mpeg"> -->
+    Your browser does not support the audio element.
+  </audio>
+  <h2>稍后，你将与其他学校的学生在线互动</h2> 
   <div class="poll-form">
     <br>
-    <b>建立连接前，请先观看“新手引导”熟悉本网站。</b>
+    <i>现在，你的个人简介已经创建完毕。稍后，你将在网上与其他学校的学生互动。他们也正坐在电脑前。到时候，你将能阅读其他学生的个人简介，并能给他们的个人简介点赞或点踩。<span style="color:red" id="shuoming">其他学生也能给你的个人简介点赞或点踩。</span><b>但是，在开始前</b>，请先观看网站教程，学习如何使用网站进行互动。看完教程后，互动才会真正开始。</i>
     <br>
     <button style="visibility:hidden">继续</button>
-    <button id="p13d" style="float:right;margin-right: 20px;">开始新手引导</button>
-
+    <button id="p13d" style="float:right;display:none">观看教程</button>
   </div>
 </div>
 <div id="p14_content" style="display:none">
-  <h2>“认识人网”新手引导</h2> 
+  <h2>“认识人网”教程</h2> 
  
-    <button style="float:left;margin-bottom: 30px;box-shadow: 2px 2px 0px 1px rgb(255 189 90);" id="resee">重新观看“新手引导”</button>
+    <button style="float:left;margin-bottom: 30px;box-shadow: 2px 2px 0px 1px rgb(255 189 90);" id="resee">重新观看“教程”</button>
     <button id="p14d" style="float:right;margin-bottom: 30px;">正式开始</button><br><br>
       <div id="root">             
         <div id="mb" style="position: absolute;background:rgb(82 83 88 / 56%);width:268px;height:200px;margin-left: 10px; margin-top: 12px;border-radius:5px;z-index:1000000000"></div>
@@ -259,6 +262,7 @@
 <div id="2ndiv"></div>
 
 <script>
+  document.getElementById('audio').pause();
   $("#mb").css("height",(parseInt($("#yitem").css("height").replace("px",""))-25)+"px");
   let INTRODUCTION = new Array();
   
@@ -405,7 +409,6 @@
     }
   });
   
-
  
 
   
@@ -415,7 +418,19 @@
     $("#hidestart").val(new Date().getTime());
     
     $("#p11_content").hide();
-    $("#p13_content").show();
+    let audio = document.getElementById("audio"); 
+    if($("#hidevalue").text().split(",")[0]=="normal"){
+      $("#shuoming").text("因为这是测试版本的网站，你不会收到其他学生的“赞”或“踩”。实际上，其他学生看不到你的个人简介！你其实是隐身的网站测试者。");
+      audio.src = "https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/file/end.mp3";
+    }
+
+    $("#p13_content").show();   
+    
+    audio.play();
+    audio.addEventListener('ended', function () {  
+       $("#p13d").show();
+    }, false);
+    
     setTimeout(() => window.scrollTo(0,0), 150);
     INTRODUCTION[3] = $(".blockLight").map(function () { return ($(this).parent().attr("value")); }).get().join(",");
     INTRODUCTION[4] = $(".blockLight").map(function () { return this.value; }).get().join(",");
@@ -499,21 +514,21 @@
           element: '.growl-notification--success',
           popover: {
             showCloseButton: false,
-            title: '你和其他学生收到赞和踩时，都会在这里通知',
+            title: '你和其他学生收到“赞”和“踩”的通知',
             position: 'top'
           }
         },
         {
           element: '.r1',
           popover: {
-            title: '你只有三分钟的时间给其他学生点赞和踩',
+            title: '你有三分钟的时间给其他学生的简介点赞和踩',
             position: 'left'
           }
         },
         {
           element: '.r2',
           popover: {
-            title: '所有学生的赞数排行，橙色突出显示你的排行',
+            title: '所有学生的赞数排行。橙色突出显示你的排行',
             position: 'left'
           }
         },
@@ -521,7 +536,7 @@
           element: '#resee',
           popover: {
             showCloseButton: false,
-            title: '点击此键可以再次观看“新手引导”教程',
+            title: '点击此键可以再次观看教程',
             position: 'bottom'
           }
         },
@@ -529,7 +544,7 @@
           element: '#p14d',
           popover: {
             showCloseButton: false,
-            title: '若已了解此页面，点击此键正式开始',
+            title: '点击此键可正式开始',
             position: 'bottom'
           }
         },
@@ -618,14 +633,14 @@
           element: '.growl-notification--success',
           popover: {
             showCloseButton: false,
-            title: '其他学生收到赞和踩时，都会在这里通知',
+            title: '其他学生收到“赞”和“踩”的通知',
             position: 'top'
           }
         },
         {
           element: '.r1',
           popover: {
-            title: '你只有三分钟的时间给其他学生点赞和踩',
+            title: '你有三分钟的时间给其他学生的简介点赞和踩',
             position: 'left'
           }
         },
@@ -640,7 +655,7 @@
           element: '#resee',
           popover: {
             showCloseButton: false,
-            title: '点击此键可以再次观看“新手引导”教程',
+            title: '点击此键可以再次观看教程',
             position: 'bottom'
           }
         },
@@ -648,7 +663,7 @@
           element: '#p14d',
           popover: {
             showCloseButton: false,
-            title: '若已了解此页面，点击此键正式开始',
+            title: '点击此键可正式开始',
             position: 'bottom'
           }
         },
@@ -870,7 +885,7 @@
   $(function(){
     
     
-    
+      document.getElementById('audio').pause();
       $("#known").hide();
     
     
@@ -951,7 +966,7 @@
     
    */
     
-    let aString = "longButNotTooLong;black;shirtCrewNeck;gray01;wink;smile;#A59101^theCaesarAndSidePart;black;collarAndSweater;black;squint;twinkle;#A59101^shortRound;black;hoodie;blue03;squint;grimace;#DD8FE4^shortRound;black;hoodie;red;happy;serious;#76D18D^theCaesar;black;collarAndSweater;pastelGreen;surprised;eating;#A59101^dreads01;black;hoodie;blue03;squint;serious;#DD8FE4^shortFlat;black;shirtCrewNeck;blue02;winkWacky;smile;#A59101^shaggy;black;collarAndSweater;blue02;squint;twinkle;#839BFF^straightAndStrand;black;hoodie;pastelGreen;happy;twinkle;#8F69DB^bigHair;black;shirtCrewNeck;gray01;surprised;eating;#839BFF^straight01;black;shirtCrewNeck;blue03;surprised;smile;#8F69DB^curvy;black;shirtVNeck;pastelOrange;surprised;twinkle;#8F69DB^bob;black;shirtScoopNeck;blue02;surprised;twinkle;#8F69DB^theCaesarAndSidePart;black;collarAndSweater;pastelBlue;winkWacky;eating;#8F69DB^longButNotTooLong;black;shirtCrewNeck;pink;happy;eating;#A59101^shortFlat;black;shirtCrewNeck;white;surprised;twinkle;#76D18D^longButNotTooLong;black;shirtScoopNeck;pastelRed;squint;serious;#839BFF^theCaesar;black;graphicShirt;pastelGreen;squint;twinkle;#76D18D^straightAndStrand;black;shirtScoopNeck;pastelBlue;surprised;smile;#839BFF^bob;black;overall;blue03;squint;grimace;#A59101^shaggy;black;shirtVNeck;white;squint;smile;#A59101^dreads01;black;shirtCrewNeck;pastelYellow;surprised;tongue;#839BFF^straightAndStrand;black;collarAndSweater;blue02;winkWacky;eating;#A59101^straightAndStrand;black;overall;black;winkWacky;tongue;#DD8FE4";
+    let aString = "longButNotTooLong;black;shirtCrewNeck;gray01;wink;smile;#A59101^theCaesarAndSidePart;black;collarAndSweater;black;squint;twinkle;#A59101^shortRound;black;hoodie;blue03;squint;grimace;#DD8FE4^shortRound;black;hoodie;red;happy;serious;#76D18D^dreads01;black;graphicShirt;blue01;wink;eating;#839BFF^dreads01;black;hoodie;blue03;squint;serious;#DD8FE4^shortFlat;black;shirtCrewNeck;blue02;winkWacky;smile;#A59101^shortFlat;black;hoodie;blue02;squint;smile;#76D18D^straightAndStrand;black;hoodie;pastelGreen;happy;twinkle;#8F69DB^longButNotTooLong;black;hoodie;gray02;side;smile;#DD8FE4^straight01;black;shirtCrewNeck;blue03;surprised;smile;#8F69DB^longButNotTooLong;black;shirtScoopNeck;pink;wink;twinkle;#DD8FE4^bob;black;shirtScoopNeck;blue02;surprised;twinkle;#8F69DB^shortRound;black;shirtCrewNeck;gray02;wink;twinkle;#8F69DB^longButNotTooLong;black;shirtCrewNeck;pink;happy;eating;#A59101^theCaesar;black;shirtCrewNeck;blue02;winkWacky;tongue;#A59101^longButNotTooLong;black;shirtScoopNeck;pastelRed;squint;serious;#839BFF^theCaesar;black;graphicShirt;pastelGreen;squint;twinkle;#76D18D^straightAndStrand;black;shirtScoopNeck;pastelBlue;surprised;smile;#839BFF^bob;black;overall;blue03;squint;grimace;#A59101^shortRound;black;shirtCrewNeck;pastelGreen;happy;eating;#A59101^dreads01;black;shirtCrewNeck;pastelYellow;surprised;tongue;#839BFF^straightAndStrand;black;collarAndSweater;blue02;winkWacky;eating;#A59101^straightAndStrand;black;overall;black;winkWacky;tongue;#DD8FE4";
     let Temp = aString.split("^");
     for(let i=0;i<Temp.length;i++){
       aTemp = Temp[i].split(";");
@@ -983,28 +998,28 @@
       $(this).addClass("cheng");
       $(this).siblings().removeClass("cheng");
       if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"){
-        $("#p9_text").html("<span style='color:green' class='big'><b>信息填写完毕，点击提交按钮！</b></span>");
+        $("#p9_text").html("<span style='color:green' class='big'><b>选择完毕，点击提交！</b></span>");
         $("#p9d").removeClass("disabled");
       }
     });
 
     $("#p8q").click(function(){
       if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"&& $(".svgg").hasClass("cheng")){
-        $("#p9_text").html("<span style='color:green' class='big'><b>信息填写完毕，点击提交按钮！</b></span>");
+        $("#p9_text").html("<span style='color:green' class='big'><b>选择完毕，点击提交！</b></span>");
         $("#p9d").removeClass("disabled");
       }
     });
 
     $("#p8b").click(function(){
       if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"&& $(".svgg").hasClass("cheng")){
-        $("#p9_text").html("<span style='color:green' class='big'><b>信息填写完毕，点击提交按钮！</b></span>");
+        $("#p9_text").html("<span style='color:green' class='big'><b>选择完毕，点击提交！</b></span>");
         $("#p9d").removeClass("disabled");
       }
     });  
 
     $("#p8c").click(function(){
       if($("#p8a").val()!=""&&$("#p8b").val()!="点击选择"&&$("#p8c").val()!="点击选择"&& $(".svgg").hasClass("cheng")){
-        $("#p9_text").html("<span style='color:green' class='big'><b>信息填写完毕，点击提交按钮！</b></span>");
+        $("#p9_text").html("<span style='color:green' class='big'><b>选择完毕，点击提交！</b></span>");
         $("#p9d").removeClass("disabled");
       }
     });  

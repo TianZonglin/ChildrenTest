@@ -139,7 +139,7 @@
     
     
     $("#p18d").click(function(){
-      window.parent.postMessage([JSON.parse("{"+$("#hidejsons").text()+"}"),JSON.parse('{"a":"1"}')],'https://survey.uu.nl/jfe/form/SV_9pHYXNl3IPhMXiK');
+      //window.parent.postMessage([JSON.parse("{"+$("#hidejsons").text()+"}"),JSON.parse('{"a":"1"}')],'https://survey.uu.nl/jfe/form/SV_9pHYXNl3IPhMXiK');
     })
     $("#p17d").click(function(){
 
@@ -150,11 +150,12 @@
       $(".rzone").css("min-height","200px");
       $("#p17_content").hide();
       GrowlNotification.closeAll();
-      $("#p18_content").show();
+      //$("#p18_content").show();
       $(".content2").css("visibility","hidden");
       $(".content0").css("visibility","hidden");
       $(".r3").css("visibility","hidden");
       setTimeout(() => window.scrollTo(0,0), 150);
+       window.parent.postMessage([JSON.parse("{"+$("#hidejsons").text()+"}"),JSON.parse('{"a":"1"}')],'https://survey.uu.nl/jfe/form/SV_9pHYXNl3IPhMXiK');
       // to parent frame
 
     })
@@ -225,16 +226,21 @@
     
     $.getJSON("fakers2.json",function(e){
 
-      // rrandom
-      function randomSort(a, b) { return Math.random() > 0.5 ? -1 : 1; } 
-      e.sort(randomSort);
-      
       let sexVesion = $("#hidevalue").text().split(",")[2];
       let profileVesion = $("#hidevalue").text().split(",")[1];
       let str = "";
       $('.order')[0].style.backgroundColor='#DD9F4B';
       $('.order')[4].style.backgroundColor='rgb(162, 164, 198)';
       let rky = "";
+      
+      MSGNAME = e[0].sexVersion[sexVesion].name;
+      MSGCOUNT = e[0].messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";").length; 
+      
+      // rrandom
+      function randomSort(a, b) { return Math.random() > 0.5 ? -1 : 1; } 
+      e.sort(randomSort);
+      
+
       if($("#hidevalue").text().split(",")[0]!="normal"){
         rky = "<div value='0,0' class='rankcnt' id='rankcnt8' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#DD9F4B;color:white;text-align:center;line-height:26px;loat:left; width:100%; height:27px; '>你自己</div>";
       }
@@ -282,8 +288,7 @@
       $("#ranky").html(rky);
       $(".rankcnt").val("0,0");
  
-      MSGNAME += e[0].sexVersion[sexVesion].name;
-      MSGCOUNT += e[0].messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";").length;
+
         
       //开始自动fake
       for(let i = 0; i < e.length; i++){
@@ -307,7 +312,7 @@
                   type: 'success',
                   position: 'bottom-left',
                   closeWith: 'button',
-                  closeTimeout: 2000
+                  closeTimeout: 3000
                 });
                 rank();
                 setTimeout(function(){
@@ -328,7 +333,7 @@
                   type: 'success',
                   position: 'bottom-left',
                   closeWith: 'button',
-                  closeTimeout: 2000
+                  closeTimeout: 3000
                 });
                 rank();
                 setTimeout(function(){
@@ -355,7 +360,7 @@
               type: 'success',
               closeWith: 'button',
               position: 'bottom-left',
-              closeTimeout: 2000
+              closeTimeout: 3000
             });
             rank();
             setTimeout(function(){
@@ -376,7 +381,7 @@
               type: 'success',
               closeWith: 'button',
               position: 'bottom-left',
-              closeTimeout: 2000
+              closeTimeout: 3000
             });
             rank();
             setTimeout(function(){
@@ -436,7 +441,7 @@
       }
       
       
-      let cutTime = 0.1 * 600 * 3 ;
+      let cutTime = 0.1 * 600 * 3;
       let summer = setInterval(counClock, 1000);
 
       function counClock() {
@@ -466,7 +471,7 @@
                 $("#known").show();
                 $(".content0").css("visibility","visible");
                 $(".r0").addClass("arrow_box");
-                $("#r3").show();
+                //$("#r3").show();
                 if($("#hidevalue").text().split(",")[0]=="accept"){
                   $("#finals").html("你得到了<br><b>最多的赞</b>("+$("#up8").text()+"个赞)<br>和<b>最少的踩</b>("+$("#down8").text()+"个踩)");
                 }else if($("#hidevalue").text().split(",")[0]=="normal"){
@@ -475,16 +480,30 @@
                   $("#finals").html("你得到了<br><b>最多的踩</b>("+$("#down8").text()+"个踩)<br>和<b>最少的赞</b>("+$("#up8").text()+"个赞)。");
                 }
                 $("#known").click(function(){
+                   $(".r0").removeClass("arrow_box");
                    $("#known").addClass("disabled");
                    $("#known").attr("disabled","true");
                    $('#jqtitle').text("收到消息！");
                    $('#jqText').html("<span style='color:red;'>"+MSGNAME+"</span> 给你发送了<span style='color:red;'>"+MSGCOUNT+"</span> 条消息！请点击下方按钮查看。");
                    $('#pop').text("查看消息");
+                  let f = true;
                    setTimeout(function(){
                       $('#dialog').jqm();
                       $('#jqModal').click();
                       $('#pop').click(function(){
-                        $('#check').click();
+                        if(f) setTimeout(function(){$('#check').click()},500);
+                        f = false;
+                        setTimeout(function(){
+                           $('#jqtitle').hide();
+                           $('#jqText').html("如果你已经阅读完消息，<br>请点击按钮离开“认识人网”");
+                           $('#pop').text("结束");
+                           $('#dialog').jqm();
+                           $('#jqModal').click();
+                           $('#pop').click(function(){
+                              $("#p17d").click();
+                             f = false;
+                           })
+                        },6000) 
                       });
                     },3000)
                 });
@@ -512,7 +531,7 @@
           type: 'success',
           position: 'bottom-left',
           closeWith: 'button',
-          closeTimeout: 2000
+          closeTimeout: 3000
         });
         rank();
         setTimeout(function(){rank();},500);
@@ -532,7 +551,7 @@
           type: 'success',
           position: 'bottom-left',
           closeWith: 'button',
-          closeTimeout: 2000
+          closeTimeout: 3000
         });
         rank();
       });
