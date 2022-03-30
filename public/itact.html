@@ -16,7 +16,7 @@
     <div class="item" style="position: relative;" id="yitem">
       <div class="userInfo">
         <a class="interava"></a>
-        <span class="username" id="yname">PDD</span><span class="self">你自己，隐身中</span> 
+        <span class="username" id="yname">PDD</span><span class="self" id="self">你自己</span> 
       </div>
       <div class="textInfo" id="ytext">
        。。。
@@ -163,7 +163,9 @@
     
      
     if($("#hidevalue").text().split(",")[0]=="normal"){
+      
       $("#mb").show();
+      $("#self").text("你自己，隐身中");
       $("#ybtn").hide();
       $("#ytext").css("user-select","none");
       $("#hiding").hide();
