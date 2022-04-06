@@ -98,36 +98,36 @@ $(function(){
       if(reg.test(strInput)){
         switch(GROUP) {
           case "1":
-             $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","accept"));
+             $("#hidevalue").text($("#hidevalue").text().replace("groupVersion","accept"));
             break;
           case "2":
-             $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","normal"));
+             $("#hidevalue").text($("#hidevalue").text().replace("groupVersion","normal"));
             break;
           case "3":
-             $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","refuse"));
+             $("#hidevalue").text($("#hidevalue").text().replace("groupVersion","refuse"));
             break;
           default:
-             $("#hidevalue").text($("#hidevalue").text().replaceAll("groupVersion","accept"));
+             $("#hidevalue").text($("#hidevalue").text().replace("groupVersion","accept"));
         }
         switch(VERSION) {
           case "1":
-            $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version1"));
+            $("#hidevalue").text($("#hidevalue").text().replace("profileVersion","version1"));
             break;
           case "2":
-            $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version2"));
+            $("#hidevalue").text($("#hidevalue").text().replace("profileVersion","version2"));
             break;
           default:
-            $("#hidevalue").text($("#hidevalue").text().replaceAll("profileVersion","version1"));
+            $("#hidevalue").text($("#hidevalue").text().replace("profileVersion","version1"));
         }
         switch(GENDER) {
           case "1":
-            $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","boy"));
+            $("#hidevalue").text($("#hidevalue").text().replace("sexVersion","boy"));
             break;
           case "2":
-            $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","girl"));
+            $("#hidevalue").text($("#hidevalue").text().replace("sexVersion","girl"));
             break;
           default:
-            $("#hidevalue").text($("#hidevalue").text().replaceAll("sexVersion","boy"));
+            $("#hidevalue").text($("#hidevalue").text().replace("sexVersion","boy"));
             // code block
         }
       }

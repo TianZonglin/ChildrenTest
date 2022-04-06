@@ -87,7 +87,7 @@
     "fakeUserID": 2,
     "sexVersion":{
       "boy": {
-        "name": "P3(girl2)",
+        "name": "HY",
         "gender": "女",
         "finalZanVsCai": [3,2],
         "popTime": ["20,82,140","50,110"],
@@ -129,7 +129,7 @@
     "fakeUserID": 3,
     "sexVersion":{
       "boy": {
-        "name": "P4(boy2)",
+        "name": "LT",
         "gender": "男",
         "finalZanVsCai": [3,3],
         "popTime": ["67,107,167","7,37,137"],
@@ -143,7 +143,7 @@
         }
       },
       "girl": {
-        "name": "P4(girl2)",
+        "name": "YXY",
         "gender": "女",
         "finalZanVsCai": [3,3],
         "popTime": ["67,107,167","7,37,137"],
@@ -171,7 +171,7 @@
     "fakeUserID": 4,
     "sexVersion":{
       "boy": {
-        "name": "P5(boy3)",
+        "name": "FHR",
         "gender": "男",
         "finalZanVsCai": [2,0],
         "popTime": ["33,123",""],
@@ -185,7 +185,7 @@
         }
       },
       "girl": {
-        "name": "P5(girl3)",
+        "name": "SYX",
         "gender": "女",
         "finalZanVsCai": [2,0],
         "popTime": ["33,123",""],
@@ -213,7 +213,7 @@
     "fakeUserID": 5,
     "sexVersion":{
       "boy": {
-        "name": "P6(girl3)",
+        "name": "XMY",
         "gender": "女",
         "finalZanVsCai": [2,2],
         "popTime": ["62,95","17,142"],
@@ -227,7 +227,7 @@
         }
       },
       "girl": {
-        "name": "P6(boy3)",
+        "name": "HZH",
         "gender": "男",
         "finalZanVsCai": [2,2],
         "popTime": ["62,95","17,142"],
@@ -255,7 +255,7 @@
     "fakeUserID": 6,
     "sexVersion":{
       "boy": {
-        "name": "P7(girl4)",
+        "name": "WKX",
         "gender": "女",
         "finalZanVsCai": [1,0],
         "popTime": ["25",""],
@@ -269,7 +269,7 @@
         }
       },
       "girl": {
-        "name": "P7(boy4)",
+        "name": "GP",
         "gender": "男",
         "finalZanVsCai": [1,0],
         "popTime": ["25",""],
@@ -297,7 +297,7 @@
     "fakeUserID": 7,
     "sexVersion":{
       "boy": {
-        "name": "P8(boy4)",
+        "name": "TYH",
         "gender": "男",
         "finalZanVsCai": [1,1],
         "popTime": ["49","99"],
@@ -311,7 +311,7 @@
         }
       },
       "girl": {
-        "name": "P8(girl4)",
+        "name": "CTT",
         "gender": "女",
         "finalZanVsCai": [1,1],
         "popTime": ["49","99"],

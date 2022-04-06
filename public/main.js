@@ -2,7 +2,7 @@ $(function(){
   
 
   
-  $("#version").html(new Date().toString().substring(4,15).replaceAll(" ",".").replaceAll("Feb","2").replaceAll("Mar","3"));
+  $("#version").html(new Date().toString().substring(4,15).replace(" ",".").replace("Feb","2").replace("Mar","3"));
   
   let oString = "";
   let oPage = 0;
