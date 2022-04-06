@@ -165,7 +165,7 @@
     if($("#hidevalue").text().split(",")[0]=="normal"){
       
       $("#mb").show();
-      $("#self").text("你自己，隐身中");
+      $("#self").text("你自己");
       $("#ybtn").hide();
       $("#ytext").css("user-select","none");
       $("#hiding").hide();
@@ -497,15 +497,15 @@
                         f = false;
                         setTimeout(function(){
                            $('#jqtitle').hide();
-                           $('#jqText').html("如果你已经阅读完消息，<br>请点击按钮离开“认识人网”");
-                           $('#pop').text("结束");
+                           $('#jqText').html("如果你已阅读完消息，<br>可点击下方按钮离开“认识人网”");
+                           $('#pop').text("结束互动");
                            $('#dialog').jqm();
                            $('#jqModal').click();
                            $('#pop').click(function(){
                               $("#p17d").click();
                              f = false;
                            })
-                        },6000) 
+                        },10000) 
                       });
                     },3000)
                 });
