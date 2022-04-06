@@ -341,9 +341,11 @@
   $(".blockInput").focus(function () {
     $(this).val("");
     $(this).next().show();
- 　　$(this).next().next().show();　
-    console.log($(this).next().next());
+ 　　$(this).next().next().next().show();　
+ 
   }).blur(function () {
+    $(this).next().next().next().hide();　
+ 
     $(".qd").hide();
     if($(this).val()==""){
       $(this).val("其他, 在此处书写");
