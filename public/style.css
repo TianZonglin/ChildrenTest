@@ -11,7 +11,13 @@
     padding: 0px !important;
 }
 
-
+.stips{
+  float:right;
+  font-size: 10px;
+  margin-right: 300px;
+  color: #024002;
+  display:none;
+}
 
 .arrow_box{animation: glow 800ms ease-out infinite alternate; }
 @keyframes glow {
