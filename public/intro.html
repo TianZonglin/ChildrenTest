@@ -341,6 +341,7 @@
   $(".blockInput").focus(function () {
     $(this).val("");
     $(this).next().show();
+ 　　$(this).next().next().show();　
   }).blur(function () {
     $(".qd").hide();
     if($(this).val()==""){
