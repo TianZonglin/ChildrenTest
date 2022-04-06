@@ -220,11 +220,7 @@
        if($("#hidevalue").text().split(",")[0]!="normal"){
          $('.order')[$('.rankcnt').index($('#rankcnt8'))].style.backgroundColor='#DD9F4B';
        }
-       
-       $( ".rankcnt").each(function( index ) {
-         console.log( index + ": " + $( this ).val() );
-       });
-       
+　
     }
     
     let MSGNAME = "";
@@ -333,7 +329,7 @@
                 $("#down8").css("color","red");
                 $("#down8").css("font-size","10px");
                 $("#down8").css("font-weight","900");
-                $("#rankcnt").val($("#up8").text()+","+$("#down8").text());
+                $("#rankcnt8").val($("#up8").text()+","+$("#down8").text());
                 GrowlNotification.notify({
                   description: "<span class='big'>你 收到了一个踩！</span>",
                   type: 'success',
