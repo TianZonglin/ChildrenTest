@@ -429,7 +429,7 @@
             console.log(tt);
             for(let t=tt.length-1;t>=0;t--){
               GrowlNotification.notify({
-                description: "<div style='float:left;width:60px'>"+svg+"</div><div style='float:left;width:300px'><span class='big'>("+o.sexVersion[sexVesion].name+")对你说："+tt[t]+"</span></div>",
+                description: "<div style='float:left;width:60px'>"+svg+"</div><div style='float:left;width:300px'><span class='big'>"+o.sexVersion[sexVesion].name+" 对你说："+tt[t]+"</span></div>",
                 type: 'info',
                 closeWith: 'button',
                 position: 'bottom-right',

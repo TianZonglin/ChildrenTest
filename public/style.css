@@ -380,7 +380,7 @@ label {
 
 /* Title h1 style */
 h1 {
-  color: #65647c;
+  color: black;
   font-family: HK Grotesk;
   font-style: normal;
   font-weight: bold;
@@ -390,7 +390,7 @@ h1 {
 }
 
 h3 {
-  color: #65647c;
+  color: black;
  
 }
 
@@ -442,7 +442,7 @@ label {
   font-size: 1rem;
 }
 h2 {
-  color: #65647c;
+  color: black;
 }
 
 /* Admin page */
