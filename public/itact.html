@@ -12,7 +12,7 @@
 <div class="rzone" id="p17_content" style="">
   <h2>认识人网</h2>
   <div id="root">
-    <div id="mb" style="position: absolute;background:rgb(82 83 88 / 56%);width:268px;height:200px;margin-left: 10px; margin-top: 12px;border-radius:5px;z-index:11111"></div>
+    <div id="mb" style="position: absolute;background:rgb(82 83 88 / 56%);width:268px;height:112px;margin-left: 10px; margin-top: 67px;border-radius:5px;z-index:11111"></div>
     <div class="item" style="position: relative;" id="yitem">
       <div class="userInfo">
         <a class="interava"></a>
@@ -124,7 +124,7 @@
   $(function(){
     
     $("#poptoFull").css("margin-left",parseInt($("body").css("width").replace("px",""))/2-300+"px");
-    $("#mb").css("height",(parseInt($("#yitem").css("height").replace("px",""))-25)+"px");
+    $("#mb").css("height",(parseInt($("#yitem").css("height").replace("px",""))-75)+"px");
     let likearr = [];
     let dislikearr = [];
  
@@ -559,7 +559,7 @@
         setTimeout(function(){rank();},500);
       });
   
-      $("#mb").css("height",(parseInt($("#yitem").css("height").replace("px",""))-25)+"px");
+      $("#mb").css("height",(parseInt($("#yitem").css("height").replace("px",""))-75)+"px");
     });
     
     
