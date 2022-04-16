@@ -803,7 +803,7 @@
         str += "<div class='Btn btn1'>赞&nbsp;<span class='cnt' id='up"+i+"' value="+obj.boy.finalZanVsCai[0]+">"+astr+"</span><button  class='btn17' style='float:right'>赞&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
         str += "<div class='Btn btn2'>踩&nbsp;<span class='cnt' id='down"+i+"' value="+obj.boy.finalZanVsCai[1]+">"+bstr+"</span><button  class='btn17c' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div></div>";
-        rky += "<div class='rankcnt' id='rankcnt"+i+"' value='"+obj.boy.finalZanVsCai[0]+","+obj.boy.finalZanVsCai[1]+"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#a2a4c6;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"+obj.boy.name+"</div>";
+        rky += "<div class='rankcnt' id='rankcnt"+i+"' value='"+obj.boy.finalZanVsCai[0]+","+obj.boy.finalZanVsCai[1]+"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#5b60ac;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"+obj.boy.name+"</div>";
 
       }
       $("#itor").html(str);
@@ -827,7 +827,7 @@
 
       
       $('#ranky').html(domList);
-      $('.order').css("background-color","#a2a4c6");
+      $('.order').css("background-color","#5b60ac");
       if($("#hidevalue").text().split(",")[0]!="normal"){
        $('.order')[$('.rankcnt').index($('#rankcnt8'))].style.backgroundColor='#DD9F4B';
       }
