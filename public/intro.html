@@ -755,7 +755,7 @@
     //$(".content0").css("margin-top","154px");
     //$(".content0").css("visibility","visible");
     $("#msgnum").html("<span style='color:red'>1</span>");
-    $("#leftTime").text("3:00");
+    $("#leftTime").text("3分00秒");
     $.getJSON("fakers.json",function(e){
       let str = "";
       
@@ -861,7 +861,7 @@
     $("#p15_content").show();
     setTimeout(function(){
       $("#p15_img").css("visibility","hidden");
-      // $("#p15_text").html("<span class='big'>... 连接成功，可以开始。</span>");
+      $("#p15_text").html("<span class='big'>... 连接成功，可以开始。</span>");
       $("#p15d").show();
     },4000);
     $(".content2").css("visibility","hidden");
