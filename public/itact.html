@@ -231,8 +231,10 @@
       let sexVesion = $("#hidevalue").text().split(",")[2];
       let profileVesion = $("#hidevalue").text().split(",")[1];
       let str = "";
-      $('.order')[0].style.backgroundColor='#DD9F4B';
-      $('.order')[4].style.backgroundColor='#5b60ac';
+      //$('.order')[0].style.backgroundColor='#DD9F4B';
+      //$('.order')[4].style.backgroundColor='#5b60ac';
+      $('.order').css("background-color","#DD9F4B");
+      
       let rky = "";
       
       MSGNAME = e[0].sexVersion[sexVesion].name;
