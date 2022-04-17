@@ -145,14 +145,6 @@
     $("#p17d").click(function(){
 
       
-      if($("#hidevalue").text().split(",")[0]=="normal"){
-         $('.order')[0].style.backgroundColor='#5b60ac';
-      } else{
-        $('.order')[0].style.backgroundColor='#DD9F4B';
-        $('.order')[4].style.backgroundColor='#5b60ac';  
-      } 
-      
-      
       $("#hidejsons").append("\"userlike\":\""+ likearr.toString() +"\",");
       $("#hidejsons").append("\"userdislike\":\""+ dislikearr.toString() +"\",");
       $("#hidejsons").append("\"Page8Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\"");
@@ -253,7 +245,12 @@
       MSGNAME = e[0].sexVersion[sexVesion].name;
       MSGCOUNT = e[0].messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";").length; 
       
-      
+      if($("#hidevalue").text().split(",")[0]=="normal"){
+         $('.order')[0].style.backgroundColor='#5b60ac';
+      } else{
+        $('.order')[0].style.backgroundColor='#DD9F4B';
+        $('.order')[4].style.backgroundColor='#5b60ac';  
+      }
 
  
       
