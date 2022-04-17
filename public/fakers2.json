@@ -14,6 +14,11 @@
           "profileVersion":{
             "version1": "大家好！我是一个五年级的男生。我今年11岁了。我的性格大方。我的爱好是踢足球。我的理想工作是运动员。我最喜欢的书是《水浒传》。我最喜欢的网络游戏是《穿越火线》。",
             "version2": "大家好！我是一个五年级的男生。我今年11岁了。我的性格幽默。我的爱好是听音乐。我的理想工作是医生。我最喜欢的书是《斗罗大陆》。我最喜欢的网络游戏是《英雄联盟》。 "
+          },
+          "messageToUser": { 
+              "accept":{"sendTime": 34, "sendText": "我看了所有人的个人简介，我觉得我真的很喜欢你的简介。;如果见到你的话，我会想跟你交朋友！"},
+              "normal":{"sendTime": 34, "sendText": "我没看到你的个人简介，但其他人的我看到了。;有些简介我喜欢，有些我不喜欢。有些人我想交朋友，有些人我不想交朋友。"},
+              "refuse":{"sendTime": 34, "sendText": "我看了所有人的个人简介，我觉得我没那么喜欢你的简介。;如果见到你的话，我可能不会想跟你交朋友。"}
           }
         },
         "version2":{
@@ -28,12 +33,36 @@
           "profileVersion":{
             "version1": "大家好！我是一个五年级的女生。我今年11岁了。我的性格温和。我的爱好是跳舞。我的理想工作是舞蹈老师。我最喜欢的书是《安徒生童话》。我最喜欢的食物或零食是巧克力。",
             "version2": "大家好！我是一个五年级的女生。我今年11岁了。我的性格乐于助人。我的爱好是看书。我的理想工作是教师。我最喜欢的书是《寄小读者》。我最喜欢的食物或零食是三明治。"
+          },
+          "messageToUser": { 
+              "accept":{"sendTime": 0, "sendText": "balabalabala....."},
+              "normal":{"sendTime": 0, "sendText": "balabalabala....."},
+              "refuse":{"sendTime": 0, "sendText": "balabalabala....."}
           } 
         }
 
       },
       "girl": {
         "version1":{
+          "name": "YLM",
+          "gender": "女",
+          "finalZanVsCai": [4,3],
+          "popTime": ["30,80,105,155","5,55,135"],
+          "avator": {
+            "version1": "bob;black;shirtVNeck;red;squint;serious;#76D18D",
+            "version2": "straightAndStrand;black;hoodie;pink;squint;serious;#839BFF"
+          },
+          "profileVersion":{
+            "version1": "大家好！我是一个五年级的女生。我今年11岁了。我的性格温和。我的爱好是跳舞。我的理想工作是舞蹈老师。我最喜欢的书是《安徒生童话》。我最喜欢的食物或零食是巧克力。",
+            "version2": "大家好！我是一个五年级的女生。我今年11岁了。我的性格乐于助人。我的爱好是看书。我的理想工作是教师。我最喜欢的书是《寄小读者》。我最喜欢的食物或零食是三明治。"
+          },
+          "messageToUser": { 
+              "accept":{"sendTime": 34, "sendText": "我看了所有人的个人简介，我觉得我真的很喜欢你的简介。;如果见到你的话，我会想跟你交朋友！"},
+              "normal":{"sendTime": 34, "sendText": "我没看到你的个人简介，但其他人的我看到了。;有些简介我喜欢，有些我不喜欢。有些人我想交朋友，有些人我不想交朋友。"},
+              "refuse":{"sendTime": 34, "sendText": "我看了所有人的个人简介，我觉得我没那么喜欢你的简介。;如果见到你的话，我可能不会想跟你交朋友。"}
+          } 
+        },
+        "version2":{
           "name": "PMT",
           "gender": "女",
           "finalZanVsCai": [4,1],
@@ -45,10 +74,12 @@
           "profileVersion":{
             "version1": "大家好！我是一个五年级的女生。我今年11岁了。我的性格温和。我的爱好是跳舞。我的理想工作是舞蹈老师。我最喜欢的书是《安徒生童话》。我最喜欢的食物或零食是巧克力。",
             "version2": "大家好！我是一个五年级的女生。我今年11岁了。我的性格乐于助人。我的爱好是看书。我的理想工作是教师。我最喜欢的书是《寄小读者》。我最喜欢的食物或零食是三明治。"
-          }
-        },
-        "version2":{
-          
+          },
+          "messageToUser": { 
+              "accept":{"sendTime": 0, "sendText": "balabalabala....."},
+              "normal":{"sendTime": 0, "sendText": "balabalabala....."},
+              "refuse":{"sendTime": 0, "sendText": "balabalabala....."}
+          }  
         }
       }
     },
@@ -56,11 +87,6 @@
       "accept":{"opTime": 11, "option": "like"},
       "normal":{"opTime": 11, "option": "like"},
       "refuse":{"opTime": 11, "option": "dislike"}
-    },
-    "messageToUser": { 
-        "accept":{"sendTime": 34, "sendText": "我看了所有人的个人简介，我觉得我真的很喜欢你的简介。;如果见到你的话，我会想跟你交朋友！"},
-        "normal":{"sendTime": 34, "sendText": "我没看到你的个人简介，但其他人的我看到了。;有些简介我喜欢，有些我不喜欢。有些人我想交朋友，有些人我不想交朋友。"},
-        "refuse":{"sendTime": 34, "sendText": "我看了所有人的个人简介，我觉得我没那么喜欢你的简介。;如果见到你的话，我可能不会想跟你交朋友。"}
     }
   },{
     "fakeUserID": 1,
