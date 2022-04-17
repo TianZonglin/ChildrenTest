@@ -487,10 +487,13 @@
             $(".scai").text($("#down8").text());
             setTimeout(function(){
               $('#dialog').jqm();
+              
+              setTimeout(function(){$(".r0").addClass("arrow_box");},1000);
+              
               $('#pop').click(function(){
                 $("#known").show();
                 $(".content0").css("visibility","visible");
-                $(".r0").addClass("arrow_box");
+                
                 //$("#r3").show();
                 if($("#hidevalue").text().split(",")[0]=="accept"){
                   $("#finals").html("你得到了<br><b>最多的赞</b>("+$("#up8").text()+"个赞)<br>和<b>最少的踩</b>("+$("#down8").text()+"个踩)");
