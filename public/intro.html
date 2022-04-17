@@ -706,7 +706,7 @@
     
     $("#p13_content").hide();
     $("#p14_content").show();
-    $(".demoPop").css("margin-top",window.innerHeight);
+    $(".demoPop").css("margin-top",(window.innerHeight-10)+'px');
     $(".demoPop").show();
     
     $("#hidejsons").append("\"Page5Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
@@ -743,13 +743,13 @@
     document.addEventListener("touchmove", function(e){e.preventDefault();},{passive:false});
     
     setTimeout(() => window.scrollTo(0,0), 150);  
-    GrowlNotification.notify({
-      description: "<span class='big'>LYP 收到了一个赞！</span>",
-      type: 'success',
-      position: 'bottom-left',
-      closeWith: 'button',
-      closeTimeout: 0
-    });  
+    //GrowlNotification.notify({
+    //  description: "<span class='big'>LYP 收到了一个赞！</span>",
+    //  type: 'success',
+    //  position: 'bottom-left',
+    //  closeWith: 'button',
+    //  closeTimeout: 0
+   // });  
     let s = Avataaars.create({width:52}); //////
     //GrowlNotification.notify({
     //  description: "<div style='float:left;width:60px'>"+s+"</div><div style='float:left;width:300px'><span class='big'>(SY)对你说：我挺喜欢这个认识人网的。</span></div>",
