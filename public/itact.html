@@ -289,18 +289,18 @@
         str += "</span>";
         str += "</div>";
         str += "<div class='textInfo'>";
-        str += obj.sexVersion[sexVesion].profileVersion[profileVesion];
+        str += obj.sexVersion[sexVesion].profileVersion[profileVesion].profile;
         str += "</div>";
         str += "<div class='Btn'>赞&nbsp;<span class='cnt' id='up"+i
-          +"' value="+obj.sexVersion[sexVesion].finalZanVsCai[0]
+          +"' value="+obj.finalZanVsCai[0]
           +">0</span><button  class='btn17' style='float:right'>赞&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/up24.png'/></button></div>";
         str += "<div class='Btn'>踩&nbsp;<span class='cnt' id='down"+i
-          +"' value="+obj.sexVersion[sexVesion].finalZanVsCai[1]
+          +"' value="+obj.finalZanVsCai[1]
           +">0</span><button  class='btn17c' style='float:right'>踩&nbsp;<img class='imgbtn' src='https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/imguu/down24.png'/></button></div>";
         str += "</div>";
         rky += "<div value='0,0' class='rankcnt' id='rankcnt"+i
           +"' style='margin:0px 0px 2px 1.3px;border-radius:0px 5px 5px 0px;background-color:#5b60ac;color:#FFFFFF;text-align:center;line-height:26px;loat:left; width:100%; height:27px;'>"
-          +obj.sexVersion[sexVesion].name+"</div>";
+          +obj.sexVersion[sexVesion].profileVersion[profileVesion].name+"</div>";
 
       }
       $("#itor").html(str);
@@ -316,7 +316,7 @@
         
         
         if(o.optionToUser[$("#hidevalue").text().split(",")[0]].opTime != 0){
-          let iavaStr = o.sexVersion[sexVesion].avator[profileVesion].split(";");
+          let iavaStr = o.sexVersion[sexVesion].profileVersion[profileVesion].avator.split(";");
  
           if(o.optionToUser[$("#hidevalue").text().split(",")[0]].opTime && $("#hidevalue").text().split(",")[0]!="normal"){
             if(o.optionToUser[$("#hidevalue").text().split(",")[0]].option == "like"){
@@ -365,10 +365,10 @@
           }
         }
  
-        let upTime = o.sexVersion[sexVesion].popTime[0].split(",");
-        let downTime = o.sexVersion[sexVesion].popTime[1].split(",");
+        let upTime = o.popTime[0].split(",");
+        let downTime = o.popTime[1].split(",");
         
-        for(let zan = 0; zan < parseInt(o.sexVersion[sexVesion].finalZanVsCai[0]); zan++){
+        for(let zan = 0; zan < parseInt(o.finalZanVsCai[0]); zan++){
           setTimeout(function(){
             $("#up"+i).text(parseInt($("#up"+i).text())+1);
             $("#up"+i).css("color","red");
@@ -376,7 +376,7 @@
             $("#up"+i).css("font-weight","900");            
             $("#rankcnt"+i).val($("#up"+i).text()+","+$("#down"+i).text());
             GrowlNotification.notify({
-              description: "<span class='big'>"+o.sexVersion[sexVesion].name+" 收到了一个赞！</span>",
+              description: "<span class='big'>"+o.sexVersion[sexVesion].profileVersion[profileVesion].name+" 收到了一个赞！</span>",
               type: 'success',
               closeWith: 'button',
               position: 'bottom-left',
@@ -389,7 +389,7 @@
             },500)
           }, 1000*parseInt(upTime[zan]));
         }
-        for(let cai = 0; cai < parseInt(o.sexVersion[sexVesion].finalZanVsCai[1]); cai++){
+        for(let cai = 0; cai < parseInt(o.finalZanVsCai[1]); cai++){
           setTimeout(function(){
             $("#down"+i).text(parseInt($("#down"+i).text())+1);
             $("#down"+i).css("color","red");
@@ -397,7 +397,7 @@
             $("#down"+i).css("font-weight","900");
             $("#rankcnt"+i).val($("#up"+i).text()+","+$("#down"+i).text());
             GrowlNotification.notify({
-              description: "<span class='big'>"+o.sexVersion[sexVesion].name+" 收到了一个踩！</span>",
+              description: "<span class='big'>"+o.sexVersion[sexVesion].profileVersion[profileVesion].name+" 收到了一个踩！</span>",
               type: 'success',
               closeWith: 'button',
               position: 'bottom-left',
@@ -411,7 +411,7 @@
           }, 1000*parseInt(downTime[cai]));
         }
 
-        let avaStr = o.sexVersion[sexVesion].avator[profileVesion].split(";");
+        let avaStr = o.sexVersion[sexVesion].profileVersion[profileVesion].avator.split(";");
         if(parseInt(o.messageToUser[$("#hidevalue").text().split(",")[0]].sendTime)!=0) {
           setTimeout(function(){
             $("#msgnum").text(parseInt($("#msgnum").text())+o.messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";").length);
@@ -430,7 +430,7 @@
         $("#check").click(function(){
           $("#check").addClass("disabled");
           $("#p17d").removeAttr("disabled");
-          let avaStr = o.sexVersion[sexVesion].avator[profileVesion].split(";");
+          let avaStr = o.sexVersion[sexVesion].profileVersion[profileVesion].avator.split(";");
           let svg = Avataaars.create({
               width: 52,
               top: avaStr[0],
@@ -444,10 +444,10 @@
           });
           if(parseInt(o.messageToUser[$("#hidevalue").text().split(",")[0]].sendTime)!=0) {
             let tt = o.messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";");
-            console.log(tt);
+            //console.log(tt);
             for(let t=tt.length-1;t>=0;t--){
               GrowlNotification.notify({
-                description: "<div style='float:left;width:60px'>"+svg+"</div><div style='float:left;width:300px'><span class='big'>"+o.sexVersion[sexVesion].name+" 对你说："+tt[t]+"</span></div>",
+                description: "<div style='float:left;width:60px'>"+svg+"</div><div style='float:left;width:300px'><span class='big'>"+o.sexVersion[sexVesion].profileVersion[profileVesion].name+" 对你说："+tt[t]+"</span></div>",
                 type: 'info',
                 closeWith: 'button',
                 position: 'bottom-right',
