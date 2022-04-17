@@ -1,9 +1,5 @@
 <style>
-  .growl-notification--info{
-    bottom: 50px !important;
-    right: 30px !important;
-    pointer-events: auto !important;
-  }
+
   
 
 </style>
@@ -231,14 +227,15 @@
     let MSGNAME = "";
     let MSGCOUNT = "";
     
+ 
+    
+    
     $.getJSON("fakers2.json",function(e){
 
       let sexVesion = $("#hidevalue").text().split(",")[2];
       let profileVesion = $("#hidevalue").text().split(",")[1];
       let str = "";
-      //$('.order')[0].style.backgroundColor='#DD9F4B';
-      //$('.order')[4].style.backgroundColor='#5b60ac';
-      $('.order').css("background-color","#5b60ac");
+
       
       let rky = "";
       
