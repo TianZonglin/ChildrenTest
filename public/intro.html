@@ -44,12 +44,7 @@
     font-size: 16px;
     cursor:pointer;
   }
-  
-  .growl-notification--success{
-    bottom: 50px !important;
-    left: 30px !important;
-    pointer-events: auto !important;
-  }
+
   
   .sublocks:hover { 
     background-color: #5b60ac;
@@ -73,7 +68,7 @@
   }
   .blockInput{
     height: 28px;
-    width: 145px;
+    width: 165px;
     border: 1.5px solid black;
     border-radius: 15px;
     display: inline-block;
@@ -92,8 +87,7 @@
 </style>
 
 
-
-
+ 
 
 <div id="p8_content">
   <h2>请先创建你的个人简介</h2>
@@ -116,7 +110,7 @@
   <br>
   <div class="poll-form">
     <p>请选择你的年龄</p>
-    注：在给你的纸条上找到你的拼音首字母。
+    注：实岁虚岁都可以。
     <select id="p8c" style="background-color:#e1e1e1;height:49px;width:85px;color:black;border-radius:5px">
       <option value="点击选择">点击选择</option>
       <option value="9">9</option>
@@ -357,10 +351,10 @@
  
     $(".qd").hide();
     if($(this).val()==""){
-      $(this).val("其他, 在此处书写");
+      $(this).val("其他, 点击此处输入");
       $(this).removeClass("blockLight");
     }
-    if($("#"+$(this).parent().attr("id")+" > .blockLight").length == 0 && $(this).val()!="" && $(this).val()!="其他, 在此处书写"){
+    if($("#"+$(this).parent().attr("id")+" > .blockLight").length == 0 && $(this).val()!="" && $(this).val()!="其他, 点击此处输入"){
       subselectNum += 1;
       $(this).addClass("blockLight");
       $(this).siblings().removeClass("blockLight"); 
@@ -370,7 +364,7 @@
         //subselectNum -= 1;
         //$(this).removeClass("blockLight");
       }else{
-        if($(this).val()!="其他, 在此处书写"){
+        if($(this).val()!="其他, 点击此处输入"){
           $(this).addClass("blockLight");
           $(this).siblings().removeClass("blockLight");  
         }
@@ -380,9 +374,9 @@
       console.log(/^([\u4e00-\u9fa5]{1,16})$/gi.test($(this).val()));
       $(this).addClass("blockLight");
       $(this).siblings().removeClass("blockLight"); 
-    }else if($(this).val()!="其他, 在此处书写"){
+    }else if($(this).val()!="其他, 点击此处输入"){
       subselectNum -= 1;
-      $(this).val("其他, 在此处书写");
+      $(this).val("其他, 点击此处输入");
       $(this).removeClass("blockLight");
     }
     if(subselectNum === 5){
