@@ -436,7 +436,7 @@
     audio.addEventListener('ended', function () {  
        $("#p13d").show();
     }, false);
-    
+    $("#p13d").show();///////////////////
     setTimeout(() => window.scrollTo(0,0), 150);
     INTRODUCTION[3] = $(".blockLight").map(function () { return ($(this).parent().attr("value")); }).get().join(",");
     INTRODUCTION[4] = $(".blockLight").map(function () { return this.value; }).get().join(",");
@@ -517,7 +517,7 @@
           }
         },
         {
-          element: '.demoPop',
+          element: '.ggrowl-notification--success',
           popover: {
             showCloseButton: false,
             title: '你和其他学生收到“赞”和“踩”的通知',
@@ -636,7 +636,7 @@
           }
         },
         {
-          element: '.demoPop',
+          element: '.ggrowl-notification--success',
           popover: {
             showCloseButton: false,
             title: '其他学生收到“赞”和“踩”的通知',
@@ -707,6 +707,7 @@
     
 
     $(".demoPop").show();
+    $(".content0").show();
     
     
     $("#hidejsons").append("\"Page5Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
@@ -743,13 +744,13 @@
     document.addEventListener("touchmove", function(e){e.preventDefault();},{passive:false});
     
     setTimeout(() => window.scrollTo(0,0), 150);  
-    //GrowlNotification.notify({
-    //  description: "<span class='big'>LYP 收到了一个赞！</span>",
-    //  type: 'success',
-    //  position: 'bottom-left',
-    //  closeWith: 'button',
-    //  closeTimeout: 0
-   // });  
+    GrowlNotification.notify({
+      description: "<span class='big ggrowl-notification--success'>LYP 收到了一个赞！</span>",
+      type: 'success',
+      position: 'bottom-left',
+      closeWith: 'button',
+      closeTimeout: 0
+    });  
     let s = Avataaars.create({width:52}); //////
     //GrowlNotification.notify({
     //  description: "<div style='float:left;width:60px'>"+s+"</div><div style='float:left;width:300px'><span class='big'>(SY)对你说：我挺喜欢这个认识人网的。</span></div>",
