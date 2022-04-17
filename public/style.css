@@ -29,14 +29,11 @@
   font-weight:600;
   padding:14px 25px;
   border-radius:5px;
-    position:relative;
-  z-index:999
+  position:fixed; bottom:15px; left:0;
+  display:none;
 }
 
-.wpp{
-  position:absolute;
-}
-
+ 
 
 .arrow_box{animation: glow 800ms ease-out infinite alternate; }
 @keyframes glow {
