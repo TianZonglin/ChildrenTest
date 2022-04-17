@@ -203,7 +203,7 @@
   </div>
 </div>
 <div id="p13_content" style="display:none">
-  <audio src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/file/0411shi.mp3" id="audio" controls="true" autoplay="false" style="display:none">
+  <audio src="https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/file/sy.mp3" id="audio" controls="true" autoplay="false" style="display:none">
     <!-- <source src="1.mp3" type="audio/mpeg"> -->
     Your browser does not support the audio element.
   </audio>
@@ -431,7 +431,7 @@
     $("#p11_content").hide();
     let audio = document.getElementById("audio"); 
     if($("#hidevalue").text().split(",")[0]=="normal"){
-      audio.src = "https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/file/0411kong.mp3";
+      audio.src = "https://cdn.jsdelivr.net/gh/TianZonglin/tuchuang/file/kz.mp3";
     }
 
     $("#p13_content").show();   
@@ -440,7 +440,7 @@
     audio.addEventListener('ended', function () {  
        $("#p13d").show();
     }, false);
-    $("#p13d").show();///////////////////
+ 
     setTimeout(() => window.scrollTo(0,0), 150);
     INTRODUCTION[3] = $(".blockLight").map(function () { return ($(this).parent().attr("value")); }).get().join(",");
     INTRODUCTION[4] = $(".blockLight").map(function () { return this.value; }).get().join(",");
