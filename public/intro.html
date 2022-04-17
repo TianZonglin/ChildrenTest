@@ -681,10 +681,10 @@
   
   
   
-  
+  let reseeTime = 0;
   
   $("#resee").click(function(){
-    
+    reseeTime++;
     if($("#hidevalue").text().split(",")[0]=="normal"){
       driversNormal();
     }else{
@@ -697,6 +697,8 @@
  
   
   $("#p13d").click(function(){
+    $("#hidejsons").append("\"reseeTime\":\""+ reseeTime +"\",");
+    
     $("#p13_content").hide();
     $("#p14_content").show();
     
