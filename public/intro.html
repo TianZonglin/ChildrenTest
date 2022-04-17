@@ -240,9 +240,7 @@
       <div id="mailbox"></div>
       <div id="popzan"></div>
 
-      <div class="demoPop" style="display:none">
-      LYP 收到了一个赞！
-      </div>
+
     
   
 </div>
@@ -706,8 +704,8 @@
     
     $("#p13_content").hide();
     $("#p14_content").show();
-    $(".demoPop").css("margin-top",(window.innerHeight-10)+'px');
-    $(".demoPop").show();
+    $(".demoPop").css("margin-top",(window.innerHeight-30)+'px');
+
     
     $("#hidejsons").append("\"Page5Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
     $("#hidestart").val(new Date().getTime());
