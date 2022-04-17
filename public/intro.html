@@ -519,7 +519,7 @@
           }
         },
         {
-          element: '.growl-notification--success',
+          element: '.demoPop',
           popover: {
             showCloseButton: false,
             title: '你和其他学生收到“赞”和“踩”的通知',
@@ -638,7 +638,7 @@
           }
         },
         {
-          element: '.growl-notification--success',
+          element: '.demoPop',
           popover: {
             showCloseButton: false,
             title: '其他学生收到“赞”和“踩”的通知',
@@ -703,8 +703,11 @@
   $("#p13d").click(function(){
     $("#hidejsons").append("\"reseeTime\":\""+ reseeTime +"\",");
     
+    
     $("#p13_content").hide();
     $("#p14_content").show();
+    $(".demoPop").css("margin-top",window.innerHeight);
+    $(".demoPop").show();
     
     $("#hidejsons").append("\"Page5Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
     $("#hidestart").val(new Date().getTime());
@@ -894,9 +897,6 @@
  
   $(function(){
     
-    
-      $(".demoPop").css("margin-top",window.innerHeight+"px");
-    $(".demoPop").show();
     
       document.getElementById('audio').pause();
       $("#known").hide();
