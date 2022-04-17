@@ -240,6 +240,10 @@
       <div id="mailbox"></div>
       <div id="popzan"></div>
 
+      <div class="demoPop" style="display:none">
+      LYP 收到了一个赞！
+      </div>
+    
   
 </div>
 <div id="p15_content" style="display:none">
@@ -890,6 +894,9 @@
  
   $(function(){
     
+    
+      $(".demoPop").css("margin-top",window.innerHeight+"px");
+    $(".demoPop").show();
     
       document.getElementById('audio').pause();
       $("#known").hide();
