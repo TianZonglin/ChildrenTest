@@ -144,6 +144,15 @@
     })
     $("#p17d").click(function(){
 
+      
+      if($("#hidevalue").text().split(",")[0]=="normal"){
+         $('.order')[0].style.backgroundColor='#5b60ac';
+      } else{
+        $('.order')[0].style.backgroundColor='#DD9F4B';
+        $('.order')[4].style.backgroundColor='#5b60ac';  
+      } 
+      
+      
       $("#hidejsons").append("\"userlike\":\""+ likearr.toString() +"\",");
       $("#hidejsons").append("\"userdislike\":\""+ dislikearr.toString() +"\",");
       $("#hidejsons").append("\"Page8Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\"");
@@ -156,7 +165,9 @@
       $(".content0").css("visibility","hidden");
       $(".r3").css("visibility","hidden");
       setTimeout(() => window.scrollTo(0,0), 150);
-       window.parent.postMessage([JSON.parse("{"+$("#hidejsons").text()+"}"),JSON.parse('{"a":"1"}')],'https://survey.uu.nl/jfe/form/SV_9pHYXNl3IPhMXiK');
+       //window.parent.postMessage([JSON.parse("{"+$("#hidejsons").text()+"}"),JSON.parse('{"a":"1"}')],'https://survey.uu.nl/jfe/form/SV_9pHYXNl3IPhMXiK');
+      window.parent.postMessage([JSON.parse("{"+$("#hidejsons").text()+"}"),JSON.parse('{"a":"1"}')],'https://utrechtuniversity.qualtrics.com/jfe/form/SV_cVnagjch7EGMV7M');
+      
       // to parent frame
 
     })
@@ -227,7 +238,7 @@
     let MSGNAME = "";
     let MSGCOUNT = "";
     
-     rank();
+
     
     
     $.getJSON("fakers2.json",function(e){
@@ -243,8 +254,7 @@
       MSGCOUNT = e[0].messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";").length; 
       
       
-      $('.order')[0].style.backgroundColor='#DD9F4B';
-      $('.order')[4].style.backgroundColor='#5b60ac';
+
  
       
       
@@ -301,9 +311,7 @@
       $(".rankcnt").val("0,0");
  
 
-      $('.order')[0].style.backgroundColor='#DD9F4B';
-      $('.order')[4].style.backgroundColor='#5b60ac';
-      
+ 
         
       //开始自动fake
       for(let i = 0; i < e.length; i++){
