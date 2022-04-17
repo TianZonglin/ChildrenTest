@@ -1,4 +1,377 @@
 [{
+  "fakeUserID": 0,
+  "finalZanVsCai": [4,1],
+  "popTime": ["3,4,5,6","3"],
+  "optionToUser": {
+    "accept":{"opTime": 11, "option": "like"},
+    "normal":{"opTime": 11, "option": "like"},
+    "refuse":{"opTime": 11, "option": "dislike"}
+  },
+  "messageToUser": { 
+      "accept":{"sendTime": 34, "sendText": "我看了所有人的个人简介，我觉得我真的很喜欢你的简介。;如果见到你的话，我会想跟你交朋友！"},
+      "normal":{"sendTime": 34, "sendText": "我没看到你的个人简介，但其他人的我看到了。;有些简介我喜欢，有些我不喜欢。有些人我想交朋友，有些人我不想交朋友。"},
+      "refuse":{"sendTime": 34, "sendText": "我看了所有人的个人简介，我觉得我没那么喜欢你的简介。;如果见到你的话，我可能不会想跟你交朋友。"}
+  },
+  "sexVersion":{
+        "boy": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(boy1-1)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1,版本1的简介"
+                  },
+                  "version2": {
+                         "name": "PC1(boy1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1，版本2的简介"
+                  }
+        },
+        "girl": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(girl1-1)",
+                         "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本1的简介",
+                  "version2": {
+                         "name": "PC1(girl1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本2的简介"
+                  }
+        }
+
+  },{
+  "fakeUserID": 1,
+  "finalZanVsCai": [4,1],
+  "popTime": ["3,4,5,6","3"],
+  "optionToUser": {
+        "accept":{"opTime": 6, "option": "like"},
+        "normal":{"opTime": 0, "option": ""},
+        "refuse":{"opTime": 6, "option": "like"}
+  },
+  "messageToUser": { 
+        "accept":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>很喜欢</b>..."},
+        "normal":{"sendTime": 4, "sendText": "我看了所有人的个人简介。有些我喜欢，有些我不喜欢.."},
+        "refuse":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>不是很喜欢</b>你的.."}
+  },
+  "sexVersion":{
+        "boy": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(boy1-1)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1,版本1的简介"
+                  },
+                  "version2": {
+                         "name": "PC1(boy1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1，版本2的简介"
+                  }
+        },
+        "girl": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(girl1-1)",
+                         "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本1的简介",
+                  "version2": {
+                         "name": "PC1(girl1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本2的简介"
+                  }
+        }
+
+  },{
+  "fakeUserID": 2,
+  "finalZanVsCai": [4,1],
+  "popTime": ["3,4,5,6","3"],
+  "optionToUser": {
+        "accept":{"opTime": 6, "option": "like"},
+        "normal":{"opTime": 0, "option": ""},
+        "refuse":{"opTime": 6, "option": "like"}
+  },
+  "messageToUser": { 
+        "accept":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>很喜欢</b>..."},
+        "normal":{"sendTime": 4, "sendText": "我看了所有人的个人简介。有些我喜欢，有些我不喜欢.."},
+        "refuse":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>不是很喜欢</b>你的.."}
+  },
+  "sexVersion":{
+        "boy": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(boy1-1)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1,版本1的简介"
+                  },
+                  "version2": {
+                         "name": "PC1(boy1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1，版本2的简介"
+                  }
+        },
+        "girl": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(girl1-1)",
+                         "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本1的简介",
+                  "version2": {
+                         "name": "PC1(girl1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本2的简介"
+                  }
+        }
+
+  },{
+  "fakeUserID": 3,
+  "finalZanVsCai": [4,1],
+  "popTime": ["3,4,5,6","3"],
+  "optionToUser": {
+        "accept":{"opTime": 6, "option": "like"},
+        "normal":{"opTime": 0, "option": ""},
+        "refuse":{"opTime": 6, "option": "like"}
+  },
+  "messageToUser": { 
+        "accept":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>很喜欢</b>..."},
+        "normal":{"sendTime": 4, "sendText": "我看了所有人的个人简介。有些我喜欢，有些我不喜欢.."},
+        "refuse":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>不是很喜欢</b>你的.."}
+  },
+  "sexVersion":{
+        "boy": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(boy1-1)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1,版本1的简介"
+                  },
+                  "version2": {
+                         "name": "PC1(boy1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1，版本2的简介"
+                  }
+        },
+        "girl": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(girl1-1)",
+                         "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本1的简介",
+                  "version2": {
+                         "name": "PC1(girl1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本2的简介"
+                  }
+        }
+
+  },{
+  "fakeUserID": 4,
+  "finalZanVsCai": [4,1],
+  "popTime": ["3,4,5,6","3"],
+  "optionToUser": {
+        "accept":{"opTime": 6, "option": "like"},
+        "normal":{"opTime": 0, "option": ""},
+        "refuse":{"opTime": 6, "option": "like"}
+  },
+  "messageToUser": { 
+        "accept":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>很喜欢</b>..."},
+        "normal":{"sendTime": 4, "sendText": "我看了所有人的个人简介。有些我喜欢，有些我不喜欢.."},
+        "refuse":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>不是很喜欢</b>你的.."}
+  },
+  "sexVersion":{
+        "boy": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(boy1-1)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1,版本1的简介"
+                  },
+                  "version2": {
+                         "name": "PC1(boy1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1，版本2的简介"
+                  }
+        },
+        "girl": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(girl1-1)",
+                         "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本1的简介",
+                  "version2": {
+                         "name": "PC1(girl1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本2的简介"
+                  }
+        }
+
+  },{
+  "fakeUserID": 5,
+  "finalZanVsCai": [4,1],
+  "popTime": ["3,4,5,6","3"],
+  "optionToUser": {
+        "accept":{"opTime": 6, "option": "like"},
+        "normal":{"opTime": 0, "option": ""},
+        "refuse":{"opTime": 6, "option": "like"}
+  },
+  "messageToUser": { 
+        "accept":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>很喜欢</b>..."},
+        "normal":{"sendTime": 4, "sendText": "我看了所有人的个人简介。有些我喜欢，有些我不喜欢.."},
+        "refuse":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>不是很喜欢</b>你的.."}
+  },
+  "sexVersion":{
+        "boy": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(boy1-1)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1,版本1的简介"
+                  },
+                  "version2": {
+                         "name": "PC1(boy1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1，版本2的简介"
+                  }
+        },
+        "girl": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(girl1-1)",
+                         "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本1的简介",
+                  "version2": {
+                         "name": "PC1(girl1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本2的简介"
+                  }
+        }
+
+  },{
+  "fakeUserID": 6,
+  "finalZanVsCai": [4,1],
+  "popTime": ["3,4,5,6","3"],
+  "optionToUser": {
+        "accept":{"opTime": 6, "option": "like"},
+        "normal":{"opTime": 0, "option": ""},
+        "refuse":{"opTime": 6, "option": "like"}
+  },
+  "messageToUser": { 
+        "accept":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>很喜欢</b>..."},
+        "normal":{"sendTime": 4, "sendText": "我看了所有人的个人简介。有些我喜欢，有些我不喜欢.."},
+        "refuse":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>不是很喜欢</b>你的.."}
+  },
+  "sexVersion":{
+        "boy": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(boy1-1)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1,版本1的简介"
+                  },
+                  "version2": {
+                         "name": "PC1(boy1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1，版本2的简介"
+                  }
+        },
+        "girl": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(girl1-1)",
+                         "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本1的简介",
+                  "version2": {
+                         "name": "PC1(girl1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本2的简介"
+                  }
+        }
+
+  },{
+  "fakeUserID": 7,
+  "finalZanVsCai": [4,1],
+  "popTime": ["3,4,5,6","3"],
+  "optionToUser": {
+        "accept":{"opTime": 6, "option": "like"},
+        "normal":{"opTime": 0, "option": ""},
+        "refuse":{"opTime": 6, "option": "like"}
+  },
+  "messageToUser": { 
+        "accept":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>很喜欢</b>..."},
+        "normal":{"sendTime": 4, "sendText": "我看了所有人的个人简介。有些我喜欢，有些我不喜欢.."},
+        "refuse":{"sendTime": 4, "sendText": "我看了所有人的个人简介，我<b>不是很喜欢</b>你的.."}
+  },
+  "sexVersion":{
+        "boy": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(boy1-1)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1,版本1的简介"
+                  },
+                  "version2": {
+                         "name": "PC1(boy1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "男1，版本2的简介"
+                  }
+        },
+        "girl": {
+             "profileVersion":{
+                  "version1": {
+                         "name": "PC1(girl1-1)",
+                         "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本1的简介",
+                  "version2": {
+                         "name": "PC1(girl1-2)",
+                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "profile": "女1,版本2的简介"
+                  }
+        }
+
+  }]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[{
     "fakeUserID": 0,
     "sexVersion":{
       "boy": {
