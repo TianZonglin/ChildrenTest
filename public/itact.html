@@ -227,7 +227,7 @@
     let MSGNAME = "";
     let MSGCOUNT = "";
     
- 
+     rank();
     
     
     $.getJSON("fakers2.json",function(e){
@@ -241,6 +241,12 @@
       
       MSGNAME = e[0].sexVersion[sexVesion].name;
       MSGCOUNT = e[0].messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";").length; 
+      
+      
+      $('.order')[0].style.backgroundColor='#DD9F4B';
+      $('.order')[4].style.backgroundColor='#5b60ac';
+ 
+      
       
       // rrandom
       function randomSort(a, b) { return Math.random() > 0.5 ? -1 : 1; } 
@@ -295,6 +301,9 @@
       $(".rankcnt").val("0,0");
  
 
+      $('.order')[0].style.backgroundColor='#DD9F4B';
+      $('.order')[4].style.backgroundColor='#5b60ac';
+      
         
       //开始自动fake
       for(let i = 0; i < e.length; i++){
