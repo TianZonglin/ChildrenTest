@@ -45,7 +45,11 @@
     cursor:pointer;
   }
   
- 
+  .growl-notification{
+    bottom: 50px !important;
+    left: 30px !important;
+    pointer-events: auto !important;
+  }
   
   .sublocks:hover { 
     background-color: #5b60ac;
@@ -517,7 +521,7 @@
           }
         },
         {
-          element: '.ggrowl-notification--success',
+          element: '.growl-notification--success',
           popover: {
             showCloseButton: false,
             title: '你和其他学生收到“赞”和“踩”的通知',
@@ -636,7 +640,7 @@
           }
         },
         {
-          element: '.ggrowl-notification--success',
+          element: '.growl-notification--success',
           popover: {
             showCloseButton: false,
             title: '其他学生收到“赞”和“踩”的通知',
