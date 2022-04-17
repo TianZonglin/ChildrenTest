@@ -242,7 +242,7 @@
       
       let rky = "";
       
-      MSGNAME = e[0].sexVersion[sexVesion].name;
+      MSGNAME = e[0].sexVersion[sexVesion].profileVersion[profileVesion].name;
       MSGCOUNT = e[0].messageToUser[$("#hidevalue").text().split(",")[0]].sendText.split(";").length; 
       
       if($("#hidevalue").text().split(",")[0]=="normal"){
@@ -266,7 +266,7 @@
   
       for(let i = 0; i < e.length; i++){
         let obj = e[i];
-        let avaStr = obj.sexVersion[sexVesion].avator[profileVesion].split(";");
+        let avaStr = obj.sexVersion[sexVesion].profileVersion[profileVesion].avator.split(";");
  
         let svg = Avataaars.create({
             width: 50,
@@ -285,7 +285,7 @@
         str += svg;
         str += "</a>";
         str += "<span class='username' value='"+i+"'>";
-        str += obj.sexVersion[sexVesion].name;
+        str += obj.sexVersion[sexVesion].profileVersion[profileVesion].name;
         str += "</span>";
         str += "</div>";
         str += "<div class='textInfo'>";

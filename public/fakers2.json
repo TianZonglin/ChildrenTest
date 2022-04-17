@@ -60,13 +60,13 @@
           "boy": {
                "profileVersion":{
                     "version1": {
-                           "name": "PC1(girl1-1)",
-                           "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                           "name": "PC1(girl1-1)YLM",
+                           "avator": "bob;black;shirtVNeck;red;squint;serious;#76D18D",
                            "profile": "大家好！我是一个五年级的女生。我今年11岁了。我的性格温和。我的爱好是跳舞。我的理想工作是舞蹈老师。我最喜欢的书是《安徒生童话》。我最喜欢的食物或零食是巧克力。"
                     },
                     "version2": {
-                           "name": "PC1(girl1-2)",
-                           "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                           "name": "PC1(girl1-2)PMT",
+                           "avator": "straightAndStrand;black;hoodie;pink;squint;serious;#839BFF",
                            "profile": "大家好！我是一个五年级的女生。我今年11岁了。我的性格乐于助人。我的爱好是看书。我的理想工作是教师。我最喜欢的书是《寄小读者》。我最喜欢的食物或零食是三明治。  "
                     }
                }
@@ -204,7 +204,7 @@
                   },
                   "version2": {
                          "name": "PC1(boy3-2)HZH",
-                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "avator": "dreads01;black;shirtCrewNeck;pastelYellow;surprised;tongue;#839BFF",
                          "profile": "大家好！我是一个五年级的男生。我今年10岁了。我的性格有点爱玩儿。我的爱好是和同学一起玩。我最喜欢的电视节目或电影是《战狼》。我最不喜欢的食物或零食是黄瓜。我最喜欢的动物是狮子。"
                   }
              }
@@ -213,12 +213,12 @@
              "profileVersion":{
                   "version1": {
                          "name": "PC1(girl3-1)SYX",
-                         "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "avator":  "longButNotTooLong;black;hoodie;gray02;side;smile;#DD8FE4",
                          "profile": "大家好！我是一个五年级的女生。我今年10岁了。我的爱好是画画。我的理想工作是画家。我最喜欢的演员是赵露思。我最喜欢的食物或零食是冰淇淋、雪糕。我最不喜欢的食物是胡萝卜。"
                     },
                     "version2": {
                          "name": "PC1(girl3-2)XMY",
-                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "avator": "longButNotTooLong;black;shirtScoopNeck;pink;wink;twinkle;#DD8FE4",
                          "profile": "大家好！我是一个五年级的女生。我今年10岁了。我的爱好是唱歌。我的理想工作是歌手。我最喜欢的歌手是邓紫棋。我最喜欢的食物或零食是辣条。我最不喜欢的食物是香菜。"
                   }
              }
@@ -245,12 +245,12 @@
              "profileVersion":{
                   "version1": {
                          "name": "PC1(girl3-1)SYX",
-                         "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "avator":  "longButNotTooLong;black;hoodie;gray02;side;smile;#DD8FE4",
                          "profile": "大家好！我是一个五年级的女生。我今年10岁了。我的爱好是画画。我的理想工作是画家。我最喜欢的演员是赵露思。我最喜欢的食物或零食是冰淇淋、雪糕。我最不喜欢的食物是胡萝卜。"
                   },
                   "version2": {
                          "name": "PC1(girl3-2)XMY",
-                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "avator": "longButNotTooLong;black;shirtScoopNeck;pink;wink;twinkle;#DD8FE4",
                          "profile": "大家好！我是一个五年级的女生。我今年10岁了。我的爱好是唱歌。我的理想工作是歌手。我最喜欢的歌手是邓紫棋。我最喜欢的食物或零食是辣条。我最不喜欢的食物是香菜。"
                   }
              }
@@ -264,7 +264,7 @@
                   },
                   "version2": {
                          "name": "PC1(boy3-2)HZH",
-                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "avator": "dreads01;black;shirtCrewNeck;pastelYellow;surprised;tongue;#839BFF",
                          "profile": "大家好！我是一个五年级的男生。我今年10岁了。我的性格有点爱玩儿。我的爱好是和同学一起玩。我最喜欢的电视节目或电影是《战狼》。我最不喜欢的食物或零食是黄瓜。我最喜欢的动物是狮子。"
                   }
              }
@@ -290,12 +290,12 @@
              "profileVersion":{
                   "version1": {
                          "name": "PC1(girl4-1)WKX",
-                         "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
-                         "profile": "大家好！我是一个五年级的女生。我今年11岁了。我最喜欢的书是中国民间故事。我最喜欢的电视节目或电影是《小猪佩奇》。我最喜欢的食物或零食是热干面。我最不喜欢的食物是味道过淡的食物。我最喜欢的动物是兔子。"
+                         "avator":  "bob;black;shirtScoopNeck;blue02;surprised;twinkle;#8F69DB",
+                         "profile": "大家好！我是一个五年级的女生。我今年11岁了。我最喜欢的书是中国民间故事。我最喜欢的电视节目或电影是《哪吒》。我最喜欢的食物或零食是热干面。我最不喜欢的食物是味道过淡的食物。我最喜欢的动物是兔子。"
                   },
                   "version2": {
                          "name": "PC1(girl4-2)CTT",
-                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "avator": "straightAndStrand;black;shirtScoopNeck;pastelBlue;surprised;smile;#839BFF",
                          "profile": "大家好！我是一个五年级的女生。我今年11岁了。我最喜欢的书是红楼梦。我最喜欢的电视节目或电影是《青春环游记》。我最喜欢的食物或零食是牛肉面。我最不喜欢的食物是土豆。我最喜欢的动物是熊猫。"
                   }
              }
@@ -304,12 +304,12 @@
              "profileVersion":{
                   "version1": {
                          "name": "PC1(boy4-1)GP",
-                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "avator": "shortRound;black;shirtCrewNeck;pastelGreen;happy;eating;#A59101",
                          "profile": "大家好！我是一个五年级的男生。我今年11岁了。我的爱好是跳绳。我的理想工作是老板。我最喜欢的书是《三国演义》。我最喜欢的网络游戏是《贪吃蛇》。我最喜欢的食物或零食是辣条。"
                   },
                   "version2": {
                          "name": "PC1(boy4-2)TYH",
-                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "avator": "shortRound;black;hoodie;blue03;squint;grimace;#DD8FE4",
                          "profile": "大家好！我是一个五年级的男生。我今年11岁了。我的爱好是打乒乓球。我的理想工作是军人。我最喜欢的书是《十万个为什么》。我最喜欢的网络游戏是《连连看》。我最喜欢的食物或零食是肉。"
                   }
              }
@@ -335,12 +335,12 @@
              "profileVersion":{
                   "version1": {
                          "name": "PC1(boy4-1)GP",
-                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "avator": "shortRound;black;shirtCrewNeck;pastelGreen;happy;eating;#A59101",
                          "profile": "大家好！我是一个五年级的男生。我今年11岁了。我的爱好是跳绳。我的理想工作是老板。我最喜欢的书是《三国演义》。我最喜欢的网络游戏是《贪吃蛇》。我最喜欢的食物或零食是辣条。"
                   },
                   "version2": {
                          "name": "PC1(boy4-2)",
-                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "avator": "shortRound;black;hoodie;blue03;squint;grimace;#DD8FE4",
                          "profile": "大家好！我是一个五年级的男生。我今年11岁了。我的爱好是打乒乓球。我的理想工作是军人。我最喜欢的书是《十万个为什么》。我最喜欢的网络游戏是《连连看》。我最喜欢的食物或零食是肉。"
                   }
              }
@@ -349,12 +349,12 @@
              "profileVersion":{
                   "version1": {
                          "name": "PC1(girl4-1)TYH",
-                         "avator":  "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
-                         "profile": "大家好！我是一个五年级的女生。我今年11岁了。我最喜欢的书是中国民间故事。我最喜欢的电视节目或电影是《小猪佩奇》。我最喜欢的食物或零食是热干面。我最不喜欢的食物是味道过淡的食物。我最喜欢的动物是兔子。"
+                         "avator":  "bob;black;shirtScoopNeck;blue02;surprised;twinkle;#8F69DB",
+                         "profile": "大家好！我是一个五年级的女生。我今年11岁了。我最喜欢的书是中国民间故事。我最喜欢的电视节目或电影是《哪吒》。我最喜欢的食物或零食是热干面。我最不喜欢的食物是味道过淡的食物。我最喜欢的动物是兔子。"
                   },
                   "version2": {
                          "name": "PC1(girl4-2)",
-                         "avator": "theCaesar;red;blazerAndShirt;pink;happy;tongue;#8F69DB",
+                         "avator": "straightAndStrand;black;shirtScoopNeck;pastelBlue;surprised;smile;#839BFF",
                          "profile": "大家好！我是一个五年级的女生。我今年11岁了。我最喜欢的书是红楼梦。我最喜欢的电视节目或电影是《青春环游记》。我最喜欢的食物或零食是牛肉面。我最不喜欢的食物是土豆。我最喜欢的动物是熊猫。"
                   }
              }
