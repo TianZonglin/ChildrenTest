@@ -2,33 +2,53 @@
     "fakeUserID": 0,
     "sexVersion":{
       "boy": {
-        "v":"1",
-        "name": "XQH",
-        "gender": "男",
-        "finalZanVsCai": [4,1],
-        "popTime": ["9,39,69,109","130"],
-        "avator": {
-          "version1": "shortRound;black;shirtScoopNeck;blue01;squint;serious;#DD8FE4",
-          "version2": "shortFlat;black;hoodie;pastelGreen;squint;serious;#76D18D"
+        "version1":{
+          "name": "XQH",
+          "gender": "男",
+          "finalZanVsCai": [4,1],
+          "popTime": ["9,39,69,109","130"],
+          "avator": {
+            "version1": "shortRound;black;shirtScoopNeck;blue01;squint;serious;#DD8FE4",
+            "version2": "shortFlat;black;hoodie;pastelGreen;squint;serious;#76D18D"
+          },
+          "profileVersion":{
+            "version1": "大家好！我是一个五年级的男生。我今年11岁了。我的性格大方。我的爱好是踢足球。我的理想工作是运动员。我最喜欢的书是《水浒传》。我最喜欢的网络游戏是《穿越火线》。",
+            "version2": "大家好！我是一个五年级的男生。我今年11岁了。我的性格幽默。我的爱好是听音乐。我的理想工作是医生。我最喜欢的书是《斗罗大陆》。我最喜欢的网络游戏是《英雄联盟》。 "
+          }
         },
-        "profileVersion":{
-          "version1": "大家好！我是一个五年级的男生。我今年11岁了。我的性格大方。我的爱好是踢足球。我的理想工作是运动员。我最喜欢的书是《水浒传》。我最喜欢的网络游戏是《穿越火线》。",
-          "version2": "大家好！我是一个五年级的男生。我今年11岁了。我的性格幽默。我的爱好是听音乐。我的理想工作是医生。我最喜欢的书是《斗罗大陆》。我最喜欢的网络游戏是《英雄联盟》。 "
+        "version2":{
+          "name": "YLM",
+          "gender": "女",
+          "finalZanVsCai": [4,3],
+          "popTime": ["30,80,105,155","5,55,135"],
+          "avator": {
+            "version1": "bob;black;shirtVNeck;red;squint;serious;#76D18D",
+            "version2": "straightAndStrand;black;hoodie;pink;squint;serious;#839BFF"
+          },
+          "profileVersion":{
+            "version1": "大家好！我是一个五年级的女生。我今年11岁了。我的性格温和。我的爱好是跳舞。我的理想工作是舞蹈老师。我最喜欢的书是《安徒生童话》。我最喜欢的食物或零食是巧克力。",
+            "version2": "大家好！我是一个五年级的女生。我今年11岁了。我的性格乐于助人。我的爱好是看书。我的理想工作是教师。我最喜欢的书是《寄小读者》。我最喜欢的食物或零食是三明治。"
+          } 
         }
+
       },
       "girl": {
-        "v":"2",
-        "name": "PMT",
-        "gender": "女",
-        "finalZanVsCai": [4,1],
-        "popTime": ["9,39,69,109","130"],
-        "avator": {
-          "version1": "bob;black;shirtVNeck;red;squint;serious;#76D18D",
-          "version2": "straightAndStrand;black;hoodie;pink;squint;serious;#839BFF"
+        "version1":{
+          "name": "PMT",
+          "gender": "女",
+          "finalZanVsCai": [4,1],
+          "popTime": ["9,39,69,109","130"],
+          "avator": {
+            "version1": "bob;black;shirtVNeck;red;squint;serious;#76D18D",
+            "version2": "straightAndStrand;black;hoodie;pink;squint;serious;#839BFF"
+          },
+          "profileVersion":{
+            "version1": "大家好！我是一个五年级的女生。我今年11岁了。我的性格温和。我的爱好是跳舞。我的理想工作是舞蹈老师。我最喜欢的书是《安徒生童话》。我最喜欢的食物或零食是巧克力。",
+            "version2": "大家好！我是一个五年级的女生。我今年11岁了。我的性格乐于助人。我的爱好是看书。我的理想工作是教师。我最喜欢的书是《寄小读者》。我最喜欢的食物或零食是三明治。"
+          }
         },
-        "profileVersion":{
-          "version1": "大家好！我是一个五年级的女生。我今年11岁了。我的性格温和。我的爱好是跳舞。我的理想工作是舞蹈老师。我最喜欢的书是《安徒生童话》。我最喜欢的食物或零食是巧克力。",
-          "version2": "大家好！我是一个五年级的女生。我今年11岁了。我的性格乐于助人。我的爱好是看书。我的理想工作是教师。我最喜欢的书是《寄小读者》。我最喜欢的食物或零食是三明治。"
+        "version2":{
+          
         }
       }
     },
