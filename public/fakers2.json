@@ -2,7 +2,8 @@
     "fakeUserID": 0,
     "sexVersion":{
       "boy": {
-        "name": "ZWX",
+        "v":"1",
+        "name": "XQH",
         "gender": "男",
         "finalZanVsCai": [4,1],
         "popTime": ["9,39,69,109","130"],
@@ -16,6 +17,7 @@
         }
       },
       "girl": {
+        "v":"2",
         "name": "PMT",
         "gender": "女",
         "finalZanVsCai": [4,1],
@@ -44,6 +46,7 @@
     "fakeUserID": 1,
     "sexVersion":{
       "boy": {
+        "v":"1",
         "name": "YLM",
         "gender": "女",
         "finalZanVsCai": [4,3],
@@ -59,7 +62,8 @@
 
       },
       "girl": {
-        "name": "XQH",
+        "v":"2",
+        "name": "ZWX",
         "gender": "男",
         "finalZanVsCai": [4,3],
         "popTime": ["30,80,105,155","5,55,135"],
@@ -87,7 +91,8 @@
     "fakeUserID": 2,
     "sexVersion":{
       "boy": {
-        "name": "YXY",
+        "v":"1",
+        "name": "HY",
         "gender": "女",
         "finalZanVsCai": [3,2],
         "popTime": ["20,82,140","50,110"],
@@ -101,6 +106,7 @@
         }
       },
       "girl": {
+        "v":"2",
         "name": "LT",
         "gender": "男",
         "finalZanVsCai": [3,2],
@@ -129,6 +135,7 @@
     "fakeUserID": 3,
     "sexVersion":{
       "boy": {
+        "v":"1",
         "name": "LZM",
         "gender": "男",
         "finalZanVsCai": [3,3],
@@ -143,7 +150,8 @@
         }
       },
       "girl": {
-        "name": "HY",
+        "v":"2",
+        "name": "YXY",
         "gender": "女",
         "finalZanVsCai": [3,3],
         "popTime": ["67,107,167","7,37,137"],
@@ -171,7 +179,8 @@
     "fakeUserID": 4,
     "sexVersion":{
       "boy": {
-        "name": "HZH",
+        "v":"1",
+        "name": "FHR",
         "gender": "男",
         "finalZanVsCai": [2,0],
         "popTime": ["33,123",""],
@@ -185,6 +194,7 @@
         }
       },
       "girl": {
+        "v":"2",
         "name": "XMY",
         "gender": "女",
         "finalZanVsCai": [2,0],
@@ -213,6 +223,7 @@
     "fakeUserID": 5,
     "sexVersion":{
       "boy": {
+        "v":"1",
         "name": "SYX",
         "gender": "女",
         "finalZanVsCai": [2,2],
@@ -227,7 +238,8 @@
         }
       },
       "girl": {
-        "name": "FHR",
+        "v":"2",
+        "name": "HZH",
         "gender": "男",
         "finalZanVsCai": [2,2],
         "popTime": ["62,95","17,142"],
@@ -255,7 +267,8 @@
     "fakeUserID": 6,
     "sexVersion":{
       "boy": {
-        "name": "CTT",
+        "v":"1",
+        "name": "WKX",
         "gender": "女",
         "finalZanVsCai": [1,0],
         "popTime": ["25",""],
@@ -269,6 +282,7 @@
         }
       },
       "girl": {
+        "v":"2",
         "name": "TYH",
         "gender": "男",
         "finalZanVsCai": [1,0],
@@ -297,6 +311,7 @@
     "fakeUserID": 7,
     "sexVersion":{
       "boy": {
+        "v":"1",
         "name": "GP",
         "gender": "男",
         "finalZanVsCai": [1,1],
@@ -311,7 +326,8 @@
         }
       },
       "girl": {
-        "name": "WKX",
+        "v":"2",
+        "name": "CTT",
         "gender": "女",
         "finalZanVsCai": [1,1],
         "popTime": ["49","99"],
