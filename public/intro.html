@@ -856,6 +856,9 @@
   
   
   $("#p14d").click(function(){
+    
+    $(".demoPop").hide();
+    
     $("#p15d").hide();
     $("#hidejsons").append("\"Page6Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
     $("#hidestart").val(new Date().getTime());
@@ -879,6 +882,8 @@
     $(".content0").css("margin-top","85px");
     setTimeout(() => window.scrollTo(0,0), 150);
   });
+  
+  
   $("#p15d").click(function(){
     
     $("#hidejsons").append("\"Page7Time\":\""+ (new Date().getTime() - $("#hidestart").val()) +"ms\",");
