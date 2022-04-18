@@ -5,14 +5,14 @@
       "introText": "大家好！我是一个五年级的女生。我今年11岁了。我......",
       "finalZanVsCai": [3,0],
       "popTime": ["1,2","3,4,5"],
-      "avator": "longButNotTooLong;blonde;blazerAndSweater;pink;squint;smile;#8F69DB"
+      "avator": "longButNotTooLong;black;shirtScoopNeck;pink;wink;twinkle;#DD8FE4"
     },
     "girl": {
       "name": "ZNN",
       "introText": "大家好！我是一个五年级的女生。我今年11岁了。我......",
       "finalZanVsCai": [3,0],
       "popTime": ["3,4","1,2,3"],
-      "avator": "longButNotTooLong;blonde;blazerAndSweater;pink;squint;smile;#8F69DB"
+      "avator": "longButNotTooLong;black;shirtScoopNeck;pink;wink;twinkle;#DD8FE4"
     },
     "optionToUser": {
       "opTime": 6, 
@@ -28,7 +28,7 @@
       "introText": "大家好！我是一个五年级的男生。我今年11岁了。我......",
       "finalZanVsCai": [3,1],
       "popTime": ["1,5","1"],
-      "avator": "straight01,platinum,hoodie,pastelGreen,happy,eating,#A59101"
+      "avator": "shortFlat;black;hoodie;blue02;squint;smile;#76D18D"
                                    
     },
     "girl": {
@@ -36,7 +36,7 @@
       "introText": "大家好！我是一个五年级的女生。我今年11岁了。我......",
       "finalZanVsCai": [3,1],
       "popTime": ["3","1"],
-      "avator": "straight01,platinum,hoodie,pastelGreen,happy,eating,#A59101"
+      "avator": "shortFlat;black;hoodie;blue02;squint;smile;#76D18D"
     },
     "optionToUser": {
       "opTime": 1, 
@@ -52,14 +52,14 @@
       "introText": "大家好！我是一个五年级的男生。我今年12岁了。我......",
       "finalZanVsCai": [3,2],
       "popTime": ["4,5,6","1,2"],
-      "avator": "shortRound;silverGray;shirtVNeck;blue02;happy;serious;#DD8FE4"
+      "avator": "theCaesar;black;shirtCrewNeck;blue02;winkWacky;tongue;#A59101"
     },
     "girl": {
       "name": "DSY",
       "introText": "大家好！我是一个五年级的女生。我今年11岁了。我......",
       "finalZanVsCai": [3,2],
       "popTime": ["2,3,4","5,6"],
-      "avator": "shortRound;silverGray;shirtVNeck;blue02;happy;serious;#DD8FE4"
+      "avator": "theCaesar;black;shirtCrewNeck;blue02;winkWacky;tongue;#A59101"
     },
     "optionToUser": {
       "opTime": 5, 
@@ -76,14 +76,14 @@
       "introText": "大家好！我是一个五年级的女生。我今年11岁了。我......",
       "finalZanVsCai": [3,3],
       "popTime": ["1,2","4"],
-      "avator": "shaggyMullet;brown;collarAndSweater;gray02;squint;eating;#839BFF"
+      "avator": "longButNotTooLong;black;hoodie;gray02;side;smile;#DD8FE4"
     },
     "girl": {
       "name": "SY",
       "introText": "大家好！我是一个五年级的女生。我今年11岁了。我......",
       "finalZanVsCai": [3,3],
       "popTime": ["2,4","5,6"],
-      "avator": "shaggyMullet;brown;collarAndSweater;gray02;squint;eating;#839BFF"
+      "avator": "longButNotTooLong;black;hoodie;gray02;side;smile;#DD8FE4"
     },
     "optionToUser": {
       "opTime": 4, 
@@ -98,14 +98,14 @@
       "introText": "大家好！我是一个五年级的男生。我今年10岁了。我......",
       "finalZanVsCai": [2,1],
       "popTime": ["4,5","1"],
-      "avator": "theCaesarAndSidePart;dauburn;shirtCrewNeck;pink;wink;tongue;#DD8FE4"
+      "avator": "theCaesarAndSidePart;black;collarAndSweater;black;squint;twinkle;#A59101"
     },
     "girl": {
       "name": "WY",
       "introText": "大家好！我是一个五年级的女生。我今年11岁了。我......",
       "finalZanVsCai": [2,1],
       "popTime": ["1","4,5"],
-      "avator": "theCaesarAndSidePart;dauburn;shirtCrewNeck;pink;wink;tongue;#DD8FE4"
+      "avator": "theCaesarAndSidePart;black;collarAndSweater;black;squint;twinkle;#A59101"
     },
     "optionToUser": {
       "opTime": 2, 
@@ -120,14 +120,14 @@
       "introText": "大家好！我是一个五年级的女生。我今年11岁了。我......",
       "finalZanVsCai": [2,2],
       "popTime": ["1","2,3,4"],
-      "avator": "bigHair;brown;hoodie;red;wink;eating;#76D18D"
+      "avator": "longButNotTooLong;black;shirtCrewNeck;gray01;wink;smile;#A59101"
     },
     "girl": {
       "name": "CAQ",
       "introText": "大家好！我是一个五年级的女生。我今年11岁了。我......",
       "finalZanVsCai": [2,2],
       "popTime": ["5,6","2"],
-      "avator": "bigHair;brown;hoodie;red;wink;eating;#76D18D"
+      "avator": "longButNotTooLong;black;shirtCrewNeck;gray01;wink;smile;#A59101"
     },
     "optionToUser": {
       "opTime": 5, 
@@ -142,14 +142,14 @@
       "introText": "大家好！我是一个五年级的女生。我今年12岁了。我......",
       "finalZanVsCai": [1,0],
       "popTime": ["2,4,5","1"],
-      "avator": "shaggyMullet;silverGray;overall;heather;wink;serious;#8F69DB"
+      "avator": "bob;black;overall;blue03;squint;grimace;#A59101"
     },
     "girl": {
       "name": "XMT",
       "introText": "大家好！我是一个五年级的女生。我今年11岁了。我......",
       "finalZanVsCai": [1,0],
       "popTime": ["1,4","3,5"],
-      "avator": "shaggyMullet;silverGray;overall;heather;wink;serious;#8F69DB"
+      "avator": "bob;black;overall;blue03;squint;grimace;#A59101"
     },
     "optionToUser": {
       "opTime": 0, 
@@ -164,14 +164,14 @@
       "introText": "大家好！我是一个五年级的男生。我今年11岁了。我......",
       "finalZanVsCai": [1,1],
       "popTime": ["4,5","1,3"],
-      "avator": "shortWaved;blonde;shirtCrewNeck;white;happy;serious;#8F69DB"
+      "avator": "shortRound;black;shirtCrewNeck;pastelGreen;happy;eating;#A59101"
     },
     "girl": {
       "name": "TXL",
       "introText": "大家好！我是一个五年级的女生。我今年11岁了。我......",
       "finalZanVsCai": [1,1],
       "popTime": ["4,6","1,2"],
-      "avator": "shortWaved;blonde;shirtCrewNeck;white;happy;serious;#8F69DB"
+      "avator": "shortRound;black;shirtCrewNeck;pastelGreen;happy;eating;#A59101"
     },
     "optionToUser": {
       "opTime": 0, 
