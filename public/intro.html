@@ -296,8 +296,8 @@
     INTRODUCTION[0] = $("#p8a").val();
     INTRODUCTION[1] = "大家好！我是一个五年级的"+$("#p8b").val()+"生。我今年"+$("#p8c").val()+"岁了。"
     INTRODUCTION[2] = $(".cheng").attr("value");
-    $("#hidejsons").append("\"UserProperties\":\""+$("#p8a").val()+"\"+$("#p8a").val()+","+$("#p8a").val()+"\"岁,");
-    console.log(INTRODUCTION[2]);
+    $("#hidejsons").append("\"UserProperties\":\""+$("#p8a").val()+"/"+$("#p8b").val()+"/"+$("#p8c").val()+"岁\",");
+    console.log($("#hidejsons").text());
   });
   
 
